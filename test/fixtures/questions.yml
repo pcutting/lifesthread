@@ -1,0 +1,56 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  survey: one
+  statement: Monday
+  points: 1
+  position: 1
+
+two:
+  survey: one
+  statement: Friday
+  points: 1
+  position: 2
+  
+three:
+  survey: one
+  statement: April Fools
+  points: 1
+  position: 3
+  
+four:
+  survey: one
+  statement: Christmas
+  points: 1
+  position: 4
+  
+five:
+  survey: one
+  statement: Diet is an evil word
+  points: 1
+  position: 5
+  
+six:
+  survey: one
+  statement: Yesterday
+  points: 1
+  position: 6
+
+seven:
+  survey: one
+  statement: Right now
+  points: 1
+  position: 7
+  
+eight:
+  survey: one
+  statement: Never
+  points: 1
+  position: 8
+  
+ 
+nine:
+  survey: two
+  statement: question 2 - out of place for diet question - test
+  points: 1
+  position: 1

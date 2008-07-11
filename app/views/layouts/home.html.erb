@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Homes: <%= controller.action_name %></title>
+ 
+    <%= stylesheet_link_tag 'scaffold' %>
+
+
+  <!-- flot includes  -->
+    <!--[if IE]><script language="javascript" type="text/javascript" src="javascripts/excanvas.pack.js"></script><![endif]-->
+    <script language="javascript" type="text/javascript" src="javascripts/jquery.js"></script>
+    <script language="javascript" type="text/javascript" src="javascripts/jquery.flot.js"></script>
+  <!-- end flot includes -->
+</head>
+<body>
+
+
+
+
+<div id="container">
+
+<div id="header"><p style="color: green"><%= flash[:notice] %></p>
+<%= yield :header %> </div>
+
+<div id="wrapper"><div id="content"> <%= yield :layout %></div></div>
+
+
+<% if logged_in? %>
+<div id="navigation"><%= yield :navigation %></div>
+
+
+<div id="extra"><%= yield :extra %></div>
+
+<div id="footer"><p>Here it goes the footer:</p><%= yield :footer %></div>
+
+<% end %>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

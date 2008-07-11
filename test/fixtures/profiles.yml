@@ -1,0 +1,203 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  dob: 1978-06-26
+  address1: 144 home st
+  address2: 
+  city: Portland
+  state: ME
+  zip: 04102
+  cell_phone: 123-456-7890
+  phone: MyString
+  work_phone: MyString
+  height_inch: 72
+  body_shape: MyString
+  sex: male
+  race: white
+  rx_affiliate_no: 234sdf453
+  sale_code: MyString
+  terms_agreed: false
+  terms_agreed_on: 2008-06-26 23:49:56
+  primary_care_physician: Blumenthal
+  employer_name: self
+  marital_status: Married
+  partner_employer: MyString
+  occupation: MyString
+  emergency_contact: MyString
+  emergency_phone: MyString
+  emergency_relationship: MyString
+  emergency_address: MyString
+  emergency_city: MyString
+  emergency_state: MyString
+  emergency_zip: MyString
+  number_of_children: false
+  list_unusual_substance_exposure: oil
+  eduction_years: 17
+  smoker: false
+  was_smoker: false
+  average_smoking: none
+  alcoholic: false
+  ounces_alcohol_weekly: 20
+  user: test
+
+two:
+  dob: 2008-06-26
+  address1: MyString
+  address2: MyString
+  city: Denver
+  state: CO
+  zip: MyString
+  cell_phone: MyString
+  phone: MyString
+  work_phone: MyString
+  height_inch: 1
+  body_shape: MyString
+  sex: MyString
+  race: MyString
+  rx_affiliate_no: MyString
+  sale_code: MyString
+  terms_agreed: false
+  terms_agreed_on: 2008-06-26 23:49:56
+  primary_care_physician: MyString
+  employer_name: MyString
+  marital_status: MyString
+  partner_employer: MyString
+  occupation: MyString
+  emergency_contact: MyString
+  emergency_phone: MyString
+  emergency_relationship: MyString
+  emergency_address: MyString
+  emergency_city: MyString
+  emergency_state: MyString
+  emergency_zip: MyString
+  number_of_children: false
+  list_unusual_substance_exposure: MyString
+  eduction_years: 1
+  smoker: false
+  was_smoker: false
+  average_smoking: MyString
+  alcoholic: false
+  ounces_alcohol_weekly: 1
+  user: aaron
+  
+three:
+  dob: 1978-06-26
+  address1: 144 home st
+  address2: 
+  city: Mt. Vernon
+  state: ME
+  zip: 04102
+  cell_phone: 123-456-7890
+  phone: MyStringone
+  work_phone: MyString
+  height_inch: 72
+  body_shape: MyString
+  sex: male
+  race: white
+  rx_affiliate_no: 234sdf453
+  sale_code: MyString
+  terms_agreed: false
+  terms_agreed_on: 2008-06-26 23:49:56
+  primary_care_physician: Blumenthal
+  employer_name: self
+  marital_status: Married
+  partner_employer: MyString
+  occupation: MyString
+  emergency_contact: MyString
+  emergency_phone: MyString
+  emergency_relationship: MyString
+  emergency_address: MyString
+  emergency_city: MyString
+  emergency_state: MyString
+  emergency_zip: MyString
+  number_of_children: false
+  list_unusual_substance_exposure: oil
+  eduction_years: 17
+  smoker: false
+  was_smoker: false
+  average_smoking: none
+  alcoholic: false
+  ounces_alcohol_weekly: 20
+  user: philip
+
+four:
+  dob: 1978-06-26
+  address1: 144 home st
+  address2: 
+  city: Falmouth
+  state: ME
+  zip: 04102
+  cell_phone: 123-456-7890
+  phone: MyString
+  work_phone: MyString
+  height_inch: 72
+  body_shape: MyString
+  sex: male
+  race: white
+  rx_affiliate_no: 234sdf453
+  sale_code: MyString
+  terms_agreed: false
+  terms_agreed_on: 2008-06-26 23:49:56
+  primary_care_physician: Blumenthal
+  employer_name: self
+  marital_status: Married
+  partner_employer: MyString
+  occupation: MyString
+  emergency_contact: MyString
+  emergency_phone: MyString
+  emergency_relationship: MyString
+  emergency_address: MyString
+  emergency_city: MyString
+  emergency_state: MyString
+  emergency_zip: MyString
+  number_of_children: false
+  list_unusual_substance_exposure: oil
+  eduction_years: 17
+  smoker: false
+  was_smoker: false
+  average_smoking: none
+  alcoholic: false
+  ounces_alcohol_weekly: 20
+  user: nevie
+
+five:
+  dob: 1978-06-26
+  address1: 144 home st
+  address2: one
+  city: Portland
+  state: ME
+  zip: 04102
+  cell_phone: 123-456-7890
+  phone: MyString
+  work_phone: MyString
+  height_inch: 72
+  body_shape: MyString
+  sex: male
+  race: white
+  rx_affiliate_no: 234sdf453
+  sale_code: MyString
+  terms_agreed: false
+  terms_agreed_on: 2008-06-26 23:49:56
+  primary_care_physician: Blumenthal
+  employer_name: self
+  marital_status: Married
+  partner_employer: MyString
+  occupation: MyString
+  emergency_contact: MyString
+  emergency_phone: MyString
+  emergency_relationship: MyString
+  emergency_address: MyStringone
+  emergency_city: MyString
+  emergency_state: MyString
+  emergency_zip: MyString
+  number_of_children: false
+  list_unusual_substance_exposure: oil
+  eduction_years: 17
+  smoker: false
+  was_smoker: false
+  average_smoking: none
+  alcoholic: false
+  ounces_alcohol_weekly: 20
+  user: phil
+
+

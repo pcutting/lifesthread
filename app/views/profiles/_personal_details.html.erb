@@ -1,0 +1,55 @@
+
+<fieldset><legend>Personal Details</legend>
+  <p>
+    <%= f.label :primary_care_physician %><!-- was a br -->
+    <%= f.text_field :primary_care_physician , :size => 15 %>
+  </p>
+    <p>
+    <%= f.label "Years of Eduction"%><!-- was a br -->
+    <%= f.text_field :eduction_years , :size => 2%>
+  </p>
+  <p>
+    <%= f.label :employer_name %><!-- was a br -->
+    <%= f.text_field :employer_name , :size =>  10%>
+  </p>
+    <p>
+    <%= f.label :occupation %><!-- was a br -->
+    <%= f.text_field :occupation , :size => 10 %>
+  </p>
+  <p>
+    <%= f.label :marital_status %><!-- was a br -->
+
+
+
+  <% s_checker = false %>
+  <% m_checker = false %>
+  <% d_checker = false %>
+  <% w_checker = false %>
+  
+  
+  <% s_checker = true if @profile.marital_status == "single" %>
+  <% m_checker = true if @profile.marital_status == "married" %>
+  <% d_checker = true if @profile.marital_status == "divorced" %>
+  <% w_checker = true if @profile.marital_status == "widowed" %>
+  
+  <%= radio_button( "profile", "marital_status", "single", :options => {:checked => s_checker} ) %>Single
+  <%= radio_button( "profile", "marital_status", "married", :options => {:checked => m_checker} ) %>Married
+  <%= radio_button( "profile", "marital_status", "divorced", :options => {:checked => d_checker} ) %>Divorced
+  <%= radio_button( "profile", "marital_status", "widowed", :options => {:checked => w_checker} ) %>Widowed
+  </p>
+  
+  <p>
+    <%= f.label :partner_employer %><!-- was a br -->
+    <%= f.text_field :partner_employer , :size => 10 %>
+  </p>
+
+    <p>
+    
+    <%= f.label :have_children %><!-- was a br -->
+    <%= f.check_box :has_children %>
+    
+    <%= f.label :number_of_children %><!-- was a br -->
+    <%= f.text_field :number_of_children , :size => 2%>
+  </p>
+</fieldset>
+  

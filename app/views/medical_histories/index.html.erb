@@ -1,0 +1,36 @@
+<h1>Listing Medical history events</h1>
+
+<table>
+  <tr>
+    <th>Approx date</th>
+    <th>Hospital</th>
+    <th>Problem</th>
+    <th>Treatment</th>
+    <th>Doctor</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Dr phone</th>
+    <th>Required hospitalization</th>
+  </tr>
+
+<% for medical_history in @medical_histories %>
+  <tr>
+    <td><%=h medical_history.approx_date %></td>
+    <td><%=h medical_history.hospital %></td>
+    <td><%=h medical_history.problem %></td>
+    <td><%=h medical_history.treatment %></td>
+    <td><%=h medical_history.doctor %></td>
+    <td><%=h medical_history.city %></td>
+    <td><%=h medical_history.state %></td>
+    <td><%=h medical_history.dr_phone %></td>
+    <td><%=h medical_history.required_hospitalization %></td>
+    <td><%= link_to 'Show', medical_history %></td>
+    <td><%= link_to 'Edit', edit_medical_history_path(medical_history) %></td>
+    <td><%= link_to 'Destroy', medical_history, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New medical_history', new_medical_history_path %>

@@ -1,0 +1,37 @@
+<% if params[:question].nil?  then %>
+  
+  <% form_for :opinions , :url => { :action => :create } do |opinion| %>
+  
+      <%  @survey = Survey.find(:first) %>
+      <%= "Q: #{@survey.question}" %><hr />
+      
+      <% for question in @survey.questions.find(:all, :order => "position asc") %>
+        <%= radio_button( "opinion", "question", question.id ) %>
+        <%= question.statement %> <br />
+      <% end %>
+      
+  <br />
+  <%= submit_tag :survey %>
+  <% end %> 
+
+<% else %>
+
+Results for:<br />
+  <% @question = Question.find( params[:question]) %>
+  <%= @question.survey.question %><br />
+  <% @survey =  Survey.find(@question.survey) %>
+  
+  <hr />
+  
+  <% for question in @survey.questions.find(:all, :order => "position asc") %>
+        <% @opinions = Opinion.find(:all, :conditions => ["question_id = ?",question.id]) %>
+        <%= @opinions.size %> :
+        <%= question.statement %>
+        
+
+         <br />
+      <% end %>
+
+
+<% end %>
+

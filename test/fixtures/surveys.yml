@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  question: When is the best time to start a diet?
+  is_active: false
+
+two:
+  question: Some question?
+  is_active: false

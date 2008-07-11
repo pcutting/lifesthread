@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: test
+  name: MyString
+  strength: 1
+  unit_type: MyString
+  prescribed_start: 2008-06-09
+  prescribed_end: 2008-06-09
+  actual_start: 2008-06-09
+  actual_stop: 2008-06-09
+  dosage: 1
+  dosage_unit: MyString
+  purpose: MyString
+  result: MyString
+  comment: MyString
+
+two:
+  user: aaron
+  name: MyString
+  strength: 1
+  unit_type: MyString
+  prescribed_start: 2008-06-09
+  prescribed_end: 2008-06-09
+  actual_start: 2008-06-09
+  actual_stop: 2008-06-09
+  dosage: 1
+  dosage_unit: MyString
+  purpose: MyString
+  result: MyString
+  comment: MyString

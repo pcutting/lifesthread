@@ -1,0 +1,42 @@
+<h1>Listing medications</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Strength</th>
+    <th>Unit type</th>
+    <th>Prescribed start</th>
+    <th>Prescribed end</th>
+    <th>Actual start</th>
+    <th>Actual stop</th>
+    <th>Dosage</th>
+    <th>Dosage unit</th>
+    <th>Purpose</th>
+    <th>Result</th>
+    <th>Comment</th>
+  </tr>
+
+<% for medication in @medications %>
+  <tr>
+    <td><%=h medication.name %></td>
+    <td><%=h medication.strength %></td>
+    <td><%=h medication.unit_type %></td>
+    <td><%=h medication.prescribed_start %></td>
+    <td><%=h medication.prescribed_end %></td>
+    <td><%=h medication.actual_start %></td>
+    <td><%=h medication.actual_stop %></td>
+    <td><%=h medication.dosage %></td>
+    <td><%=h medication.dosage_unit %></td>
+    <td><%=h medication.purpose %></td>
+    <td><%=h medication.result %></td>
+    <td><%=h medication.comment %></td>
+    <td><%= link_to 'Show', medication %></td>
+    <td><%= link_to 'Edit', edit_medication_path(medication) %></td>
+    <td><%= link_to 'Destroy', medication, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New medication', new_medication_path %>

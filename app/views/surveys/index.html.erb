@@ -1,0 +1,22 @@
+<h1>Listing surveys</h1>
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Is active</th>
+  </tr>
+
+<% for survey in @surveys %>
+  <tr>
+    <td><%=h survey.question %></td>
+    <td><%=h survey.is_active %></td>
+    <td><%= link_to 'Show', survey %></td>
+    <td><%= link_to 'Edit', edit_survey_path(survey) %></td>
+    <td><%= link_to 'Destroy', survey, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New survey', new_survey_path %>

@@ -1,0 +1,23 @@
+<p>
+  <b>Survey:</b>
+  <%=h @question.survey %>
+</p>
+
+<p>
+  <b>Statement:</b>
+  <%=h @question.statement %>
+</p>
+
+<p>
+  <b>Points:</b>
+  <%=h @question.points %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%=h @question.position %>
+</p>
+
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>

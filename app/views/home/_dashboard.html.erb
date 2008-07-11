@@ -1,0 +1,55 @@
+
+
+<% if @profile.blank? %> 
+  <h1> <%= link_to 'Please update your profile.', profile_path, :action => "show" %> </h1>
+<% else %>
+
+  <%= render :partial => "progress" %>
+
+
+  <%= link_to 'View your Chart' , charts_path %>
+
+
+<% content_for :extra  do %>
+  <%= render :partial => "survey" %>
+<% end %>
+
+
+
+  <% form_for :profile , :url => { :action => :create } do |form| %>
+
+  <fieldset>
+  <legend><%= link_to 'Blood Pressure', bps_path %> </legend>
+    <% fields_for :bp do |bp| %>
+     <%= render :partial => "/bps/new" , :locals => { :f => bp} %>
+    <% end %>
+  </fieldset>
+
+
+  <fieldset>
+  <legend><%= link_to 'Body Image', measurements_path %></legend>
+    <% fields_for :measurements do |measurement| %>
+      <%= render :partial => "/measurements/new" , :locals => {:f => measurement }  %>
+    <% end %>
+  </fieldset>
+
+  <fieldset>
+  <legend><%= link_to 'Food', foods_path %></legend>
+    <% fields_for :foods do |food| %>
+      <%= render :partial => "/foods/new" , :locals => {:f => food }  %>
+    <% end %>
+  </fieldset>
+
+
+  <br />
+  <%= submit_tag %>
+  <% end %> 
+
+
+
+
+
+
+<% end # ends the required profile model %>
+ <br />
+

@@ -1,0 +1,60 @@
+<h1>Editing medication</h1>
+
+<% form_for(@medication) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :strength %><br />
+    <%= f.text_field :strength %>
+  </p>
+  <p>
+    <%= f.label :unit_type %><br />
+    <%= f.text_field :unit_type %>
+  </p>
+  <p>
+    <%= f.label :prescribed_start %><br />
+    <%= f.date_select :prescribed_start %>
+  </p>
+  <p>
+    <%= f.label :prescribed_end %><br />
+    <%= f.date_select :prescribed_end %>
+  </p>
+  <p>
+    <%= f.label :actual_start %><br />
+    <%= f.date_select :actual_start %>
+  </p>
+  <p>
+    <%= f.label :actual_stop %><br />
+    <%= f.date_select :actual_stop %>
+  </p>
+  <p>
+    <%= f.label :dosage %><br />
+    <%= f.text_field :dosage %>
+  </p>
+  <p>
+    <%= f.label :dosage_unit %><br />
+    <%= f.text_field :dosage_unit %>
+  </p>
+  <p>
+    <%= f.label :purpose %><br />
+    <%= f.text_field :purpose %>
+  </p>
+  <p>
+    <%= f.label :result %><br />
+    <%= f.text_field :result %>
+  </p>
+  <p>
+    <%= f.label :comment %><br />
+    <%= f.text_field :comment %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @medication %> |
+<%= link_to 'Back', medications_path %>

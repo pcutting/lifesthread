@@ -1,0 +1,63 @@
+<p>
+  <b>Label:</b>
+  <%=h @fitness_plan.label %>
+</p>
+
+<p>
+  <b>Time length for workout:</b>
+  <%=h @fitness_plan.time_length_for_workout %>
+</p>
+
+<p>
+  <b>Start:</b>
+  <%=h @fitness_plan.start %>
+</p>
+
+<p>
+  <b>End:</b>
+  <%=h @fitness_plan.end %>
+</p>
+
+<p>
+  <b>Your why:</b>
+  <%=h @fitness_plan.your_why %>
+</p>
+
+<p>
+  <b>Mon:</b>
+  <%=h @fitness_plan.mon %>
+</p>
+
+<p>
+  <b>Tue:</b>
+  <%=h @fitness_plan.tue %>
+</p>
+
+<p>
+  <b>Wed:</b>
+  <%=h @fitness_plan.wed %>
+</p>
+
+<p>
+  <b>Thur:</b>
+  <%=h @fitness_plan.thur %>
+</p>
+
+<p>
+  <b>Fri:</b>
+  <%=h @fitness_plan.fri %>
+</p>
+
+<p>
+  <b>Sat:</b>
+  <%=h @fitness_plan.sat %>
+</p>
+
+<p>
+  <b>Sun:</b>
+  <%=h @fitness_plan.sun %>
+</p>
+
+
+<%= link_to 'Edit', edit_fitness_plan_path(@fitness_plan) %> |
+<%= link_to 'Back', fitness_plans_path %>

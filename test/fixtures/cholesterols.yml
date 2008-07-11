@@ -1,0 +1,45 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: test
+  measured_on: 2008-06-2 13:06:18
+  comment: baccon
+  is_goal: false
+  hdl: 234
+  ldl: 55
+
+two:
+  user: aaron
+  measured_on: 2008-06-1 13:06:18
+  comment: grits -aaron
+  is_goal: false
+  hdl: 100
+  ldl: 140
+  
+three:
+  user: test
+  measured_on: 2008-05-24 13:06:18
+  comment: salad and oatmeal
+  is_goal: false
+  hdl: 100
+  ldl: 133
+  
+<% year = 2008 %><% month = 1 %><% day = 1 %><% hour = 8 %><% min= 0 %><% sec = 0%><%= "gen#0:" %>
+  user: test
+  measured_on: <%= year %>-<%= month%>-<%= day%> <%= hour %>:<%= min %>:<%= sec %>
+  hdl: <%= sys = rand(30) + 170 %>
+  ldl: <%= dia = rand(20) + 40 %>
+
+<% y = 0 %><% x = 1 %><% while x < 200 %><% x = x +1 %><% y = y + 0.1 %><%= "gen#{x}:" %>
+  user: test<% randsec = rand(99960) %><% sec = sec + randsec %><% rsec = sec %>
+<% if sec > 59 then %><% min = min + ( sec / 60)  %><% sec =  ( sec % 60 ) %>
+<% if min > 59 then %><% hour = hour + rand(8)  %><% hour = hour.to_i + (min / 60) %><% min = ( min % 60 )  %>
+<% if hour > 23 then %><% day = day + rand(3)   %><% day = day.to_i + (hour / 60) %><% hour =  ( hour % 24 ) %>
+<% if ((day > 27 && month ==2 ) || day > 30 ) then %><% month = month + 1 %><% day  = 1 %>
+<% if month > 12 then %><% year = year + 1 %><% month  = 1 %>
+<% end %><% end %><% end %><% end %><% end %>
+  comment: generated
+  measured_on: <%= year %>-<%= month %>-<%= day %> <%= hour %>:<%= min %>:<%= sec %>
+  hdl: <% sys = Math.cos(y) * 30 + 180  %><%= sys.to_i %>
+  ldl: <% dias = Math.cos(y) * 35 + 10 %><%= dias.to_i %>
+<% end %>

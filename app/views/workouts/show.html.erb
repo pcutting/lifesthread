@@ -1,0 +1,27 @@
+<p></p>
+
+<table>
+<tr>
+<th> Title: </th>
+<th> Day: </th>
+<th> Start time: </th>
+<th> End time: </th>
+<th> Comment: </th>
+<th> Supplements: </th>
+</tr>
+<tr>
+<td>  <%=h @workout.title %> </td>
+<td>  <%=h @workout.day %> </td>
+<td>  <%=h @workout.start_time %> </td>
+<td>   <%=h @workout.end_time %></td>
+<td> <%=h @workout.supplements %> </td>
+<td> <%=h @workout.comment %> </td>
+</tr>
+</table>
+<br />
+<%= link_to 'Edit', edit_workout_path(@workout) %> |
+<%= link_to 'Back', workouts_path %>
+
+<%= render :partial => "/exercises/index" %>
+
+

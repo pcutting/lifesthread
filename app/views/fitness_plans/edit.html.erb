@@ -1,0 +1,60 @@
+<h1>Editing fitness_plan</h1>
+
+<% form_for(@fitness_plan) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :label %><br />
+    <%= f.text_field :label %>
+  </p>
+  <p>
+    <%= f.label :time_length_for_workout %><br />
+    <%= f.text_field :time_length_for_workout %>
+  </p>
+  <p>
+    <%= f.label :start %><br />
+    <%= f.date_select :start %>
+  </p>
+  <p>
+    <%= f.label :end %><br />
+    <%= f.date_select :end %>
+  </p>
+  <p>
+    <%= f.label :your_why %><br />
+    <%= f.text_field :your_why %>
+  </p>
+  <p>
+    <%= f.label :mon %><br />
+    <%= f.check_box :mon %>
+  </p>
+  <p>
+    <%= f.label :tue %><br />
+    <%= f.check_box :tue %>
+  </p>
+  <p>
+    <%= f.label :wed %><br />
+    <%= f.check_box :wed %>
+  </p>
+  <p>
+    <%= f.label :thur %><br />
+    <%= f.check_box :thur %>
+  </p>
+  <p>
+    <%= f.label :fri %><br />
+    <%= f.check_box :fri %>
+  </p>
+  <p>
+    <%= f.label :sat %><br />
+    <%= f.check_box :sat %>
+  </p>
+  <p>
+    <%= f.label :sun %><br />
+    <%= f.check_box :sun %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @fitness_plan %> |
+<%= link_to 'Back', fitness_plans_path %>

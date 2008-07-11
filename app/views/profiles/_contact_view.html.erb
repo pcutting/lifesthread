@@ -1,0 +1,17 @@
+<fieldset>
+  <legend>Contact Information: <%= link_to "Edit" , edit_profile_path( :fieldset => "contact") %></legend>
+
+  <p>
+    <%="cell phone:".capitalize %> <!-- was a br -->
+    <%= @profile.cell_phone %>
+  </p>
+  <p>
+    <%="phone:".capitalize %> <!-- was a br -->
+    <%= @profile.phone %>
+  </p>
+  <p>
+    <%="work phone:".capitalize %> <!-- was a br -->
+    <%= @profile.work_phone %>
+  </p>
+
+</fieldset>

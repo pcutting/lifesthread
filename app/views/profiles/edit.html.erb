@@ -1,0 +1,58 @@
+<h1>Editing profile</h1>
+
+<% form_for(current_user.profile, :url => profile_path) do |f| %>
+  <%= f.error_messages %>
+
+
+
+<% unless params[:fieldset].nil?   %>
+  <br />
+
+
+  <% if params[:fieldset] == "address" %>
+    <%= render :partial => "address" , :locals => { :f => f } %>
+  
+  <% elsif params[:fieldset] == "required" %>
+    <%= render :partial => "required" , :locals => { :f => f } %>
+  
+  <% elsif params[:fieldset] == "contact" %>
+    <%= render :partial => "contact" , :locals => { :f => f } %>
+
+  <% elsif params[:fieldset] == "emergency" %>
+    <%= render :partial => "emergency_contact" , :locals => { :f => f } %>
+
+  <% elsif params[:fieldset] == "ethnicity" %>
+    <%= render :partial => "ethnicity" , :locals => { :f => f } %>
+    
+  <% elsif params[:fieldset] == "personal" %>
+    <%= render :partial => "personal_details" , :locals => { :f => f } %>
+    
+  <% elsif params[:fieldset] == "substance" %>
+    <%= render :partial => "substance_usage" , :locals => { :f => f } %>
+    
+  <% elsif params[:fieldset] == "terms" %>
+    <%= render :partial => "terms" , :locals => { :f => f } %>
+
+  <% elsif params[:fieldset] == "women" %>
+    <%= render :partial => "womens_concerns" , :locals => { :f => f } %>
+
+  <% end %>
+
+<% else %>
+
+
+  <%= render :partial => "content", :locals => { :f => f} %>
+
+
+
+
+<% end %>
+
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+  
+
+<%= link_to 'Back', profile_path %>

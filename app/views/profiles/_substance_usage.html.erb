@@ -1,0 +1,29 @@
+  
+<fieldset><legend>Substance Use and Exposure</legend>
+  <p>
+    <%= f.label :list_unusual_substance_exposure %><!-- was a br -->
+    <%= f.text_field :list_unusual_substance_exposure , :size => 20 %>
+  </p>
+
+  <p>
+    <%= f.label :smoker %><!-- was a br -->
+    <%= f.check_box :smoker %>
+
+    <%= f.label :was_smoker %><!-- was a br -->
+    <%= f.check_box :was_smoker %>
+  </p>
+  <p>
+    <%= f.label :average_smoking %><!-- was a br -->
+    <%= f.text_field :average_smoking , :size => 10%>
+  </p>
+  <p>
+    <%= f.label :alcoholic %><!-- was a br -->
+    <%= f.check_box :alcoholic %>
+  </p>
+  <p>
+    <%= f.label :ounces_alcohol_weekly %><!-- was a br -->
+    <%= f.text_field :ounces_alcohol_weekly , :size => 3%>
+  </p>
+
+</fieldset>
+

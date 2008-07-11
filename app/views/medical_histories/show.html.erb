@@ -1,0 +1,48 @@
+<p>
+  <b>Approx date:</b>
+  <%=h @medical_history.approx_date %>
+</p>
+
+<p>
+  <b>Hospital:</b>
+  <%=h @medical_history.hospital %>
+</p>
+
+<p>
+  <b>Problem:</b>
+  <%=h @medical_history.problem %>
+</p>
+
+<p>
+  <b>Treatment:</b>
+  <%=h @medical_history.treatment %>
+</p>
+
+<p>
+  <b>Doctor:</b>
+  <%=h @medical_history.doctor %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @medical_history.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @medical_history.state %>
+</p>
+
+<p>
+  <b>Dr phone:</b>
+  <%=h @medical_history.dr_phone %>
+</p>
+
+<p>
+  <b>Required hospitalization:</b>
+  <%=h @medical_history.required_hospitalization %>
+</p>
+
+
+<%= link_to 'Edit', edit_medical_history_path(@medical_history) %> |
+<%= link_to 'Back', medical_histories_path %>

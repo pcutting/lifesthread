@@ -1,0 +1,29 @@
+<div class = "progress">
+DOB: <%= @profile.dob %><br />
+AGE: <% ( age = ((  Time.now - @profile.dob.to_time ) / 1.years).to_i) %>
+<%= age %> <br />
+
+
+<% if @has_weight_nil then %>
+  <br />Please enter your initial body measurements: <%= link_to 'Body Image', new_measurement_path %>.  Thank you.<br />
+  
+  
+<% else %>
+  
+  
+  
+  <% if @has_goal_weight_nil %>
+    <br />  Please go to body measurements, and put your goals and make sure 'Is goal' is checked: <%= link_to 'Body Image', new_measurement_path %> :.  Thank you.<br />
+      
+  <% else %>
+    Weight: <%= @current_weight %>,   
+    Your Goal is: 
+
+    <%= @goal_weight %>,  and you are <%  to_goal =  (@goal_weight.to_f / @current_weight) *100 %><%= to_goal.to_i %>% there!<br />
+  <% end %>
+  
+  Height: <%= @profile.height_inch %> <br />
+  BMI: <%= ((@current_weight/(@profile.height_inch * @profile.height_inch.to_f))* 703).to_i %> <br/>
+<% end %>  
+</div>
+

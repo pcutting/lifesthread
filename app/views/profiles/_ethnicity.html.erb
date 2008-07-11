@@ -1,0 +1,23 @@
+<fieldset>
+<legend> Ethnicity</legend>
+  <p>
+    <%= f.label :body_shape %><!-- was a br -->
+    <%= f.text_field :body_shape , :size => 10%>
+  </p>
+  <p>
+  <%= f.label :sex %><!-- was a br -->
+  <% f_checker = false %>
+  <% m_checker = false %>
+  
+  
+  <% f_checker = true if @profile.sex == "female" %>
+  <% m_checker = true if @profile.sex == "male"  %>
+  
+  <%= radio_button( "profile", "sex", "female", :options => {:checked => f_checker} ) %>Female
+  <%= radio_button( "profile", "sex",  "male", :options => {:checked => m_checker } ) %>Male 
+  </p>
+  <p>
+    <%= f.label :race %><!-- was a br -->
+    <%= f.text_field :race , :size => 6 %>
+  </p>
+</fieldset>

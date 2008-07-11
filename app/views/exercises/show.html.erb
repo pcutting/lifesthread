@@ -1,0 +1,49 @@
+
+<p>
+  <b>Type:</b>
+  <%=h @exercise.type %>
+</p>
+
+<p>
+  <b>Style:</b>
+  <%=h @exercise.style %>
+</p>
+
+<p>
+  <b>Exercise:</b>
+  <%=h @exercise.exercise %>
+</p>
+
+<p>
+  <b>Length:</b>
+  <%=h @exercise.length %>
+</p>
+
+<p>
+  <b>Reps:</b>
+  <%=h @exercise.reps %>
+</p>
+
+<p>
+  <b>Resistance:</b>
+  <%=h @exercise.resistance %>
+</p>
+
+<p>
+  <b>Unit:</b>
+  <%=h @exercise.unit %>
+</p>
+
+<p>
+  <b>Calories burned:</b>
+  <%=h @exercise.calories_burned %>
+</p>
+
+<p>
+  <b>Intensity:</b>
+  <%=h @exercise.intensity %>
+</p>
+
+
+<%= link_to 'Edit', edit_polymorphic_path([@parent, @exercise]) %> |
+<%= link_to 'Back', polymorphic_path([@parent]) %>

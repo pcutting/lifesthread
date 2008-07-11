@@ -1,0 +1,9 @@
+<fieldset><legend>Terms: <%= link_to "EDIT" , edit_profile_path( :fieldset => "terms") %></legend>
+   <p>
+    <%= f.label :terms_agreed %><!-- was a br -->
+    <%= f.check_box :terms_agreed %>
+
+    Terms agreed on  <!-- was a br -->
+    <%= terms_agreed_on %>
+  </p>
+</fieldset>

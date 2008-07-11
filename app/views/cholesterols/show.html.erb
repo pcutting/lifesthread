@@ -1,0 +1,30 @@
+
+
+<p>
+  <b>Measured on:</b>
+  <%=h @cholesterol.measured_on %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @cholesterol.comment %>
+</p>
+
+<p>
+  <b>Is goal:</b>
+  <%=h @cholesterol.is_goal %>
+</p>
+
+<p>
+  <b>Hdl:</b>
+  <%=h @cholesterol.hdl %>
+</p>
+
+<p>
+  <b>Ldl:</b>
+  <%=h @cholesterol.ldl %>
+</p>
+
+
+<%= link_to 'Edit', edit_cholesterol_path(@cholesterol) %> |
+<%= link_to 'Back', cholesterols_path %>

@@ -1,0 +1,29 @@
+
+<p>
+  <b>Measured on:</b>
+  <%=h @bp.measured_on %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @bp.comment %>
+</p>
+
+<p>
+  <b>Is goal:</b>
+  <%=h @bp.is_goal %>
+</p>
+
+<p>
+  <b>Systolic:</b>
+  <%=h @bp.systolic %>
+</p>
+
+<p>
+  <b>Diastolic:</b>
+  <%=h @bp.diastolic %>
+</p>
+
+
+<%= link_to 'Edit', edit_bp_path(@bp) %> |
+<%= link_to 'Back', bps_path %>

@@ -1,0 +1,17 @@
+<fieldset><legend>Required: <%= link_to "Edit" , edit_profile_path( :fieldset => "required") %></legend>
+
+
+
+  <p>
+    <%="dob:".capitalize %> <!-- was a br -->
+    <%= @profile.dob %>
+  </p>
+    <p>
+    <%="rx affiliate no:".capitalize %> <!-- was a br -->
+    <%= @profile.rx_affiliate_no %>
+  </p>
+    <p>
+    <%="height inch:".capitalize %> <!-- was a br -->
+    <%= @profile.height_inch %>
+  </p>
+  </fieldset>

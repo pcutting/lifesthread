@@ -1,0 +1,23 @@
+<p>
+  <b>Relationship type:</b>
+  <%=h @relationship.relationship_type %>
+</p>
+
+<p>
+  <b>Nick name:</b>
+  <%=h @relationship.nick_name %>
+</p>
+
+<p>
+  <b>Known since:</b>
+  <%=h @relationship.known_since %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%=h @relationship.age %>
+</p>
+
+
+<%= link_to 'Edit', edit_relationship_path(@relationship) %> |
+<%= link_to 'Back', relationships_path %>

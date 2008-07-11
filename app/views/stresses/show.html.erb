@@ -1,0 +1,28 @@
+<p>
+  <b>Category:</b>
+  <%=h @stress.category %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @stress.title %>
+</p>
+
+<p>
+  <b>First acknowledged:</b>
+  <%=h @stress.first_acknowledged %>
+</p>
+
+<p>
+  <b>Initial effect on life:</b>
+  <%=h @stress.initial_effect_on_life %>
+</p>
+
+<p>
+  <b>Desired effect on lifestyle:</b>
+  <%=h @stress.desired_effect_on_lifestyle %>
+</p>
+
+
+<%= link_to 'Edit', edit_stress_path(@stress) %> |
+<%= link_to 'Back', stresses_path %>

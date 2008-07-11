@@ -1,0 +1,14 @@
+<fieldset><legend>Required</legend>
+  <p>
+    <%= f.label :dob %><!-- was a br -->
+    <%= f.date_select :dob, :start_year => 1900 %>
+  </p>
+    <p>
+    <%= f.label :rx_affiliate_no %><!-- was a br -->
+    <%= f.text_field :rx_affiliate_no , :size => 8%>
+  </p>
+    <p>
+    <%= f.label :height_inch %><!-- was a br -->
+    <%= f.text_field :height_inch , :size => 2%>
+  </p>
+  </fieldset>

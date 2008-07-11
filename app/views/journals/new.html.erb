@@ -1,0 +1,31 @@
+<h1>New journal</h1>
+
+<% form_for([@relationship, @journal]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :event %><br />
+    <%= f.text_field :event %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :temperature %><br />
+    <%= f.text_field :temperature %>
+  </p>
+  <p>
+    <%= f.label :comfort_zone %><br />
+    <%= f.text_field :comfort_zone %>
+  </p>
+  <p>
+    <%= f.label :satisfaction %><br />
+    <%= f.text_field :satisfaction %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', relationship_journals_path(@relationship) %>

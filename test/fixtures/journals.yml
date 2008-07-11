@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  relationship: one
+  event: my sons birthday
+  description: went to chucky cheese, had dinner
+  temperature: 90
+  comfort_zone: 0
+  satisfaction: 80
+
+two:
+  relationship: one
+  event: fathersday
+  description: celebration
+  temperature: 100
+  comfort_zone: 0
+  satisfaction: 100

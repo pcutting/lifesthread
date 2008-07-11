@@ -1,0 +1,15 @@
+<fieldset>
+<legend> Ethnicity: <%= link_to "Edit" , edit_profile_path( :fieldset => "ethnicity") %></legend>
+  <p>
+    <%="body shape:".capitalize %> <!-- was a br -->
+    <%= @profile.body_shape.capitalize %>
+  </p>
+  <p>
+    <%="sex:".capitalize %> <!-- was a br -->
+    <%= @profile.sex.capitalize %>
+  </p>
+  <p>
+    <%="race:".capitalize %> <!-- was a br -->
+    <%= @profile.race.capitalize %>
+  </p>
+</fieldset>

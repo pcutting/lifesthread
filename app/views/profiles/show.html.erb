@@ -1,0 +1,26 @@
+
+<%= link_to 'Edit', edit_profile_path %> |
+<%= link_to 'Back', profile_path %>
+<br />
+<br />
+
+<table>
+<tr>
+<td>
+
+<%= render :partial => "required_view"  %>
+<%= render :partial => "address_view"  %>
+<%= render :partial => "ethnicity_view"   %>
+<%= render :partial => "contact_view"   %>
+<%= render :partial => "womens_concerns_view"  if @profile.sex == "female" %>
+
+</td>
+<td>
+<%= render :partial => "personal_details_view"   %>
+<%= render :partial => "substance_usage_view"   %>
+<%= render :partial => "emergency_contact_view"   %>
+
+</td>
+</td>
+</table>
+

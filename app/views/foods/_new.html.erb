@@ -1,0 +1,43 @@
+
+<table>
+  <tr>
+    <th colspan = 3> <%= f.label :date %> </th>
+    <th> <%= f.label :category %> </th>
+    <th> <%= f.label :sub_category %> </th>
+    <th> <%= f.label :name %> </th>
+    <th> <%= f.label :meal %> </th>
+    
+    <th> <%= f.label :comment %> </th>
+</tr>
+<tr>
+    <td colspan = 3> <%= f.date_select :date %> </td>
+    <td>  <%= f.text_field :category , :size => 6 %> </td>
+    <td>  <%= f.text_field :subcategory  , :size => 6 %> </td>
+    <td>  <%= f.text_field :name  , :size => 6 %></td>
+    <td> <%= f.text_field :meal , :size => 5 %> </td>
+    <td> <%= f.text_field :comment %> </td>
+</tr>
+<tr>
+    <th> <%= f.label :calories_per_serving %> </th>
+    <th> <%= f.label :protein %> </th>
+    <th> <%= f.label :fiber %> </th>
+    <th> <%= f.label :simple_carbs %> </th>
+    <th> <%= f.label :complex_carbs %> </th>
+    <th> <%= f.label :mono_unsat_fats %> </th>
+    <th> <%= f.label :poly_unsat_fats %> </th>
+    <th> <%= f.label :saturated_fats %> </th>
+
+</tr>
+<tr>
+
+    <td> <%= f.text_field :calories_per_serving , :size => 5 %> </td>
+    <td> <%= f.text_field :protein  , :size =>  2 %> </td>
+    <td> <%= f.text_field :fiber , :size => 2 %> </td>
+    <td>  <%= f.text_field :simple_carbs , :size => 2 %> </td>
+    <td> <%= f.text_field :complex_carbs , :size => 2 %> </td>
+    <td> <%= f.text_field :monounsaturated_fats , :size => 2 %> </td>
+    <td> <%= f.text_field :polyunsaturated_fats , :size => 2 %> </td>
+    <td> <%= f.text_field :saturated_fats , :size => 2 %> </td>
+</tr>
+</table>
+

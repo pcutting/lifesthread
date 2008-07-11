@@ -1,0 +1,13 @@
+<p>
+  <b>Question:</b>
+  <%=h @opinion.question %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @opinion.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_opinion_path(@opinion) %> |
+<%= link_to 'Back', opinions_path %>

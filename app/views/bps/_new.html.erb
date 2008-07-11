@@ -1,0 +1,18 @@
+
+<table>
+  <tr>
+    <th colspan= 4>New Blood pressure</th>
+  </tr>
+  <tr>
+    <th><%= f.label :systolic %></th>
+    <th><%= f.label :diastolic %> </th>
+    <th><%= f.label :measured_on %> </th>
+    <th><%= f.label :comment %></th>
+  </tr>
+  <tr>
+    <td><%= f.text_field :systolic, :size => 4  %></td>
+    <td><%= f.text_field :diastolic, :size => 4  %></td>
+    <td><%= f.datetime_select :measured_on , :start_year => 1900  %></td>
+    <td><%= f.text_field :comment %></td>
+  </tr>
+</table>

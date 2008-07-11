@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: test
+  title: diabetes
+  has: false
+  controlled: false
+  at_risk: false
+  in_family_history: true
+  concerned_about: false
+  comment: on grandparents (father) side
+
+two:
+  user: test
+  title: Cancer
+  has: false
+  controlled: false
+  at_risk: false
+  in_family_history: true
+  concerned_about: true
+  comment: grandfather

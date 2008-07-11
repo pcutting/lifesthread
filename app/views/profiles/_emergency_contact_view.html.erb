@@ -1,0 +1,31 @@
+<fieldset>
+  <legend>Emergency Contact Data: <%= link_to "Edit" , edit_profile_path( :fieldset => "emergency") %></legend>
+  <p>
+    <%="emergency contact:".capitalize %> <!-- was a br -->
+    <%= @profile.emergency_contact %>
+  </p>
+  <p>
+    <%="emergency phone:".capitalize %> <!-- was a br -->
+    <%= @profile.emergency_phone %>
+  </p>
+  <p>
+    <%="emergency relationship:".capitalize %> <!-- was a br -->
+    <%= @profile.emergency_relationship %>
+  </p>
+  <p>
+    <%="emergency address:".capitalize %> <!-- was a br -->
+    <%= @profile.emergency_address %>
+  </p>
+  <p>
+    <%="emergency city:".capitalize %> <!-- was a br -->
+    <%= @profile.emergency_city %>
+  </p>
+  <p>
+    <%="emergency state:".capitalize %> <!-- was a br -->
+    <%= @profile.emergency_state %>
+  </p>
+  <p>
+    <%="emergency zip:".capitalize %> <!-- was a br -->
+    <%= @profile.emergency_zip %>
+  </p>
+</fieldset>

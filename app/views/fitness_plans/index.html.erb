@@ -1,0 +1,42 @@
+<h1>Your Fitness plans</h1>
+
+<table>
+  <tr>
+    <th>Label</th>
+    <th>Time length for workout</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Your why</th>
+    <th>Mon</th>
+    <th>Tue</th>
+    <th>Wed</th>
+    <th>Thur</th>
+    <th>Fri</th>
+    <th>Sat</th>
+    <th>Sun</th>
+  </tr>
+
+<% for fitness_plan in @fitness_plans %>
+  <tr>
+    <td><%=h fitness_plan.label %></td>
+    <td><%=h fitness_plan.time_length_for_workout %></td>
+    <td><%=h fitness_plan.start %></td>
+    <td><%=h fitness_plan.end %></td>
+    <td><%=h fitness_plan.your_why %></td>
+    <td><%=h fitness_plan.mon %></td>
+    <td><%=h fitness_plan.tue %></td>
+    <td><%=h fitness_plan.wed %></td>
+    <td><%=h fitness_plan.thur %></td>
+    <td><%=h fitness_plan.fri %></td>
+    <td><%=h fitness_plan.sat %></td>
+    <td><%=h fitness_plan.sun %></td>
+    <td><%= link_to 'Exercises', fitness_plan_exercises_path(fitness_plan) %></td>
+    <td><%= link_to 'Edit', edit_fitness_plan_path(fitness_plan) %></td>
+    <td><%= link_to 'Destroy', fitness_plan, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New fitness_plan', new_fitness_plan_path %>

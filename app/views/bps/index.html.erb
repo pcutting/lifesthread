@@ -1,0 +1,34 @@
+<h1>Blood pressure</h1>
+<br />
+<%= render :partial => "chart" %>
+<hr />
+
+<%= render :partial => "new_inform" %>
+
+
+<table>
+  <tr>
+    <th>Measured on</th>
+    <th>Comment</th>
+    <th>Systolic</th>
+    <th>Diastolic</th>
+  </tr>
+
+<% for bp in @bps %>
+  <tr>
+    <td><%=h bp.measured_on %></td>
+    <td><%=h bp.comment %></td>
+    <td><%=h bp.systolic %></td>
+    <td><%=h bp.diastolic %></td>
+    <td><%= link_to 'Edit', edit_bp_path(bp) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New bp', new_bp_path %><br />
+
+
+<br />
+

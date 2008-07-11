@@ -1,0 +1,73 @@
+<p>
+  <b>Category:</b>
+  <%=h @food.category %>
+</p>
+
+<p>
+  <b>Subcategory:</b>
+  <%=h @food.subcategory %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @food.name %>
+</p>
+
+<p>
+  <b>Calories per serving:</b>
+  <%=h @food.calories_per_serving %>
+</p>
+
+<p>
+  <b>Protein:</b>
+  <%=h @food.protein %>
+</p>
+
+<p>
+  <b>Fiber:</b>
+  <%=h @food.fiber %>
+</p>
+
+<p>
+  <b>Simple carbs:</b>
+  <%=h @food.simple_carbs %>
+</p>
+
+<p>
+  <b>Complex carbs:</b>
+  <%=h @food.complex_carbs %>
+</p>
+
+<p>
+  <b>Monounsaturated fats:</b>
+  <%=h @food.monounsaturated_fats %>
+</p>
+
+<p>
+  <b>Polyunsaturated fats:</b>
+  <%=h @food.polyunsaturated_fats %>
+</p>
+
+<p>
+  <b>Saturated fats:</b>
+  <%=h @food.saturated_fats %>
+</p>
+
+<p>
+  <b>Meal:</b>
+  <%=h @food.meal %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%=h @food.date %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @food.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_food_path(@food) %> |
+<%= link_to 'Back', foods_path %>

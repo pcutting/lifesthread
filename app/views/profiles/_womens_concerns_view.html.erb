@@ -1,0 +1,15 @@
+
+<fieldset><legend>Women's Concerns: <%= link_to "Edit" , edit_profile_path( :fieldset => "women") %></legend>
+  <p>
+    <%="Pregnant: ".capitalize %> <!-- was a br -->
+    <%=if @profile.is_pregnant then "Yes" else "No" end %>
+    <%="Conception:".capitalize %> <!-- was a br -->
+    <%= @profile.conception_on %>
+  </p>
+  <p>
+    <%="Menopause:".capitalize %> <!-- was a br -->
+    <%= if @profile.is_menopause then "Yes" else "No" end  %>
+  </p>
+
+</fieldset>
+  

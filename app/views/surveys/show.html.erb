@@ -1,0 +1,13 @@
+<p>
+  <b>Question:</b>
+  <%=h @survey.question %>
+</p>
+
+<p>
+  <b>Is active:</b>
+  <%=h @survey.is_active %>
+</p>
+
+
+<%= link_to 'Edit', edit_survey_path(@survey) %> |
+<%= link_to 'Back', surveys_path %>

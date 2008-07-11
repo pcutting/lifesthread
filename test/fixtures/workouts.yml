@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+wo_one:
+  user: test
+  title: upper body
+  day: 2008-07-04
+  start_time: 2008-07-04 21:15:13
+  end_time: 2008-07-04 21:15:13
+  supplements: MyString
+  comment: user:test 1
+
+wo_two:
+  user: test
+  title: lower body
+  day: 2008-07-04
+  start_time: 2008-07-04 21:15:13
+  end_time: 2008-07-04 21:15:13
+  supplements: MyString
+  comment: user:test 2

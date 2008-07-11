@@ -1,0 +1,23 @@
+  <fieldset> 
+  <legend>Address: <%= link_to "Edit" , edit_profile_path( :fieldset => "address") %></legend>
+  <p>
+    <%="address:".capitalize %> <!-- was a br -->
+    <%= @profile.address1.capitalize %>
+  </p>
+  <p>
+    <%="address:".capitalize %> <!-- was a br -->
+    <%= @profile.address2 %>
+  </p>
+  <p>
+    <%="city:".capitalize %> <!-- was a br -->
+    <%= @profile.city.capitalize %>
+  </p>
+  <p>
+    <%="state:".capitalize %> <!-- was a br -->
+    <%= @profile.state %>
+  </p>
+  <p>
+    <%="zip:".capitalize %> <!-- was a br -->
+    <%= @profile.zip %>
+  </p>
+  </fieldset>

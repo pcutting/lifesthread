@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+fp_one:
+  user: test
+  label: Upper body work out
+  time_length_for_workout: 1
+  start: 2008-07-04
+  end: 2008-07-04
+  your_why: why1
+  mon: false
+  tue: false
+  wed: false
+  thur: false
+  fri: false
+  sat: false
+  sun: false
+
+fp_two:
+  user: test
+  label: Trunk Work out
+  time_length_for_workout: 1
+  start: 2008-07-04
+  end: 2008-07-04
+  your_why: why 2
+  mon: false
+  tue: false
+  wed: false
+  thur: false
+  fri: false
+  sat: false
+  sun: false

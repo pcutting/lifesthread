@@ -1,0 +1,27 @@
+<h1>New relationship</h1>
+
+<% form_for(@relationship) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :relationship_type %><br />
+    <%= f.text_field :relationship_type %>
+  </p>
+  <p>
+    <%= f.label :nick_name %><br />
+    <%= f.text_field :nick_name %>
+  </p>
+  <p>
+    <%= f.label :known_since %><br />
+    <%= f.date_select :known_since %>
+  </p>
+  <p>
+    <%= f.label :age %><br />
+    <%= f.date_select :age %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', relationships_path %>

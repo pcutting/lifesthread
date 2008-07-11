@@ -1,0 +1,38 @@
+<h1>Exercises</h1>
+
+<table>
+  <tr>
+
+    <th>Style</th>
+    <th>Exercise</th>
+    <th>Length</th>
+    <th>Reps</th>
+    <th>Resistance</th>
+    <th>Unit</th>
+    <th>Calories burned</th>
+    <th>Intensity</th>
+    <th>Comfort Level</th>
+  </tr>
+
+<% for exercise in @exercises %>
+  <tr>
+
+    <td><%=h exercise.style %></td>
+    <td><%=h exercise.exercise %></td>
+    <td><%=h exercise.length %></td>
+    <td><%=h exercise.reps %></td>
+    <td><%=h exercise.resistance %></td>
+    <td><%=h exercise.unit %></td>
+    <td><%=h exercise.calories_burned %></td>
+    <td><%=h exercise.intensity %></td>
+    <td><%=h exercise.comfort_level %></td>
+    <td><%= link_to 'Show', polymorphic_path([@parent, exercise ]) %></td>
+    <td><%= link_to 'Edit', edit_polymorphic_path([@parent, exercise]) %></td>
+    <td><%= link_to 'Destroy', polymorphic_path([@parent, exercise]), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New exercise', new_polymorphic_path([@parent, exercise]) %>

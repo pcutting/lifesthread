@@ -1,0 +1,35 @@
+<h1>New sTress log entry</h1>
+
+<% form_for([@stress, @stress_log]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :measured_on %><br />
+    <%= f.datetime_select :measured_on %>
+  </p>
+  <p>
+    <%= f.label :event %><br />
+    <%= f.text_field :event %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :action_taken %><br />
+    <%= f.text_field :action_taken %>
+  </p>
+  <p>
+    <%= f.label :effect_on_life %><br />
+    <%= f.text_field :effect_on_life %>
+  </p>
+  <p>
+    <%= f.label :perceivable_progress %><br />
+    <%= f.text_field :perceivable_progress %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', stress_stress_logs_path(@stress) %>

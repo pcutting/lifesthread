@@ -1,0 +1,142 @@
+ <div id="overview" style="margin-left:50px;margin-top:20px;width:400px;height:50px"></div>
+    <p> Try zooming. The image above shows an adjustable overview. Click and drag to select a zone.</p>
+ <div id="placeholder" style="width:600px;height:600px;"></div>
+
+<script id="source" language="javascript" type="text/javascript">
+
+$(function () {
+
+  <% plot_data = [] -%>
+
+//Blood pressure data
+  <% bp1 = [] -%><% bp2 = [] -%>
+
+  <% for bps in current_user.bps.find(:all, :order => "measured_on asc") -%>
+     <% bp1 << [ "[ #{bps.measured_on.to_i * 1000}, #{bps.systolic} ]" ] -%>
+     <% bp2 << [ "[ #{bps.measured_on.to_i * 1000}, #{bps.diastolic}]" ] -%>
+  <% end -%> 
+
+     <% plot_data << "label: 'Systolic', data: [#{bp1.join(",")}]" %> 
+     <% plot_data << "label: 'Diastolic' , data: [#{bp2.join(",")}]" %>  
+
+   // var d1 = [[1196463600000, 0], [1196550000000, 0], ... [1197068400000, 1086]];
+
+//weight and measurements data
+  <%- meas1 = [] -%><%- meas2 = [] -%><%- meas3 = [] -%>
+  <%- meas4 = [] -%><%- meas5 = [] -%><%- meas6 = [] -%>
+  <%- meas7 = [] -%><%- meas8 = [] -%>
+
+  <% for measurement in current_user.measurements.find(:all, :order => "measured_on asc") %>
+      <% meas1  << "[ #{measurement.measured_on.to_time.to_i * 1000} , #{measurement.weight}]" %>
+      <% meas3  << "[ #{measurement.measured_on.to_time.to_i * 1000} , #{measurement.fat_percent}]" %>
+      <% meas4  << "[ #{measurement.measured_on.to_time.to_i * 1000} , #{measurement.muscle_percent}]" %>
+      <% meas5  << "[ #{measurement.measured_on.to_time.to_i * 1000} , #{measurement.visceral_fat}]" %>
+      <% meas6  << "[ #{measurement.measured_on.to_time.to_i * 1000} , #{measurement.chest}]" %>
+      <% meas7  << "[ #{measurement.measured_on.to_time.to_i * 1000} , #{measurement.belly}]" %>
+      <% meas8  << "[ #{measurement.measured_on.to_time.to_i * 1000} , #{measurement.hip} ]" %>
+   <% end %>
+
+  <% plot_data << "label: 'Weight', data: [#{meas1.join(",")}]" %> 
+  <% plot_data << "label: 'Fat%', data: [#{meas3.join(",")}]" %> 
+  <% plot_data << "label: 'Muscle%', data: [#{meas4.join(",")}]" %> 
+  <% plot_data << "label: 'Visceral Fat%', data: [#{meas5.join(",")}]" %> 
+  <% plot_data << "label: 'Chest', data: [#{meas6.join(",")}]" %> 
+  <% plot_data << "label: 'Belly', data: [#{meas7.join(",")}]" %> 
+  <% plot_data << "label: 'Hip', data: [#{meas8.join(",")}]" %> 
+
+// cholesterol
+  <% cholesterol1 = [] -%><% cholesterol2 = [] -%>
+
+  <% for cholesterols in current_user.cholesterols.find(:all, :order => "measured_on asc") -%>
+     <% cholesterol1 << [ "[ #{cholesterols.measured_on.to_i * 1000}, #{cholesterols.hdl} ]" ] -%>
+     <% cholesterol2 << [ "[ #{cholesterols.measured_on.to_i * 1000}, #{cholesterols.ldl}]" ] -%>
+  <% end -%> 
+
+     <% plot_data << "label: 'HDL', data: [#{cholesterol1.join(",")}]" %> 
+     <% plot_data << "label: 'LDL' , data: [#{cholesterol2.join(",")}]" %>  
+
+
+
+    
+    var options = {
+        xaxis: { mode: "time" },
+        selection: { mode: "x" },
+        //grid: { coloredAreas: weekendAreas },
+        legend: {
+            show: true,
+            //labelFormatter: null,
+            //labelBoxBorderColor: color,
+            noColumns: 7,
+            position: "sw",   // "ne" or "nw" or "se" or "sw"
+            //margin: number of pixels
+            //backgroundColor: null or color
+            backgroundOpacity: 0.0,  // number in 0.0 - 1.0
+            //container: null or jQuery object
+  }
+    };
+    
+        var options_overview = {
+        points: { show: true, fill: true },
+        xaxis: { mode: "time" },
+        selection: { mode: "x" },
+        //grid: { coloredAreas: weekendAreas },
+        legend: {
+            show: false,
+            //labelFormatter: null,
+            //labelBoxBorderColor: color,
+            noColumns: 6 ,
+            position: "nw",   // "ne" or "nw" or "se" or "sw"
+            //margin: number of pixels
+            //backgroundColor: null or color
+            backgroundOpacity: .9 // number in 0.0 - 1.0
+            //container: null or jQuery object
+  }
+    };
+    
+    var plot = $.plot($("#placeholder"), 
+    [ {<%= plot_data.join(" ,points: { show: true }, lines: { show: true }
+ }, {") %> }
+    ], options);
+    
+    var overview = $.plot($("#overview"), 
+      [
+      {<%= plot_data.join(" }, {") %>}
+      ], {
+        lines: { show: true, lineWidth: 2 },
+        shadowSize: 0,
+        legend: {
+            show: false },
+        xaxis: { ticks: 6, mode: "time" },
+        // yaxis: { ticks: [], min: 0, max: 4000 },
+        selection: { mode: "x" }
+    });
+
+    // now connect the two
+    var internalSelection = false;
+    
+    $("#placeholder").bind("selected", function (event, area) {
+        // do the zooming
+        plot = $.plot($("#placeholder"),
+        [{<%= plot_data.join("  ,points: { show: true }, lines: { show: true }}, {") %>}],
+                      $.extend(true, {}, options, {
+                          xaxis: { min: area.x1, max: area.x2 }
+                      }));
+        
+        if (internalSelection)
+            return; // prevent eternal loop
+        internalSelection = true;
+        overview.setSelection(area);
+        internalSelection = false;
+    });
+    
+    $("#overview").bind("selected", function (event, area) {
+        if (internalSelection)
+            return;
+        internalSelection = true;
+        plot.setSelection(area);
+        internalSelection = false;
+    });
+});
+</script>
+
+

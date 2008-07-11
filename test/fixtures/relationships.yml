@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: test
+  relationship_type: spouse
+  nick_name: wifiepoo
+  known_since: 1999-06-24
+  age: 1982-06-24
+
+two:
+  user: aaron
+  relationship_type: MyString
+  nick_name: MyString
+  known_since: 2008-06-24
+  age: 2008-06-24

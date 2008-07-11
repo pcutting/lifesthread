@@ -1,0 +1,33 @@
+<p>
+  <b>Measured on:</b>
+  <%=h @stress_log.measured_on %>
+</p>
+
+<p>
+  <b>Event:</b>
+  <%=h @stress_log.event %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @stress_log.description %>
+</p>
+
+<p>
+  <b>Action taken:</b>
+  <%=h @stress_log.action_taken %>
+</p>
+
+<p>
+  <b>Effect on life:</b>
+  <%=h @stress_log.effect_on_life %>
+</p>
+
+<p>
+  <b>Perceivable progress:</b>
+  <%=h @stress_log.perceivable_progress %>
+</p>
+
+
+<%= link_to 'Edit', [:edit, @stress,@stress_log] %> |
+<%= link_to 'Back', stress_stress_logs_path %>

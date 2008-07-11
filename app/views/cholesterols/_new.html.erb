@@ -1,0 +1,17 @@
+<table>
+
+<tr>
+<th> <%= f.label :measured_on %> </th>
+<th> <%= f.label :comment %> </th>
+<th> <%= f.label :hdl %> </th>
+<th> <%= f.label :ldl %> </th>
+</tr>
+
+<tr>
+<td> <%= f.datetime_select :measured_on %> </td>
+<td> <%= f.text_field :comment %> </td>
+<td> <%= f.text_field :hdl, :size => 4 %> </td>
+<td> <%= f.text_field :ldl, :size => 4 %> </td>
+</tr>
+
+</table>

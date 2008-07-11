@@ -1,0 +1,26 @@
+<h1>Listing relationships</h1>
+
+<table>
+  <tr>
+    <th>Relationship type</th>
+    <th>Nick name</th>
+    <th>Known since</th>
+    <th>Age</th>
+  </tr>
+
+<% for relationship in @relationships %>
+  <tr>
+     <td><%=h relationship.relationship_type %></td>
+    <td><%=h relationship.nick_name %></td>
+    <td><%=h relationship.known_since %></td>
+    <td><%=h relationship.age %></td>
+    <td><%= link_to 'Journal', relationship_journals_path(relationship) %></td>
+    <td><%= link_to 'Edit', edit_relationship_path(relationship) %></td>
+    <td><%= link_to 'Destroy', relationship, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New relationship', new_relationship_path %>

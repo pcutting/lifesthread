@@ -1,0 +1,28 @@
+<h1>Listing cholesterols</h1>
+<%= render :partial => "chart" %>
+<hr />
+<%= render :partial => "new_inform" %>
+
+
+<table>
+  <tr>
+    <th>Measured on</th>
+    <th>Comment</th>
+    <th>Hdl</th>
+    <th>Ldl</th>
+  </tr>
+
+<% for cholesterol in @cholesterols %>
+  <tr>
+    <td><%=h cholesterol.measured_on %></td>
+    <td><%=h cholesterol.comment %></td>
+    <td><%=h cholesterol.hdl %></td>
+    <td><%=h cholesterol.ldl %></td>
+    <td><%= link_to 'Edit', edit_cholesterol_path(cholesterol) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New cholesterol', new_cholesterol_path %>

@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: test 
+  approx_date: 2008-06-26
+  hospital: Memorial
+  problem: Heart
+  treatment: new heart
+  doctor: Dr Who
+  city: Colorado springs
+  state: Colorado
+  dr_phone: 315-222-555
+  required_hospitalization: true
+
+two:
+  user: aaron
+  approx_date: 2008-06-26
+  hospital: MyString
+  problem: MyString
+  treatment: MyString
+  doctor: MyString
+  city: MyString
+  state: MyString
+  dr_phone: MyString
+  required_hospitalization: false

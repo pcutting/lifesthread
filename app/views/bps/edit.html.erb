@@ -1,0 +1,14 @@
+<h1>Editing Blood Pressure</h1>
+
+<% form_for(@bp) do |f| %>
+  <%= f.error_messages %>
+
+  <%= render :partial => "new" , :locals => {:f => f} %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @bp %> |
+<%= link_to 'Back', bps_path %>

@@ -1,0 +1,28 @@
+<h1>Listing journals</h1>
+
+<table>
+  <tr>
+    <th>Event</th>
+    <th>Description</th>
+    <th>Temperature</th>
+    <th>Comfort zone</th>
+    <th>Satisfaction</th>
+  </tr>
+
+<% for journal in @journals %>
+  <tr>
+    <td><%=h journal.event %></td>
+    <td><%=h journal.description %></td>
+    <td><%=h journal.temperature %></td>
+    <td><%=h journal.comfort_zone %></td>
+    <td><%=h journal.satisfaction %></td>
+    <td><%= link_to 'Show',[@relationship, journal ] %></td>
+    <td><%= link_to 'Edit', [:edit, @relationship , journal] %></td>
+    <td><%= link_to 'Destroy',[@relationship, journal], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New journal', new_relationship_journal_path(@relationship) %>

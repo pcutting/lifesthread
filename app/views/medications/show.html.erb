@@ -1,0 +1,63 @@
+<p>
+  <b>Name:</b>
+  <%=h @medication.name %>
+</p>
+
+<p>
+  <b>Strength:</b>
+  <%=h @medication.strength %>
+</p>
+
+<p>
+  <b>Unit type:</b>
+  <%=h @medication.unit_type %>
+</p>
+
+<p>
+  <b>Prescribed start:</b>
+  <%=h @medication.prescribed_start %>
+</p>
+
+<p>
+  <b>Prescribed end:</b>
+  <%=h @medication.prescribed_end %>
+</p>
+
+<p>
+  <b>Actual start:</b>
+  <%=h @medication.actual_start %>
+</p>
+
+<p>
+  <b>Actual stop:</b>
+  <%=h @medication.actual_stop %>
+</p>
+
+<p>
+  <b>Dosage:</b>
+  <%=h @medication.dosage %>
+</p>
+
+<p>
+  <b>Dosage unit:</b>
+  <%=h @medication.dosage_unit %>
+</p>
+
+<p>
+  <b>Purpose:</b>
+  <%=h @medication.purpose %>
+</p>
+
+<p>
+  <b>Result:</b>
+  <%=h @medication.result %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @medication.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_medication_path(@medication) %> |
+<%= link_to 'Back', medications_path %>

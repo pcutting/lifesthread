@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: test
+  category: School
+  title: grant requirements
+  first_acknowledged: 2007-06-24
+  initial_effect_on_life: 75
+  desired_effect_on_lifestyle: 0
+
+two:
+  user: test
+  category: Social
+  title: fratunity
+  first_acknowledged: 2008-01-01
+  initial_effect_on_life: 50
+  desired_effect_on_lifestyle: 0

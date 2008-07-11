@@ -1,0 +1,145 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  exercisable: wo_one
+  exercisable_type: Workout
+  style: MyString
+  exercise: MyString
+  length: 1
+  reps: 1
+  resistance: 1
+  unit: MyString
+  calories_burned: 1
+  intensity: MyString
+
+two:
+  exercisable: fp_one
+  exercisable_type: FitnessPlan
+  style: MyString
+  exercise: MyString
+  length: 1
+  reps: 1
+  resistance: 1
+  unit: MyString
+  calories_burned: 1
+  intensity: MyString
+
+three:
+  exercisable: wo_two
+  exercisable_type: Workout
+  style: MyString
+  exercise: MyString
+  length: 1
+  reps: 1
+  resistance: 1
+  unit: MyString
+  calories_burned: 1
+  intensity: MyString
+
+one1:
+  exercisable: wo_one
+  exercisable_type: Workout
+  style: MyString
+  exercise: MyString
+  length: 1
+  reps: 1
+  resistance: 1
+  unit: MyString
+  calories_burned: 1
+  intensity: MyString
+
+two1:
+  exercisable: fp_one
+  exercisable_type: FitnessPlan
+  style: MyString
+  exercise: MyString
+  length: 1
+  reps: 1
+  resistance: 1
+  unit: MyString
+  calories_burned: 1
+  intensity: MyString
+
+three1:
+  exercisable: wo_two
+  exercisable_type: Workout
+  style: MyString
+  exercise: MyString
+  length: 1
+  reps: 1
+  resistance: 1
+  unit: MyString
+  calories_burned: 1
+  intensity: MyString
+  
+one2:
+  exercisable: wo_one
+  exercisable_type: Workout
+  style: MyString
+  exercise: MyString
+  length: 1
+  reps: 1
+  resistance: 1
+  unit: MyString
+  calories_burned: 1
+  intensity: MyString
+
+two2:
+  exercisable: fp_one
+  exercisable_type: FitnessPlan
+  style: MyString
+  exercise: MyString
+  length: 1
+  reps: 1
+  resistance: 1
+  unit: MyString
+  calories_burned: 1
+  intensity: MyString
+
+three2:
+  exercisable: wo_two
+  exercisable_type: Workout
+  style: MyString
+  exercise: MyString
+  length: 1
+  reps: 1
+  resistance: 1
+  unit: MyString
+  calories_burned: 1
+  intensity: MyString
+  
+one3:
+  exercisable: wo_one
+  exercisable_type: Workout
+  style: MyString
+  exercise: MyString
+  length: 1
+  reps: 1
+  resistance: 1
+  unit: MyString
+  calories_burned: 1
+  intensity: MyString
+
+two3:
+  exercisable: fp_one
+  exercisable_type: FitnessPlan
+  style: MyString
+  exercise: MyString
+  length: 1
+  reps: 1
+  resistance: 1
+  unit: MyString
+  calories_burned: 1
+  intensity: MyString
+
+three3:
+  exercisable: wo_two
+  exercisable_type: Workout
+  style: MyString
+  exercise: MyString
+  length: 1
+  reps: 1
+  resistance: 1
+  unit: MyString
+  calories_burned: 1
+  intensity: MyString

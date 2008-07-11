@@ -1,0 +1,30 @@
+<h1>sTress log</h1>
+
+<%= link_to 'New stress log', new_stress_stress_log_path(@stress) %>
+<br /><br />
+<table>
+  <tr>
+    <th>Measured on</th>
+    <th>Event</th>
+    <th>Description</th>
+    <th>Action taken</th>
+    <th>Effect on life</th>
+    <th>Perceivable progress</th>
+  </tr>
+
+<% for stress_log in  @stress_logs %>
+  <tr>
+    <td><%=h stress_log.measured_on %></td>
+    <td><%=h stress_log.event %></td>
+    <td><%=h stress_log.description %></td>
+    <td><%=h stress_log.action_taken %></td>
+    <td><%=h stress_log.effect_on_life %></td>
+    <td><%=h stress_log.perceivable_progress %></td>
+    <td><%= link_to 'Edit', [:edit, @stress,stress_log] %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+

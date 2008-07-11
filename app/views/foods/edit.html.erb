@@ -1,0 +1,12 @@
+<h1>Editing food</h1>
+
+<% form_for(@food) do |f| %>
+  <%= f.error_messages %>
+<%= render :partial => "new", :locals => { :f => f } %>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @food %> |
+<%= link_to 'Back', foods_path %>

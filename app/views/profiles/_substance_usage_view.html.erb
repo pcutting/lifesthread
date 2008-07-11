@@ -1,0 +1,29 @@
+  
+<fieldset><legend>Substance Use and Exposure: <%= link_to "Edit" , edit_profile_path( :fieldset => "substance") %></legend>
+  <p>
+   List unusual substance exposure: <!-- was a br -->
+    <%= @profile.list_unusual_substance_exposure.capitalize %>
+  </p>
+  <p>
+   Smoker: <!-- was a br -->
+    <%= if @profile.smoker then "Yes" else "No" end %>
+  </p>
+  <p>
+   Was smoker: <!-- was a br -->
+    <%= if @profile.was_smoker  then "Yes" else "No" end %>
+  </p>
+  <p>
+   Average smoking: <!-- was a br -->
+    <%= @profile.average_smoking %>
+  </p>
+  <p>
+   Alcoholic: <!-- was a br -->
+    <%= if @profile.alcoholic  then "Yes" else "No" end %>
+  </p>
+  <p>
+   Ounces alcohol weekly: <!-- was a br -->
+    <%= @profile.ounces_alcohol_weekly %>
+  </p>
+
+</fieldset>
+

@@ -1,0 +1,27 @@
+<h1>sTressos</h1>
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Title</th>
+    <th>First acknowledged</th>
+    <th>Initial effect on life</th>
+    <th>Desired effect on lifestyle</th>
+  </tr>
+
+<% for stress in @stresses %>
+  <tr>
+    <td><%=h stress.category %></td>
+    <td><%=h stress.title %></td>
+    <td><%=h stress.first_acknowledged %></td>
+    <td><%=h stress.initial_effect_on_life %></td>
+    <td><%=h stress.desired_effect_on_lifestyle %></td>
+    <td><%= link_to 'Log', stress_stress_logs_path(stress) %></td>
+    <td><%= link_to 'Edit', edit_stress_path(stress) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New stress', new_stress_path %>

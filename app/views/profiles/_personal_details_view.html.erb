@@ -1,0 +1,38 @@
+
+<fieldset><legend>Personal Details: <%= link_to "Edit" , edit_profile_path( :fieldset => "personal") %></legend>
+  <p>
+    <%="primary care physician:".capitalize %> <!-- was a br -->
+    <%= @profile.primary_care_physician %>
+  </p>
+    <p>
+    <%="eduction_years:".capitalize %> <!-- was a br -->
+    <%= @profile.eduction_years %>
+  </p>
+  <p>
+    <%="employer name:".capitalize %> <!-- was a br -->
+    <%= @profile.employer_name.capitalize %>
+  </p>
+    <p>
+    <%="occupation:".capitalize %> <!-- was a br -->
+    <%= @profile.occupation.capitalize %>
+  </p>
+  <p>
+    <%="marital status:".capitalize %> <!-- was a br -->
+    <%= @profile.marital_status.capitalize %>
+  </p>
+  <p>
+    <%="partner employer:".capitalize %> <!-- was a br -->
+    <%= @profile.partner_employer.capitalize %>
+  </p>
+
+    <p>
+    <%="have children:".capitalize %> <!-- was a br -->
+    <%= if @profile.has_children  then "Yes" else "No" end %>
+    
+       
+    <%="number of children:".capitalize %> <!-- was a br -->
+    <%= @profile.number_of_children %>
+
+  </p>
+</fieldset>
+  

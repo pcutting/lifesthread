@@ -1,0 +1,38 @@
+<p>
+  <b>Title:</b>
+  <%=h @illness_history.title %>
+</p>
+
+<p>
+  <b>Has:</b>
+  <%=h @illness_history.has %>
+</p>
+
+<p>
+  <b>Controlled:</b>
+  <%=h @illness_history.controlled %>
+</p>
+
+<p>
+  <b>At risk:</b>
+  <%=h @illness_history.at_risk %>
+</p>
+
+<p>
+  <b>In family history:</b>
+  <%=h @illness_history.in_family_history %>
+</p>
+
+<p>
+  <b>Concerned about:</b>
+  <%=h @illness_history.concerned_about %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @illness_history.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_illness_history_path(@illness_history) %> |
+<%= link_to 'Back', illness_histories_path %>

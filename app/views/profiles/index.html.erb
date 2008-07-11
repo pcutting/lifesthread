@@ -1,0 +1,94 @@
+<h1>Listing profiles</h1>
+
+<table>
+  <tr>
+    <th>Dob</th>
+    <th>Address1</th>
+    <th>Address2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Cell phone</th>
+    <th>Phone</th>
+    <th>Work phone</th>
+    <th>Email</th>
+    <th>Height inch</th>
+    <th>Body shape</th>
+    <th>Sex</th>
+    <th>Race</th>
+    <th>Rx affiliate no</th>
+    <th>Sale code</th>
+    <th>Terms agreed</th>
+    <th>Terms agreed on</th>
+    <th>Primary care physician</th>
+    <th>Employer name</th>
+    <th>Marital status</th>
+    <th>Partner employer</th>
+    <th>Occupation</th>
+    <th>Emergency contact</th>
+    <th>Emergency phone</th>
+    <th>Emergency relationship</th>
+    <th>Emergency address</th>
+    <th>Emergency city</th>
+    <th>Emergency state</th>
+    <th>Emergency zip</th>
+    <th>Number of children</th>
+    <th>List unusual substance exposure</th>
+    <th>Eduction years</th>
+    <th>Smoker</th>
+    <th>Was smoker</th>
+    <th>Average smoking</th>
+    <th>Alcoholic</th>
+    <th>Ounces alcohol weekly</th>
+  </tr>
+
+<% for profile in @profiles %>
+  <tr>
+    <td><%=h profile.dob %></td>
+    <td><%=h profile.address1 %></td>
+    <td><%=h profile.address2 %></td>
+    <td><%=h profile.city %></td>
+    <td><%=h profile.state %></td>
+    <td><%=h profile.zip %></td>
+    <td><%=h profile.cell_phone %></td>
+    <td><%=h profile.phone %></td>
+    <td><%=h profile.work_phone %></td>
+    <td><%=h profile.email %></td>
+    <td><%=h profile.height_inch %></td>
+    <td><%=h profile.body_shape %></td>
+    <td><%=h profile.sex %></td>
+    <td><%=h profile.race %></td>
+    <td><%=h profile.rx_affiliate_no %></td>
+    <td><%=h profile.sale_code %></td>
+    <td><%=h profile.terms_agreed %></td>
+    <td><%=h profile.terms_agreed_on %></td>
+    <td><%=h profile.primary_care_physician %></td>
+    <td><%=h profile.employer_name %></td>
+    <td><%=h profile.marital_status %></td>
+    <td><%=h profile.partner_employer %></td>
+    <td><%=h profile.occupation %></td>
+    <td><%=h profile.emergency_contact %></td>
+    <td><%=h profile.emergency_phone %></td>
+    <td><%=h profile.emergency_relationship %></td>
+    <td><%=h profile.emergency_address %></td>
+    <td><%=h profile.emergency_city %></td>
+    <td><%=h profile.emergency_state %></td>
+    <td><%=h profile.emergency_zip %></td>
+    <td><%=h profile.number_of_children %></td>
+    <td><%=h profile.list_unusual_substance_exposure %></td>
+    <td><%=h profile.eduction_years %></td>
+    <td><%=h profile.smoker %></td>
+    <td><%=h profile.was_smoker %></td>
+    <td><%=h profile.average_smoking %></td>
+    <td><%=h profile.alcoholic %></td>
+    <td><%=h profile.ounces_alcohol_weekly %></td>
+    <td><%= link_to 'Show', profile %></td>
+    <td><%= link_to 'Edit', edit_profile_path %></td>
+    <td><%= link_to 'Destroy', profile, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New profile', new_profile_path %>

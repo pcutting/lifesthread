@@ -1,0 +1,29 @@
+<fieldset>
+  <legend>Emergency Contact Data (Optional)  </legend>
+  <p>
+    <%= f.label :emergency_contact %><!-- was a br -->
+    <%= f.text_field :emergency_contact , :size => 10 %>
+  </p>
+  <p>
+    <%= f.label :emergency_phone %><!-- was a br -->
+    <%= f.text_field :emergency_phone, :size => 10 %>
+  </p>
+  <p>
+    <%= f.label :emergency_relationship %><!-- was a br -->
+    <%= f.text_field :emergency_relationship , :size => 10 %>
+  </p>
+  <p>
+    <%= f.label :emergency_address %><!-- was a br -->
+    <%= f.text_field :emergency_address , :size => 20%>
+  </p>
+  <p>
+    <%= f.label :emergency_city %><!-- was a br -->
+    <%= f.text_field :emergency_city , :size => 10 %>
+
+    <%= f.label :emergency_state %><!-- was a br -->
+    <%= f.text_field :emergency_state , :size => 5 %>
+
+    <%= f.label :emergency_zip %><!-- was a br -->
+    <%= f.text_field :emergency_zip , :size => 10%>
+  </p>
+</fieldset>

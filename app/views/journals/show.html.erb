@@ -1,0 +1,28 @@
+<p>
+  <b>Event:</b>
+  <%=h @journal.event %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @journal.description %>
+</p>
+
+<p>
+  <b>Temperature:</b>
+  <%=h @journal.temperature %>
+</p>
+
+<p>
+  <b>Comfort zone:</b>
+  <%=h @journal.comfort_zone %>
+</p>
+
+<p>
+  <b>Satisfaction:</b>
+  <%=h @journal.satisfaction %>
+</p>
+
+
+<%= link_to 'Edit', [:edit, @relationship, @journal] %> |
+<%= link_to 'Back', relationship_journals_path(@relationship) %>

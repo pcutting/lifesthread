@@ -1,0 +1,2 @@
+module StressesHelper
+end

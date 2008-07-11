@@ -1,0 +1,28 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  stress: one
+  measured_on: 2008-06-24 21:28:29
+  event: exam in two weeks
+  description: mid-term comming up in physics
+  action_taken: studied with friends
+  effect_on_life: 30
+  perceivable_progress: 70
+
+two:
+  stress: one
+  measured_on: 2008-06-24 21:28:29
+  event: mid-term physics
+  description: couldn't sleep all night but i worked out in the morning and had a good breakfast + 2 coffies
+  action_taken: took exam
+  effect_on_life: 70
+  perceivable_progress: 100
+  
+three:
+  stress: two
+  measured_on: 2008-06-24 21:28:29
+  event: fratunity search
+  description: looking for a fratunity that matches my interests
+  action_taken: went to recrouting events
+  effect_on_life: 30
+  perceivable_progress: 40
