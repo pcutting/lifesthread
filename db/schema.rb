@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080706171446) do
+ActiveRecord::Schema.define(:version => 20080711202303) do
 
   create_table "bps", :force => true do |t|
     t.integer  "user_id",     :limit => 11
@@ -264,6 +264,36 @@ ActiveRecord::Schema.define(:version => 20080706171446) do
     t.date     "first_acknowledged"
     t.integer  "initial_effect_on_life",      :limit => 11
     t.integer  "desired_effect_on_lifestyle", :limit => 11
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "support_dialogs", :force => true do |t|
+    t.integer  "support_id",       :limit => 11
+    t.integer  "user_id",          :limit => 11
+    t.text     "note"
+    t.integer  "rate_helpfulness", :limit => 11
+    t.boolean  "is_visible"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "supports", :force => true do |t|
+    t.string   "title"
+    t.integer  "priority",         :limit => 11
+    t.string   "category"
+    t.string   "reference_page"
+    t.text     "comment"
+    t.boolean  "resolved"
+    t.datetime "resolved_on"
+    t.boolean  "ok_to_contact"
+    t.string   "contact_number"
+    t.integer  "user_id",          :limit => 11
+    t.boolean  "marked_closed"
+    t.datetime "marked_closed_on"
+    t.boolean  "reopen"
+    t.datetime "reopen_on"
+    t.boolean  "is_visible"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

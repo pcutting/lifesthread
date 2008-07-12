@@ -10,7 +10,6 @@ class ProfilesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @profiles }
     end
   end
 
@@ -21,7 +20,6 @@ class ProfilesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @profile }
     end
   end
 
@@ -32,7 +30,6 @@ class ProfilesController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @profile }
     end
   end
 
@@ -83,7 +80,6 @@ class ProfilesController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to(profile_url) }
-      format.xml  { head :ok }
     end
   end
 end

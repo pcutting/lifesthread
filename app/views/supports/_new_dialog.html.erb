@@ -1,0 +1,14 @@
+<h2>New note:</h2>
+
+<% form_for  :support_dialog,  :url => { :action => :create , :support_id => params[:id] }  do |f| %>
+                  
+  <p>
+    <%= f.text_area :note , :rows => 5, :cols => 60 %>
+  </p>
+
+  <p>
+    <%= f.submit "Add note" %>
+  </p>
+<% end %>
+
+

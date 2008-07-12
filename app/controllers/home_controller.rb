@@ -5,7 +5,7 @@ def index
    
    if current_user.profile.dob.nil? then
       flash[:notice] = "Please fill out your profile so that we can start to build your lifes thread. Thank you!"
-      redirect_to(edit_profile_path)
+      redirect_to(edit_profile_path(:fieldset => "welcome"))
    else
    
    @profile = current_user.profile

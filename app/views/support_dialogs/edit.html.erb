@@ -1,0 +1,32 @@
+<h1>Editing support_dialog</h1>
+
+<% form_for(@support_dialog) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :support %><br />
+    <%= f.text_field :support %>
+  </p>
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.label :note %><br />
+    <%= f.text_area :note %>
+  </p>
+  <p>
+    <%= f.label :rate_helpfulness %><br />
+    <%= f.text_field :rate_helpfulness %>
+  </p>
+  <p>
+    <%= f.label :is_visible %><br />
+    <%= f.check_box :is_visible %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @support_dialog %> |
+<%= link_to 'Back', support_dialogs_path %>

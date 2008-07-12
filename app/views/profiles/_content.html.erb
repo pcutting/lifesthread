@@ -19,11 +19,22 @@
 <%= render :partial => "substance_usage" , :locals => { :f => f } %>
 
 </td>
+<td>
+
+
+<%= render :partial => "womens_concerns" , :locals => { :f => f }  if current_user.profile.sex = "female" %>
+<%= render :partial => "emergency_contact" , :locals => { :f => f } %>
+<% #= render :partial => "" , :locals => { :f => f } %>
+
+
+
+</td>
+
 </tr>
 <tr>
 <td colspan=2>
 
-<%= render ( :partial => "terms" , :locals => { :f => f }) if ! current_user.profile.terms_agreed %>
+<%= render ( :partial => "terms" , :locals => { :f => f }) unless current_user.profile.terms_agreed %>
 
 
 </td>

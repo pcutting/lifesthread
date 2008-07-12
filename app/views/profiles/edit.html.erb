@@ -35,7 +35,9 @@
 
   <% elsif params[:fieldset] == "women" %>
     <%= render :partial => "womens_concerns" , :locals => { :f => f } %>
-
+  
+  <% elsif params[:fieldset] == "welcome" %>
+    <%= render :partial => "welcome" , :locals => { :f => f } %>
   <% end %>
 
 <% else %>

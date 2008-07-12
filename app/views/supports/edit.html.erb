@@ -1,0 +1,71 @@
+<h1>Editing support</h1>
+
+<% form_for(@support) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+    <%= f.label :priority %>[1 = Lowest, 5 = Urgent] 
+    <%= f.select :priority, [1,2,3,4,5], :size=> 3 %>
+  </p>
+  <p>
+    <%= f.label :category %>
+    <%= f.select :category, ["Bug", "Recommendation", "Does not operate as expected", "request for help/clarification", "opinion", "other"], :size=> 15 %>
+  </p>
+
+  <p>
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment %>
+  </p>
+  <p>
+    <%= f.label :resolved %>
+    <%= f.check_box :resolved %>
+  
+    <%= f.label :resolved_on %>
+    <%= f.datetime_select :resolved_on %>
+  </p>
+   <p>
+    <%= f.label "Is it ok to contact you?" %>
+    <% # = f.check_box :ok_to_contact %> :
+
+  <% y_checker = false %>
+  <% n_checker = false %>
+ 
+  
+  <% y_checker = true if @support.ok_to_contact == true %>
+  <% n_checker = true if @support.ok_to_contact == false %>
+  
+  <%= f.radio_button(  :ok_to_contact, true, :options => {:checked => y_checker} ) %>Yes
+  <%= f.radio_button(  :ok_to_contact, false, :options => {:checked => n_checker} ) %>No
+
+
+
+   : <%= f.label "If yes, contact number" %>
+    <%= f.text_field :contact_number %>
+  </p>
+
+
+  <p>
+    <%= f.label :marked_closed %>
+    <%= f.check_box :marked_closed %>
+ 
+    <%= f.label :marked_closed_on %>
+    <%= f.datetime_select :marked_closed_on %>
+  </p>
+  <p>
+    <%= f.label :reopen %>
+    <%= f.check_box :reopen %>
+ 
+    <%= f.label :reopen_on %>
+    <%= f.datetime_select :reopen_on %>
+  </p>
+  
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @support %> |
+<%= link_to 'Back', supports_path %>

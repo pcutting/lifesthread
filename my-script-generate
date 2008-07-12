@@ -1,0 +1,4 @@
+script/generate scaffold Support title:string priority:integer category:string reference_page:string comment:text resolved:boolean resolved_on:datetime ok_to_contact:boolean contact_number:string user:references marked_closed:boolean marked_closed_on:datetime reopen:boolean reopen_on:datetime is_visible:boolean
+
+
+script/generate scaffold SupportDialog support:references user:references note:text rate_helpfulness:integer is_visible:boolean 

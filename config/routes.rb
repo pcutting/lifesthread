@@ -2,6 +2,8 @@ ActionController::Routing::Routes.draw do |map|
 
 
 
+
+
   
   map.root :controller => "home", :action =>"index"
   
@@ -45,6 +47,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :surveys
 
+  map.resources :supports
+
+  map.resources :supports, :has_many => :support_dialogs
 
   
 
