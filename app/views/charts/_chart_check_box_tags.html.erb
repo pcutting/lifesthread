@@ -1,104 +1,110 @@
 
  Blood Pressure <br />
-  <%= check_box_tag ':chartoptions[:bp][0]' ,  [true], if @chartoptions[:bp][0] == [false] then false else true end %>  Show <br />
-  <%= check_box_tag ':chartoptions[:bp][1]' ,  [true], if @chartoptions[:bp][1] == [false] then false else true end %>  Average <br />
-  <%= check_box_tag ':chartoptions[:bp][2]' ,  [true], if @chartoptions[:bp][2] == [false] then false else true end %>  Goal <br /> 
+  <%= check_box_tag 'chartoptions[bp][a]' ,  true, @chartoptions[:bp][0] %>  Show <br />
+  <%= check_box_tag 'chartoptions[bp][b]' ,  true, @chartoptions[:bp][1] %>  Average <br />
+  <%= check_box_tag 'chartoptions[bp][c]' ,  true, @chartoptions[:bp][2] %>  Goal <br /> 
 
   
   
   Cholesterol <br />
-  <%= check_box_tag ':chartoptions[:cholesterol][0]' ,  [true], if @chartoptions[:cholesterol][0] == [false] then false else true end %> Show  <br />
-  <%= check_box_tag ':chartoptions[:cholesterol][1]' ,  [true], if @chartoptions[:cholesterol][1] == [false] then false else true end %> Average <br />
-  <%= check_box_tag ':chartoptions[:cholesterol][2]' ,  [true], if @chartoptions[:cholesterol][2] == [false] then false else true end %> Goal <br />
+  <%= check_box_tag 'chartoptions[cholesterol][a]' ,  true, @chartoptions[:cholesterol][0] %> Show  <br />
+  <%= check_box_tag 'chartoptions[cholesterol][b]' ,  true, @chartoptions[:cholesterol][1] %> Average <br />
+  <%= check_box_tag 'chartoptions[cholesterol][c]' ,  true, @chartoptions[:cholesterol][2] %> Goal <br />
   
+  
+<div class="make_hidden">
  Cholesterol LDL <br />
-  <%= check_box_tag ':chartoptions[:chol_ldl][0]' ,  [true], if @chartoptions[:chol_ldl][0] == [false] then false else true end %>  Show <br />
-  <%= check_box_tag ':chartoptions[:chol_ldl][1]' ,  [true], if @chartoptions[:chol_ldl][1] == [false] then false else true end %>  Average <br />
-  <%= check_box_tag ':chartoptions[:chol_ldl][2]' ,  [true], if @chartoptions[:chol_ldl][2] == [false] then false else true end %>  Goal <br />
+  <%= check_box_tag 'chartoptions[chol_ldl][a]' ,  true, @chartoptions[:chol_ldl][0] %>  Show <br />
+  <%= check_box_tag 'chartoptions[chol_ldl][b]' ,  true, @chartoptions[:chol_ldl][1] %>  Average <br />
+  <%= check_box_tag 'chartoptions[chol_ldl][c]' ,  true, @chartoptions[:chol_ldl][2] %>  Goal <br />
   
  Cholesterol HDL <br />
-  <%= check_box_tag ':chartoptions[:chol_hdl][0]' ,  [true], if @chartoptions[:chol_hdl][0] == [false] then false else true end %>  Show <br />
-  <%= check_box_tag ':chartoptions[:chol_hdl][1]' ,  [true], if @chartoptions[:chol_hdl][1] == [false] then false else true end %>  Average <br />
-  <%= check_box_tag ':chartoptions[:chol_hdl][2]' ,  [true], if @chartoptions[:chol_hdl][2] == [false] then false else true end %>  Goal <br />
-  
+  <%= check_box_tag 'chartoptions[chol_hdl][a]' ,  true, @chartoptions[:chol_hdl][0] %>  Show <br />
+  <%= check_box_tag 'chartoptions[chol_hdl][b]' ,  true, @chartoptions[:chol_hdl][1] %>  Average <br />
+  <%= check_box_tag 'chartoptions[chol_hdl][c]' ,  true, @chartoptions[:chol_hdl][2] %>  Goal <br />
+
+ 
+ 
  Measurements <br />
-  <%= check_box_tag ':chartoptions[:measurements][0]' ,  [true], if @chartoptions[:measurements][0] == [false] then false else true end %>  Show <br />
-  <%= check_box_tag ':chartoptions[:measurements][1]' ,  [true], if @chartoptions[:measurements][1] == [false] then false else true end %>  Average <br />
-  <%= check_box_tag ':chartoptions[:measurements][2]' ,  [true], if @chartoptions[:measurements][2] == [false] then false else true end %>  Goal <br />
+  <%= check_box_tag 'chartoptions[measurements][a]' ,  true, @chartoptions[:measurements][0] %>  Show <br />
+  <%= check_box_tag 'chartoptions[measurements][b]' ,  true, @chartoptions[:measurements][1] %>  Average <br />
+  <%= check_box_tag 'chartoptions[measurements][c]' ,  true, @chartoptions[:measurements][2] %>  Goal <br />
+</div>
+
   
   Weight  <br />
-  <%= check_box_tag ':chartoptions[:measurement_weight][0]' ,  [true], if @chartoptions[:measurement_weight][0] == [false] then false else true end %>  Show  <br /> 
-  <%= check_box_tag ':chartoptions[:measurement_weight][1]' ,  [true], if @chartoptions[:measurement_weight][1] == [false] then false else true end %>  Average <br />
-  <%= check_box_tag ':chartoptions[:measurement_weight][2]' ,  [true], if @chartoptions[:measurement_weight][2] == [false] then false else true end %>  Goal <br />
+  <%= check_box_tag 'chartoptions[measurement_weight][a]' ,  true, @chartoptions[:measurement_weight][0] %>  Show  <br /> 
+  <%= check_box_tag 'chartoptions[measurement_weight][b]' ,  true, @chartoptions[:measurement_weight][1] %>  Average <br />
+  <%= check_box_tag 'chartoptions[measurement_weight][c]' ,  true, @chartoptions[:measurement_weight][2] %>  Goal <br />
   
   Resting Metabolism  <br />
-  <%= check_box_tag ':chartoptions[:measurement_resting_metabolism][0]' ,  [true], if @chartoptions[:measurement_resting_metabolism][0] == [false] then false else true end %>  Show  <br />
-  <%= check_box_tag ':chartoptions[:measurement_resting_metabolism][1]' ,  [true], if @chartoptions[:measurement_resting_metabolism][1] == [false] then false else true end %> Average <br />
-  <%= check_box_tag ':chartoptions[:measurement_resting_metabolism][2]' ,  [true], if @chartoptions[:measurement_resting_metabolism][2] == [false] then false else true end %> Goal Goal <br />
+  <%= check_box_tag 'chartoptions[measurement_resting_metabolism][a]' ,  true, @chartoptions[:measurement_resting_metabolism][0] %>  Show  <br />
+  <%= check_box_tag 'chartoptions[measurement_resting_metabolism][b]' ,  true, @chartoptions[:measurement_resting_metabolism][1] %> Average <br />
+  <%= check_box_tag 'chartoptions[measurement_resting_metabolism][c]' ,  true, @chartoptions[:measurement_resting_metabolism][2] %> Goal Goal <br />
   
  Fat %  <br />
-  <%= check_box_tag ':chartoptions[:measurement_fat_percent][0]' ,  [true], if @chartoptions[:measurement_fat_percent][0] == [false] then false else true end %>  Show <br />
-  <%= check_box_tag ':chartoptions[:measurement_fat_percent][1]' ,  [true], if @chartoptions[:measurement_fat_percent][1] == [false] then false else true end %>  Average <br />
-  <%= check_box_tag ':chartoptions[:measurement_fat_percent][2]' ,  [true], if @chartoptions[:measurement_fat_percent][2] == [false] then false else true end %>  Goal <br />
+  <%= check_box_tag 'chartoptions[measurement_fat_percent][a]' ,  true, @chartoptions[:measurement_fat_percent][0] %>  Show <br />
+  <%= check_box_tag 'chartoptions[measurement_fat_percent][b]' ,  true, @chartoptions[:measurement_fat_percent][1] %>  Average <br />
+  <%= check_box_tag 'chartoptions[measurement_fat_percent][c]' ,  true, @chartoptions[:measurement_fat_percent][2] %>  Goal <br />
   
  Muscle %  <br />
-  <%= check_box_tag ':chartoptions[:measurement_muscle_percent][0]' , [true], if @chartoptions[:measurement_muscle_percent][0] == [false] then false else true end %>  Show <br />
-  <%= check_box_tag ':chartoptions[:measurement_muscle_percent][1]' , [true], if @chartoptions[:measurement_muscle_percent][1] == [false] then false else true end %>  Average <br />
-  <%= check_box_tag ':chartoptions[:measurement_muscle_percent][2]' , [true], if @chartoptions[:measurement_muscle_percent][2] == [false] then false else true end %>  Goal <br />
+  <%= check_box_tag 'chartoptions[measurement_muscle_percent][a]' , true, @chartoptions[:measurement_muscle_percent][0] %>  Show <br />
+  <%= check_box_tag 'chartoptions[measurement_muscle_percent][b]' , true, @chartoptions[:measurement_muscle_percent][1] %>  Average <br />
+  <%= check_box_tag 'chartoptions[measurement_muscle_percent][c]' , true, @chartoptions[:measurement_muscle_percent][2] %>  Goal <br />
   
  Visceral Fat %  <br />
-  <%= check_box_tag ':chartoptions[:measurement_visceral_fat][0]' ,  [true], if @chartoptions[:measurement_visceral_fat][0] == [false] then false else true end %>  Show <br />
-  <%= check_box_tag ':chartoptions[:measurement_visceral_fat][1]' ,  [true], if @chartoptions[:measurement_visceral_fat][1] == [false] then false else true end %>  Average <br />
-  <%= check_box_tag ':chartoptions[:measurement_visceral_fat][2]' ,  [true], if @chartoptions[:measurement_visceral_fat][2] == [false] then false else true end %>  Goal <br />
+  <%= check_box_tag 'chartoptions[measurement_visceral_fat][a]' ,  true, @chartoptions[:measurement_visceral_fat][0] %>  Show <br />
+  <%= check_box_tag 'chartoptions[measurement_visceral_fat][b]' ,  true, @chartoptions[:measurement_visceral_fat][1] %>  Average <br />
+  <%= check_box_tag 'chartoptions[measurement_visceral_fat][c]' ,  true, @chartoptions[:measurement_visceral_fat][2] %>  Goal <br />
   
  Water %  <br />
-  <%= check_box_tag ':chartoptions[:measurement_water_percent][0]' ,  [true], if @chartoptions[:measurement_water_percent][0] == [false] then false else true end %>  Show <br />
-  <%= check_box_tag ':chartoptions[:measurement_water_percent][1]' ,  [true], if @chartoptions[:measurement_water_percent][1] == [false] then false else true end %>  Average <br />
-  <%= check_box_tag ':chartoptions[:measurement_water_percent][2]' ,  [true], if @chartoptions[:measurement_water_percent][2] == [false] then false else true end %>  Goal <br />
+  <%= check_box_tag 'chartoptions[measurement_water_percent][a]' ,  true, @chartoptions[:measurement_water_percent][0] %>  Show <br />
+  <%= check_box_tag 'chartoptions[measurement_water_percent][b]' ,  true, @chartoptions[:measurement_water_percent][1] %>  Average <br />
+  <%= check_box_tag 'chartoptions[measurement_water_percent][c]' ,  true, @chartoptions[:measurement_water_percent][2] %>  Goal <br />
   
  Chest  <br />
-  <%= check_box_tag ':chartoptions[:measurement_chest][0]' ,  [true], if @chartoptions[:measurement_chest][0] == [false] then false else true end %>  Show <br />
-  <%= check_box_tag ':chartoptions[:measurement_chest][1]' ,  [true], if @chartoptions[:measurement_chest][1] == [false] then false else true end %>  Average <br />
-  <%= check_box_tag ':chartoptions[:measurement_chest][2]' ,  [true], if @chartoptions[:measurement_chest][2] == [false] then false else true end %>  Goal <br />
+  <%= check_box_tag 'chartoptions[measurement_chest][a]' ,  true, @chartoptions[:measurement_chest][0] %>  Show <br />
+  <%= check_box_tag 'chartoptions[measurement_chest][b]' ,  true, @chartoptions[:measurement_chest][1] %>  Average <br />
+  <%= check_box_tag 'chartoptions[measurement_chest][c]' ,  true, @chartoptions[:measurement_chest][2] %>  Goal <br />
   
   Pectoral  <br />
-  <%= check_box_tag ':chartoptions[:measurement_pectoral][0]' ,  [true], if @chartoptions[:measurement_pectoral][0] == [false] then false else true end %>  Show <br />
-  <%= check_box_tag ':chartoptions[:measurement_pectoral][1]' ,  [true], if @chartoptions[:measurement_pectoral][1] == [false] then false else true end %>  Average <br />
-  <%= check_box_tag ':chartoptions[:measurement_pectoral][2]' ,  [true], if @chartoptions[:measurement_pectoral][2] == [false] then false else true end %>  Goal <br />
+  <%= check_box_tag 'chartoptions[measurement_pectoral][a]' ,  true, @chartoptions[:measurement_pectoral][0] %>  Show <br />
+  <%= check_box_tag 'chartoptions[measurement_pectoral][b]' ,  true, @chartoptions[:measurement_pectoral][1] %>  Average <br />
+  <%= check_box_tag 'chartoptions[measurement_pectoral][c]' ,  true, @chartoptions[:measurement_pectoral][2] %>  Goal <br />
   
   Bicept Left  <br />
-  <%= check_box_tag ':chartoptions[:measurement_bicep_left][0]' ,  [true], if @chartoptions[:measurement_bicep_left][0] == [false] then false else true end %>  Show <br />
-  <%= check_box_tag ':chartoptions[:measurement_bicep_left][1]' ,  [true], if @chartoptions[:measurement_bicep_left][1] == [false] then false else true end %>  Average <br />
-  <%= check_box_tag ':chartoptions[:measurement_bicep_left][2]' ,  [true], if @chartoptions[:measurement_bicep_left][2] == [false] then false else true end %>  Goal <br />
+  <%= check_box_tag 'chartoptions[measurement_bicep_left][a]' ,  true, @chartoptions[:measurement_bicep_left][0] %>  Show <br />
+  <%= check_box_tag 'chartoptions[measurement_bicep_left][b]' ,  true, @chartoptions[:measurement_bicep_left][1] %>  Average <br />
+  <%= check_box_tag 'chartoptions[measurement_bicep_left][c]' ,  true, @chartoptions[:measurement_bicep_left][2] %>  Goal <br />
   
   Bicept Right  <br />
-  <%= check_box_tag ':chartoptions[:measurement_bicep_right][0]' ,  [true], if @chartoptions[:measurement_bicep_right][0] == [false] then false else true end %>  Show <br />
-  <%= check_box_tag ':chartoptions[:measurement_bicep_right][1]' ,  [true], if @chartoptions[:measurement_bicep_right][1] == [false] then false else true end %>  Average <br />
-  <%= check_box_tag ':chartoptions[:measurement_bicep_right][2]' ,  [true], if @chartoptions[:measurement_bicep_right][2] == [false] then false else true end %>  Goal <br />
+  <%= check_box_tag 'chartoptions[measurement_bicep_right][a]' ,  true, @chartoptions[:measurement_bicep_right][0] %>  Show <br />
+  <%= check_box_tag 'chartoptions[measurement_bicep_right][b]' ,  true, @chartoptions[:measurement_bicep_right][1] %>  Average <br />
+  <%= check_box_tag 'chartoptions[measurement_bicep_right][c]' ,  true, @chartoptions[:measurement_bicep_right][2] %>  Goal <br />
   
   Belly  <br />
-  <%= check_box_tag ':chartoptions[:measurement_belly][0]' ,  [true], if @chartoptions[:measurement_belly][0] == [false] then false else true end %>  Show <br />
-  <%= check_box_tag ':chartoptions[:measurement_belly][1]' ,  [true], if @chartoptions[:measurement_belly][1] == [false] then false else true end %>  Average <br />
-  <%= check_box_tag ':chartoptions[:measurement_belly][2]' ,  [true], if @chartoptions[:measurement_belly][2] == [false] then false else true end %>  Goal <br />
+  <%= check_box_tag 'chartoptions[measurement_belly][a]' ,  true, @chartoptions[:measurement_belly][0] %>  Show <br />
+  <%= check_box_tag 'chartoptions[measurement_belly][b]' ,  true, @chartoptions[:measurement_belly][1] %>  Average <br />
+  <%= check_box_tag 'chartoptions[measurement_belly][c]' ,  true, @chartoptions[:measurement_belly][2] %>  Goal <br />
   
   Hip  <br />
-  <%= check_box_tag ':chartoptions[:measurement_hip][0]' ,  [true], if @chartoptions[:measurement_hip][0] == [false] then false else true end %>  Show <br />
-  <%= check_box_tag ':chartoptions[:measurement_hip][1]' ,  [true], if @chartoptions[:measurement_hip][1] == [false] then false else true end %>  Average <br />
-  <%= check_box_tag ':chartoptions[:measurement_hip][2]' ,  [true], if @chartoptions[:measurement_hip][2] == [false] then false else true end %>  Goal <br />
+  <%= check_box_tag 'chartoptions[measurement_hip][a]' ,  true, @chartoptions[:measurement_hip][0] %>  Show <br />
+  <%= check_box_tag 'chartoptions[measurement_hip][b]' ,  true, @chartoptions[:measurement_hip][1] %>  Average <br />
+  <%= check_box_tag 'chartoptions[measurement_hip][c]' ,  true, @chartoptions[:measurement_hip][2] %>  Goal <br />
   
   Lower Hip  <br />
-  <%= check_box_tag ':chartoptions[:measurement_lower_hip][0]' ,  [true], if @chartoptions[:measurement_lower_hip][0] == [false] then false else true end %>  Show <br />
-  <%= check_box_tag ':chartoptions[:measurement_lower_hip][1]' ,  [true], if @chartoptions[:measurement_lower_hip][1] == [false] then false else true end %>  Average <br />
-  <%= check_box_tag ':chartoptions[:measurement_lower_hip][2]' ,  [true], if @chartoptions[:measurement_lower_hip][2] == [false] then false else true end %>  Goal <br />
+  <%= check_box_tag 'chartoptions[measurement_lower_hip][a]' ,  true, @chartoptions[:measurement_lower_hip][0] %>  Show <br />
+  <%= check_box_tag 'chartoptions[measurement_lower_hip][b]' ,  true, @chartoptions[:measurement_lower_hip][1] %>  Average <br />
+  <%= check_box_tag 'chartoptions[measurement_lower_hip][c]' ,  true, @chartoptions[:measurement_lower_hip][2] %>  Goal <br />
   
   Thigh Left  <br />
-  <%= check_box_tag ':chartoptions[:measurement_thigh_left][0]' ,  [true], if @chartoptions[:measurement_thigh_left][0] == [false] then false else true end %>  Show <br />
-  <%= check_box_tag ':chartoptions[:measurement_thigh_left][1]' ,  [true], if @chartoptions[:measurement_thigh_left][1] == [false] then false else true end %>  Average <br />
-  <%= check_box_tag ':chartoptions[:measurement_thigh_left][2]' ,  [true], if @chartoptions[:measurement_thigh_left][2] == [false] then false else true end %>  Goal <br />
+  <%= check_box_tag 'chartoptions[measurement_thigh_left][a]' ,  true, @chartoptions[:measurement_thigh_left][0] %>  Show <br />
+  <%= check_box_tag 'chartoptions[measurement_thigh_left][b]' ,  true, @chartoptions[:measurement_thigh_left][1] %>  Average <br />
+  <%= check_box_tag 'chartoptions[measurement_thigh_left][c]' ,  true, @chartoptions[:measurement_thigh_left][2] %>  Goal <br />
   
   Thigh Right  <br />
-  <%= check_box_tag ':chartoptions[:measurement_thigh_right][0]' ,  [true], if @chartoptions[:measurement_thigh_right][0] == [false] then false else true end %>  Show <br />
-  <%= check_box_tag ':chartoptions[:measurement_thigh_right][1]' ,  [true], if @chartoptions[:measurement_thigh_right][1] == [false] then false else true end %>  Average <br />
-  <%= check_box_tag ':chartoptions[:measurement_thigh_right][2]' ,  [true], if @chartoptions[:measurement_thigh_right][2] == [false] then false else true end %>  Goal <br />
+  <%= check_box_tag 'chartoptions[measurement_thigh_right][a]' ,  true, @chartoptions[:measurement_thigh_right][0] %>  Show <br />
+  <%= check_box_tag 'chartoptions[measurement_thigh_right][b]' ,  true, @chartoptions[:measurement_thigh_right][1] %>  Average <br />
+  <%= check_box_tag 'chartoptions[measurement_thigh_right][c]' ,  true, @chartoptions[:measurement_thigh_right][2] %>  Goal <br />
   
  

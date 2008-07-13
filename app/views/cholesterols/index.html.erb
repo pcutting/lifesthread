@@ -6,18 +6,18 @@
 
 <table>
   <tr>
-    <th>Measured on</th>
-    <th>Comment</th>
     <th>Hdl</th>
     <th>Ldl</th>
+    <th>Measured on</th>
+    <th>Comment</th>
   </tr>
 
 <% for cholesterol in @cholesterols %>
   <tr>
-    <td><%=h cholesterol.measured_on %></td>
-    <td><%=h cholesterol.comment %></td>
     <td><%=h cholesterol.hdl %></td>
     <td><%=h cholesterol.ldl %></td>
+    <td><%=h cholesterol.measured_on %></td>
+    <td><%=h cholesterol.comment %></td>
     <td><%= link_to 'Edit', edit_cholesterol_path(cholesterol) %></td>
   </tr>
 <% end %>

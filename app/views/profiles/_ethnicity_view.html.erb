@@ -6,7 +6,7 @@
   </p>
   <p>
     <%="sex:".capitalize %> <!-- was a br -->
-    <%= @profile.sex.capitalize %>
+    <%= @profile.sex.capitalize unless @profile.sex.nil?%>
   </p>
   <p>
     <%="race:".capitalize %> <!-- was a br -->

@@ -5,33 +5,28 @@ class ChartsController < ApplicationController
     
    if @chartoptions.nil? then
      #@conditions = Hash[:plot => true, :average => true , :show_goal => true]
-     @conditions = Array.new
-     @conditions << true
-     @conditions << true
-     @conditions << true
-     
-     
+
      @chartoptions=Hash[
-     :bp=>[[true],[true],[false]],
-     :chol_ldl=>[[true],[true],[true]],
-     :chol_hdl=>[[true],[true],[true]],
-     :measurements=>[[false],[false],[false]],
-     :measurement_weight=>[[true],[true],[true]],
-     :measurement_resting_metabolism=>[[true],[true],[true]],
-     :measurement_fat_percent=>[[true],[true],[true]],
-     :measurement_muscle_percent=>[[true],[true],[true]],
-     :measurement_visceral_fat=>[[true],[true],[true]],
-     :measurement_water_percent=>[[true],[true],[true]],
-     :measurement_chest=>[[true],[true],[true]],
-     :measurement_pectoral=>[[true],[true],[true]],
-     :measurement_bicep_left=>[[true],[true],[true]],
-     :measurement_bicep_right=>[[true],[true],[true]],
-     :measurement_belly=>[[true],[true],[true]],
-     :measurement_hip=>[[true],[true],[true]],
-     :measurement_lower_hip=>[[true],[true],[true]],
-     :measurement_thigh_left=>[[true],[true],[true]],
-     :measurement_thigh_right=>[[true],[true],[true]],
-     :cholesterol=>[[true],[true],[true]]
+     :bp=>[true,true,true],
+     :chol_ldl=>[true,true,true],
+     :chol_hdl=>[true,true,true],
+     :measurements=>[true,true,true],
+     :measurement_weight=>[true,true,true],
+     :measurement_resting_metabolism=>[true,true,true],
+     :measurement_fat_percent=>[true,true,true],
+     :measurement_muscle_percent=>[true,true,true],
+     :measurement_visceral_fat=>[true,true,true],
+     :measurement_water_percent=>[true,true,true],
+     :measurement_chest=>[true,true,true],
+     :measurement_pectoral=>[true,true,true],
+     :measurement_bicep_left=>[true,true,true],
+     :measurement_bicep_right=>[true,true,true],
+     :measurement_belly=>[true,true,true],
+     :measurement_hip=>[true,true,true],
+     :measurement_lower_hip=>[true,true,true],
+     :measurement_thigh_left=>[true,true,true],
+     :measurement_thigh_right=>[true,true,true],
+     :cholesterol=>[true,true,true]
      ]
      
      
@@ -42,11 +37,6 @@ class ChartsController < ApplicationController
 
     end #end if chart_options...
       
-      
-    puts "chart_options =========================="
-    puts @chartoptions
-    puts "chart_options :bp2 =========================="
-    puts @chartoptions[:bp][2] 
    
 
     respond_to do |format|
@@ -57,7 +47,192 @@ class ChartsController < ApplicationController
   def create
   
     @returned = params[:chartoptions]
-    curre nt_user.profile.chart_options = @returned
+    @results=Hash.new 
+    
+unless @returned[:bp].nil?   
+ @results[:bp]=
+ [if  @returned[:bp][:a].nil? then false else true end,
+if  @returned[:bp][:b].nil? then false else true end,
+if  @returned[:bp][:c].nil? then false else true end] 
+else @results[:bp] = [false, false, false]
+end
+
+unless @returned[:cholesterol].nil?   
+ @results[:cholesterol]=
+[if  @returned[:cholesterol][:a].nil? then false else true end,
+if  @returned[:cholesterol][:b].nil? then false else true end,
+if  @returned[:cholesterol][:c].nil? then false else true end] 
+else @results[:cholesterol] = [false, false, false]
+
+end
+
+unless @returned[:chol_ldl].nil?   
+ @results[:chol_ldl]=
+[if  @returned[:chol_ldl][:a].nil? then false else true end,
+if  @returned[:chol_ldl][:b].nil? then false else true end,
+if  @returned[:chol_ldl][:c].nil? then false else true end] 
+else @results[:chol_ldl] = [false, false, false]
+
+end
+
+unless @returned[:chol_hdl].nil?   
+ @results[:chol_hdl]=
+[if  @returned[:chol_hdl][:a].nil? then false else true end,
+if  @returned[:chol_hdl][:b].nil? then false else true end,
+if  @returned[:chol_hdl][:c].nil? then false else true end]
+else @results[:chol_hdl] = [false, false, false]
+
+end
+
+unless @returned[:measurements].nil?    
+@results[:measurements]=
+[if  @returned[:measurements][:a].nil? then false else true end,
+if  @returned[:measurements][:b].nil? then false else true end,
+if  @returned[:measurements][:c].nil? then false else true end]
+else @results[:measurements] = [false, false, false]
+
+end
+
+unless @returned[:measurement_weight].nil?   
+ @results[:measurement_weight]=
+[if  @returned[:measurement_weight][:a].nil? then false else true end,
+if  @returned[:measurement_weight][:b].nil? then false else true end,
+if  @returned[:measurement_weight][:c].nil? then false else true end]
+else @results[:measurement_weight] = [false, false, false]
+
+end
+
+unless @returned[:measurement_resting_metabolism].nil?   
+ @results[:measurement_resting_metabolism]=
+[if  @returned[:measurement_resting_metabolism][:a].nil? then false else true end,
+if  @returned[:measurement_resting_metabolism][:b].nil? then false else true end,
+if  @returned[:measurement_resting_metabolism][:c].nil? then false else true end]
+else @results[:measurement_resting_metabolism] = [false, false, false]
+
+end
+
+unless @returned[:measurement_fat_percent].nil?   
+ @results[:measurement_fat_percent]=
+[if  @returned[:measurement_fat_percent][:a].nil? then false else true end,
+if  @returned[:measurement_fat_percent][:b].nil? then false else true end,
+if  @returned[:measurement_fat_percent][:c].nil? then false else true end]
+else @results[:measurement_fat_percent] = [false, false, false]
+
+end
+
+unless @returned[:measurement_muscle_percent].nil?   
+ @results[:measurement_muscle_percent]=
+[if  @returned[:measurement_muscle_percent][:a].nil? then false else true end,
+if  @returned[:measurement_muscle_percent][:b].nil? then false else true end,
+if  @returned[:measurement_muscle_percent][:c].nil? then false else true end] 
+else @results[:measurement_muscle_percent] = [false, false, false]
+
+end
+
+unless @returned[:measurement_visceral_fat].nil?   
+ @results[:measurement_visceral_fat]=
+[if  @returned[:measurement_visceral_fat][:a].nil? then false else true end,
+if  @returned[:measurement_visceral_fat][:b].nil? then false else true end,
+if  @returned[:measurement_visceral_fat][:c].nil? then false else true end]
+else @results[:measurement_visceral_fat] = [false, false, false]
+
+end
+
+unless @returned[:measurement_water_percent].nil?   
+ @results[:measurement_water_percent]=
+[if  @returned[:measurement_water_percent][:a].nil? then false else true end,
+if  @returned[:measurement_water_percent][:b].nil? then false else true end,
+if  @returned[:measurement_water_percent][:c].nil? then false else true end] 
+else @results[:measurement_water_percent] = [false, false, false]
+
+end
+
+unless @returned[:measurement_chest].nil?   
+ @results[:measurement_chest]=
+[if  @returned[:measurement_chest][:a].nil? then false else true end,
+if  @returned[:measurement_chest][:b].nil? then false else true end,
+if  @returned[:measurement_chest][:c].nil? then false else true end]
+else @results[:measurement_chest] = [false, false, false]
+
+end
+
+unless @returned[:measurement_pectoral].nil?   
+ @results[:measurement_pectoral]=
+[if  @returned[:measurement_pectoral][:a].nil? then false else true end,
+if  @returned[:measurement_pectoral][:b].nil? then false else true end,
+if  @returned[:measurement_pectoral][:c].nil? then false else true end]
+else @results[:measurement_pectoral] = [false, false, false]
+ 
+end
+
+unless @returned[:measurement_bicep_left].nil?   
+ @results[:measurement_bicep_left]=
+[if  @returned[:measurement_bicep_left][:a].nil? then false else true end,
+if  @returned[:measurement_bicep_left][:b].nil? then false else true end,
+if  @returned[:measurement_bicep_left][:c].nil? then false else true end]
+else @results[:measurement_bicep_left] = [false, false, false]
+ 
+end
+
+unless @returned[:measurement_bicep_right].nil?   
+ @results[:measurement_bicep_right]=
+[if  @returned[:measurement_bicep_right][:a].nil? then false else true end,
+if  @returned[:measurement_bicep_right][:b].nil? then false else true end,
+if  @returned[:measurement_bicep_right][:c].nil? then false else true end] 
+else @results[:measurement_bicep_right] = [false, false, false]
+
+end
+
+unless @returned[:measurement_belly].nil?   
+ @results[:measurement_belly]=
+[if  @returned[:measurement_belly][:a].nil? then false else true end,
+if  @returned[:measurement_belly][:b].nil? then false else true end,
+if  @returned[:measurement_belly][:c].nil? then false else true end]
+else @results[:measurement_belly] = [false, false, false]
+
+end
+
+unless @returned[:measurement_hip].nil?   
+ @results[:measurement_hip]=
+[if  @returned[:measurement_hip][:a].nil? then false else true end,
+if  @returned[:measurement_hip][:b].nil? then false else true end,
+if  @returned[:measurement_hip][:c].nil? then false else true end]
+else @results[:measurement_hip] = [false, false, false]
+
+end
+
+unless @returned[:measurement_lower_hip].nil?   
+ @results[:measurement_lower_hip]=
+[if  @returned[:measurement_lower_hip][:a].nil? then false else true end,
+if  @returned[:measurement_lower_hip][:b].nil? then false else true end,
+if  @returned[:measurement_lower_hip][:c].nil? then false else true end] 
+else @results[:measurement_lower_hip] = [false, false, false]
+
+end
+
+unless @returned[:measurement_thigh_left].nil?   
+ @results[:measurement_thigh_left]=
+[if  @returned[:measurement_thigh_left][:a].nil? then false else true end,
+if  @returned[:measurement_thigh_left][:b].nil? then false else true end,
+if  @returned[:measurement_thigh_left][:c].nil? then false else true end] 
+else @results[:measurement_thigh_left] = [false, false, false]
+
+end
+
+unless @returned[:measurement_thigh_right].nil?   
+ @results[:measurement_thigh_right]=
+[if  @returned[:measurement_thigh_right][:a].nil? then false else true end,
+if  @returned[:measurement_thigh_right][:b].nil? then false else true end,
+if  @returned[:measurement_thigh_right][:c].nil? then false else true end] 
+else @results[:measurement_thigh_right] = [false, false, false]
+
+end
+     
+        puts "create: results[:bp] ==========================="
+    puts @results[:bp]
+    
+    
+    current_user.profile.chart_options = @results
     if current_user.profile.save
     
     redirect_to(charts_path) 

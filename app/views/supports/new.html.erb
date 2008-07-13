@@ -10,8 +10,7 @@
   <p>
     <%= f.label :priority %>[1 = Lowest, 5 = Urgent] 
     <%= f.select :priority, [1,2,3,4,5], :size=> 5 %>
-  </p>
-  <p>
+
     <%= f.label :category %>
     <%= f.select :category, ["Bug", "Recommendation", "Does not operate as expected", "request for help or clarification", "opinion", "other"], :size=> 10 %>
   </p>
@@ -22,7 +21,7 @@
 
   <p>
     <%= f.label :comment %><br />
-    <%= f.text_area :comment %>
+    <%= f.text_area :comment , :rows => 8, :cols => 80%>
   </p>
 
   <p>

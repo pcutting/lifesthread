@@ -43,6 +43,12 @@ background:#FFFF80;
 border: 1px groove;
 }
 
+div#option{
+text-align: left;
+background:#FFFF70;
+border: 1px groove;
+}
+
 div#footer{
 background: #333;
 /*color: #FFF */
@@ -53,7 +59,13 @@ div#wrapper{float:left;width:100%;margin-left:-200px}
 div#content{margin-left:200px}
 div#navigation{float:right;width:150px}
 div#extra{float:right;clear:right;width:150px}
+div#option{float:right;clear:right;width:150px}
 div#footer{clear:both;width:100%}
+
+div.make_hidden{
+display: none
+}
+
 
 
 body { 

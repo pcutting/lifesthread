@@ -50,8 +50,8 @@ class SupportsController < ApplicationController
       
     else
     
-      saved = @support = current_user.supports.new(params[:support])
-
+      @support = current_user.supports.new(params[:support])
+      saved = @support.save
     end
 
     respond_to do |format|
