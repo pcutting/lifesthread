@@ -40,7 +40,8 @@ class CreateProfiles < ActiveRecord::Migration
       t.boolean :alcoholic
       t.integer :ounces_alcohol_weekly
       t.references :user
-      t.string :chart_options
+      t.text :chart_options
+      t.text :favorits
       t.boolean :is_pregnant
       t.date :conception_on
       t.boolean :is_breast_feeding

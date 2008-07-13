@@ -2,3 +2,6 @@
 
 <%= render :partial => "/layouts/chart" %>
 
+<% content_for :extra do %>
+  <%= render :partial => "chart_options" %>
+<% end %>

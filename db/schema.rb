@@ -216,7 +216,8 @@ ActiveRecord::Schema.define(:version => 20080711202303) do
     t.boolean  "alcoholic"
     t.integer  "ounces_alcohol_weekly",           :limit => 11
     t.integer  "user_id",                         :limit => 11
-    t.string   "chart_options"
+    t.text     "chart_options"
+    t.text     "favorits"
     t.boolean  "is_pregnant"
     t.date     "conception_on"
     t.boolean  "is_breast_feeding"

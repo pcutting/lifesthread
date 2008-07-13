@@ -1,5 +1,10 @@
 
 <fieldset><legend>Personal Details</legend>
+
+  <p>
+    <%= f.label :blood_type %><!-- was a br -->
+    <%= f.select :blood_type, ["A+", "A-", "B+", "B-", "O"],:size => 5 %>
+  </p>
   <p>
     <%= f.label :primary_care_physician %><!-- was a br -->
     <%= f.text_field :primary_care_physician , :size => 15 %>
