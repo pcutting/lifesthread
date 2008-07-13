@@ -2,7 +2,7 @@ class CreateMeasurements < ActiveRecord::Migration
   def self.up
     create_table :measurements do |t|
       t.references :user
-      t.integer :weight
+      t.decimal :weight
       t.integer :resting_metabolism
       t.integer :fat_percent
       t.integer :muscle_percent

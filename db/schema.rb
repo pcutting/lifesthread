@@ -114,7 +114,7 @@ ActiveRecord::Schema.define(:version => 20080711202303) do
 
   create_table "measurements", :force => true do |t|
     t.integer  "user_id",            :limit => 11
-    t.integer  "weight",             :limit => 11
+    t.integer  "weight",             :limit => 10, :precision => 10, :scale => 0
     t.integer  "resting_metabolism", :limit => 11
     t.integer  "fat_percent",        :limit => 11
     t.integer  "muscle_percent",     :limit => 11
