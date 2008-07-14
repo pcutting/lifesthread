@@ -1,15 +1,10 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
+ 
 one:
-  support: 
-  user: 
+  support: two
   note: MyText
-  rate_helpfulness: 1
-  is_visible: false
 
 two:
-  support: 
-  user: 
+  support: one
   note: MyText
-  rate_helpfulness: 1
-  is_visible: false
+
