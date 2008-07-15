@@ -65,6 +65,13 @@ div#content table {
   font-size: 13px;
 }
 
+div#overview table {
+
+  border: 0;
+
+}
+
+
 div#wrapper{float:left;width:100%;margin-left:-200px}
 div#content{margin-left:200px}
 div#navigation{float:right;width:150px}
