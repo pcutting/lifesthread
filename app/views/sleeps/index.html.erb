@@ -1,0 +1,32 @@
+<h1>Listing sleeps</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Slept in</th>
+    <th>Started at</th>
+    <th>Woke up at</th>
+    <th>Quality</th>
+    <th>Interrupted</th>
+    <th>Environment</th>
+  </tr>
+
+<% for sleep in @sleeps %>
+  <tr>
+    <td><%=h sleep.user %></td>
+    <td><%=h sleep.slept_in %></td>
+    <td><%=h sleep.started_at %></td>
+    <td><%=h sleep.woke_up_at %></td>
+    <td><%=h sleep.quality %></td>
+    <td><%=h sleep.interrupted %></td>
+    <td><%=h sleep.environment %></td>
+    <td><%= link_to 'Show', sleep %></td>
+    <td><%= link_to 'Edit', edit_sleep_path(sleep) %></td>
+    <td><%= link_to 'Destroy', sleep, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New sleep', new_sleep_path %>

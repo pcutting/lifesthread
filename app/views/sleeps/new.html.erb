@@ -1,0 +1,39 @@
+<h1>New sleep</h1>
+
+<% form_for(@sleep) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.label :slept_in %><br />
+    <%= f.text_field :slept_in %>
+  </p>
+  <p>
+    <%= f.label :started_at %><br />
+    <%= f.datetime_select :started_at %>
+  </p>
+  <p>
+    <%= f.label :woke_up_at %><br />
+    <%= f.datetime_select :woke_up_at %>
+  </p>
+  <p>
+    <%= f.label :quality %><br />
+    <%= f.text_field :quality %>
+  </p>
+  <p>
+    <%= f.label :interrupted %><br />
+    <%= f.check_box :interrupted %>
+  </p>
+  <p>
+    <%= f.label :environment %><br />
+    <%= f.text_field :environment %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', sleeps_path %>

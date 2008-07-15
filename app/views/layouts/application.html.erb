@@ -29,9 +29,9 @@
 <div id="container">
 
 <div id="header">
-  Your lifesThread today: <img src="/images/imglifesthread.jpg">
+  Your lifesThread today: <img src="/images/imglifesthread.jpg" alt="Welcome to lifesthread" />
   <p><strong>Welcome <%= h current_user.first_name  -%></strong> 
-  <%= link_to 'Logout', logout_path -%> <br />
+  <%= link_to 'Logout', logout_path -%> </p>
   <p style="color: green"><%= flash[:notice] %></p>
 <%= yield :header %> 
 </div>

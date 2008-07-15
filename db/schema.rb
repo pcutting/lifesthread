@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080711202303) do
+ActiveRecord::Schema.define(:version => 20080714215417) do
 
   create_table "bps", :force => true do |t|
     t.integer  "user_id",     :limit => 11
@@ -242,6 +242,18 @@ ActiveRecord::Schema.define(:version => 20080711202303) do
     t.string   "nick_name"
     t.date     "known_since"
     t.date     "age"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sleeps", :force => true do |t|
+    t.integer  "user_id",     :limit => 11
+    t.string   "slept_in"
+    t.datetime "started_at"
+    t.datetime "woke_up_at"
+    t.integer  "quality",     :limit => 11
+    t.boolean  "interrupted"
+    t.string   "environment"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

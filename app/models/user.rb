@@ -19,6 +19,7 @@ has_many :illness_histories
 has_many :measurements
 has_many :supports
 has_many :support_dialogs, :through => :supports
+has_many :sleeps
 
   # Virtual attribute for the unencrypted password
   attr_accessor :password

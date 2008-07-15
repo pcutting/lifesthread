@@ -1,0 +1,38 @@
+<p>
+  <b>User:</b>
+  <%=h @sleep.user %>
+</p>
+
+<p>
+  <b>Slept in:</b>
+  <%=h @sleep.slept_in %>
+</p>
+
+<p>
+  <b>Started at:</b>
+  <%=h @sleep.started_at %>
+</p>
+
+<p>
+  <b>Woke up at:</b>
+  <%=h @sleep.woke_up_at %>
+</p>
+
+<p>
+  <b>Quality:</b>
+  <%=h @sleep.quality %>
+</p>
+
+<p>
+  <b>Interrupted:</b>
+  <%=h @sleep.interrupted %>
+</p>
+
+<p>
+  <b>Environment:</b>
+  <%=h @sleep.environment %>
+</p>
+
+
+<%= link_to 'Edit', edit_sleep_path(@sleep) %> |
+<%= link_to 'Back', sleeps_path %>
