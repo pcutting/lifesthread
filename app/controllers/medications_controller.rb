@@ -75,7 +75,7 @@ class MedicationsController < ApplicationController
     @medication.destroy
 
     respond_to do |format|
-      format.html { redirect_to(medications_url) }
+      format.html { redirect_to(medications_path) }
       format.xml  { head :ok }
     end
   end

@@ -89,7 +89,7 @@ class SupportsController < ApplicationController
     @support.destroy
 
     respond_to do |format|
-      format.html { redirect_to(supports_url) }
+      format.html { redirect_to(supports_path) }
     end
   end
 end

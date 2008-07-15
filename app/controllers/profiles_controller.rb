@@ -79,7 +79,7 @@ class ProfilesController < ApplicationController
     @profile.destroy
 
     respond_to do |format|
-      format.html { redirect_to(profile_url) }
+      format.html { redirect_to(profile_path) }
     end
   end
 end

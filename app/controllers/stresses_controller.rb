@@ -75,7 +75,7 @@ class StressesController < ApplicationController
     @stress.destroy
 
     respond_to do |format|
-      format.html { redirect_to(stresses_url) }
+      format.html { redirect_to(stresses_path) }
     end
   end
 end

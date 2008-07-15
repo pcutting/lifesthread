@@ -74,7 +74,7 @@ class RelationshipsController < ApplicationController
     @relationship.destroy
 
     respond_to do |format|
-      format.html { redirect_to(relationships_url) }
+      format.html { redirect_to(relationships_path) }
     end
   end
 end

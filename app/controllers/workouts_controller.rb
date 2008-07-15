@@ -122,7 +122,7 @@ class WorkoutsController < ApplicationController
     @workout.destroy
 
     respond_to do |format|
-      format.html { redirect_to(workouts_url) }
+      format.html { redirect_to(workouts_path) }
 
     end
   end

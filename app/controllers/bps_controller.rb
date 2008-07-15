@@ -82,7 +82,7 @@ class BpsController < ApplicationController
     @bp.destroy
 
     respond_to do |format|
-      format.html { redirect_to(bps_url) }
+      format.html { redirect_to(bps_path) }
       format.xml  { head :ok }
     end
   end

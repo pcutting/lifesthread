@@ -78,7 +78,7 @@ class OpinionsController < ApplicationController
     @opinion.destroy
 
     respond_to do |format|
-      format.html { redirect_to(opinions_url) }
+      format.html { redirect_to(opinions_path) }
       format.xml  { head :ok }
     end
   end

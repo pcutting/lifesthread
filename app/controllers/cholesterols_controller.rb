@@ -76,7 +76,7 @@ class CholesterolsController < ApplicationController
     @cholesterol.destroy
 
     respond_to do |format|
-      format.html { redirect_to(cholesterols_url) }
+      format.html { redirect_to(cholesterols_path) }
     end
   end
 end

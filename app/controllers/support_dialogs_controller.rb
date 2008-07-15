@@ -75,7 +75,7 @@ class SupportDialogsController < ApplicationController
     @support_dialog.destroy
 
     respond_to do |format|
-      format.html { redirect_to(support_support_dialogs_url(@support)) }
+      format.html { redirect_to(support_support_dialogs_path(@support)) }
     end
   end
   

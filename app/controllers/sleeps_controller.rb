@@ -80,7 +80,7 @@ class SleepsController < ApplicationController
     @sleep.destroy
 
     respond_to do |format|
-      format.html { redirect_to(sleeps_url) }
+      format.html { redirect_to(sleeps_path) }
       format.xml  { head :ok }
     end
   end

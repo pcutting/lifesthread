@@ -74,7 +74,7 @@ class IllnessHistoriesController < ApplicationController
     @illness_history.destroy
 
     respond_to do |format|
-      format.html { redirect_to(illness_histories_url) }
+      format.html { redirect_to(illness_histories_path) }
     end
   end
 end

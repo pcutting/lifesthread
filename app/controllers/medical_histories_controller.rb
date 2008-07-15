@@ -73,7 +73,7 @@ class MedicalHistoriesController < ApplicationController
     @medical_history.destroy
 
     respond_to do |format|
-      format.html { redirect_to(medical_histories_url) }
+      format.html { redirect_to(medical_histories_path) }
     end
   end
 end

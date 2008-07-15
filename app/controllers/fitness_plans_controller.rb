@@ -70,7 +70,7 @@ class FitnessPlansController < ApplicationController
     @fitness_plan.destroy
 
     respond_to do |format|
-      format.html { redirect_to(fitness_plans_url) }
+      format.html { redirect_to(fitness_plans_path) }
     end
   end
 end

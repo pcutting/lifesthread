@@ -75,7 +75,7 @@ class FoodsController < ApplicationController
     @food.destroy
 
     respond_to do |format|
-      format.html { redirect_to(foods_url) }
+      format.html { redirect_to(foods_path) }
     end
   end
 end

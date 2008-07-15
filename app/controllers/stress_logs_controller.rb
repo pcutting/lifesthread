@@ -74,7 +74,7 @@ class StressLogsController < ApplicationController
     @stress_log.destroy
 
     respond_to do |format|
-      format.html { redirect_to(stress_logs_url) }
+      format.html { redirect_to(stress_logs_path) }
     end
   end
   
