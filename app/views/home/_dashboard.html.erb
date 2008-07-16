@@ -6,10 +6,6 @@
 
   <%= render :partial => "progress" %>
 
-
-  <%= link_to 'View your Chart' , charts_path %>
-
-
 <% content_for :extra  do %>
   <%= render :partial => "survey" %>
 <% end %>
@@ -17,6 +13,14 @@
 
 
   <% form_for :profile , :url => { :action => :create } do |form| %>
+
+  <fieldset>
+  <legend><%= link_to 'Sleep', sleeps_path %> </legend>
+    <% fields_for :sleep do |sleep| %>
+     <%= render :partial => "/sleeps/new" , :locals => { :f => sleep} %>
+    <% end %>
+  </fieldset>
+
 
   <fieldset>
   <legend><%= link_to 'Blood Pressure', bps_path %> </legend>

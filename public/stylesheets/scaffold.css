@@ -65,10 +65,22 @@ div#content table {
   font-size: 13px;
 }
 
-div#overview table {
 
-  border: 0;
+div#option table{
+  margin-left: auto;
+  margin-right: auto;
+  border-color: #600;
+  border: 1px;
+  border-style: solid;
+  border-collapse: seperate;
+  font-size: 13px;
+}
 
+div#option td {
+  border-color: #600;
+  border: 1px;
+  border-style: solid;
+  margin: 3;
 }
 
 
@@ -76,7 +88,7 @@ div#wrapper{float:left;width:100%;margin-left:-200px}
 div#content{margin-left:200px}
 div#navigation{float:right;width:150px}
 div#extra{float:right;clear:right;width:150px}
-div#option{float:right;clear:right;width:150px}
+div#option{clear:both;width:100%}
 div#footer{clear:both;width:100%}
 
 div.make_hidden{

@@ -1,6 +1,10 @@
 <h1>Body Measurements</h1>
 
-<%= render :partial => "chart" %>
+<%- @plot_data = [] -%>
+<% @chartoptions = current_user.profile.chart_options %>
+<% myPlots("measurements") %>
+<%= makeChart %>
+
 
 <%= render :partial => "new_inform" %>
 

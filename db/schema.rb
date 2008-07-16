@@ -190,8 +190,8 @@ ActiveRecord::Schema.define(:version => 20080714215417) do
     t.string   "body_shape"
     t.string   "sex"
     t.string   "race"
-    t.string   "rx_affiliate_no"
-    t.string   "sale_code"
+    t.string   "rx_affiliate_no",                               :default => "SELF"
+    t.string   "sale_code",                                     :default => "SELF"
     t.boolean  "terms_agreed"
     t.datetime "terms_agreed_on"
     t.string   "primary_care_physician"
@@ -209,10 +209,11 @@ ActiveRecord::Schema.define(:version => 20080714215417) do
     t.boolean  "has_children"
     t.integer  "number_of_children",              :limit => 11
     t.string   "list_unusual_substance_exposure"
-    t.integer  "eduction_years",                  :limit => 11
+    t.integer  "education_years",                 :limit => 11
     t.boolean  "smoker"
     t.boolean  "was_smoker"
     t.string   "average_smoking"
+    t.boolean  "non_smoker"
     t.boolean  "alcoholic"
     t.integer  "ounces_alcohol_weekly",           :limit => 11
     t.integer  "user_id",                         :limit => 11
@@ -223,6 +224,7 @@ ActiveRecord::Schema.define(:version => 20080714215417) do
     t.boolean  "is_breast_feeding"
     t.boolean  "is_menopause"
     t.string   "blood_type"
+    t.integer  "user_priority",                   :limit => 11, :default => 1
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -247,13 +249,15 @@ ActiveRecord::Schema.define(:version => 20080714215417) do
   end
 
   create_table "sleeps", :force => true do |t|
-    t.integer  "user_id",     :limit => 11
+    t.integer  "user_id",          :limit => 11
     t.string   "slept_in"
     t.datetime "started_at"
     t.datetime "woke_up_at"
-    t.integer  "quality",     :limit => 11
-    t.boolean  "interrupted"
+    t.integer  "quality",          :limit => 11
+    t.boolean  "interrupted",                    :default => false
     t.string   "environment"
+    t.string   "woken_by"
+    t.string   "condition_awoken"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

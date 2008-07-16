@@ -26,7 +26,8 @@ class ChartsController < ApplicationController
      :measurement_lower_hip=>[false, false, false],
      :measurement_thigh_left=>[false, false, false],
      :measurement_thigh_right=>[false, false, false],
-     :cholesterol=>[true,true,true]
+     :cholesterol=>[true,true,true],
+     :sleep=>[true,true,true]
      ]
      
      
@@ -55,6 +56,14 @@ unless @returned[:bp].nil?
 if  @returned[:bp][:b].nil? then false else true end,
 if  @returned[:bp][:c].nil? then false else true end] 
 else @results[:bp] = [false, false, false]
+end
+
+unless @returned[:sleep].nil?   
+ @results[:sleep]=
+ [if  @returned[:sleep][:a].nil? then false else true end,
+if  @returned[:sleep][:b].nil? then false else true end,
+if  @returned[:sleep][:c].nil? then false else true end] 
+else @results[:sleep] = [false, false, false]
 end
 
 unless @returned[:cholesterol].nil?   

@@ -32,7 +32,7 @@ one:
   emergency_zip: MyString
   number_of_children: false
   list_unusual_substance_exposure: oil
-  eduction_years: 17
+  education_years: 17
   smoker: false
   was_smoker: false
   average_smoking: none
@@ -72,7 +72,7 @@ two:
   emergency_zip: MyString
   number_of_children: false
   list_unusual_substance_exposure: MyString
-  eduction_years: 1
+  education_years: 1
   smoker: false
   was_smoker: false
   average_smoking: MyString
@@ -112,7 +112,7 @@ three:
   emergency_zip: MyString
   number_of_children: false
   list_unusual_substance_exposure: oil
-  eduction_years: 17
+  education_years: 17
   smoker: false
   was_smoker: false
   average_smoking: none
@@ -152,7 +152,7 @@ four:
   emergency_zip: MyString
   number_of_children: false
   list_unusual_substance_exposure: oil
-  eduction_years: 17
+  education_years: 17
   smoker: false
   was_smoker: false
   average_smoking: none
@@ -192,7 +192,7 @@ five:
   emergency_zip: MyString
   number_of_children: false
   list_unusual_substance_exposure: oil
-  eduction_years: 17
+  education_years: 17
   smoker: false
   was_smoker: false
   average_smoking: none

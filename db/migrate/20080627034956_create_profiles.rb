@@ -14,8 +14,8 @@ class CreateProfiles < ActiveRecord::Migration
       t.string :body_shape
       t.string :sex
       t.string :race
-      t.string :rx_affiliate_no
-      t.string :sale_code
+      t.string :rx_affiliate_no , :default => "SELF"
+      t.string :sale_code , :default => "SELF"
       t.boolean :terms_agreed
       t.datetime :terms_agreed_on
       t.string :primary_care_physician
@@ -33,10 +33,11 @@ class CreateProfiles < ActiveRecord::Migration
       t.boolean :has_children
       t.integer :number_of_children
       t.string :list_unusual_substance_exposure
-      t.integer :eduction_years
+      t.integer :education_years
       t.boolean :smoker
       t.boolean :was_smoker
       t.string :average_smoking
+      t.boolean :non_smoker
       t.boolean :alcoholic
       t.integer :ounces_alcohol_weekly
       t.references :user
@@ -47,6 +48,7 @@ class CreateProfiles < ActiveRecord::Migration
       t.boolean :is_breast_feeding
       t.boolean :is_menopause 
       t.string :blood_type
+      t.integer :user_priority , :default => 1
 
       t.timestamps
     end

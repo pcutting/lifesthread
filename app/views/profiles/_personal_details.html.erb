@@ -3,15 +3,15 @@
 
   <p>
     <%= f.label :blood_type %><!-- was a br -->
-    <%= f.select :blood_type, ["A+", "A-", "B+", "B-", "O"],:size => 5 %>
+    <%= f.select :blood_type, ["A+", "A-", "B+", "B-", "AB+" , "AB-", "O+",  "O-"],:size => 5 %>
   </p>
   <p>
     <%= f.label :primary_care_physician %><!-- was a br -->
     <%= f.text_field :primary_care_physician , :size => 15 %>
   </p>
     <p>
-    <%= f.label "Years of Eduction"%><!-- was a br -->
-    <%= f.text_field :eduction_years , :size => 2%>
+    <%= f.label "Years of Education"%><!-- was a br -->
+    <%= f.text_field :education_years , :size => 2%>
   </p>
   <p>
     <%= f.label :employer_name %><!-- was a br -->

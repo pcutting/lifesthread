@@ -1,0 +1,31 @@
+
+  <p>
+    <%= f.label :slept_in %><br />
+    <%= f.select :slept_in, ["Bed", "Chair/Recliner", "Vehicle", "Floor", "Sofa", "Cot" , "Camping"],:size => 10 %>
+  </p>
+  <p>
+    <%= f.label :started_at %>
+    <%= f.datetime_select :started_at %>
+  </p>
+  <p> 
+    <%= f.label :woke_up_at %>
+    <%= f.datetime_select :woke_up_at %>
+  </p>
+  <p>
+    <%= f.label :quality %>
+    <%= f.select :quality, [1 ,10,20,30,40,50,60, 70, 80,90, 100], :size => 3%>
+
+    <%= f.label :interrupted %>
+    <%= f.check_box :interrupted %>
+  </p>
+  <p>
+    <%= f.label :environment %>
+    <%= f.select :environment, ["Very Quiet", "Quiet", "TV on", "Radio on", "Noisy" , "While moving in vehicle"],:size => 10 %>
+
+    <%= f.label :woken_by %>
+    <%= f.select :woken_by, ["By Alarm", "Awoke Naturally", "By a person", "By Dream", "By noise"] ,:size => 10%>
+
+    <%= f.label :condition_awoken %>
+    <%= f.select :condition_awoken, ["Rested", "Tiered"],:size => 10 %>
+  </p>
+  

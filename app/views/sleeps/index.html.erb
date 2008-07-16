@@ -1,25 +1,36 @@
 <h1>Listing sleeps</h1>
 
+<%- @plot_data = [] -%>
+<% @chartoptions = current_user.profile.chart_options %>
+<% myPlots("sleep") %>
+<%= makeChart %>
+
+
 <table>
   <tr>
-    <th>User</th>
     <th>Slept in</th>
     <th>Started at</th>
     <th>Woke up at</th>
+    <th>Hours</th>
     <th>Quality</th>
     <th>Interrupted</th>
     <th>Environment</th>
+    <th>Woken By</th>
+    <th>Result</th>
   </tr>
+
 
 <% for sleep in @sleeps %>
   <tr>
-    <td><%=h sleep.user %></td>
     <td><%=h sleep.slept_in %></td>
     <td><%=h sleep.started_at %></td>
     <td><%=h sleep.woke_up_at %></td>
+    <td><%= ((sleep.woke_up_at - sleep.started_at) / 3600).round_with_precision(2)  %></td>
     <td><%=h sleep.quality %></td>
     <td><%=h sleep.interrupted %></td>
     <td><%=h sleep.environment %></td>
+    <td><%=h sleep.woken_by %></td>
+    <td><%=h sleep.condition_awoken %></td>
     <td><%= link_to 'Show', sleep %></td>
     <td><%= link_to 'Edit', edit_sleep_path(sleep) %></td>
     <td><%= link_to 'Destroy', sleep, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -29,4 +40,4 @@
 
 <br />
 
-<%= link_to 'New sleep', new_sleep_path %>
+<%= link_to 'New sleep period', new_sleep_path %>

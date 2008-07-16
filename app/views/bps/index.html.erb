@@ -1,6 +1,10 @@
 <h1>Blood pressure</h1>
 <br />
-<%= render :partial => "chart" %>
+<%- @plot_data = [] -%>
+<% @chartoptions = current_user.profile.chart_options %>
+<% myPlots("bp") %>
+<%= makeChart %>
+
 <hr />
 
 <%= render :partial => "new_inform" %>

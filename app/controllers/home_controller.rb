@@ -52,19 +52,25 @@ if params[:commit] == "survey" then
       @opinion.save
       redirect_to(home_path(:question => @opinion.question_id))
 else
-
+      did_save = false
       @bp = current_user.bps.new(params[:bp])
       @measurement = current_user.measurements.new(params[:measurements])
       @food = current_user.foods.new(params[:foods])
+      @sleep = current_user.sleeps.new(params[:sleep])
       
      # flash[:notice] = ""
       if !@bp.systolic.blank? && !@bp.diastolic.blank? then 
-        @bp.save  
+        did_save = @bp.save  
+        flash[:notice] ="Records updated."
+      end
+
+      if @sleep.started_at != @sleep.woke_up_at then 
+        did_save = @sleep.save  
         flash[:notice] ="Records updated."
       end
 
       if !( @measurement.water_percent.blank? && @measurement.muscle_percent.blank? && @measurement.chest.blank? && @measurement.weight.blank? &&  @measurement.pectoral.blank? &&  @measurement.bicep_left.blank? &&    @measurement.visceral_fat.blank? &&   @measurement.bicep_right.blank? &&   @measurement.belly.blank? &&     @measurement.hip.blank? &&     @measurement.thigh_left.blank? &&     @measurement.resting_metabolism.blank? &&      @measurement.thigh_right.blank? &&     @measurement.fat_percent.blank? &&     @measurement.comment.blank? &&     @measurement.lower_hip.blank?   ) then
-        @measurement.save
+       did_save =  @measurement.save
         flash[:notice] = "Records updated."
       end
 
@@ -81,22 +87,18 @@ else
       #@food.comment.blank? &&
       #@food.polyunsaturated_fats.blank? &&
       @food.calories_per_serving.blank? ) then 
-        @food.save
+        did_save = @food.save
         flash[:notice] = "Records updated"
     end
 
 
 
-     if flash[:notice] = "" then
-    #  flash[:notice] = "There were no updates, please fill out the required data and submit again."
+     unless did_save then
+      flash[:notice] = "There were no updates, please fill out the required data and submit again."
      end 
       
-    #      if @bp.save or @measurement.save
-    #        flash[:notice] = flash[:notice] + ' Records updated was successfully created.'
-            redirect_to(home_path) 
-     #     else
-      #      #render :action => "new"
-      #    end
+     redirect_to(home_path) 
+
 end 
 
 end

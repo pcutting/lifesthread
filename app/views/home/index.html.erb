@@ -9,7 +9,7 @@
 <% if logged_in? %>
 
   <% content_for :header do%>
-    Your lifesThread today: <img src="/images/imglifesthread.jpg">
+    Your LifesThread today: <img src="/images/imglifesthread.jpg" />
     <p><strong>Welcome to your WellnessBoard <%=h current_user.first_name -%></strong> <%= link_to 'Logout', logout_path %></p>
   <% end %>
 

@@ -2,6 +2,7 @@
 <fieldset>
  <%= link_to 'Home', root_path %> 
  <%= link_to 'Master Chart', charts_path %> 
+ <%= link_to 'Sleep', sleeps_path %> 
  <%= link_to 'Medications', medications_path %> 
  <%= link_to 'Blood Pressure', bps_path %>  
  <%= link_to 'Cholesterol', cholesterols_path %>  
@@ -14,6 +15,7 @@
  <%= link_to 'Workouts', workouts_path %>
  <%= link_to 'Fitness Plans', fitness_plans_path %>
  <%= link_to 'Profile', profile_path %> 
+ <br />
  <%= link_to 'New Support/Bug', new_support_path(:ref_page => request.url) %>
  <%= link_to 'View Support/Bug', supports_path %>
 </fieldset>

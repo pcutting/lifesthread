@@ -1,99 +1,12 @@
- <div id="overview" style="margin-left:50px;margin-top:20px;width:400px;height:50px"></div>
-    <p> Try zooming. The image above shows an adjustable overview. Click and drag to select a zone.</p>
- <div id="placeholder" style="width:600px;height:500px;"></div>
 
-<script id="source" language="javascript" type="text/javascript">
+<%- @plot_data = [] -%>
+
+<% myPlots("all") %>
+
+<%= makeChart %>
 
 
 
-
-$(function () {
-
-  <%- @plot_data = [] -%>
-
- <% myPlots %>
- 
- 
-  
-    var options = {
-        xaxis: { mode: "time" },
-        selection: { mode: "x" },
-        //grid: { coloredAreas: weekendAreas },
-        legend: {
-            show: true,
-            //labelFormatter: null,
-            //labelBoxBorderColor: color,
-            noColumns: 2,
-            position: "sw"   // "ne" or "nw" or "se" or "sw"
-            //margin: number of pixels
-            //backgroundColor: null or color
-            //backgroundOpacity: number in 0.0 - 1.0
-            //container: null or jQuery object
-  }
-    };
-    
-        var options_overview = {
-        xaxis: { mode: "time" },
-        selection: { mode: "x" },
-        //grid: { coloredAreas: weekendAreas },
-        legend: {
-            show: false,
-            //labelFormatter: null,
-            //labelBoxBorderColor: color,
-            noColumns: 2,
-            position: "sw"   // "ne" or "nw" or "se" or "sw"
-            //margin: number of pixels
-            //backgroundColor: null or color
-            //backgroundOpacity: number in 0.0 - 1.0
-            //container: null or jQuery object
-  }
-    };
-    
-    var plot = $.plot($("#placeholder"), 
-    [ {<%=@plot_data.join(" }, {") %> }
-    ], options);
-    
-    var overview = $.plot($("#overview"), 
-      [
-      {<%=@plot_data.join(" }, {") %>}
-      ], {
-        lines: { show: true, lineWidth: 2 },
-        shadowSize: 0,
-        legend: {
-            show: false },
-        xaxis: { ticks: 3, mode: "time" },
-        // yaxis: { ticks: [], min: 0, max: 4000 },
-        selection: { mode: "x" }
-    });
-
-    // now connect the two
-    var internalSelection = false;
-    
-    $("#placeholder").bind("selected", function (event, area) {
-        // do the zooming
-        plot = $.plot($("#placeholder"),
-         
-        [{<%=@plot_data.join(" }, {") %>}],
-                      $.extend(true, {}, options, {
-                          xaxis: { min: area.x1, max: area.x2 }
-                      }));
-        
-        if (internalSelection)
-            return; // prevent eternal loop
-        internalSelection = true;
-        overview.setSelection(area);
-        internalSelection = false;
-    });
-    
-    $("#overview").bind("selected", function (event, area) {
-        if (internalSelection)
-            return;
-        internalSelection = true;
-        plot.setSelection(area);
-        internalSelection = false;
-    });
-});
-</script>
 
  
  

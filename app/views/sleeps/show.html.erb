@@ -1,7 +1,3 @@
-<p>
-  <b>User:</b>
-  <%=h @sleep.user %>
-</p>
 
 <p>
   <b>Slept in:</b>
@@ -33,6 +29,16 @@
   <%=h @sleep.environment %>
 </p>
 
+<p>
+  <b>Woken By:</b>
+  <%=h @sleep.woken_by %>
+</p>
+
+<p>
+  <b>Woke Feeling:</b>
+  <%=h @sleep.condition_awoken %>
+</p>
+
 
 <%= link_to 'Edit', edit_sleep_path(@sleep) %> |
-<%= link_to 'Back', sleeps_path %>
+<%= link_to 'View sleep records', sleeps_path %>
