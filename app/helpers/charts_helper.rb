@@ -8,14 +8,11 @@ module ChartsHelper
 def makeChart(*options)
 
 display = '
-
 <div id="overview" style="margin-left:50px;margin-top:20px;width:400px;height:50px"></div>
 <p> Try zooming. The image above shows an adjustable overview. Click and drag to select a zone.</p>
 <div id="placeholder" style="width:600px;height:500px;"></div>
 
 <script id="source" language="javascript" type="text/javascript">
-
-
 
 
 $(function () {
@@ -147,19 +144,23 @@ end
 
 
   if options == "all" || options == "bp"
-    getBP  #function call
+    @bps = current_user.bps.find(:all, :order => "measured_on asc") 
+    getBP  unless @bps.nil? #function call
   end
 
   if options == "all" || options == "sleep"
-    getSleep  #function call
+    @sleeps = current_user.sleeps.find(:all, :order => "started_at asc")
+    getSleep unless @sleeps.nil? #function call
   end
 
   if options == "all" || options == "measurements" 
-    getMeasurements #function call
+    @measurements = current_user.measurements.find(:all, :order => "measured_on asc", :conditions => "is_goal = false " ) 
+    getMeasurements unless @measurements.nil? #function call
   end
 
   if options == "all" || options == "cholesterol" 
-    getCholesterol #function call
+    @cholesterols = current_user.cholesterols.find(:all, :order => "measured_on asc") 
+    getCholesterol unless @cholesterol.nil? #function call
   end
 
 end # ends myPlots
@@ -181,8 +182,8 @@ def getSleep
 
   sleep1, sleep2 , sleep1_avg , sleep2_avg = [], [], [], []  
   sum_sleep1, sum_sleep2 , count = 0,0,0 
-  if ( @chartoptions[:sleep][0] == true|| @chartoptions[:sleep][1] == true  ) 
-    for sleeps in current_user.sleeps.find(:all, :order => "started_at asc") 
+  if ( @chartoptions[:sleep][0]|| @chartoptions[:sleep][1]  ) 
+    for sleeps in @sleeps
       count += 1 
       #divide seconds of sleep by 288 so that we can get a number between 0 and 100 (or above) 
       # based on the concept that you want to get 8 hours of sleep on average, and to give you numbers 
@@ -196,10 +197,10 @@ def getSleep
       sleep1_avg << [ "[ #{sleeps.started_at.to_i * 1000}, #{sum_sleep1 / count} ]" ] 
 
     end  
-    if @chartoptions[:sleep][0] == true
+    if @chartoptions[:sleep][0]
       @plot_data << "label: '% of Required Sleep<a href=\"popup\">i</a> ', data: [#{sleep1.join(",")}]  ,points: { show: true }, lines: { show: true }" 
     end 
-    if @chartoptions[:sleep][1] == true
+    if @chartoptions[:sleep][1]
       @plot_data << "label: 'Sleep Avg' , data: [#{sleep1_avg.join(",")}] ,points: { show: false }, lines: { show: true }" 
     
     end 
@@ -218,8 +219,8 @@ def getBP
   #Bloodpressure
   bp1, bp2 , bp1_avg , bp2_avg = [], [], [], []  
   sum_bp1, sum_bp2 , count = 0,0,0 
-  if ( @chartoptions[:bp][0] == true|| @chartoptions[:bp][1] == true) 
-    for bps in current_user.bps.find(:all, :order => "measured_on asc") 
+  if ( @chartoptions[:bp][0]|| @chartoptions[:bp][1]) 
+    for bps in @bps
       count += 1 
 
       bp1 << [ "[#{bps.measured_on.to_i * 1000}, #{bps.systolic} ]" ] 
@@ -229,11 +230,11 @@ def getBP
       sum_bp2 += bps.diastolic 
       bp2_avg << [ "[ #{bps.measured_on.to_i * 1000}, #{sum_bp2 / count} ]" ] 
     end  
-    if @chartoptions[:bp][0] == true
+    if @chartoptions[:bp][0]
       @plot_data << "label: 'Systolic', data: [#{bp1.join(",")}]  ,points: { show: true }, lines: { show: true }" 
       @plot_data << "label: 'Diastolic' , data: [#{bp2.join(",")}]  ,points: { show: true }, lines: { show: true }" 
     end 
-    if @chartoptions[:bp][1] == true
+    if @chartoptions[:bp][1]
       @plot_data << "label: 'Sys Avg' , data: [#{bp1_avg.join(",")}] ,points: { show: false }, lines: { show: true }" 
       @plot_data << "label: 'Dias Avg', data: [#{bp2_avg.join(",")}] ,points: { show: false }, lines: { show: true }" 
     end 
@@ -251,8 +252,8 @@ def getCholesterol
 cholesterol1,cholesterol2 = [],[] 
 chol_sum1, chol_sum2, count = 0,0,0 
 chol_avg1, chol_avg2 = [],[] 
-if ( @chartoptions[:cholesterol][0] == true|| @chartoptions[:cholesterol][1] == true) 
-  for cholesterols in current_user.cholesterols.find(:all, :order => "measured_on asc") 
+if ( @chartoptions[:cholesterol][0]|| @chartoptions[:cholesterol][1]) 
+  for cholesterols in @cholesterols
     chol_sum1 += cholesterols.hdl 
     chol_sum2 += cholesterols.ldl 
     count += 1 
@@ -261,11 +262,11 @@ if ( @chartoptions[:cholesterol][0] == true|| @chartoptions[:cholesterol][1] == 
     chol_avg1 << [ "[ #{cholesterols.measured_on.to_i * 1000}, #{chol_sum1 / count.to_f}]" ] 
     chol_avg2 << [ "[ #{cholesterols.measured_on.to_i * 1000}, #{chol_sum2 / count.to_f}]" ] 
   end 
-  if @chartoptions[:cholesterol][0] == true
+  if @chartoptions[:cholesterol][0]
     @plot_data << "label: 'HDL', data: [#{cholesterol1.join(",")}] ,points: { show: true }, lines: { show: true }" 
     @plot_data << "label: 'LDL' , data: [#{cholesterol2.join(",")}] ,points: { show: true }, lines: { show: true }" 
   end 
-  if @chartoptions[:cholesterol][1] == true
+  if @chartoptions[:cholesterol][1]
     @plot_data << "label: 'HDL Avg', data: [#{chol_avg1.join(",")}] ,points: { show: false }, lines: { show: true }" 
     @plot_data << "label: 'LDL Avg' , data: [#{chol_avg2.join(",")}] ,points: { show: false }, lines: { show: true }" 
   end
@@ -280,49 +281,51 @@ end #def getCholesterol
 def 
 getMeasurements
 #measurements
-if @chartoptions[:measurements][0] == true|| @chartoptions[:measurements][1] == true|| @chartoptions[:measurements][2] == true
+if @chartoptions[:measurements][0]|| @chartoptions[:measurements][1]|| @chartoptions[:measurements][2]
   meas1, meas2, meas3, meas4, meas5, meas6, meas7, meas8 = [],[],[],[],[],[],[],[] 
   meas1_avg, meas2_avg, meas3_avg, meas4_avg, meas5_avg, meas6_avg, meas7_avg, meas8_avg = [],[],[],[],[],[],[],[] 
   meas1_count, meas2_count, meas3_count, meas4_count, meas5_count, meas6_count, meas7_count, meas8_count = 0,0,0,0,0,0,0,0 
+  
   meas1_sum, meas2_sum, meas3_sum, meas4_sum, meas5_sum, meas6_sum, meas7_sum, meas8_sum = 0,0,0,0,0,0,0,0 
-  for measurement in current_user.measurements.find(:all, :order => "measured_on asc", :conditions => "is_goal = false " ) 
-    unless measurement.weight.nil? && ! (@chartoptions[:measurement_weight][0] == true|| @chartoptions[:measurement_weight][1] == true)  
+  
+  for measurement in @measurements
+    unless measurement.weight.nil? && ! (@chartoptions[:measurement_weight][0]|| @chartoptions[:measurement_weight][1])  
       meas1_count += 1 
       meas1_sum += measurement.weight  
       meas1  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{measurement.weight}] "  
       meas1_avg  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{ meas1_sum.to_f/ meas1_count.to_f}] " 
     end 
-    unless measurement.fat_percent.nil?  && ! ( @chartoptions[:measurement_fat_percent][0] == true|| @chartoptions[:measurement_fat_percent][1] == true) 
+    unless measurement.fat_percent.nil?  && ! ( @chartoptions[:measurement_fat_percent][0]|| @chartoptions[:measurement_fat_percent][1]) 
       meas3_count += 1 
       meas3_sum += measurement.fat_percent  
       meas3  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{measurement.fat_percent}]"  
       meas3_avg  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{meas3_sum.to_f/ meas3_count.to_f}]" 
     end 
-    unless measurement.muscle_percent.nil?   && ! ( @chartoptions[:measurement_muscle_percent][0] == true || @chartoptions[:measurement_muscle_percent][1] == true ) 
+    unless measurement.muscle_percent.nil?   && ! ( @chartoptions[:measurement_muscle_percent][0] || @chartoptions[:measurement_muscle_percent][1] ) 
       meas4_count += 1 
       meas4_sum += measurement.muscle_percent  
       meas4  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{measurement.muscle_percent}]"  
       meas4_avg  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{meas4_sum.to_f/ meas4_count.to_f}]" 
     end 
-    unless measurement.visceral_fat.nil?  && ! ( @chartoptions[:measurement_visceral_fat][0] == true|| @chartoptions[:measurement_visceral_fat][1] == true)
+    unless measurement.visceral_fat.nil?  && ! ( @chartoptions[:measurement_visceral_fat][0]|| @chartoptions[:measurement_visceral_fat][1])
       meas5_count += 1 
       meas5_sum += measurement.visceral_fat  
       meas5  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{measurement.visceral_fat}]" 
       meas5_avg  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{meas5_sum.to_f/ meas5_count.to_f}]"  
     end 
-    unless measurement.chest.nil?  && ! ( @chartoptions[:measurement_chest][0] == true|| @chartoptions[:measurement_chest][1] == true) 
+    unless measurement.chest.nil?  && ! ( @chartoptions[:measurement_chest][0]|| @chartoptions[:measurement_chest][1]) 
       meas6_count += 1 
       meas6_sum += measurement.chest  
       meas6  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{measurement.chest}]"  
       meas6_avg  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{meas6_sum.to_f/ meas6_count.to_f}]" 
     end 
-    unless measurement.belly.nil?  && ! ( @chartoptions[:measurement_belly][0] == true|| @chartoptions[:measurement_belly][1] == true) 
+    unless measurement.belly.nil?  && ! ( @chartoptions[:measurement_belly][0]|| @chartoptions[:measurement_belly][1]) 
       meas7_count += 1 
       meas7_sum += measurement.belly  
       meas7  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{measurement.belly}]"  
       meas7_avg  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{meas7_sum.to_f/ meas7_count.to_f}]" 
     end 
-    unless measurement.hip.nil?   && ! (@chartoptions[:measurement_hip][0] == true|| @chartoptions[:measurement_hip][1] == true) 
+    unless measurement.hip.nil?   && ! (@chartoptions[:measurement_hip][0]|| @chartoptions[:measurement_hip][1]) 
       meas8_count += 1 
       meas8_sum += measurement.hip  
       meas8  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{measurement.hip} ]"  
@@ -330,52 +333,52 @@ if @chartoptions[:measurements][0] == true|| @chartoptions[:measurements][1] == 
     end 
   end 
     
-  if @chartoptions[:measurements][0] == true
-    if @chartoptions[:measurement_weight][0] == true
+  if @chartoptions[:measurements][0]
+    if @chartoptions[:measurement_weight][0]
       @plot_data << "label: 'Weight', data: [#{meas1.join(",")}] ,points: { show: true }, lines: { show: true }" 
     end 
-    if @chartoptions[:measurement_fat_percent][0] == true
+    if @chartoptions[:measurement_fat_percent][0]
       @plot_data << "label: 'Fat%', data: [#{meas3.join(",")}] ,points: { show: true }, lines: { show: true }" 
     end 
-    if @chartoptions[:measurement_muscle_percent][0] == true
+    if @chartoptions[:measurement_muscle_percent][0]
       @plot_data << "label: 'Muscle%', data: [#{meas4.join(",")}] ,points: { show: true }, lines: { show: true }" 
     end 
-    if @chartoptions[:measurement_visceral_fat][0] == true
+    if @chartoptions[:measurement_visceral_fat][0]
       @plot_data << "label: 'Visceral Fat%', data: [#{meas5.join(",")}] ,points: { show: true }, lines: { show: true }" 
     end 
-    if @chartoptions[:measurement_chest][0] == true
+    if @chartoptions[:measurement_chest][0]
       @plot_data << "label: 'Chest', data: [#{meas6.join(",")}] ,points: { show: true }, lines: { show: true }" 
     end 
-    if @chartoptions[:measurement_belly][0] == true
+    if @chartoptions[:measurement_belly][0]
       @plot_data << "label: 'Belly', data: [#{meas7.join(",")}] ,points: { show: true }, lines: { show: true }" 
     end 
-    if @chartoptions[:measurement_hip][0] == true
+    if @chartoptions[:measurement_hip][0]
       @plot_data << "label: 'Hip', data: [#{meas8.join(",")}] ,points: { show: true }, lines: { show: true }" 
     end 
-  end # if @chartoptions[:measurements][0] == true
-  if @chartoptions[:measurements][1] == true
-    if @chartoptions[:measurement_weight][1] == true
+  end # if @chartoptions[:measurements][0]
+  if @chartoptions[:measurements][1]
+    if @chartoptions[:measurement_weight][1]
       @plot_data << "label: 'Weight Avg', data: [#{meas1_avg.join(",")}] ,points: { show: false }, lines: { show: true }" 
     end 
-    if @chartoptions[:measurement_fat_percent][1] == true
+    if @chartoptions[:measurement_fat_percent][1]
       @plot_data << "label: 'Fat% Avg', data: [#{meas3_avg.join(",")}] ,points: { show: false }, lines: { show: true }" 
     end 
-    if @chartoptions[:measurement_muscle_percent][1] == true
+    if @chartoptions[:measurement_muscle_percent][1]
       @plot_data << "label: 'Muscle% Avg', data: [#{meas4_avg.join(",")}] ,points: { show: false }, lines: { show: true }" 
     end 
-    if @chartoptions[:measurement_visceral_fat][1] == true
+    if @chartoptions[:measurement_visceral_fat][1]
       @plot_data << "label: 'Visceral Fat% Avg', data: [#{meas5_avg.join(",")}] ,points: { show: false }, lines: { show: true }" 
     end 
-    if @chartoptions[:measurement_chest][1] == true
+    if @chartoptions[:measurement_chest][1]
       @plot_data << "label: 'Chest Avg', data: [#{meas6_avg.join(",")}] ,points: { show: false }, lines: { show: true }" 
     end 
-    if @chartoptions[:measurement_belly][1] == true
+    if @chartoptions[:measurement_belly][1]
       @plot_data << "label: 'Belly Avg', data: [#{meas7_avg.join(",")}] ,points: { show: false }, lines: { show: true }" 
     end 
-    if @chartoptions[:measurement_hip][1] == true
+    if @chartoptions[:measurement_hip][1]
       @plot_data << "label: 'Hip Avg', data: [#{meas8_avg.join(",")}] ,points: { show: false }, lines: { show: true }" 
     end 
-  end # if @chartoptions[:measurements][1] == true
+  end # if @chartoptions[:measurements][1]
 end # if @chartoptions[:measurments] 
 end #def getMeasurements
 
