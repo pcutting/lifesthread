@@ -51,12 +51,20 @@ var options = {
 };
 
 var plot = $.plot($("#placeholder"), 
-[ {' + @plot_data.join(" }, {")  + ' }
+[ {' 
+
+display += @plot_data.join(" }, {") 
+
+display += ' }
 ], options);
 
 var overview = $.plot($("#overview"), 
 [
-{' + @plot_data.join(" }, {")  + '}
+{' 
+
+display +=  @plot_data.join(" }, {") 
+
+display += '}
 ], {
   lines: { show: true, lineWidth: 2 },
   shadowSize: 0,
@@ -74,7 +82,11 @@ $("#placeholder").bind("selected", function (event, area) {
   // do the zooming
   plot = $.plot($("#placeholder"),
    
-  [{' + @plot_data.join(" }, {")  + '}],
+  [{' 
+  
+display += @plot_data.join(" }, {") 
+
+display += '}],
                 $.extend(true, {}, options, {
                     xaxis: { min: area.x1, max: area.x2 }
                 }));
@@ -281,7 +293,7 @@ end #def getCholesterol
 def 
 getMeasurements
 #measurements
-if @chartoptions[:measurements][0]|| @chartoptions[:measurements][1]|| @chartoptions[:measurements][2]
+if @chartoptions[:measurements][0] || @chartoptions[:measurements][1] || @chartoptions[:measurements][2]
   meas1, meas2, meas3, meas4, meas5, meas6, meas7, meas8 = [],[],[],[],[],[],[],[] 
   meas1_avg, meas2_avg, meas3_avg, meas4_avg, meas5_avg, meas6_avg, meas7_avg, meas8_avg = [],[],[],[],[],[],[],[] 
   meas1_count, meas2_count, meas3_count, meas4_count, meas5_count, meas6_count, meas7_count, meas8_count = 0,0,0,0,0,0,0,0 
@@ -289,43 +301,52 @@ if @chartoptions[:measurements][0]|| @chartoptions[:measurements][1]|| @chartopt
   meas1_sum, meas2_sum, meas3_sum, meas4_sum, meas5_sum, meas6_sum, meas7_sum, meas8_sum = 0,0,0,0,0,0,0,0 
   
   for measurement in @measurements
-    unless (measurement.weight.nil? || measurement.weight == 0) && ! (@chartoptions[:measurement_weight][0]|| @chartoptions[:measurement_weight][1])  
+    unless (measurement.weight.nil? || measurement.weight == 0) && ! (@chartoptions[:measurement_weight][0] || @chartoptions[:measurement_weight][1])  
       meas1_count += 1 
       meas1_sum += measurement.weight  
       meas1  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{measurement.weight}] "  
       meas1_avg  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{ meas1_sum.to_f/ meas1_count.to_f}] " 
     end 
-    unless (measurement.fat_percent.nil?  || measurement.fat_percent == 0) && ! ( @chartoptions[:measurement_fat_percent][0]|| @chartoptions[:measurement_fat_percent][1]) 
+    
+    if !(measurement.fat_percent.nil? ) &&  ( @chartoptions[:measurement_fat_percent][0] || @chartoptions[:measurement_fat_percent][1]) 
+     
+      puts "fat % =============="
+      puts measurement.fat_percent
+      
+      
       meas3_count += 1 
-      meas3_sum += measurement.fat_percent  
+      meas3_sum += measurement.fat_percent
       meas3  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{measurement.fat_percent}]"  
       meas3_avg  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{meas3_sum.to_f/ meas3_count.to_f}]" 
     end 
-    unless (measurement.muscle_percent.nil? || measurement.muscle_percent == 0)   && ! ( @chartoptions[:measurement_muscle_percent][0] || @chartoptions[:measurement_muscle_percent][1] ) 
+    
+    if !(measurement.muscle_percent.nil?)   &&  ( @chartoptions[:measurement_muscle_percent][0] || @chartoptions[:measurement_muscle_percent][1] ) 
       meas4_count += 1 
       meas4_sum += measurement.muscle_percent  
       meas4  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{measurement.muscle_percent}]"  
       meas4_avg  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{meas4_sum.to_f/ meas4_count.to_f}]" 
     end 
-    unless (measurement.visceral_fat.nil?  || measurement.visceral_fat == 0) && ! ( @chartoptions[:measurement_visceral_fat][0]|| @chartoptions[:measurement_visceral_fat][1])
+    
+    if !(measurement.visceral_fat.nil? ) && ( @chartoptions[:measurement_visceral_fat][0] || @chartoptions[:measurement_visceral_fat][1])
       meas5_count += 1 
       meas5_sum += measurement.visceral_fat  
       meas5  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{measurement.visceral_fat}]" 
       meas5_avg  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{meas5_sum.to_f/ meas5_count.to_f}]"  
     end 
-    unless (measurement.chest.nil? || measurement.chest == 0)  && ! ( @chartoptions[:measurement_chest][0]|| @chartoptions[:measurement_chest][1]) 
+    
+    if !(measurement.chest.nil? )  &&  ( @chartoptions[:measurement_chest][0] || @chartoptions[:measurement_chest][1]) 
       meas6_count += 1 
       meas6_sum += measurement.chest  
       meas6  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{measurement.chest}]"  
       meas6_avg  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{meas6_sum.to_f/ meas6_count.to_f}]" 
     end 
-    unless (measurement.belly.nil?  || measurement.belly == 0) && ! ( @chartoptions[:measurement_belly][0]|| @chartoptions[:measurement_belly][1]) 
+    if !(measurement.belly.nil? ) &&  ( @chartoptions[:measurement_belly][0] || @chartoptions[:measurement_belly][1]) 
       meas7_count += 1 
       meas7_sum += measurement.belly  
       meas7  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{measurement.belly}]"  
       meas7_avg  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{meas7_sum.to_f/ meas7_count.to_f}]" 
     end 
-    unless (measurement.hip.nil?  || measurement.hip == 0)  && ! (@chartoptions[:measurement_hip][0]|| @chartoptions[:measurement_hip][1]) 
+    if !(measurement.hip.nil? )  &&  (@chartoptions[:measurement_hip][0] || @chartoptions[:measurement_hip][1]) 
       meas8_count += 1 
       meas8_sum += measurement.hip  
       meas8  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{measurement.hip} ]"  
