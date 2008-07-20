@@ -1,6 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :sleeps
-
 
 
 
@@ -52,6 +50,14 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :supports
 
   map.resources :supports, :has_many => :support_dialogs
+
+  map.resources :roles
+
+  map.resources :subjects
+
+  map.resources :permissions
+
+  map.resources :sleeps
 
   
 

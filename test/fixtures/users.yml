@@ -7,6 +7,7 @@ test:
   first_name: Phil
   middle_name: J
   last_name: Cutting
+  time_zone: Eastern Time (US & Canada)
 
 aaron:
   login: aaron
@@ -17,6 +18,7 @@ aaron:
   first_name: Aaron
   middle_name: K
   last_name: Smith
+  time_zone: Eastern Time (US & Canada)
 
 phil:
   login: phil
@@ -27,6 +29,7 @@ phil:
   first_name: phil
   middle_name: K
   last_name: Cutting
+  time_zone: Eastern Time (US & Canada)
   
 nevie:
   login: nevie
@@ -37,6 +40,7 @@ nevie:
   first_name: Nevie
   middle_name: D
   last_name: Cutting
+  time_zone: Eastern Time (US & Canada)
   
 philip:
   login: philip
@@ -47,3 +51,4 @@ philip:
   first_name: Philip
   middle_name: J
   last_name: Cutting
+  time_zone: Eastern Time (US & Canada)

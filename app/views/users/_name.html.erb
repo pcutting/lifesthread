@@ -8,6 +8,11 @@
 <p><label for="last_name">Last Name</label><br/>
 <%= f.text_field :last_name %></p>
 
+
+<p><label for="Time Zone">Time Zone</label><br/>
+<%= f.time_zone_select :time_zone, TimeZone.us_zones %>
+
+
 <!--
 <p><label for="sir_name">Sir Name (ie. Sr, Jr, 3rd)</label><br/>
 <%= f.text_field :sir_name %></p>

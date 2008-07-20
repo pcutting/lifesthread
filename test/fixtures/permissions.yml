@@ -1,0 +1,8 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: test
+  authorized_user_id: 1
+  role: MyString
+  subject: MyString
+

@@ -1,0 +1,8 @@
+script/generate scaffold Permission user:references authorized_user_id:integer role:string subject:string
+
+
+script/generate scaffold Subject what:string
+
+script/generate scaffold Role permit:string
+
+ 

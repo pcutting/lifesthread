@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080714215417) do
+ActiveRecord::Schema.define(:version => 20080719024928) do
 
   create_table "bps", :force => true do |t|
     t.integer  "user_id",     :limit => 11
@@ -176,6 +176,15 @@ ActiveRecord::Schema.define(:version => 20080714215417) do
     t.datetime "updated_at"
   end
 
+  create_table "permissions", :force => true do |t|
+    t.integer  "user_id",            :limit => 11
+    t.integer  "authorized_user_id", :limit => 11
+    t.string   "role"
+    t.string   "subject"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "profiles", :force => true do |t|
     t.date     "dob"
     t.string   "address1"
@@ -248,6 +257,12 @@ ActiveRecord::Schema.define(:version => 20080714215417) do
     t.datetime "updated_at"
   end
 
+  create_table "roles", :force => true do |t|
+    t.string   "permit"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "sleeps", :force => true do |t|
     t.integer  "user_id",          :limit => 11
     t.string   "slept_in"
@@ -256,7 +271,7 @@ ActiveRecord::Schema.define(:version => 20080714215417) do
     t.integer  "quality",          :limit => 11
     t.boolean  "interrupted",                    :default => false
     t.string   "environment"
-    t.string   "woken_by"
+    t.string   "waken_by"
     t.string   "condition_awoken"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -281,6 +296,12 @@ ActiveRecord::Schema.define(:version => 20080714215417) do
     t.date     "first_acknowledged"
     t.integer  "initial_effect_on_life",      :limit => 11
     t.integer  "desired_effect_on_lifestyle", :limit => 11
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "subjects", :force => true do |t|
+    t.string   "what"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -335,6 +356,9 @@ ActiveRecord::Schema.define(:version => 20080714215417) do
     t.datetime "updated_at"
     t.string   "remember_token"
     t.datetime "remember_token_expires_at"
+    t.boolean  "admin",                                   :default => false
+    t.boolean  "public",                                  :default => false
+    t.string   "time_zone",                               :default => "Eastern"
   end
 
   create_table "workouts", :force => true do |t|

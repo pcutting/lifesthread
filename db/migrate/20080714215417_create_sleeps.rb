@@ -8,7 +8,7 @@ class CreateSleeps < ActiveRecord::Migration
       t.integer :quality
       t.boolean :interrupted , :default => false
       t.string :environment
-      t.string :woken_by
+      t.string :waken_by
       t.string :condition_awoken
       t.timestamps
     end

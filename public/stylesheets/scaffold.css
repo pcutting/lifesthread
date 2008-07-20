@@ -33,15 +33,6 @@ div#header{
  border: 1px groove; /*       hidden, double, solid, dashed, dotted, ridge, outset, groove, inset,none. */
 }
 
-div#navigation{
- background:#BFBFC0;
-}
-
-div#extra{
-text-align: left;
-background:#FFFF80;
-border: 1px groove;
-}
 
 div#option{
 text-align: left;
@@ -84,10 +75,8 @@ div#option td {
 }
 
 
-div#wrapper{float:left;width:100%;margin-left:-200px}
-div#content{margin-left:200px}
-div#navigation{float:right;width:150px}
-div#extra{float:right;clear:right;width:150px}
+div#wrapper{float:left;width:100%;margin-left: 0px}
+div#content{margin-left:000px}
 div#option{clear:both;width:100%}
 div#footer{clear:both;width:100%}
 

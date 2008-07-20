@@ -10,7 +10,7 @@
 
   <% content_for :header do%>
     Your LifesThread today: <img src="/images/imglifesthread.jpg" />
-    <p><strong>Welcome to your WellnessBoard <%=h current_user.first_name -%></strong> <%= link_to 'Logout', logout_path %></p>
+    <p><strong>Welcome to your WellnessBoard <%=h current_user.first_name -%></strong> 
   <% end %>
 
   <%= render :partial => "dashboard" %>

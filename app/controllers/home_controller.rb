@@ -1,17 +1,17 @@
 class HomeController < ApplicationController
 
 def index
-  if logged_in? then
+  unless logged_in? then
    
+   redirect_to (login_path)
+   
+  else 
    if current_user.profile.dob.nil? then
       flash[:notice] = "Please fill out your profile so that we can start to build your lifes thread. Thank you!"
       redirect_to(edit_profile_path(:fieldset => "welcome"))
    else
-   
    @profile = current_user.profile
-
-    #I have a seperate variable for each item because I don't require them to make the complete 
-    # measurements. Ie , they may put weight on on record, and then update chest and waist sizes.
+    #I have a seperate variable for each item because I don't require them to make the complete measurements. Ie , they may put weight on on record, and then update chest and waist sizes.
     @has_weight_nil =  current_user.measurements.find(:first, :order => "measured_on desc", :conditions => [ "is_goal = ?  && weight >  ?", false, 1] ).nil?
     
     unless @has_weight_nil
@@ -24,12 +24,13 @@ def index
       @goal_weight = current_user.measurements.find(:first, :order => "measured_on desc", :conditions => [ (('is_goal = ? && weight >  ?')), true , 1] ).weight
     end
 
-    end
+    end # if current_user.profile.dob.nil?
   @bp = Bp.new
   @measurement = Measurement.new
   @food = Food.new
   @opinion = Opinion.new
-    
+  @sleep = Sleep.new 
+  
   end
   
 end

@@ -210,10 +210,10 @@ def getSleep
 
     end  
     if @chartoptions[:sleep][0]
-      @plot_data << "label: '% of Required Sleep<a href=\"popup\">i</a> ', data: [#{sleep1.join(",")}]  ,points: { show: true }, lines: { show: true }" 
+      @plot_data << "label: '% of 8hr<a href=\"popup\">i</a> ', data: [#{sleep1.join(",")}]  ,points: { show: true }, lines: { show: true }" 
     end 
     if @chartoptions[:sleep][1]
-      @plot_data << "label: 'Sleep Avg' , data: [#{sleep1_avg.join(",")}] ,points: { show: false }, lines: { show: true }" 
+      @plot_data << "label: 'Sleep Avg %' , data: [#{sleep1_avg.join(",")}] ,points: { show: false }, lines: { show: true }" 
     
     end 
   end  

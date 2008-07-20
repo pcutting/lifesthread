@@ -1,0 +1,23 @@
+<p>
+  <b>User:</b>
+  <%=h @permission.user %>
+</p>
+
+<p>
+  <b>Authorized user:</b>
+  <%=h @permission.authorized_user_id %>
+</p>
+
+<p>
+  <b>Role:</b>
+  <%=h @permission.role %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%=h @permission.subject %>
+</p>
+
+
+<%= link_to 'Edit', edit_permission_path(@permission) %> |
+<%= link_to 'Back', permissions_path %>

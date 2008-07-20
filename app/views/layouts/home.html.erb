@@ -7,34 +7,32 @@
   <title>Homes: <%= controller.action_name %></title>
  
     <%= stylesheet_link_tag 'scaffold' %>
-
+    <link rel="stylesheet" type="text/css" href="/stylesheets/clickmenu.css" />
 
   <!-- flot includes  -->
-    <!--[if IE]><script language="javascript" type="text/javascript" src="javascripts/excanvas.pack.js"></script><![endif]-->
-    <script language="javascript" type="text/javascript" src="javascripts/jquery.js"></script>
-    <script language="javascript" type="text/javascript" src="javascripts/jquery.flot.js"></script>
+    <!--[if IE]><script language="javascript" type="text/javascript" src="/javascripts/excanvas.pack.js"></script><![endif]-->
+    <script language="javascript" type="text/javascript" src="/javascripts/jquery.js"></script>
+    <script language="javascript" type="text/javascript" src="/javascripts/jquery.flot.pack.js"></script>
   <!-- end flot includes -->
+  <script language="javascript" type="text/javascript" src="/javascripts/jquery.clickmenu.v016/jquery.clickmenu.pack.js"></script>
+  
+  
 </head>
 <body>
-
-
 
 
 <div id="container">
 
 <div id="header"><p style="color: green"><%= flash[:notice] %></p>
-<%= yield :header %> </div>
+<%= yield :header %>
+<%= yield :navigation %> </div>
 
-<div id="wrapper"><div id="content"> <%= yield :layout %></div></div>
+<div id="wrapper"><div id="content">
+<%= yield :layout %></div></div>
 
 
 <% if logged_in? %>
-<% puts "******* Users Login: #{current_user.login} Time: #{Time.now} ***** " %>
-<div id="navigation"><%= yield :navigation %></div>
-
-
-<div id="extra"><%= yield :extra %></div>
-
+<% puts "** Users Login: #{current_user.login} Time: #{Time.now} **" %>
 <div id="footer"><%= yield :footer %></div>
 
 <% end %>
@@ -46,23 +44,6 @@
 
 
 
-
-
-
-
-
-
-
-
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-5016991-1");
-pageTracker._initData();
-pageTracker._trackPageview();
-</script>
 
 </body>
 </html>
