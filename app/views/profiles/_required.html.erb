@@ -3,12 +3,18 @@
     <%= f.label :dob %><!-- was a br -->
     <%= f.date_select :dob, :start_year => 1900 %>
   </p>
-    <p>
-    <%= f.label :rx_affiliate_no %><!-- was a br -->
-    <%= f.text_field :rx_affiliate_no , :size => 8%>
-  </p>
+
     <p>
     <%= f.label :height_inch %><!-- was a br -->
     <%= f.text_field :height_inch , :size => 2%>
   </p>
   </fieldset>
+
+
+<fieldset><legend>Reference</legend>  
+      <p>
+    <%= f.label "If you were referred by a Pharmacy then please enter their phone number" %><!-- was a br -->
+    <%= f.text_field :rx_affiliate_no , :size => 12%>
+  </p>
+ </fieldset>
+ 

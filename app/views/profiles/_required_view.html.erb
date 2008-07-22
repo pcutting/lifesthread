@@ -15,3 +15,10 @@
     <%= @profile.height_inch %>
   </p>
   </fieldset>
+  
+  <fieldset><legend>Reference: <%= link_to "Edit" , edit_profile_path( :fieldset => "required") %></legend>
+    <p>
+    <%="Referring Pharmacy phone number" %> <!-- was a br -->
+    <%= @profile.rx_affiliate_no %>
+  </p>
+  </fieldset>

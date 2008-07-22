@@ -160,6 +160,7 @@ end
     getBP  unless @bps.nil? #function call
   end
 
+
   if options == "all" || options == "sleep"
     @sleeps = current_user.sleeps.find(:all, :order => "started_at asc")
     getSleep unless @sleeps.nil? #function call

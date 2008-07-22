@@ -1,4 +1,5 @@
 <div class = "progress">
+Local Time: <%= Time.zone.now.to_s(:time) %><br />
 DOB: <%= @profile.dob %><br />
 AGE: <% ( age = ((  Time.now - @profile.dob.to_time ) / 1.years).to_i) %>
 <%= age %> <br />

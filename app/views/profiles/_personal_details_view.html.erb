@@ -20,15 +20,15 @@
     <%="marital status:".capitalize %> <!-- was a br -->
     <%= @profile.marital_status %>
   </p>
-  <p>
-    <%="partner employer:".capitalize %> <!-- was a br -->
-    <%= @profile.partner_employer %>
-  </p>
+
 
     <p>
     <%="have children:".capitalize %> <!-- was a br -->
     <%= if @profile.has_children  then "Yes" else "No" end %>
-    
+  </p>
+
+
+    <p>    
        
     <%="number of children:".capitalize %> <!-- was a br -->
     <%= @profile.number_of_children %>

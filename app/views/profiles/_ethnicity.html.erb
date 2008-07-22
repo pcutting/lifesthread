@@ -18,6 +18,6 @@
   </p>
   <p>
     <%= f.label :race %><!-- was a br -->
-    <%= f.text_field :race , :size => 6 %>
+    <%= f.select :race, ["American Indian", "Alaska Native" , "Asian", "Black or African American", "Hispanic/Latino", "Hative Hawaiian or Other Pacific Islander", "White"],:size => 5 %>
   </p>
 </fieldset>

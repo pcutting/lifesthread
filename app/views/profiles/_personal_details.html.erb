@@ -43,16 +43,12 @@
   <%= radio_button( "profile", "marital_status", "widowed", :options => {:checked => w_checker} ) %>Widowed
   </p>
   
-  <p>
-    <%= f.label :partner_employer %><!-- was a br -->
-    <%= f.text_field :partner_employer , :size => 10 %>
-  </p>
 
-    <p>
-    
+    <p>   
     <%= f.label :have_children %><!-- was a br -->
     <%= f.check_box :has_children %>
-    
+    </p>
+    <p>
     <%= f.label :number_of_children %><!-- was a br -->
     <%= f.text_field :number_of_children , :size => 2%>
   </p>
