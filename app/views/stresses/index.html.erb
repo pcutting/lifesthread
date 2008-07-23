@@ -1,4 +1,9 @@
 <h1>sTressors</h1>
+<br />
+<%- @plot_data = [] -%>
+<% @chartoptions = current_user.profile.chart_options %>
+<% myPlots("stress") %>
+<%= makeChart %>
 
 <table>
   <tr>

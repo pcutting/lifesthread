@@ -11,10 +11,10 @@
 <%= render :partial => "/layouts/linkto_all" %>
 <li><%= link_to 'Home', root_path unless request.path == root_path %>
 </li>
+<li><%= link_to 'View Combined Vitals', charts_path unless request.path == charts_path %></li> 
 <li>Vitals
   <ul>
      <li></li> 
-     <li><%= link_to 'View Combined Vitals', charts_path unless request.path == charts_path %></li> 
      <li><%= link_to 'Sleep Chart Data', sleeps_path unless request.path == sleeps_path %></li> 
      <li><%= link_to 'Body Measurements', measurements_path unless request.path == measurements_path %></li>
      <li><%= link_to 'Medication List', medications_path unless request.path == medications_path %></li> 

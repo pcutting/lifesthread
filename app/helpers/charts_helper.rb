@@ -125,6 +125,8 @@ def myPlots(options)
 #  all components of that model that are chartable.
 if options == "all" then 
 
+
+
 else
 @chartoptions=Hash[
      :bp=>[true,true,true],
@@ -147,7 +149,8 @@ else
      :measurement_thigh_left=>[true,true,true],
      :measurement_thigh_right=>[true,true,true],
      :cholesterol=>[true,true,true],
-     :sleep=>[true,true,true]
+     :sleep=>[true,true,true],
+     :stress=>[true,true,true]
      ]
      
      puts "@chartoptions for else condition in myplots =========="
@@ -155,9 +158,14 @@ else
 end
 
 
-  if options == "all" || options == "bp"
+  if options == "all" || options == "bp" || options == "stress"
     @bps = current_user.bps.find(:all, :order => "measured_on asc") 
     getBP  unless @bps.nil? #function call
+  end
+
+  if options == "all" || options == "stress"
+    @stresses = current_user.stresses.find(:all, :order => "first_acknowledged asc") 
+    getStresses  unless @stresses.nil? #function call
   end
 
 
@@ -187,6 +195,38 @@ end # ends myPlots
 def check_min_max
 
 end
+  
+  
+  
+  
+#####################
+# Gets Stressors
+#####################
+  
+def getStresses
+  #stressors
+  stress1, stress2 = [], [] 
+  
+  if ( @chartoptions[:stress][0]) 
+    for stress in @stresses
+
+      stress1 = Array.new
+      stress1 << [ "[#{stress.first_acknowledged.to_time.to_i * 1000},  #{stress.initial_effect_on_life} ]" ] 
+      for stress_log in stress.stress_logs
+        stress1 <<  [ "[#{stress_log.measured_on.to_i * 1000},  #{stress_log.effect_on_life} ]" ] 
+      end
+      
+      if @chartoptions[:bp][0]
+      @plot_data << "label: '#{stress.title}', data: [#{stress1.join(",")}]  ,points: { show: true }, lines: { show: true }" 
+      end 
+
+
+     
+    end 
+  end #@options[:bp] 
+end # def getBP
+    
+  
   
 ####################
 #gets sleep

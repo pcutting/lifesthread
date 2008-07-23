@@ -27,12 +27,18 @@ class ChartsController < ApplicationController
      :measurement_thigh_left=>[false, false, false],
      :measurement_thigh_right=>[false, false, false],
      :cholesterol=>[true,true,true],
-     :sleep=>[true,true,true]
+     :sleep=>[true,true,true],
+     :stress=>[true,true,true]
      ]
+ 
      
+     current_user.profile.chart_options = @chartoptions
+     current_user.profile.save
+
      
+    elsif @chartoptions[:stress].nil?
      
-     
+     @chartoptions[:stress] = [true,true,true]
      current_user.profile.chart_options = @chartoptions
      current_user.profile.save
 
@@ -57,6 +63,15 @@ if  @returned[:bp][:b].nil? then false else true end,
 if  @returned[:bp][:c].nil? then false else true end] 
 else @results[:bp] = [false, false, false]
 end
+
+unless @returned[:stress].nil?   
+ @results[:stress]=
+ [if  @returned[:stress][:a].nil? then false else true end,
+if  @returned[:stress][:b].nil? then false else true end,
+if  @returned[:stress][:c].nil? then false else true end] 
+else @results[:stress] = [false, false, false]
+end
+
 
 unless @returned[:sleep].nil?   
  @results[:sleep]=
