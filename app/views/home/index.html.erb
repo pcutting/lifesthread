@@ -17,10 +17,8 @@
 <% if logged_in? %>
 
   <% content_for :header do%>
-    Your LifesThread today: <img src="/images/imglifesthread.jpg" />
-    <p><strong>Welcome to your Wellness Board, <%=h current_user.first_name -%></strong> 
-  <% end %>
-
+    <strong>Welcome to your Wellness Board, <%=h current_user.first_name -%></strong> 
+  <% end -%>
   <%= render :partial => "dashboard" %>
 
 <% else %>

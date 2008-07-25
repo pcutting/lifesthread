@@ -15,8 +15,10 @@ layout "entry"
         cookies[:auth_token] = { :value => self.current_user.remember_token , :expires => self.current_user.remember_token_expires_at }
       end
       redirect_back_or_default('/')
-      flash[:notice] = "Logged in successfully"
+      #took this out, because it's obvious they logged in when they see the dashboard
+      #flash[:notice] = "Logged in successfully"
     else
+    flash[:notice] = "User name and password do not match."
       render :action => 'new'
     end
   end

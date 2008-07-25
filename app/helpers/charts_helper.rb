@@ -117,18 +117,14 @@ end #def makeCharts(options)
 ##################
 
 
-def myPlots(options)
+def myPlots(options='all')
 #pass "all" or specific option
 
 
 #if it's a specific option then go with it, otherwise show 
 #  all components of that model that are chartable.
-if options == "all" then 
-
-
-
-else
-@chartoptions=Hash[
+unless options == "all" 
+  @chartoptions=Hash[
      :bp=>[true,true,true],
      :chol_ldl=>[true,true,true],
      :chol_hdl=>[true,true,true],
@@ -152,9 +148,6 @@ else
      :sleep=>[true,true,true],
      :stress=>[true,true,true]
      ]
-     
-     puts "@chartoptions for else condition in myplots =========="
-     puts @chartoptions
 end
 
 

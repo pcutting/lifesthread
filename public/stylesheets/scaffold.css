@@ -85,7 +85,7 @@ div#option td {
 }
 
 
-div#wrapper{float:left;width:100%;margin-left: 0px}
+div#wrapper{float:left;width:100%;margin-left: 1px}
 div#content{margin-left:000px}
 div#option{clear:both;width:100%}
 div#footer{clear:both;width:100%}

@@ -13,6 +13,7 @@
 
 <% for support in @supports %>
   <tr>
+
     <td><%=h support.title %></td>
     <td>
      <%= if ( support.priority == 1 ) then " Low" 
@@ -27,7 +28,6 @@
     <td><%=if support.marked_closed then "Yes" else "No" end %></td>
     <td><%=if support.reopen then "Yes" else "No" end%></td>
     <td><%= link_to 'Show', support %></td>
-    <td><%= link_to 'Edit', edit_support_path(support) %></td>
     <td><%= link_to 'Destroy', support, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>

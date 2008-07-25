@@ -27,11 +27,10 @@
 <div id="container">
 
 <div id="header">
-  Your LifesThread today: <img src="/images/imglifesthread.jpg" alt="Welcome to Lifesthread" />
-  <p><strong>Welcome <%= h current_user.first_name -%></strong>
+  <strong>Welcome <%= h current_user.first_name -%></strong>
   <% puts "** Users Login: #{current_user.login} Time: #{Time.now} **" %>
- </p>
-  <p style="color: green"><%= flash[:notice] %></p>
+
+  <%= "<p style=\"color: green\">" +  flash[:notice] + " </p>" unless flash[:notice].nil?  %>
 <%= yield :header %> 
 <br /> 
 <%= render :partial => "/layouts/linktos" %>

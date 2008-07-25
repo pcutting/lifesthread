@@ -3,7 +3,7 @@ class Admin::SupportsController < Admin::BaseController
   # GET /supports
   # GET /supports.xml
   def index
-    @supports = Support.find(:all)
+    @supports = Support.find(:all )
 
     respond_to do |format|
       format.html # index.html.erb

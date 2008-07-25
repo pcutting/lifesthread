@@ -23,7 +23,7 @@
 
 <div id="container">
 
-<div id="header"><p style="color: green"><%= flash[:notice] %></p>
+<div id="header">  <%= "<p style=\"color: green\">" +  flash[:notice] + " </p>" unless flash[:notice].nil?  %>
 <%= yield :header %>
 <%= yield :navigation %>
 <%= yield :navigation_alt %> </div>

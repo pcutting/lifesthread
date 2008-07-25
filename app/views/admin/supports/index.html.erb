@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Prioritized</th>
     <th>Title</th>
     <th>Priority</th>
     <th>Category</th>
@@ -13,6 +14,7 @@
 
 <% for support in @supports %>
   <tr>
+    <td><%= h support.prioritized %></td>
     <td><%=h support.title %></td>
     <td>
      <%= if ( support.priority == 1 ) then "Low" 
