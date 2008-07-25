@@ -1,3 +1,22 @@
+#  create_table "users", :force => true do |t|
+#    t.string   "login"
+#    t.string   "first_name"
+#    t.string   "middle_name"
+#    t.string   "last_name"
+#    t.string   "sir_name"
+#    t.string   "email"
+#    t.string   "crypted_password",          :limit => 40
+#    t.string   "salt",                      :limit => 40
+#    t.datetime "created_at"
+#    t.datetime "updated_at"
+#    t.string   "remember_token"
+#    t.datetime "remember_token_expires_at"
+#    t.boolean  "admin",                                   :default => false
+#    t.boolean  "public",                                  :default => false
+#    t.string   "time_zone",                               :default => "Eastern"
+#  end
+
+
 require 'digest/sha1'
 class User < ActiveRecord::Base
 
@@ -89,6 +108,13 @@ has_many :permissions
   # Returns true if the user has just been activated.
   def recently_activated?
     @activated
+  end
+  
+  def full_name
+    fullName = self.first_name + " "
+    fullName += self.middle_name + " " unless self.middle_name.nil?
+    fullName += self.last_name
+    
   end
 
   protected

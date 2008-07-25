@@ -24,8 +24,6 @@
 </head>
 <body>
 
-
-
 <div id="container">
 
 <div id="header">
@@ -38,6 +36,9 @@
 <br /> 
 <%= render :partial => "/layouts/linktos" %>
 
+<% if current_user.admin %>
+  <%= render :partial => "/layouts/admin_links" %>
+<% end %>
 </div>
 
 <div id="wrapper"><div id="content"> <%= yield :layout %></div></div>

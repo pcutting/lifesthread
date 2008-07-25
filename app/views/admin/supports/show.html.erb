@@ -1,0 +1,70 @@
+<table>
+<tr>
+<td> 
+  <b>Title:</b>
+  <%=h @support.title %>
+</td>
+<td>
+  <b>Priority:</b>
+  <%=h @support.priority %> : 
+  <%= if ( @support.priority == 1 ) then " Low" 
+   elsif ( @support.priority == 2 ) then " Medium Low" 
+   elsif  ( @support.priority == 3 ) then " Neutral "
+   elsif ( @support.priority == 4 ) then " Medium High" 
+   elsif ( @support.priority == 5 ) then " Urgent" end %>
+</td>
+<td>
+
+  <b>Category:</b>
+  <%=h @support.category %>
+</td>
+</tr>
+<tr>
+<td colspan = 100%>
+
+  <b>Comment:</b>
+  <%=h @support.comment %>
+</td>
+</tr>
+<tr>
+<td>
+
+  <b>Resolved:</b>
+  <%=if @support.resolved then "Yes" else "Not yet" end %>
+</td>
+<td>
+
+  <b>Resolved on:</b>
+  <%= if @support.resolved  then h( @support.resolved_on ) else  "Still working on this case" end %>
+</td>
+<td>
+
+  <b>Ok to contact:</b>
+  <%= if @support.ok_to_contact then "Yes" else "No" end %>
+
+  <b>Contact number:</b>
+  <%=h @support.contact_number  %>
+</td>
+<td>
+
+  <b>Marked closed:</b>
+  <%= if @support.marked_closed  then "Yes" else "No" end %>
+</td>
+<td>
+
+  <b>Marked closed on:</b>
+  <%= if @support.marked_closed  then h( @support.marked_closed_on ) else  "Still working on this case" end  %>
+
+</td>
+</tr>
+</table>
+
+<hr />
+<%= render :partial => "index_dialogs" %>
+
+<%= render :partial => "new_dialog" %>
+
+
+
+<%= link_to 'Edit', edit_admin_support_path(@support) %> |
+<%= link_to 'View your support tickets', admin_supports_path %>

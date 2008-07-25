@@ -1,13 +1,14 @@
 test:
   login: test
-  email: quentin@example.com
+  email: tester@example.com
   salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
   crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
   created_at: <%= 5.days.ago.to_s :db %>
-  first_name: Phil
-  middle_name: J
-  last_name: Cutting
+  first_name: Phil_tester
+  middle_name: J_tester
+  last_name: Tester
   time_zone: Eastern Time (US & Canada)
+  admin: true
 
 aaron:
   login: aaron
@@ -27,7 +28,7 @@ phil:
   crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
   created_at: <%= 1.days.ago.to_s :db %>
   first_name: phil
-  middle_name: K
+  middle_name: J
   last_name: Cutting
   time_zone: Eastern Time (US & Canada)
   
@@ -50,5 +51,5 @@ philip:
   created_at: <%= 1.days.ago.to_s :db %>
   first_name: Philip
   middle_name: J
-  last_name: Cutting
+  last_name: Cutting 3rd
   time_zone: Eastern Time (US & Canada)

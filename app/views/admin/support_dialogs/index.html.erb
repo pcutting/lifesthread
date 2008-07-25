@@ -1,0 +1,22 @@
+<h1>Case Responces</h1>
+
+<table>
+  <tr>
+    <th>Note</th>
+  </tr>
+
+<% for support_dialog in @support_dialogs %>
+  <tr>
+    <td><%=h support_dialog.note %></td>
+    <td><%= link_to 'Show', support_dialog %></td>
+    <td><%= link_to 'Edit', edit_support_dialog_path(support_dialog) %></td>
+    <td><%= link_to 'Destroy', support_dialog, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+
+
+<br />
+
+<%= link_to 'New support_dialog', new_admin_support_dialog_path %>

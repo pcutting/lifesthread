@@ -1,0 +1,44 @@
+<% content_for(:sidebar) do %>
+	<%= render :partial => 'admin/users/sidebar' %>
+<% end %>
+
+<%= page_title "Show User" %>
+
+<div style="float:right;"><%= link_to 'Back', admin_users_path %></div>
+
+<% javascript_tabs_initialization %>
+<% tabs = TabsRenderer.new(self) %>
+
+	<% tabs.create('user_tab', 'User') do %>
+		<p>
+		  <b>User</b><br />
+			<%= h(@user.whole_name) %> (<%= mail_to @user.email, nil, :encode => "javascript" %>)<br/>
+		</p>
+		<p>
+		  <b>Address:</b><br />
+			<%= @user.full_address %>
+		</p>
+		<%= javascript_google_map() %>
+	<% end %>
+	
+	<% tabs.create('affiliates_tab', 'Affiliates') do %>
+		<ol>
+			<% @affiliates.each do |affiliate| %>
+				<li><%= link_to h(affiliate.name), affiliate_path(affiliate) %></li>
+			<% end %>
+		</ol>
+	<% end unless @affiliates.blank? %>
+
+	<% tabs.create('classifieds_tab', 'Classifieds') do %>
+		<%= render :partial => "admin/listings/listings", :locals => { :listings => @classifieds } %>
+	<% end unless @classifieds.blank? %>
+
+	<% tabs.create('events_tab', 'Events') do %>
+		<%= render :partial => "admin/listings/listings", :locals => { :listings => @events } %>
+	<% end unless @events.blank? %>
+
+	<% tabs.create('jobs_tab', 'Jobs') do %>
+		<%= render :partial => "admin/listings/listings", :locals => { :listings => @jobs } %>
+	<% end unless @jobs.blank? %>
+	
+<%= tabs.render %>

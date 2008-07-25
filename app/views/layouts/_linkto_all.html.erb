@@ -1,24 +1,24 @@
 
 <li>Complete Menu
   <ul>
-     <li><%= link_to 'Home', root_path unless request.path == root_path %></li> 
-     <li><%= link_to 'View Combined Vitals', charts_path unless request.path == charts_path %></li> 
-     <li><%= link_to 'Sleep Chart Data', sleeps_path unless request.path == sleeps_path %></li> 
-     <li><%= link_to 'Medication List', medications_path unless request.path == medications_path %></li> 
-     <li><%= link_to 'Blood Pressure Chart Data', bps_path unless request.path == bps_path %></li>  
-     <li><%= link_to 'Cholesterol Chart Data', cholesterols_path unless request.path == cholesterols_path %></li>  
-     <li><%= link_to 'sTressors', stresses_path unless request.path == stresses_path%></li>  
-     <li><%= link_to 'Relationship List', relationships_path unless request.path == relationships_path%></li> 
-     <li><%= link_to 'Food List', foods_path unless request.path == foods_path %></li> 
-     <li><%= link_to 'Medical History Repository', medical_histories_path  unless request.path == medical_histories_path %></li> 
-     <li><%= link_to 'Illness History Repository', illness_histories_path unless request.path == illness_histories_path %></li> 
-     <li><%= link_to 'Body Measurements', measurements_path unless request.path == measurements_path %></li>
-     <li><%= link_to 'Workouts', workouts_path unless request.path == workouts_path%></li>
-     <li><%= link_to 'Fitness Plans', fitness_plans_path unless request.path == fitness_plans_path%></li>
-     <li><%= link_to 'Profile', profile_path unless request.path == profile_path%></li> 
-     <li><%= link_to 'New Support/Bug', new_support_path(:ref_page => request.url) unless request.path == new_support_path %></li>
-     <li><%= link_to 'View Support/Bug', supports_path unless request.path == supports_path %></li>
-      <li><%= link_to 'Logout', logout_path %></p></li>
+     <li><%= link_to 'Home', root_path  %></li> 
+     <li><%= link_to 'View Combined Vitals', charts_path %></li> 
+     <li><%= link_to 'Sleep Chart Data', sleeps_path  %></li> 
+     <li><%= link_to 'Medication List', medications_path  %></li> 
+     <li><%= link_to 'Blood Pressure Chart Data', bps_path  %></li>  
+     <li><%= link_to 'Cholesterol Chart Data', cholesterols_path  %></li>  
+     <li><%= link_to 'sTressors', stresses_path %></li>  
+     <li><%= link_to 'Relationship List', relationships_path %></li> 
+     <li><%= link_to 'Food List', foods_path %></li> 
+     <li><%= link_to 'Medical History Repository', medical_histories_path   %></li> 
+     <li><%= link_to 'Illness History Repository', illness_histories_path  %></li> 
+     <li><%= link_to 'Body Measurements', measurements_path  %></li>
+     <li><%= link_to 'Workouts', workouts_path %></li>
+     <li><%= link_to 'Fitness Plans', fitness_plans_path %></li>
+     <li><%= link_to 'Profile', profile_path %></li> 
+     <li><%= link_to 'New Support/Bug', new_support_path(:ref_page => request.url)  %></li>
+     <li><%= link_to 'View Support/Bug', supports_path  %></li>
+     <li><%= link_to 'Logout', logout_path %></p></li>
 </ul>
 
 

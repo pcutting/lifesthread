@@ -22,6 +22,16 @@ padding:1px
 div#navigation a:hover {
   color: #FFFFCC;
 }
+  
+div#navigation_alt a{
+display:block;
+color: #2D006B; 
+padding:1px
+} 
+div#navigation_alt a:hover {
+  color: #FFFFCC;
+}
+
 
 div#content p{
 /* line-height:1.4 */
