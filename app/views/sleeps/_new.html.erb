@@ -4,10 +4,13 @@
     <%= f.label :started_at %><br />
     <%= f.datetime_select :started_at %>
  </td>
-
+ <td>
+   <%= f.label :woke_up_at %><br />
+    <%= f.datetime_select :woke_up_at %>
+ </td>
  <td>
     <%= f.label :slept_in %><br />
-    <%= f.select :slept_in, ["Bed", "Chair/Recliner", "Vehicle", "Floor", "Sofa", "Cot" , "Camping"],:size => 8 %>
+    <%= f.select :slept_in, ["Bed", "Chair", "Recliner" , "Vehicle", "Floor", "Sofa", "Cot" , "Camping"],:size => 8 %>
 </td>
 <td>
     <%= f.label :quality %><br />
@@ -17,12 +20,8 @@
     <%= f.label :interrupted %><br />
     <%= f.check_box :interrupted %>
 </td>
-</tr>
-<tr>
- <td>
-   <%= f.label :woke_up_at %><br />
-    <%= f.datetime_select :woke_up_at %>
- </td>
+
+
 <td>
     <%= f.label :environment %><br />
     <%= f.select :environment, ["Very Quiet", "Quiet", "TV on", "Radio on", "Noisy" , "Moving vehicle"],:size => 6 %>

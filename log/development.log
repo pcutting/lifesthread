@@ -7835,3 +7835,1315 @@ Rendered measurements/_new (0.01092)
 Rendered foods/_new (0.00453)
 Rendered home/_dashboard (0.04502)
 Completed in 0.21472 (4 reqs/sec) | Rendering: 0.04857 (22%) | DB: 0.02601 (12%) | 200 OK [http://localhost/]
+
+
+Processing ProfilesController#show (for 127.0.0.1 at 2008-07-25 15:10:36) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3MTc0NmNkNDFkY2U2MDVl
+Yjc6DHVzZXJfaWRpBEUAgDY6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--bebfa61ed612862bab4bb4d073b3d8bd7d23f09d
+  Parameters: {"action"=>"show", "controller"=>"profiles"}
+  [4;35;1mUser Columns (0.002322)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.001135)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Load (0.003185)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering profiles/show
+  [4;36;1mProfile Columns (0.004757)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+Rendered profiles/_required_view (0.01470)
+Rendered profiles/_address_view (0.00026)
+Rendered profiles/_ethnicity_view (0.00021)
+Rendered profiles/_contact_view (0.00022)
+Rendered profiles/_personal_details_view (0.00026)
+Rendered profiles/_substance_usage_view (0.00026)
+Rendered profiles/_emergency_contact_view (0.00026)
+Rendered layouts/_linkto_all (0.00053)
+Rendered layouts/_linktos (0.00125)
+Rendered layouts/_admin_links (0.00006)
+Completed in 0.09431 (10 reqs/sec) | Rendering: 0.05306 (56%) | DB: 0.01140 (12%) | 200 OK [http://localhost/profile]
+
+
+Processing ProfilesController#show (for 127.0.0.1 at 2008-07-25 15:16:42) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkERQCANjoMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3
+MTc0NmNkNDFkY2U2MDVlYjc6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--69a2849fa49794d7126b3f8cef0b88c5eca70075
+  Parameters: {"action"=>"show", "controller"=>"profiles"}
+  [4;35;1mUser Columns (0.001923)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.001098)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Load (0.003151)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering profiles/show
+  [4;36;1mProfile Columns (0.004366)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+Rendered profiles/_required_view (0.01400)
+Rendered profiles/_address_view (0.00022)
+Rendered profiles/_ethnicity_view (0.00020)
+Rendered profiles/_contact_view (0.00019)
+Rendered profiles/_personal_details_view (0.00023)
+Rendered profiles/_substance_usage_view (0.00023)
+Rendered profiles/_emergency_contact_view (0.00025)
+Rendered layouts/_linkto_all (0.00046)
+Rendered layouts/_linktos (0.00102)
+Rendered layouts/_admin_links (0.00005)
+Completed in 0.05508 (18 reqs/sec) | Rendering: 0.01566 (28%) | DB: 0.01054 (19%) | 200 OK [http://localhost/profile]
+
+
+Processing ProfilesController#show (for 127.0.0.1 at 2008-07-25 15:17:30) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3MTc0NmNkNDFkY2U2MDVl
+Yjc6DHVzZXJfaWRpBEUAgDY6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--bebfa61ed612862bab4bb4d073b3d8bd7d23f09d
+  Parameters: {"action"=>"show", "controller"=>"profiles"}
+  [4;35;1mUser Columns (0.001928)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.001121)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Load (0.003602)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering profiles/show
+  [4;36;1mProfile Columns (0.003969)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+Rendered profiles/_required_view (0.01258)
+Rendered profiles/_address_view (0.00023)
+Rendered profiles/_ethnicity_view (0.00020)
+Rendered profiles/_contact_view (0.00022)
+Rendered profiles/_personal_details_view (0.00024)
+Rendered profiles/_substance_usage_view (0.00023)
+Rendered profiles/_emergency_contact_view (0.00023)
+Rendered layouts/_linkto_all (0.00047)
+Rendered layouts/_linktos (0.00127)
+Rendered layouts/_admin_links (0.00005)
+Completed in 0.05358 (18 reqs/sec) | Rendering: 0.01513 (28%) | DB: 0.01062 (19%) | 200 OK [http://localhost/profile]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-07-25 15:18:00) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkERQCANjoMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3
+MTc0NmNkNDFkY2U2MDVlYjc6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--69a2849fa49794d7126b3f8cef0b88c5eca70075
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mUser Columns (0.001979)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.001130)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Load (0.003413)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+  [4;36;1mProfile Columns (0.004286)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mMeasurement Load (0.001727)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mMeasurement Load (0.001526)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mMeasurement Columns (0.002153)[0m   [0mSHOW FIELDS FROM `measurements`[0m
+  [4;36;1mMeasurement Load (0.001536)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mBp Columns (0.001355)[0m   [0;1mSHOW FIELDS FROM `bps`[0m
+  [4;35;1mFood Columns (0.001871)[0m   [0mSHOW FIELDS FROM `foods`[0m
+  [4;36;1mOpinion Columns (0.001256)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSleep Columns (0.001662)[0m   [0mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered layouts/_linkto_all (0.00059)
+Rendered layouts/_linktos (0.00122)
+Rendered layouts/_admin_links (0.00005)
+Rendered home/_progress (0.00049)
+Rendered sleeps/_new (0.01444)
+Rendered bps/_new (0.01201)
+Rendered measurements/_new (0.01070)
+Rendered foods/_new (0.00391)
+Rendered home/_dashboard (0.04404)
+Completed in 0.21774 (4 reqs/sec) | Rendering: 0.04760 (21%) | DB: 0.02389 (10%) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-07-25 15:30:46) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3MTc0NmNkNDFkY2U2MDVl
+Yjc6DHVzZXJfaWRpBEUAgDY6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--bebfa61ed612862bab4bb4d073b3d8bd7d23f09d
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mUser Columns (0.001971)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.001149)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;36;1mProfile Load (0.003254)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Columns (0.004673)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mMeasurement Load (0.001485)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mMeasurement Load (0.001443)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mMeasurement Columns (0.002137)[0m   [0;1mSHOW FIELDS FROM `measurements`[0m
+  [4;35;1mMeasurement Load (0.001441)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mBp Columns (0.001423)[0m   [0mSHOW FIELDS FROM `bps`[0m
+  [4;36;1mFood Columns (0.001950)[0m   [0;1mSHOW FIELDS FROM `foods`[0m
+  [4;35;1mOpinion Columns (0.001101)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mSleep Columns (0.001820)[0m   [0;1mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered layouts/_linkto_all (0.00052)
+Rendered layouts/_linktos (0.00110)
+Rendered layouts/_admin_links (0.00005)
+Rendered home/_progress (0.00053)
+Rendered sleeps/_new (0.01425)
+Rendered bps/_new (0.01145)
+Rendered measurements/_new (0.01050)
+Rendered foods/_new (0.00329)
+Rendered home/_dashboard (0.04461)
+Completed in 0.13983 (7 reqs/sec) | Rendering: 0.04881 (34%) | DB: 0.02385 (17%) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-07-25 15:45:00) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkERQCANjoMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3
+MTc0NmNkNDFkY2U2MDVlYjc6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--69a2849fa49794d7126b3f8cef0b88c5eca70075
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mUser Columns (0.001917)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.001093)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Load (0.003386)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+  [4;36;1mProfile Columns (0.004476)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mMeasurement Load (0.001628)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mMeasurement Load (0.001507)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mMeasurement Columns (0.004682)[0m   [0mSHOW FIELDS FROM `measurements`[0m
+  [4;36;1mMeasurement Load (0.003769)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mBp Columns (0.001400)[0m   [0;1mSHOW FIELDS FROM `bps`[0m
+  [4;35;1mFood Columns (0.001936)[0m   [0mSHOW FIELDS FROM `foods`[0m
+  [4;36;1mOpinion Columns (0.001113)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSleep Columns (0.001695)[0m   [0mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered layouts/_linkto_all (0.00066)
+Rendered layouts/_linktos (0.00135)
+Rendered layouts/_admin_links (0.00005)
+Rendered home/_progress (0.00049)
+Rendered sleeps/_new (0.01466)
+Rendered bps/_new (0.01142)
+Rendered measurements/_new (0.01142)
+Rendered foods/_new (0.00350)
+Rendered home/_dashboard (0.04627)
+Completed in 0.21693 (4 reqs/sec) | Rendering: 0.05086 (23%) | DB: 0.02860 (13%) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-07-25 15:45:27) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3MTc0NmNkNDFkY2U2MDVl
+Yjc6DHVzZXJfaWRpBEUAgDY6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--bebfa61ed612862bab4bb4d073b3d8bd7d23f09d
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mUser Columns (0.001956)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.001201)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;36;1mProfile Load (0.003774)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Columns (0.003928)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mMeasurement Load (0.001504)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mMeasurement Load (0.001475)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mMeasurement Columns (0.002111)[0m   [0;1mSHOW FIELDS FROM `measurements`[0m
+  [4;35;1mMeasurement Load (0.001547)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mBp Columns (0.001331)[0m   [0mSHOW FIELDS FROM `bps`[0m
+  [4;36;1mFood Columns (0.002353)[0m   [0;1mSHOW FIELDS FROM `foods`[0m
+  [4;35;1mOpinion Columns (0.001174)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mSleep Columns (0.001444)[0m   [0;1mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered layouts/_linkto_all (0.00052)
+Rendered layouts/_linktos (0.00116)
+Rendered layouts/_admin_links (0.00005)
+Rendered home/_progress (0.00048)
+Rendered sleeps/_new (0.01494)
+Rendered bps/_new (0.01076)
+Rendered measurements/_new (0.01141)
+Rendered foods/_new (0.00329)
+Rendered home/_dashboard (0.04506)
+Completed in 0.14076 (7 reqs/sec) | Rendering: 0.04840 (34%) | DB: 0.02380 (16%) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-07-25 15:50:16) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkERQCANjoMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3
+MTc0NmNkNDFkY2U2MDVlYjc6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--69a2849fa49794d7126b3f8cef0b88c5eca70075
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mUser Columns (0.001946)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.001080)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Load (0.003363)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+  [4;36;1mProfile Columns (0.004806)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mMeasurement Load (0.001530)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mMeasurement Load (0.001400)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mMeasurement Columns (0.002117)[0m   [0mSHOW FIELDS FROM `measurements`[0m
+  [4;36;1mMeasurement Load (0.001465)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mBp Columns (0.001517)[0m   [0;1mSHOW FIELDS FROM `bps`[0m
+  [4;35;1mFood Columns (0.002003)[0m   [0mSHOW FIELDS FROM `foods`[0m
+  [4;36;1mOpinion Columns (0.001149)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSleep Columns (0.001623)[0m   [0mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered layouts/_linkto_all (0.00056)
+Rendered layouts/_linktos (0.00117)
+Rendered layouts/_admin_links (0.00006)
+Rendered home/_progress (0.00056)
+Rendered sleeps/_new (0.01568)
+Rendered bps/_new (0.01117)
+ERROR: compiling _run_erb_47app47views47measurements47_new46html46erb RAISED compile error
+/home/phil/Desktop/lifesthread/app/views/measurements/_new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :hip Upper/Lower ).to_s); _erbout.concat "  </th>\n"
+                                                                                  ^
+Function body: def _run_erb_47app47views47measurements47_new46html46erb(local_assigns)
+object = local_assigns[:object]
+f = local_assigns[:f]
+new_counter = local_assigns[:new_counter]
+new = local_assigns[:new]
+_erbout = ''; _erbout.concat "<table class = \"dashboard\">\n"
+_erbout.concat "\n"
+_erbout.concat "<tr>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :weight  ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :resting_metabolism ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :fat_percent  ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :muscle_percent ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :visceral_fat ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :water_percent  ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<td class= \"dashboard\" class=\"star\" colspan = 3 rowspan = 2> * Check 'Is goal' if these measurements are a goal rather then your actual measurements.</td> \n"
+_erbout.concat "</tr>\n"
+_erbout.concat "\n"
+_erbout.concat "<tr>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :weight , :size => 4 ).to_s); _erbout.concat "  </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :resting_metabolism , :size => 4  ).to_s); _erbout.concat "  </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :fat_percent , :size => 4  ).to_s); _erbout.concat " </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :muscle_percent , :size => 4 ).to_s); _erbout.concat " </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :visceral_fat , :size => 4 ).to_s); _erbout.concat " </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :water_percent , :size => 4 ).to_s); _erbout.concat "  </td>\n"
+_erbout.concat "</tr>\n"
+_erbout.concat "\n"
+_erbout.concat "<tr>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :chest   ).to_s); _erbout.concat "<!-- was a br --> </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :pectoral).to_s); _erbout.concat "<!-- was a br --> </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :bicep_Left/Right  ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :bicep_right  ).to_s); _erbout.concat "/<th class = \"dashboard\" > "; _erbout.concat(( f.label :belly).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :hip Upper/Lower ).to_s); _erbout.concat "  </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :thigh_Left/Right  ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "\n"
+_erbout.concat "</tr>\n"
+_erbout.concat "\n"
+_erbout.concat "<tr>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :chest , :size => 4 ).to_s); _erbout.concat "  </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :pectoral , :size => 4 ).to_s); _erbout.concat " </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :bicep_left , :size => 4 ).to_s); _erbout.concat " / "; _erbout.concat(( f.text_field :bicep_right, :size => 4 ).to_s); _erbout.concat " </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :belly, :size => 4  ).to_s); _erbout.concat "  </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :hip, :size => 4  ).to_s); _erbout.concat "  / "; _erbout.concat(( f.text_field :lower_hip, :size => 4  ).to_s); _erbout.concat "  </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :thigh_left, :size => 4  ).to_s); _erbout.concat " / "; _erbout.concat(( f.text_field :thigh_right, :size => 4  ).to_s); _erbout.concat " </td>\n"
+_erbout.concat "</tr>\n"
+_erbout.concat "\n"
+_erbout.concat "<tr>\n"
+_erbout.concat "<th class = \"dashboard\" colspan = 4 > "; _erbout.concat(( f.label :measured_on ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<th class = \"dashboard\" colspan = 3> "; _erbout.concat(( f.label :comment ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<th class = \"dashboard\" colspan = 2> "; _erbout.concat(( f.label :is_goal ).to_s); _erbout.concat "*</th>\n"
+_erbout.concat "\n"
+_erbout.concat "</tr>\n"
+_erbout.concat "\n"
+_erbout.concat "<tr>\n"
+_erbout.concat "<td class= \"dashboard\" colspan = 4> "; _erbout.concat(( f.datetime_select :measured_on, :start_year => 1900, :include_seconds => true  ).to_s); _erbout.concat "  </td>\n"
+_erbout.concat "<td class= \"dashboard\" colspan = 3> "; _erbout.concat(( f.text_field :comment ).to_s); _erbout.concat " </td>\n"
+_erbout.concat "<td class = \"dashboard\" class = \"star\" colspan = 2 >  "; _erbout.concat(( f.check_box :is_goal ).to_s); _erbout.concat " </td>\n"
+_erbout.concat "</tr>\n"
+_erbout.concat "\n"
+_erbout.concat "</table>\n"
+_erbout.concat "\n"
+_erbout
+end
+Backtrace: /home/phil/Desktop/lifesthread/app/views/measurements/_new.html.erb:57:in `compile_template'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/template.rb:55:in `prepare!'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/partial_template.rb:15:in `initialize'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/partials.rb:110:in `new'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/partials.rb:110:in `render_partial'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/base.rb:273:in `render'
+/home/phil/Desktop/lifesthread/app/views/home/_dashboard.html.erb:36:in `_run_erb_47app47views47home47_dashboard46html46erb'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:317:in `fields_for'
+/home/phil/Desktop/lifesthread/app/views/home/_dashboard.html.erb:35:in `_run_erb_47app47views47home47_dashboard46html46erb'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:317:in `fields_for'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+/home/phil/Desktop/lifesthread/app/views/home/_dashboard.html.erb:15:in `_run_erb_47app47views47home47_dashboard46html46erb'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/base.rb:338:in `send'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/base.rb:338:in `execute'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/partial_template.rb:20:in `render'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/home/phil/Desktop/lifesthread/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/partial_template.rb:19:in `render'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/partials.rb:110:in `render_partial'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/base.rb:273:in `render'
+/home/phil/Desktop/lifesthread/app/views/home/index.html.erb:22:in `_run_erb_47app47views47home47index46html46erb'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/base.rb:338:in `send'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/base.rb:338:in `execute'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/template.rb:35:in `render'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/base.rb:245:in `render_file'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:1108:in `render_for_file'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:841:in `render_with_no_layout'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/phil/Desktop/lifesthread/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:1157:in `default_render'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:1163:in `perform_action_without_filters'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/phil/Desktop/lifesthread/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+/home/phil/Desktop/lifesthread/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+/home/phil/Desktop/lifesthread/vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+/home/phil/Desktop/lifesthread/vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+/home/phil/Desktop/lifesthread/vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+/home/phil/Desktop/lifesthread/vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+/home/phil/Desktop/lifesthread/vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+/home/phil/Desktop/lifesthread/vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+/home/phil/Desktop/lifesthread/vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+/home/phil/Desktop/lifesthread/vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+/home/phil/Desktop/lifesthread/vendor/rails/railties/lib/commands/server.rb:39
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/phil/Desktop/lifesthread/app/views/measurements/_new.html.erb:27: syntax error, unexpected tCONSTANT, expecting ')'
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :hip Upper/Lower ).to_s); _erbout.concat "  </th>\n"
+                                                                                  ^) on line #27 of measurements/_new.html.erb:
+24: <th class = "dashboard" > <%= f.label :pectoral%><!-- was a br --> </th>
+25: <th class = "dashboard" > <%= f.label :bicep_Left/Right  %> </th>
+26: <th class = "dashboard" > <%= f.label :bicep_right  %>/<th class = "dashboard" > <%= f.label :belly%> </th>
+27: <th class = "dashboard" > <%= f.label :hip Upper/Lower %>  </th>
+28: <th class = "dashboard" > <%= f.label :thigh_Left/Right  %> </th>
+29: 
+30: </tr>
+
+    app/views/measurements/_new.html.erb:57:in `compile_template'
+    vendor/rails/actionpack/lib/action_view/template.rb:55:in `prepare!'
+    vendor/rails/actionpack/lib/action_view/partial_template.rb:15:in `initialize'
+    vendor/rails/actionpack/lib/action_view/partials.rb:110:in `new'
+    vendor/rails/actionpack/lib/action_view/partials.rb:110:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:273:in `render'
+    app/views/home/_dashboard.html.erb:36:in `_run_erb_47app47views47home47_dashboard46html46erb'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:317:in `fields_for'
+    app/views/home/_dashboard.html.erb:35:in `_run_erb_47app47views47home47_dashboard46html46erb'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:317:in `fields_for'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/home/_dashboard.html.erb:15:in `_run_erb_47app47views47home47_dashboard46html46erb'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/partial_template.rb:20:in `render'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/actionpack/lib/action_view/partial_template.rb:19:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/partials.rb:110:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:273:in `render'
+    app/views/home/index.html.erb:22:in `_run_erb_47app47views47home47index46html46erb'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:35:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:245:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1108:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:841:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1157:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1163:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-07-25 15:51:02) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3MTc0NmNkNDFkY2U2MDVl
+Yjc6DHVzZXJfaWRpBEUAgDY6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--bebfa61ed612862bab4bb4d073b3d8bd7d23f09d
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mUser Columns (0.002186)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.001143)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;36;1mProfile Load (0.003704)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Columns (0.004629)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mMeasurement Load (0.001551)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mMeasurement Load (0.001412)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mMeasurement Columns (0.002166)[0m   [0;1mSHOW FIELDS FROM `measurements`[0m
+  [4;35;1mMeasurement Load (0.001432)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mBp Columns (0.001434)[0m   [0mSHOW FIELDS FROM `bps`[0m
+  [4;36;1mFood Columns (0.001917)[0m   [0;1mSHOW FIELDS FROM `foods`[0m
+  [4;35;1mOpinion Columns (0.001058)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mSleep Columns (0.001410)[0m   [0;1mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered layouts/_linkto_all (0.00055)
+Rendered layouts/_linktos (0.00117)
+Rendered layouts/_admin_links (0.00005)
+Rendered home/_progress (0.00047)
+Rendered sleeps/_new (0.01498)
+Rendered bps/_new (0.08672)
+
+
+ActionView::TemplateError (uninitialized constant ActionView::Base::CompiledTemplates::Right) on line #25 of measurements/_new.html.erb:
+22: <tr>
+23: <th class = "dashboard" > <%= f.label :chest   %><!-- was a br --> </th>
+24: <th class = "dashboard" > <%= f.label :pectoral%><!-- was a br --> </th>
+25: <th class = "dashboard" > <%= f.label :bicep_Left/Right  %> </th>
+26: <th class = "dashboard" > <%= f.label :bicep_right  %>/<th class = "dashboard" > <%= f.label :belly%> </th>
+27: <th class = "dashboard" > <%= f.label :hip_Upper/Lower %>  </th>
+28: <th class = "dashboard" > <%= f.label :thigh_Left/Right  %> </th>
+
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:275:in `load_missing_constant'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:467:in `const_missing'
+    app/views/measurements/_new.html.erb:25:in `_run_erb_47app47views47measurements47_new46html46erb'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/partial_template.rb:20:in `render'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/actionpack/lib/action_view/partial_template.rb:19:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/partials.rb:110:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:273:in `render'
+    app/views/home/_dashboard.html.erb:36:in `_run_erb_47app47views47home47_dashboard46html46erb'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:317:in `fields_for'
+    app/views/home/_dashboard.html.erb:35:in `_run_erb_47app47views47home47_dashboard46html46erb'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:317:in `fields_for'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/home/_dashboard.html.erb:15:in `_run_erb_47app47views47home47_dashboard46html46erb'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/partial_template.rb:20:in `render'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/actionpack/lib/action_view/partial_template.rb:19:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/partials.rb:110:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:273:in `render'
+    app/views/home/index.html.erb:22:in `_run_erb_47app47views47home47index46html46erb'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:35:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:245:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1108:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:841:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1157:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1163:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-07-25 15:53:11) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkERQCANjoMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3
+MTc0NmNkNDFkY2U2MDVlYjc6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--69a2849fa49794d7126b3f8cef0b88c5eca70075
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mUser Columns (0.001946)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.001096)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Load (0.003631)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+  [4;36;1mProfile Columns (0.005410)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mMeasurement Load (0.001496)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mMeasurement Load (0.001388)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mMeasurement Columns (0.002250)[0m   [0mSHOW FIELDS FROM `measurements`[0m
+  [4;36;1mMeasurement Load (0.001469)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mBp Columns (0.001536)[0m   [0;1mSHOW FIELDS FROM `bps`[0m
+  [4;35;1mFood Columns (0.001803)[0m   [0mSHOW FIELDS FROM `foods`[0m
+  [4;36;1mOpinion Columns (0.001015)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSleep Columns (0.001847)[0m   [0mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered layouts/_linkto_all (0.00054)
+Rendered layouts/_linktos (0.00114)
+Rendered layouts/_admin_links (0.00005)
+Rendered home/_progress (0.00052)
+Rendered sleeps/_new (0.01492)
+Rendered bps/_new (0.01074)
+Rendered measurements/_new (0.08738)
+Rendered foods/_new (0.00364)
+Rendered home/_dashboard (0.12307)
+Completed in 0.21667 (4 reqs/sec) | Rendering: 0.12695 (58%) | DB: 0.02489 (11%) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-07-25 15:58:31) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3MTc0NmNkNDFkY2U2MDVl
+Yjc6DHVzZXJfaWRpBEUAgDY6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--bebfa61ed612862bab4bb4d073b3d8bd7d23f09d
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mUser Columns (0.002015)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.001190)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;36;1mProfile Load (0.003371)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Columns (0.004044)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mMeasurement Load (0.001583)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mMeasurement Load (0.001535)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mMeasurement Columns (0.002220)[0m   [0;1mSHOW FIELDS FROM `measurements`[0m
+  [4;35;1mMeasurement Load (0.001530)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mBp Columns (0.001361)[0m   [0mSHOW FIELDS FROM `bps`[0m
+  [4;36;1mFood Columns (0.001932)[0m   [0;1mSHOW FIELDS FROM `foods`[0m
+  [4;35;1mOpinion Columns (0.001356)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mSleep Columns (0.001704)[0m   [0;1mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered layouts/_linkto_all (0.00053)
+Rendered layouts/_linktos (0.00113)
+Rendered layouts/_admin_links (0.00005)
+Rendered home/_progress (0.00049)
+Rendered sleeps/_new (0.01426)
+Rendered bps/_new (0.01237)
+Rendered measurements/_new (0.01080)
+Rendered foods/_new (0.00344)
+Rendered home/_dashboard (0.04747)
+Completed in 0.27520 (3 reqs/sec) | Rendering: 0.05095 (18%) | DB: 0.02384 (8%) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-07-25 16:00:57) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkERQCANjoMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3
+MTc0NmNkNDFkY2U2MDVlYjc6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--69a2849fa49794d7126b3f8cef0b88c5eca70075
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mUser Columns (0.001939)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.001092)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Load (0.003623)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+  [4;36;1mProfile Columns (0.003974)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mMeasurement Load (0.001964)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mMeasurement Load (0.001540)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mMeasurement Columns (0.002421)[0m   [0mSHOW FIELDS FROM `measurements`[0m
+  [4;36;1mMeasurement Load (0.001753)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mBp Columns (0.001379)[0m   [0;1mSHOW FIELDS FROM `bps`[0m
+  [4;35;1mFood Columns (0.002288)[0m   [0mSHOW FIELDS FROM `foods`[0m
+  [4;36;1mOpinion Columns (0.001156)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSleep Columns (0.001426)[0m   [0mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered layouts/_linkto_all (0.00083)
+Rendered layouts/_linktos (0.00157)
+Rendered layouts/_admin_links (0.00005)
+Rendered home/_progress (0.00048)
+Rendered sleeps/_new (0.01392)
+Rendered bps/_new (0.01162)
+Rendered measurements/_new (0.01042)
+Rendered foods/_new (0.00646)
+Rendered home/_dashboard (0.11672)
+Completed in 0.21305 (4 reqs/sec) | Rendering: 0.12134 (56%) | DB: 0.02456 (11%) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-07-25 16:01:42) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3MTc0NmNkNDFkY2U2MDVl
+Yjc6DHVzZXJfaWRpBEUAgDY6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--bebfa61ed612862bab4bb4d073b3d8bd7d23f09d
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mUser Columns (0.002099)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.001506)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;36;1mProfile Load (0.003482)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Columns (0.004115)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mMeasurement Load (0.001784)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mMeasurement Load (0.001505)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mMeasurement Columns (0.002166)[0m   [0;1mSHOW FIELDS FROM `measurements`[0m
+  [4;35;1mMeasurement Load (0.001544)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mBp Columns (0.001609)[0m   [0mSHOW FIELDS FROM `bps`[0m
+  [4;36;1mFood Columns (0.002006)[0m   [0;1mSHOW FIELDS FROM `foods`[0m
+  [4;35;1mOpinion Columns (0.003135)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mSleep Columns (0.001603)[0m   [0;1mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered layouts/_linkto_all (0.00055)
+Rendered layouts/_linktos (0.00116)
+Rendered layouts/_admin_links (0.00005)
+Rendered home/_progress (0.00052)
+Rendered sleeps/_new (0.01469)
+Rendered bps/_new (0.01371)
+Rendered measurements/_new (0.01178)
+Rendered foods/_new (0.00343)
+Rendered home/_dashboard (0.05103)
+Completed in 0.23063 (4 reqs/sec) | Rendering: 0.05446 (23%) | DB: 0.02655 (11%) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-07-25 16:02:02) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkERQCANjoMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3
+MTc0NmNkNDFkY2U2MDVlYjc6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--69a2849fa49794d7126b3f8cef0b88c5eca70075
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mUser Columns (0.002010)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.001154)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Load (0.003512)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+  [4;36;1mProfile Columns (0.004599)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mMeasurement Load (0.001605)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mMeasurement Load (0.001393)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mMeasurement Columns (0.002198)[0m   [0mSHOW FIELDS FROM `measurements`[0m
+  [4;36;1mMeasurement Load (0.001677)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mBp Columns (0.001464)[0m   [0;1mSHOW FIELDS FROM `bps`[0m
+  [4;35;1mFood Columns (0.001831)[0m   [0mSHOW FIELDS FROM `foods`[0m
+  [4;36;1mOpinion Columns (0.001069)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSleep Columns (0.001464)[0m   [0mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered layouts/_linkto_all (0.00055)
+Rendered layouts/_linktos (0.00113)
+Rendered layouts/_admin_links (0.00005)
+Rendered home/_progress (0.00082)
+Rendered sleeps/_new (0.01487)
+Rendered bps/_new (0.01105)
+Rendered measurements/_new (0.01030)
+Rendered foods/_new (0.00348)
+Rendered home/_dashboard (0.04613)
+Completed in 0.13883 (7 reqs/sec) | Rendering: 0.04958 (35%) | DB: 0.02398 (17%) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-07-25 16:03:28) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3MTc0NmNkNDFkY2U2MDVl
+Yjc6DHVzZXJfaWRpBEUAgDY6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--bebfa61ed612862bab4bb4d073b3d8bd7d23f09d
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mUser Columns (0.002014)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.001171)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;36;1mProfile Load (0.003279)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Columns (0.004358)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mMeasurement Load (0.001567)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mMeasurement Load (0.001458)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mMeasurement Columns (0.002182)[0m   [0;1mSHOW FIELDS FROM `measurements`[0m
+  [4;35;1mMeasurement Load (0.001528)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mBp Columns (0.001363)[0m   [0mSHOW FIELDS FROM `bps`[0m
+  [4;36;1mFood Columns (0.002336)[0m   [0;1mSHOW FIELDS FROM `foods`[0m
+  [4;35;1mOpinion Columns (0.001234)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mSleep Columns (0.001530)[0m   [0;1mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered layouts/_linkto_all (0.00054)
+Rendered layouts/_linktos (0.00114)
+Rendered layouts/_admin_links (0.00005)
+Rendered home/_progress (0.00051)
+Rendered sleeps/_new (0.01418)
+Rendered bps/_new (0.01185)
+Rendered measurements/_new (0.01050)
+Rendered foods/_new (0.00331)
+Rendered home/_dashboard (0.04592)
+Completed in 0.21440 (4 reqs/sec) | Rendering: 0.04937 (23%) | DB: 0.02402 (11%) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-07-25 16:04:46) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkERQCANjoMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3
+MTc0NmNkNDFkY2U2MDVlYjc6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--69a2849fa49794d7126b3f8cef0b88c5eca70075
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mUser Columns (0.002026)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.009891)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Load (0.003269)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+  [4;36;1mProfile Columns (0.005120)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mMeasurement Load (0.001487)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mMeasurement Load (0.001451)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mMeasurement Columns (0.002216)[0m   [0mSHOW FIELDS FROM `measurements`[0m
+  [4;36;1mMeasurement Load (0.001662)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mBp Columns (0.001332)[0m   [0;1mSHOW FIELDS FROM `bps`[0m
+  [4;35;1mFood Columns (0.001859)[0m   [0mSHOW FIELDS FROM `foods`[0m
+  [4;36;1mOpinion Columns (0.001069)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSleep Columns (0.001452)[0m   [0mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered layouts/_linkto_all (0.00054)
+Rendered layouts/_linktos (0.00114)
+Rendered layouts/_admin_links (0.00005)
+Rendered home/_progress (0.00047)
+Rendered sleeps/_new (0.01537)
+Rendered bps/_new (0.01102)
+Rendered measurements/_new (0.01124)
+Rendered foods/_new (0.00325)
+Rendered home/_dashboard (0.04701)
+Completed in 0.15126 (6 reqs/sec) | Rendering: 0.05034 (33%) | DB: 0.03283 (21%) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-07-25 16:06:32) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3MTc0NmNkNDFkY2U2MDVl
+Yjc6DHVzZXJfaWRpBEUAgDY6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--bebfa61ed612862bab4bb4d073b3d8bd7d23f09d
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mUser Columns (0.001994)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.001148)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;36;1mProfile Load (0.004123)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Columns (0.004305)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mMeasurement Load (0.001585)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mMeasurement Load (0.001507)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mMeasurement Columns (0.002189)[0m   [0;1mSHOW FIELDS FROM `measurements`[0m
+  [4;35;1mMeasurement Load (0.001664)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mBp Columns (0.001536)[0m   [0mSHOW FIELDS FROM `bps`[0m
+  [4;36;1mFood Columns (0.001902)[0m   [0;1mSHOW FIELDS FROM `foods`[0m
+  [4;35;1mOpinion Columns (0.001114)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mSleep Columns (0.001479)[0m   [0;1mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered layouts/_linkto_all (0.00059)
+Rendered layouts/_linktos (0.00121)
+Rendered layouts/_admin_links (0.00005)
+Rendered home/_progress (0.00051)
+Rendered sleeps/_new (0.01551)
+Rendered bps/_new (0.01097)
+ERROR: compiling _run_erb_47app47views47measurements47_new46html46erb RAISED compile error
+/home/phil/Desktop/lifesthread/app/views/measurements/_new.html.erb:9: syntax error, unexpected ')'
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :water_%  ).to_s); _erbout.concat " </th>\n"
+                                                                                   ^
+Function body: def _run_erb_47app47views47measurements47_new46html46erb(local_assigns)
+object = local_assigns[:object]
+new_counter = local_assigns[:new_counter]
+f = local_assigns[:f]
+new = local_assigns[:new]
+_erbout = ''; _erbout.concat "<table class = \"dashboard\">\n"
+_erbout.concat "\n"
+_erbout.concat "<tr>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :weight  ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :resting_metabolism ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :fat_percent  ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :muscle_percent ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :visceral_fat ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :water_%  ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :chest   ).to_s); _erbout.concat "<!-- was a br --> </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :pectoral).to_s); _erbout.concat "<!-- was a br --> </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label "Bicep Left / Right"  ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :belly).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label "Hip Upper / Lower" ).to_s); _erbout.concat "  </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label "Thigh Left / Right"  ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :measured_on ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :comment ).to_s); _erbout.concat " </th>\n"
+_erbout.concat "\n"
+_erbout.concat "</tr>\n"
+_erbout.concat "\n"
+_erbout.concat "<tr>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :weight , :size => 4 ).to_s); _erbout.concat "  </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :resting_metabolism , :size => 4  ).to_s); _erbout.concat "  </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :fat_percent , :size => 4  ).to_s); _erbout.concat " </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :muscle_percent , :size => 4 ).to_s); _erbout.concat " </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :visceral_fat , :size => 4 ).to_s); _erbout.concat " </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :water_percent , :size => 4 ).to_s); _erbout.concat "  </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :chest , :size => 4 ).to_s); _erbout.concat "  </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :pectoral , :size => 4 ).to_s); _erbout.concat " </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :bicep_left , :size => 4 ).to_s); _erbout.concat " / "; _erbout.concat(( f.text_field :bicep_right, :size => 4 ).to_s); _erbout.concat " </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :belly, :size => 4  ).to_s); _erbout.concat "  </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :hip, :size => 4  ).to_s); _erbout.concat "  / "; _erbout.concat(( f.text_field :lower_hip, :size => 4  ).to_s); _erbout.concat "  </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :thigh_left, :size => 4  ).to_s); _erbout.concat " / "; _erbout.concat(( f.text_field :thigh_right, :size => 4  ).to_s); _erbout.concat " </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.datetime_select :measured_on, :start_year => 1900, :include_seconds => true  ).to_s); _erbout.concat "  </td>\n"
+_erbout.concat "<td class= \"dashboard\" > "; _erbout.concat(( f.text_field :comment ).to_s); _erbout.concat " </td>\n"
+_erbout.concat "\n"
+_erbout.concat "</tr>\n"
+_erbout.concat "<tr>\n"
+_erbout.concat "<td class= \"dashboard\" colspan = 14 > "; _erbout.concat(( f.label :is_goal ).to_s); _erbout.concat " "; _erbout.concat(( f.check_box :is_goal ).to_s); _erbout.concat " Check 'Is goal' if these measurements are a goal rather then your actual measurements. </td>\n"
+_erbout.concat "</tr>\n"
+_erbout.concat "\n"
+_erbout.concat "</table>\n"
+_erbout.concat "\n"
+_erbout
+end
+Backtrace: /home/phil/Desktop/lifesthread/app/views/measurements/_new.html.erb:45:in `compile_template'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/template.rb:55:in `prepare!'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/partial_template.rb:15:in `initialize'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/partials.rb:110:in `new'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/partials.rb:110:in `render_partial'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/base.rb:273:in `render'
+/home/phil/Desktop/lifesthread/app/views/home/_dashboard.html.erb:36:in `_run_erb_47app47views47home47_dashboard46html46erb'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:317:in `fields_for'
+/home/phil/Desktop/lifesthread/app/views/home/_dashboard.html.erb:35:in `_run_erb_47app47views47home47_dashboard46html46erb'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:317:in `fields_for'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+/home/phil/Desktop/lifesthread/app/views/home/_dashboard.html.erb:15:in `_run_erb_47app47views47home47_dashboard46html46erb'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/base.rb:338:in `send'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/base.rb:338:in `execute'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/partial_template.rb:20:in `render'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/home/phil/Desktop/lifesthread/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/partial_template.rb:19:in `render'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/partials.rb:110:in `render_partial'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/base.rb:273:in `render'
+/home/phil/Desktop/lifesthread/app/views/home/index.html.erb:22:in `_run_erb_47app47views47home47index46html46erb'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/base.rb:338:in `send'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/base.rb:338:in `execute'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/template.rb:35:in `render'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_view/base.rb:245:in `render_file'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:1108:in `render_for_file'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:841:in `render_with_no_layout'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/phil/Desktop/lifesthread/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:1157:in `default_render'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:1163:in `perform_action_without_filters'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/phil/Desktop/lifesthread/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+/home/phil/Desktop/lifesthread/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+/home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+/home/phil/Desktop/lifesthread/vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+/home/phil/Desktop/lifesthread/vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+/home/phil/Desktop/lifesthread/vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+/home/phil/Desktop/lifesthread/vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+/home/phil/Desktop/lifesthread/vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+/home/phil/Desktop/lifesthread/vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+/home/phil/Desktop/lifesthread/vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+/home/phil/Desktop/lifesthread/vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+/home/phil/Desktop/lifesthread/vendor/rails/railties/lib/commands/server.rb:39
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/phil/Desktop/lifesthread/app/views/measurements/_new.html.erb:9: syntax error, unexpected ')'
+_erbout.concat "<th class = \"dashboard\" > "; _erbout.concat(( f.label :water_%  ).to_s); _erbout.concat " </th>\n"
+                                                                                   ^) on line #9 of measurements/_new.html.erb:
+6: <th class = "dashboard" > <%= f.label :fat_percent  %> </th>
+7: <th class = "dashboard" > <%= f.label :muscle_percent %> </th>
+8: <th class = "dashboard" > <%= f.label :visceral_fat %> </th>
+9: <th class = "dashboard" > <%= f.label :water_%  %> </th>
+10: <th class = "dashboard" > <%= f.label :chest   %><!-- was a br --> </th>
+11: <th class = "dashboard" > <%= f.label :pectoral%><!-- was a br --> </th>
+12: <th class = "dashboard" > <%= f.label "Bicep Left / Right"  %> </th>
+
+    app/views/measurements/_new.html.erb:45:in `compile_template'
+    vendor/rails/actionpack/lib/action_view/template.rb:55:in `prepare!'
+    vendor/rails/actionpack/lib/action_view/partial_template.rb:15:in `initialize'
+    vendor/rails/actionpack/lib/action_view/partials.rb:110:in `new'
+    vendor/rails/actionpack/lib/action_view/partials.rb:110:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:273:in `render'
+    app/views/home/_dashboard.html.erb:36:in `_run_erb_47app47views47home47_dashboard46html46erb'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:317:in `fields_for'
+    app/views/home/_dashboard.html.erb:35:in `_run_erb_47app47views47home47_dashboard46html46erb'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:317:in `fields_for'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/home/_dashboard.html.erb:15:in `_run_erb_47app47views47home47_dashboard46html46erb'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/partial_template.rb:20:in `render'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/actionpack/lib/action_view/partial_template.rb:19:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/partials.rb:110:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:273:in `render'
+    app/views/home/index.html.erb:22:in `_run_erb_47app47views47home47index46html46erb'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:35:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:245:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1108:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:841:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1157:in `default_render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1163:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:502:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-07-25 16:07:55) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkERQCANjoMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3
+MTc0NmNkNDFkY2U2MDVlYjc6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--69a2849fa49794d7126b3f8cef0b88c5eca70075
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mUser Columns (0.002450)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.001145)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Load (0.003515)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+  [4;36;1mProfile Columns (0.005249)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mMeasurement Load (0.001534)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mMeasurement Load (0.001409)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mMeasurement Columns (0.002166)[0m   [0mSHOW FIELDS FROM `measurements`[0m
+  [4;36;1mMeasurement Load (0.001429)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mBp Columns (0.001768)[0m   [0;1mSHOW FIELDS FROM `bps`[0m
+  [4;35;1mFood Columns (0.002004)[0m   [0mSHOW FIELDS FROM `foods`[0m
+  [4;36;1mOpinion Columns (0.001229)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSleep Columns (0.001638)[0m   [0mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered layouts/_linkto_all (0.00056)
+Rendered layouts/_linktos (0.00125)
+Rendered layouts/_admin_links (0.00005)
+Rendered home/_progress (0.00059)
+Rendered sleeps/_new (0.01618)
+Rendered bps/_new (0.01309)
+Rendered measurements/_new (0.01138)
+Rendered foods/_new (0.00418)
+Rendered home/_dashboard (0.05232)
+Completed in 0.22302 (4 reqs/sec) | Rendering: 0.05612 (25%) | DB: 0.02554 (11%) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-07-25 16:10:04) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3MTc0NmNkNDFkY2U2MDVl
+Yjc6DHVzZXJfaWRpBEUAgDY6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--bebfa61ed612862bab4bb4d073b3d8bd7d23f09d
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mUser Columns (0.003199)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.001183)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;36;1mProfile Load (0.003885)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Columns (0.004705)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mMeasurement Load (0.001526)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mMeasurement Load (0.001469)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mMeasurement Columns (0.003087)[0m   [0;1mSHOW FIELDS FROM `measurements`[0m
+  [4;35;1mMeasurement Load (0.001488)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mBp Columns (0.001381)[0m   [0mSHOW FIELDS FROM `bps`[0m
+  [4;36;1mFood Columns (0.001935)[0m   [0;1mSHOW FIELDS FROM `foods`[0m
+  [4;35;1mOpinion Columns (0.001623)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mSleep Columns (0.001592)[0m   [0;1mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered layouts/_linkto_all (0.00053)
+Rendered layouts/_linktos (0.00113)
+Rendered layouts/_admin_links (0.00005)
+Rendered home/_progress (0.00050)
+Rendered sleeps/_new (0.01396)
+Rendered bps/_new (0.01165)
+Rendered measurements/_new (0.01042)
+Rendered foods/_new (0.00325)
+Rendered home/_dashboard (0.04317)
+Completed in 0.14321 (6 reqs/sec) | Rendering: 0.04651 (32%) | DB: 0.02707 (18%) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-07-25 16:12:49) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkERQCANjoMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3
+MTc0NmNkNDFkY2U2MDVlYjc6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--69a2849fa49794d7126b3f8cef0b88c5eca70075
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mUser Columns (0.002078)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.001081)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Load (0.003251)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+  [4;36;1mProfile Columns (0.003916)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mMeasurement Load (0.001479)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mMeasurement Load (0.001447)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mMeasurement Columns (0.002074)[0m   [0mSHOW FIELDS FROM `measurements`[0m
+  [4;36;1mMeasurement Load (0.001475)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mBp Columns (0.001307)[0m   [0;1mSHOW FIELDS FROM `bps`[0m
+  [4;35;1mFood Columns (0.001793)[0m   [0mSHOW FIELDS FROM `foods`[0m
+  [4;36;1mOpinion Columns (0.001295)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSleep Columns (0.001726)[0m   [0mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered layouts/_linkto_all (0.00057)
+Rendered layouts/_linktos (0.00120)
+Rendered layouts/_admin_links (0.00005)
+Rendered home/_progress (0.00050)
+Rendered sleeps/_new (0.01670)
+Rendered bps/_new (0.01225)
+Rendered measurements/_new (0.01081)
+Rendered foods/_new (0.00389)
+Rendered home/_dashboard (0.04929)
+Completed in 0.21565 (4 reqs/sec) | Rendering: 0.05400 (25%) | DB: 0.02292 (10%) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-07-25 16:13:26) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3MTc0NmNkNDFkY2U2MDVl
+Yjc6DHVzZXJfaWRpBEUAgDY6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--bebfa61ed612862bab4bb4d073b3d8bd7d23f09d
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mUser Columns (0.039923)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.001272)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;36;1mProfile Load (0.003346)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Columns (0.006068)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mMeasurement Load (0.001532)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mMeasurement Load (0.001456)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mMeasurement Columns (0.002235)[0m   [0;1mSHOW FIELDS FROM `measurements`[0m
+  [4;35;1mMeasurement Load (0.001514)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mBp Columns (0.001394)[0m   [0mSHOW FIELDS FROM `bps`[0m
+  [4;36;1mFood Columns (0.002180)[0m   [0;1mSHOW FIELDS FROM `foods`[0m
+  [4;35;1mOpinion Columns (0.001151)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mSleep Columns (0.001530)[0m   [0;1mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered layouts/_linkto_all (0.00054)
+Rendered layouts/_linktos (0.00114)
+Rendered layouts/_admin_links (0.00005)
+Rendered home/_progress (0.00048)
+Rendered sleeps/_new (0.01429)
+Rendered bps/_new (0.01166)
+Rendered measurements/_new (0.01038)
+Rendered foods/_new (0.00324)
+Rendered home/_dashboard (0.04441)
+Completed in 0.18674 (5 reqs/sec) | Rendering: 0.04775 (25%) | DB: 0.06360 (34%) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-07-25 16:15:24) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkERQCANjoMY3NyZl9pZCIlY2JjZWFkYjczODA1MzA3
+MTc0NmNkNDFkY2U2MDVlYjc6DnJldHVybl90bzAiCmZsYXNoSUM6J0FjdGlv
+bkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--69a2849fa49794d7126b3f8cef0b88c5eca70075
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mUser Columns (0.001970)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.001131)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 914358341) LIMIT 1[0m
+  [4;35;1mProfile Load (0.003396)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 914358341) LIMIT 1[0m
+  [4;36;1mProfile Columns (0.004354)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mMeasurement Load (0.001499)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mMeasurement Load (0.001485)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 0 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mMeasurement Columns (0.002280)[0m   [0mSHOW FIELDS FROM `measurements`[0m
+  [4;36;1mMeasurement Load (0.001685)[0m   [0;1mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `measurements` WHERE (`measurements`.user_id = 914358341 AND (is_goal = 1 && weight > 1)) ORDER BY measured_on desc LIMIT 1[0m
+  [4;36;1mBp Columns (0.001415)[0m   [0;1mSHOW FIELDS FROM `bps`[0m
+  [4;35;1mFood Columns (0.001913)[0m   [0mSHOW FIELDS FROM `foods`[0m
+  [4;36;1mOpinion Columns (0.001028)[0m   [0;1mSHOW FIELDS FROM `opinions`[0m
+  [4;35;1mSleep Columns (0.001529)[0m   [0mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/home
+Rendering home/index
+Rendered layouts/_linkto_all (0.00053)
+Rendered layouts/_linktos (0.00115)
+Rendered layouts/_admin_links (0.00005)
+Rendered home/_progress (0.00056)
+Rendered sleeps/_new (0.09237)
+Rendered bps/_new (0.01248)
+Rendered measurements/_new (0.01102)
+Rendered foods/_new (0.00345)
+Rendered home/_dashboard (0.12641)
+Completed in 0.21705 (4 reqs/sec) | Rendering: 0.12976 (59%) | DB: 0.02368 (10%) | 200 OK [http://localhost/]

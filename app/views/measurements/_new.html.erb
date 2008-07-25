@@ -2,12 +2,20 @@
 
 <tr>
 <th class = "dashboard" > <%= f.label :weight  %> </th>
-<th class = "dashboard" > <%= f.label :resting_metabolism %> </th>
-<th class = "dashboard" > <%= f.label :fat_percent  %> </th>
-<th class = "dashboard" > <%= f.label :muscle_percent %> </th>
+<th class = "dashboard" > <%= f.label :Metabolism %> </th>
+<th class = "dashboard" > <%= f.label "Fat %"  %> </th>
+<th class = "dashboard" > <%= f.label "Muscle %" %> </th>
 <th class = "dashboard" > <%= f.label :visceral_fat %> </th>
-<th class = "dashboard" > <%= f.label :water_percent  %> </th>
-<td class= "dashboard" class="star" colspan = 3 rowspan = 2> * Check 'Is goal' if these measurements are a goal rather then your actual measurements.</td> 
+<th class = "dashboard" > <%= f.label "Water %"  %> </th>
+<th class = "dashboard" > <%= f.label :chest  %><!-- was a br --> </th>
+<th class = "dashboard" > <%= f.label :pectoral %><!-- was a br --> </th>
+<th class = "dashboard" > <%= f.label "Bicep Left / Right"  %> </th>
+<th class = "dashboard" > <%= f.label :belly%> </th>
+<th class = "dashboard" > <%= f.label "Hip Upper / Lower" %>  </th>
+<th class = "dashboard" > <%= f.label "Thigh Left / Right"  %> </th>
+<th class = "dashboard" > <%= f.label :measured_on %> </th>
+<th class = "dashboard" > <%= f.label :comment %> </th>
+
 </tr>
 
 <tr>
@@ -17,44 +25,18 @@
 <td class= "dashboard" > <%= f.text_field :muscle_percent , :size => 4 %> </td>
 <td class= "dashboard" > <%= f.text_field :visceral_fat , :size => 4 %> </td>
 <td class= "dashboard" > <%= f.text_field :water_percent , :size => 4 %>  </td>
-</tr>
-
-<tr>
-<th class = "dashboard" > <%= f.label :chest   %><!-- was a br --> </th>
-<th class = "dashboard" > <%= f.label :pectoral%><!-- was a br --> </th>
-<th class = "dashboard" > <%= f.label :bicep_left  %> </th>
-<th class = "dashboard" > <%= f.label :bicep_right  %> </th>
-<th class = "dashboard" > <%= f.label :belly%> </th>
-<th class = "dashboard" > <%= f.label :hip  %> </th>
-<th class = "dashboard" > <%= f.label :lower_hip  %> </th>
-<th class = "dashboard" > <%= f.label :thigh_left  %> </th>
-<th class = "dashboard" > <%= f.label :thigh_right  %> </th>
-
-</tr>
-
-<tr>
 <td class= "dashboard" > <%= f.text_field :chest , :size => 4 %>  </td>
 <td class= "dashboard" > <%= f.text_field :pectoral , :size => 4 %> </td>
-<td class= "dashboard" > <%= f.text_field :bicep_left , :size => 4 %>  </td>
-<td class= "dashboard" > <%= f.text_field :bicep_right, :size => 4 %> </td>
+<td class= "dashboard" > <%= f.text_field :bicep_left , :size => 4 %> / <%= f.text_field :bicep_right, :size => 4 %> </td>
 <td class= "dashboard" > <%= f.text_field :belly, :size => 4  %>  </td>
-<td class= "dashboard" > <%= f.text_field :hip, :size => 4  %>  </td>
-<td class= "dashboard" > <%= f.text_field :lower_hip, :size => 4  %>  </td>
-<td class= "dashboard" > <%= f.text_field :thigh_left, :size => 4  %>  </td>
-<td class= "dashboard" > <%= f.text_field :thigh_right, :size => 4  %> </td>
-</tr>
-
-<tr>
-<th class = "dashboard" colspan = 4 > <%= f.label :measured_on %> </th>
-<th class = "dashboard" colspan = 3> <%= f.label :comment %> </th>
-<th class = "dashboard" colspan = 2> <%= f.label :is_goal %>*</th>
+<td class= "dashboard" > <%= f.text_field :hip, :size => 4  %>  / <%= f.text_field :lower_hip, :size => 4  %>  </td>
+<td class= "dashboard" > <%= f.text_field :thigh_left, :size => 4  %> / <%= f.text_field :thigh_right, :size => 4  %> </td>
+<td class= "dashboard" > <%= f.datetime_select :measured_on, :start_year => 1900, :include_seconds => true  %>  </td>
+<td class= "dashboard" > <%= f.text_field :comment %> </td>
 
 </tr>
-
 <tr>
-<td class= "dashboard" colspan = 4> <%= f.datetime_select :measured_on, :start_year => 1900, :include_seconds => true  %>  </td>
-<td class= "dashboard" colspan = 3> <%= f.text_field :comment %> </td>
-<td class = "dashboard" class = "star" colspan = 2 >  <%= f.check_box :is_goal %> </td>
+<td class= "dashboard" colspan = 14 > <%= f.label :is_goal %> <%= f.check_box :is_goal %> Check here if these measurements are a goal rather then your measurements. </td>
 </tr>
 
 </table>

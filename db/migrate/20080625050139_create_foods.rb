@@ -5,14 +5,11 @@ class CreateFoods < ActiveRecord::Migration
       t.string :category
       t.string :subcategory
       t.string :name
-      t.integer :calories_per_serving
+      t.integer :calories
       t.integer :protein
       t.integer :fiber
-      t.integer :simple_carbs
-      t.integer :complex_carbs
-      t.integer :monounsaturated_fats
-      t.integer :polyunsaturated_fats
-      t.integer :saturated_fats
+      t.integer :carbs
+      t.integer :fats
       t.string :meal
       t.string :comment
       t.datetime :date
