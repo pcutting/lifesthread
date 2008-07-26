@@ -11,7 +11,7 @@
 <%= render :partial => "/layouts/linkto_all" %>
 <li><%= link_to 'Home', root_path   %>
 </li>
-<li><%= link_to 'View Combined Vitals', charts_path %></li> 
+<li><%= link_to 'Combined Chart', charts_path %></li> 
 <li>Vitals
   <ul>
      <li></li> 
@@ -29,7 +29,7 @@
   </ul>
 </li>
 <li><%= link_to 'Food List', foods_path  %></li> 
-<li>History Repositories
+<li>History
   <ul>
      <li><%= link_to 'Medical History Repository', medical_histories_path   %></li> 
      <li><%= link_to 'Illness History Repository', illness_histories_path %></li> 
@@ -40,8 +40,10 @@
      <li><%= link_to 'Workouts', workouts_path %></li>
      <li><%= link_to 'Fitness Plans', fitness_plans_path %></li>
   </ul>
-<li><%= link_to 'Profile', profile_path %>
-</li> 
+<li>Account</li>
+  <ul>
+    <li><%= link_to 'Profile', profile_path %></li> 
+  </ul>
 
 <li>Support
   <ul>

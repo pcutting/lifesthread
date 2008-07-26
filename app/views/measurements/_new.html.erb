@@ -19,24 +19,24 @@
 </tr>
 
 <tr>
-<td class= "dashboard" > <%= f.text_field :weight , :size => 4 %>  </td>
+<td class= "dashboard" > <%= f.text_field :weight , :size => 3 %>  </td>
 <td class= "dashboard" > <%= f.text_field :resting_metabolism , :size => 4  %>  </td>
-<td class= "dashboard" > <%= f.text_field :fat_percent , :size => 4  %> </td>
-<td class= "dashboard" > <%= f.text_field :muscle_percent , :size => 4 %> </td>
-<td class= "dashboard" > <%= f.text_field :visceral_fat , :size => 4 %> </td>
-<td class= "dashboard" > <%= f.text_field :water_percent , :size => 4 %>  </td>
-<td class= "dashboard" > <%= f.text_field :chest , :size => 4 %>  </td>
-<td class= "dashboard" > <%= f.text_field :pectoral , :size => 4 %> </td>
-<td class= "dashboard" > <%= f.text_field :bicep_left , :size => 4 %> / <%= f.text_field :bicep_right, :size => 4 %> </td>
-<td class= "dashboard" > <%= f.text_field :belly, :size => 4  %>  </td>
-<td class= "dashboard" > <%= f.text_field :hip, :size => 4  %>  / <%= f.text_field :lower_hip, :size => 4  %>  </td>
-<td class= "dashboard" > <%= f.text_field :thigh_left, :size => 4  %> / <%= f.text_field :thigh_right, :size => 4  %> </td>
+<td class= "dashboard" > <%= f.text_field :fat_percent , :size => 3  %> </td>
+<td class= "dashboard" > <%= f.text_field :muscle_percent , :size => 3 %> </td>
+<td class= "dashboard" > <%= f.text_field :visceral_fat , :size => 3 %> </td>
+<td class= "dashboard" > <%= f.text_field :water_percent , :size => 3 %>  </td>
+<td class= "dashboard" > <%= f.text_field :chest , :size => 3 %>  </td>
+<td class= "dashboard" > <%= f.text_field :pectoral , :size => 3 %> </td>
+<td class= "dashboard" > <%= f.text_field :bicep_left , :size => 3 %> / <%= f.text_field :bicep_right, :size => 4 %> </td>
+<td class= "dashboard" > <%= f.text_field :belly, :size => 3  %>  </td>
+<td class= "dashboard" > <%= f.text_field :hip, :size => 3  %>  / <%= f.text_field :lower_hip, :size => 4  %>  </td>
+<td class= "dashboard" > <%= f.text_field :thigh_left, :size => 3  %> / <%= f.text_field :thigh_right, :size => 4  %> </td>
 <td class= "dashboard" > <%= f.datetime_select :measured_on, :start_year => 1900, :include_seconds => true  %>  </td>
-<td class= "dashboard" > <%= f.text_field :comment %> </td>
+<td class= "dashboard" > <%= f.text_field :comment , :size => 10 %> </td>
 
 </tr>
 <tr>
-<td class= "dashboard" colspan = 14 > <%= f.label :is_goal %> <%= f.check_box :is_goal %> Check here if these measurements are a goal rather then your measurements. </td>
+<td class= "dashboard" colspan = 14 > <% # = f.label :is_goal %> <%= f.check_box :is_goal %> Check here if these measurements are a goal rather then your measurements. </td>
 </tr>
 
 </table>

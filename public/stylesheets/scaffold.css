@@ -97,6 +97,7 @@ display: none
 
 
 body { 
+  width: 950px;
   background-color: #FFFFCC;
   color: #333; 
   text-align: center;
