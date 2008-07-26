@@ -9505,3 +9505,448 @@ ActionController::RoutingError (No route matches "/doc" with {:method=>:get}):
     script/server:3
 
 Rendering /home/phil/Desktop/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000155)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000123)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.292397)[0m   [0;1mDROP DATABASE IF EXISTS `lifesthread_development`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000158)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000123)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.059632)[0m   [0;1mCREATE DATABASE `lifesthread_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000149)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000170)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000320)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.087603)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.042433)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000371)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000727)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000185)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000190)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000180)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000175)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000176)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000182)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000174)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000174)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000179)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000932)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000225)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000177)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000178)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000172)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000177)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000178)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000177)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000198)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000191)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000184)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000183)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000182)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20080610033236)
+  [4;35;1mSQL (0.000189)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000389)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.004734)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) DEFAULT NULL NULL, `first_name` varchar(255) DEFAULT NULL NULL, `middle_name` varchar(255) DEFAULT NULL NULL, `last_name` varchar(255) DEFAULT NULL NULL, `sir_name` varchar(255) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `crypted_password` varchar(40) DEFAULT NULL NULL, `salt` varchar(40) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL, `remember_token` varchar(255) DEFAULT NULL NULL, `remember_token_expires_at` datetime DEFAULT NULL NULL, `admin` tinyint(1) DEFAULT 0 NULL, `public` tinyint(1) DEFAULT 0 NULL, `time_zone` varchar(255) DEFAULT 'Eastern' NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.013343)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080610033236')[0m
+Migrating to CreateMedications (20080610033255)
+  [4;35;1mSQL (0.000357)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.003708)[0m   [0;1mCREATE TABLE `medications` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `name` varchar(255) DEFAULT NULL NULL, `strength` int(11) DEFAULT NULL NULL, `unit_type` varchar(255) DEFAULT NULL NULL, `prescribed_start` date DEFAULT NULL NULL, `prescribed_end` date DEFAULT NULL NULL, `actual_start` date DEFAULT NULL NULL, `actual_stop` date DEFAULT NULL NULL, `dosage` int(11) DEFAULT NULL NULL, `dosage_unit` varchar(255) DEFAULT NULL NULL, `purpose` varchar(255) DEFAULT NULL NULL, `result` varchar(255) DEFAULT NULL NULL, `comment` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001952)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080610033255')[0m
+Migrating to CreateBps (20080624184022)
+  [4;36;1mSQL (0.000362)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002025)[0m   [0mCREATE TABLE `bps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `measured_on` datetime DEFAULT NULL NULL, `comment` varchar(255) DEFAULT NULL NULL, `is_goal` tinyint(1) DEFAULT NULL NULL, `systolic` int(11) DEFAULT NULL NULL, `diastolic` int(11) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000256)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080624184022')[0m
+Migrating to CreateCholesterols (20080624184125)
+  [4;35;1mSQL (0.000418)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.004494)[0m   [0;1mCREATE TABLE `cholesterols` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `measured_on` datetime DEFAULT NULL NULL, `comment` varchar(255) DEFAULT NULL NULL, `is_goal` tinyint(1) DEFAULT NULL NULL, `hdl` int(11) DEFAULT NULL NULL, `ldl` int(11) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000390)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080624184125')[0m
+Migrating to CreateStresses (20080625012210)
+  [4;36;1mSQL (0.000475)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002192)[0m   [0mCREATE TABLE `stresses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `category` varchar(255) DEFAULT NULL NULL, `title` varchar(255) DEFAULT NULL NULL, `first_acknowledged` date DEFAULT NULL NULL, `initial_effect_on_life` int(11) DEFAULT NULL NULL, `desired_effect_on_lifestyle` int(11) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001045)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080625012210')[0m
+Migrating to CreateStressLogs (20080625012829)
+  [4;35;1mSQL (0.000359)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001988)[0m   [0;1mCREATE TABLE `stress_logs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `stress_id` int(11) DEFAULT NULL NULL, `measured_on` datetime DEFAULT NULL NULL, `event` varchar(255) DEFAULT NULL NULL, `description` varchar(255) DEFAULT NULL NULL, `action_taken` varchar(255) DEFAULT NULL NULL, `effect_on_life` int(11) DEFAULT NULL NULL, `perceivable_progress` int(11) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000296)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080625012829')[0m
+Migrating to CreateRelationships (20080625034714)
+  [4;36;1mSQL (0.000378)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001953)[0m   [0mCREATE TABLE `relationships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `relationship_type` varchar(255) DEFAULT NULL NULL, `nick_name` varchar(255) DEFAULT NULL NULL, `known_since` date DEFAULT NULL NULL, `age` date DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000314)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080625034714')[0m
+Migrating to CreateJournals (20080625034739)
+  [4;35;1mSQL (0.000377)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001956)[0m   [0;1mCREATE TABLE `journals` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `relationship_id` int(11) DEFAULT NULL NULL, `event` varchar(255) DEFAULT NULL NULL, `description` varchar(255) DEFAULT NULL NULL, `temperature` int(11) DEFAULT NULL NULL, `comfort_zone` int(11) DEFAULT NULL NULL, `satisfaction` int(11) DEFAULT NULL NULL, `occurred_on` datetime DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.003659)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080625034739')[0m
+Migrating to CreateFoods (20080625050139)
+  [4;36;1mSQL (0.000531)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002925)[0m   [0mCREATE TABLE `foods` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `category` varchar(255) DEFAULT NULL NULL, `subcategory` varchar(255) DEFAULT NULL NULL, `name` varchar(255) DEFAULT NULL NULL, `calories` int(11) DEFAULT NULL NULL, `protein` int(11) DEFAULT NULL NULL, `fiber` int(11) DEFAULT NULL NULL, `carbs` int(11) DEFAULT NULL NULL, `fats` int(11) DEFAULT NULL NULL, `meal` varchar(255) DEFAULT NULL NULL, `comment` varchar(255) DEFAULT NULL NULL, `date` datetime DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000517)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080625050139')[0m
+Migrating to CreateMedicalHistories (20080627021714)
+  [4;35;1mSQL (0.000786)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.024876)[0m   [0;1mCREATE TABLE `medical_histories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `approx_date` date DEFAULT NULL NULL, `hospital` varchar(255) DEFAULT NULL NULL, `problem` varchar(255) DEFAULT NULL NULL, `treatment` varchar(255) DEFAULT NULL NULL, `doctor` varchar(255) DEFAULT NULL NULL, `city` varchar(255) DEFAULT NULL NULL, `state` varchar(255) DEFAULT NULL NULL, `dr_phone` varchar(255) DEFAULT NULL NULL, `required_hospitalization` tinyint(1) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000653)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080627021714')[0m
+Migrating to CreateProfiles (20080627034956)
+  [4;36;1mSQL (0.000491)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.004202)[0m   [0mCREATE TABLE `profiles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `dob` date DEFAULT NULL NULL, `address1` varchar(255) DEFAULT NULL NULL, `address2` varchar(255) DEFAULT NULL NULL, `city` varchar(255) DEFAULT NULL NULL, `state` varchar(255) DEFAULT NULL NULL, `zip` varchar(255) DEFAULT NULL NULL, `cell_phone` varchar(255) DEFAULT NULL NULL, `phone` varchar(255) DEFAULT NULL NULL, `work_phone` varchar(255) DEFAULT NULL NULL, `height_inch` int(11) DEFAULT NULL NULL, `body_shape` varchar(255) DEFAULT NULL NULL, `sex` varchar(255) DEFAULT NULL NULL, `race` varchar(255) DEFAULT NULL NULL, `rx_affiliate_no` varchar(255) DEFAULT 'SELF' NULL, `sale_code` varchar(255) DEFAULT 'SELF' NULL, `terms_agreed` tinyint(1) DEFAULT NULL NULL, `terms_agreed_on` datetime DEFAULT NULL NULL, `primary_care_physician` varchar(255) DEFAULT NULL NULL, `employer_name` varchar(255) DEFAULT NULL NULL, `marital_status` varchar(255) DEFAULT NULL NULL, `partner_employer` varchar(255) DEFAULT NULL NULL, `occupation` varchar(255) DEFAULT NULL NULL, `emergency_contact` varchar(255) DEFAULT NULL NULL, `emergency_phone` varchar(255) DEFAULT NULL NULL, `emergency_relationship` varchar(255) DEFAULT NULL NULL, `emergency_address` varchar(255) DEFAULT NULL NULL, `emergency_city` varchar(255) DEFAULT NULL NULL, `emergency_state` varchar(255) DEFAULT NULL NULL, `emergency_zip` varchar(255) DEFAULT NULL NULL, `has_children` tinyint(1) DEFAULT NULL NULL, `number_of_children` int(11) DEFAULT NULL NULL, `list_unusual_substance_exposure` varchar(255) DEFAULT NULL NULL, `education_years` int(11) DEFAULT NULL NULL, `smoker` tinyint(1) DEFAULT NULL NULL, `was_smoker` tinyint(1) DEFAULT NULL NULL, `average_smoking` varchar(255) DEFAULT NULL NULL, `non_smoker` tinyint(1) DEFAULT NULL NULL, `alcoholic` tinyint(1) DEFAULT NULL NULL, `ounces_alcohol_weekly` int(11) DEFAULT NULL NULL, `user_id` int(11) DEFAULT NULL NULL, `chart_options` text DEFAULT NULL NULL, `favorits` text DEFAULT NULL NULL, `is_pregnant` tinyint(1) DEFAULT NULL NULL, `conception_on` date DEFAULT NULL NULL, `is_breast_feeding` tinyint(1) DEFAULT NULL NULL, `is_menopause` tinyint(1) DEFAULT NULL NULL, `blood_type` varchar(255) DEFAULT NULL NULL, `user_priority` int(11) DEFAULT 1 NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000391)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080627034956')[0m
+Migrating to CreateIllnessHistories (20080627041601)
+  [4;35;1mSQL (0.000476)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002704)[0m   [0;1mCREATE TABLE `illness_histories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `title` varchar(255) DEFAULT NULL NULL, `has` tinyint(1) DEFAULT NULL NULL, `controlled` tinyint(1) DEFAULT NULL NULL, `at_risk` tinyint(1) DEFAULT NULL NULL, `in_family_history` tinyint(1) DEFAULT NULL NULL, `concerned_about` tinyint(1) DEFAULT NULL NULL, `comment` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000480)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080627041601')[0m
+Migrating to CreateMeasurements (20080627061254)
+  [4;36;1mSQL (0.000503)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.033368)[0m   [0mCREATE TABLE `measurements` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `weight` decimal DEFAULT NULL NULL, `resting_metabolism` int(11) DEFAULT NULL NULL, `fat_percent` int(11) DEFAULT NULL NULL, `muscle_percent` int(11) DEFAULT NULL NULL, `visceral_fat` int(11) DEFAULT NULL NULL, `water_percent` int(11) DEFAULT NULL NULL, `chest` decimal DEFAULT NULL NULL, `pectoral` decimal DEFAULT NULL NULL, `bicep_left` decimal DEFAULT NULL NULL, `bicep_right` decimal DEFAULT NULL NULL, `belly` decimal DEFAULT NULL NULL, `hip` decimal DEFAULT NULL NULL, `lower_hip` decimal DEFAULT NULL NULL, `thigh_left` decimal DEFAULT NULL NULL, `thigh_right` decimal DEFAULT NULL NULL, `measured_on` datetime DEFAULT NULL NULL, `comment` varchar(255) DEFAULT NULL NULL, `is_goal` tinyint(1) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001364)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080627061254')[0m
+Migrating to CreateWorkouts (20080705011513)
+  [4;35;1mSQL (0.000608)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002006)[0m   [0;1mCREATE TABLE `workouts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `title` varchar(255) DEFAULT NULL NULL, `day` date DEFAULT NULL NULL, `start_time` time DEFAULT NULL NULL, `end_time` time DEFAULT NULL NULL, `supplements` varchar(255) DEFAULT NULL NULL, `comment` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000267)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080705011513')[0m
+Migrating to CreateFitnessPlans (20080705012212)
+  [4;36;1mSQL (0.000520)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.003018)[0m   [0mCREATE TABLE `fitness_plans` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `label` varchar(255) DEFAULT NULL NULL, `time_length_for_workout` decimal DEFAULT NULL NULL, `start` date DEFAULT NULL NULL, `end` date DEFAULT NULL NULL, `your_why` varchar(255) DEFAULT NULL NULL, `mon` tinyint(1) DEFAULT NULL NULL, `tue` tinyint(1) DEFAULT NULL NULL, `wed` tinyint(1) DEFAULT NULL NULL, `thur` tinyint(1) DEFAULT NULL NULL, `fri` tinyint(1) DEFAULT NULL NULL, `sat` tinyint(1) DEFAULT NULL NULL, `sun` tinyint(1) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000461)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080705012212')[0m
+Migrating to CreateExercises (20080705012443)
+  [4;35;1mSQL (0.000552)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002789)[0m   [0;1mCREATE TABLE `exercises` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `exercisable_id` int(11) DEFAULT NULL NULL, `exercisable_type` varchar(255) DEFAULT NULL NULL, `style` varchar(255) DEFAULT NULL NULL, `exercise` varchar(255) DEFAULT NULL NULL, `length` int(11) DEFAULT NULL NULL, `reps` int(11) DEFAULT NULL NULL, `resistance` int(11) DEFAULT NULL NULL, `unit` varchar(255) DEFAULT 'lb' NULL, `calories_burned` int(11) DEFAULT NULL NULL, `intensity` int(11) DEFAULT NULL NULL, `comfort_level` int(11) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000280)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080705012443')[0m
+Migrating to CreateSurveys (20080706170541)
+  [4;36;1mSQL (0.000524)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002022)[0m   [0mCREATE TABLE `surveys` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question` varchar(255) DEFAULT NULL NULL, `is_active` tinyint(1) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000263)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080706170541')[0m
+Migrating to CreateQuestions (20080706171342)
+  [4;35;1mSQL (0.000572)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002377)[0m   [0;1mCREATE TABLE `questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `survey_id` int(11) DEFAULT NULL NULL, `statement` varchar(255) DEFAULT NULL NULL, `points` int(11) DEFAULT NULL NULL, `position` int(11) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000370)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080706171342')[0m
+Migrating to CreateOpinions (20080706171446)
+  [4;36;1mSQL (0.000550)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001861)[0m   [0mCREATE TABLE `opinions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question_id` int(11) DEFAULT NULL NULL, `user_id` int(11) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000440)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080706171446')[0m
+Migrating to CreateSupports (20080711202246)
+  [4;35;1mSQL (0.000670)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.003899)[0m   [0;1mCREATE TABLE `supports` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255) DEFAULT NULL NULL, `priority` int(11) DEFAULT NULL NULL, `category` varchar(255) DEFAULT NULL NULL, `reference_page` varchar(255) DEFAULT NULL NULL, `comment` text DEFAULT NULL NULL, `resolved` tinyint(1) DEFAULT NULL NULL, `resolved_on` datetime DEFAULT NULL NULL, `ok_to_contact` tinyint(1) DEFAULT NULL NULL, `contact_number` varchar(255) DEFAULT NULL NULL, `user_id` int(11) DEFAULT NULL NULL, `marked_closed` tinyint(1) DEFAULT NULL NULL, `marked_closed_on` datetime DEFAULT NULL NULL, `reopen` tinyint(1) DEFAULT NULL NULL, `reopen_on` datetime DEFAULT NULL NULL, `is_visible` tinyint(1) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000900)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080711202246')[0m
+Migrating to CreateSupportDialogs (20080711202303)
+  [4;36;1mSQL (0.000869)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002901)[0m   [0mCREATE TABLE `support_dialogs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `support_id` int(11) DEFAULT NULL NULL, `user_id` int(11) DEFAULT NULL NULL, `note` text DEFAULT NULL NULL, `rate_helpfulness` int(11) DEFAULT NULL NULL, `is_visible` tinyint(1) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000381)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080711202303')[0m
+Migrating to CreateSleeps (20080714215417)
+  [4;35;1mSQL (0.000654)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.003036)[0m   [0;1mCREATE TABLE `sleeps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `slept_in` varchar(255) DEFAULT NULL NULL, `started_at` datetime DEFAULT NULL NULL, `woke_up_at` datetime DEFAULT NULL NULL, `quality` int(11) DEFAULT NULL NULL, `interrupted` tinyint(1) DEFAULT 0 NULL, `environment` varchar(255) DEFAULT NULL NULL, `waken_by` varchar(255) DEFAULT NULL NULL, `condition_awoken` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000359)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080714215417')[0m
+Migrating to CreatePermissions (20080719024715)
+  [4;36;1mSQL (0.000648)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002424)[0m   [0mCREATE TABLE `permissions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `authorized_user_id` int(11) DEFAULT NULL NULL, `role` varchar(255) DEFAULT NULL NULL, `subject` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000358)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080719024715')[0m
+Migrating to CreateSubjects (20080719024733)
+  [4;35;1mSQL (0.000662)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.003089)[0m   [0;1mCREATE TABLE `subjects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `what` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000322)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080719024733')[0m
+Migrating to CreateRoles (20080719024928)
+  [4;36;1mSQL (0.000707)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001673)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `permit` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000253)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080719024928')[0m
+  [4;35;1mSQL (0.000950)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000947)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.055622)[0m   [0mSHOW FIELDS FROM `bps`[0m
+  [4;36;1mSQL (0.001263)[0m   [0;1mdescribe `bps`[0m
+  [4;35;1mSQL (0.001115)[0m   [0mSHOW KEYS FROM `bps`[0m
+  [4;36;1mSQL (0.001294)[0m   [0;1mSHOW FIELDS FROM `cholesterols`[0m
+  [4;35;1mSQL (0.001182)[0m   [0mdescribe `cholesterols`[0m
+  [4;36;1mSQL (0.000935)[0m   [0;1mSHOW KEYS FROM `cholesterols`[0m
+  [4;35;1mSQL (0.001590)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mSQL (0.001466)[0m   [0;1mdescribe `exercises`[0m
+  [4;35;1mSQL (0.000949)[0m   [0mSHOW KEYS FROM `exercises`[0m
+  [4;36;1mSQL (0.001644)[0m   [0;1mSHOW FIELDS FROM `fitness_plans`[0m
+  [4;35;1mSQL (0.001558)[0m   [0mdescribe `fitness_plans`[0m
+  [4;36;1mSQL (0.000869)[0m   [0;1mSHOW KEYS FROM `fitness_plans`[0m
+  [4;35;1mSQL (0.001607)[0m   [0mSHOW FIELDS FROM `foods`[0m
+  [4;36;1mSQL (0.001621)[0m   [0;1mdescribe `foods`[0m
+  [4;35;1mSQL (0.001002)[0m   [0mSHOW KEYS FROM `foods`[0m
+  [4;36;1mSQL (0.001364)[0m   [0;1mSHOW FIELDS FROM `illness_histories`[0m
+  [4;35;1mSQL (0.001308)[0m   [0mdescribe `illness_histories`[0m
+  [4;36;1mSQL (0.000957)[0m   [0;1mSHOW KEYS FROM `illness_histories`[0m
+  [4;35;1mSQL (0.001272)[0m   [0mSHOW FIELDS FROM `journals`[0m
+  [4;36;1mSQL (0.001224)[0m   [0;1mdescribe `journals`[0m
+  [4;35;1mSQL (0.000949)[0m   [0mSHOW KEYS FROM `journals`[0m
+  [4;36;1mSQL (0.002076)[0m   [0;1mSHOW FIELDS FROM `measurements`[0m
+  [4;35;1mSQL (0.001846)[0m   [0mdescribe `measurements`[0m
+  [4;36;1mSQL (0.000925)[0m   [0;1mSHOW KEYS FROM `measurements`[0m
+  [4;35;1mSQL (0.001457)[0m   [0mSHOW FIELDS FROM `medical_histories`[0m
+  [4;36;1mSQL (0.001330)[0m   [0;1mdescribe `medical_histories`[0m
+  [4;35;1mSQL (0.000907)[0m   [0mSHOW KEYS FROM `medical_histories`[0m
+  [4;36;1mSQL (0.001583)[0m   [0;1mSHOW FIELDS FROM `medications`[0m
+  [4;35;1mSQL (0.001560)[0m   [0mdescribe `medications`[0m
+  [4;36;1mSQL (0.000885)[0m   [0;1mSHOW KEYS FROM `medications`[0m
+  [4;35;1mSQL (0.001183)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mSQL (0.000986)[0m   [0;1mdescribe `opinions`[0m
+  [4;35;1mSQL (0.000928)[0m   [0mSHOW KEYS FROM `opinions`[0m
+  [4;36;1mSQL (0.001088)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mSQL (0.000999)[0m   [0mdescribe `permissions`[0m
+  [4;36;1mSQL (0.000896)[0m   [0;1mSHOW KEYS FROM `permissions`[0m
+  [4;35;1mSQL (0.003879)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSQL (0.003525)[0m   [0;1mdescribe `profiles`[0m
+  [4;35;1mSQL (0.000951)[0m   [0mSHOW KEYS FROM `profiles`[0m
+  [4;36;1mSQL (0.001089)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mSQL (0.001097)[0m   [0mdescribe `questions`[0m
+  [4;36;1mSQL (0.001029)[0m   [0;1mSHOW KEYS FROM `questions`[0m
+  [4;35;1mSQL (0.001177)[0m   [0mSHOW FIELDS FROM `relationships`[0m
+  [4;36;1mSQL (0.001055)[0m   [0;1mdescribe `relationships`[0m
+  [4;35;1mSQL (0.000858)[0m   [0mSHOW KEYS FROM `relationships`[0m
+  [4;36;1mSQL (0.000882)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000881)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.000922)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.001355)[0m   [0mSHOW FIELDS FROM `sleeps`[0m
+  [4;36;1mSQL (0.001277)[0m   [0;1mdescribe `sleeps`[0m
+  [4;35;1mSQL (0.000852)[0m   [0mSHOW KEYS FROM `sleeps`[0m
+  [4;36;1mSQL (0.001209)[0m   [0;1mSHOW FIELDS FROM `stress_logs`[0m
+  [4;35;1mSQL (0.001134)[0m   [0mdescribe `stress_logs`[0m
+  [4;36;1mSQL (0.000907)[0m   [0;1mSHOW KEYS FROM `stress_logs`[0m
+  [4;35;1mSQL (0.001205)[0m   [0mSHOW FIELDS FROM `stresses`[0m
+  [4;36;1mSQL (0.001098)[0m   [0;1mdescribe `stresses`[0m
+  [4;35;1mSQL (0.000873)[0m   [0mSHOW KEYS FROM `stresses`[0m
+  [4;36;1mSQL (0.000902)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mSQL (0.000842)[0m   [0mdescribe `subjects`[0m
+  [4;36;1mSQL (0.000849)[0m   [0;1mSHOW KEYS FROM `subjects`[0m
+  [4;35;1mSQL (0.001092)[0m   [0mSHOW FIELDS FROM `support_dialogs`[0m
+  [4;36;1mSQL (0.001065)[0m   [0;1mdescribe `support_dialogs`[0m
+  [4;35;1mSQL (0.000989)[0m   [0mSHOW KEYS FROM `support_dialogs`[0m
+  [4;36;1mSQL (0.001749)[0m   [0;1mSHOW FIELDS FROM `supports`[0m
+  [4;35;1mSQL (0.001718)[0m   [0mdescribe `supports`[0m
+  [4;36;1mSQL (0.000896)[0m   [0;1mSHOW KEYS FROM `supports`[0m
+  [4;35;1mSQL (0.000953)[0m   [0mSHOW FIELDS FROM `surveys`[0m
+  [4;36;1mSQL (0.000910)[0m   [0;1mdescribe `surveys`[0m
+  [4;35;1mSQL (0.001024)[0m   [0mSHOW KEYS FROM `surveys`[0m
+  [4;36;1mSQL (0.001601)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001504)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.000931)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.001231)[0m   [0mSHOW FIELDS FROM `workouts`[0m
+  [4;36;1mSQL (0.001165)[0m   [0;1mdescribe `workouts`[0m
+  [4;35;1mSQL (0.000879)[0m   [0mSHOW KEYS FROM `workouts`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000160)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000117)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000150)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000109)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.058262)[0m   [0;1mDROP DATABASE IF EXISTS `lifesthread_development`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000151)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000123)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000247)[0m   [0;1mCREATE DATABASE `lifesthread_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000126)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000130)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000325)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.005619)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.003850)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000350)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000564)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000208)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000206)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000176)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000174)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000174)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000175)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000265)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000175)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000220)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000175)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000191)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000194)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000175)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001627)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000200)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000177)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000177)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000191)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000542)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000178)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000196)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20080610033236)
+  [4;35;1mSQL (0.000184)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000393)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.003104)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) DEFAULT NULL NULL, `first_name` varchar(255) DEFAULT NULL NULL, `middle_name` varchar(255) DEFAULT NULL NULL, `last_name` varchar(255) DEFAULT NULL NULL, `sir_name` varchar(255) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `crypted_password` varchar(40) DEFAULT NULL NULL, `salt` varchar(40) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL, `remember_token` varchar(255) DEFAULT NULL NULL, `remember_token_expires_at` datetime DEFAULT NULL NULL, `admin` tinyint(1) DEFAULT 0 NULL, `public` tinyint(1) DEFAULT 0 NULL, `time_zone` varchar(255) DEFAULT 'Eastern' NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000373)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080610033236')[0m
+Migrating to CreateMedications (20080610033255)
+  [4;35;1mSQL (0.000292)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.004100)[0m   [0;1mCREATE TABLE `medications` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `name` varchar(255) DEFAULT NULL NULL, `strength` int(11) DEFAULT NULL NULL, `unit_type` varchar(255) DEFAULT NULL NULL, `prescribed_start` date DEFAULT NULL NULL, `prescribed_end` date DEFAULT NULL NULL, `actual_start` date DEFAULT NULL NULL, `actual_stop` date DEFAULT NULL NULL, `dosage` int(11) DEFAULT NULL NULL, `dosage_unit` varchar(255) DEFAULT NULL NULL, `purpose` varchar(255) DEFAULT NULL NULL, `result` varchar(255) DEFAULT NULL NULL, `comment` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000319)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080610033255')[0m
+Migrating to CreateBps (20080624184022)
+  [4;36;1mSQL (0.000318)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002573)[0m   [0mCREATE TABLE `bps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `measured_on` datetime DEFAULT NULL NULL, `comment` varchar(255) DEFAULT NULL NULL, `is_goal` tinyint(1) DEFAULT NULL NULL, `systolic` int(11) DEFAULT NULL NULL, `diastolic` int(11) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000365)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080624184022')[0m
+Migrating to CreateCholesterols (20080624184125)
+  [4;35;1mSQL (0.001715)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002641)[0m   [0;1mCREATE TABLE `cholesterols` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `measured_on` datetime DEFAULT NULL NULL, `comment` varchar(255) DEFAULT NULL NULL, `is_goal` tinyint(1) DEFAULT NULL NULL, `hdl` int(11) DEFAULT NULL NULL, `ldl` int(11) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000371)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080624184125')[0m
+Migrating to CreateStresses (20080625012210)
+  [4;36;1mSQL (0.000337)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002002)[0m   [0mCREATE TABLE `stresses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `category` varchar(255) DEFAULT NULL NULL, `title` varchar(255) DEFAULT NULL NULL, `first_acknowledged` date DEFAULT NULL NULL, `initial_effect_on_life` int(11) DEFAULT NULL NULL, `desired_effect_on_lifestyle` int(11) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000277)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080625012210')[0m
+Migrating to CreateStressLogs (20080625012829)
+  [4;35;1mSQL (0.000360)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002214)[0m   [0;1mCREATE TABLE `stress_logs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `stress_id` int(11) DEFAULT NULL NULL, `measured_on` datetime DEFAULT NULL NULL, `event` varchar(255) DEFAULT NULL NULL, `description` varchar(255) DEFAULT NULL NULL, `action_taken` varchar(255) DEFAULT NULL NULL, `effect_on_life` int(11) DEFAULT NULL NULL, `perceivable_progress` int(11) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000332)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080625012829')[0m
+Migrating to CreateRelationships (20080625034714)
+  [4;36;1mSQL (0.000415)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.004625)[0m   [0mCREATE TABLE `relationships` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `relationship_type` varchar(255) DEFAULT NULL NULL, `nick_name` varchar(255) DEFAULT NULL NULL, `known_since` date DEFAULT NULL NULL, `age` date DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000478)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080625034714')[0m
+Migrating to CreateJournals (20080625034739)
+  [4;35;1mSQL (0.000444)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002432)[0m   [0;1mCREATE TABLE `journals` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `relationship_id` int(11) DEFAULT NULL NULL, `event` varchar(255) DEFAULT NULL NULL, `description` varchar(255) DEFAULT NULL NULL, `temperature` int(11) DEFAULT NULL NULL, `comfort_zone` int(11) DEFAULT NULL NULL, `satisfaction` int(11) DEFAULT NULL NULL, `occurred_on` datetime DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000502)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080625034739')[0m
+Migrating to CreateFoods (20080625050139)
+  [4;36;1mSQL (0.000410)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002612)[0m   [0mCREATE TABLE `foods` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `category` varchar(255) DEFAULT NULL NULL, `subcategory` varchar(255) DEFAULT NULL NULL, `name` varchar(255) DEFAULT NULL NULL, `calories` int(11) DEFAULT NULL NULL, `protein` int(11) DEFAULT NULL NULL, `fiber` int(11) DEFAULT NULL NULL, `carbs` int(11) DEFAULT NULL NULL, `fats` int(11) DEFAULT NULL NULL, `meal` varchar(255) DEFAULT NULL NULL, `comment` varchar(255) DEFAULT NULL NULL, `date` datetime DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000362)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080625050139')[0m
+Migrating to CreateMedicalHistories (20080627021714)
+  [4;35;1mSQL (0.000444)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002709)[0m   [0;1mCREATE TABLE `medical_histories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `approx_date` date DEFAULT NULL NULL, `hospital` varchar(255) DEFAULT NULL NULL, `problem` varchar(255) DEFAULT NULL NULL, `treatment` varchar(255) DEFAULT NULL NULL, `doctor` varchar(255) DEFAULT NULL NULL, `city` varchar(255) DEFAULT NULL NULL, `state` varchar(255) DEFAULT NULL NULL, `dr_phone` varchar(255) DEFAULT NULL NULL, `required_hospitalization` tinyint(1) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000287)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080627021714')[0m
+Migrating to CreateProfiles (20080627034956)
+  [4;36;1mSQL (0.005870)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.004378)[0m   [0mCREATE TABLE `profiles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `dob` date DEFAULT NULL NULL, `address1` varchar(255) DEFAULT NULL NULL, `address2` varchar(255) DEFAULT NULL NULL, `city` varchar(255) DEFAULT NULL NULL, `state` varchar(255) DEFAULT NULL NULL, `zip` varchar(255) DEFAULT NULL NULL, `cell_phone` varchar(255) DEFAULT NULL NULL, `phone` varchar(255) DEFAULT NULL NULL, `work_phone` varchar(255) DEFAULT NULL NULL, `height_inch` int(11) DEFAULT NULL NULL, `body_shape` varchar(255) DEFAULT NULL NULL, `sex` varchar(255) DEFAULT NULL NULL, `race` varchar(255) DEFAULT NULL NULL, `rx_affiliate_no` varchar(255) DEFAULT 'SELF' NULL, `sale_code` varchar(255) DEFAULT 'SELF' NULL, `terms_agreed` tinyint(1) DEFAULT NULL NULL, `terms_agreed_on` datetime DEFAULT NULL NULL, `primary_care_physician` varchar(255) DEFAULT NULL NULL, `employer_name` varchar(255) DEFAULT NULL NULL, `marital_status` varchar(255) DEFAULT NULL NULL, `partner_employer` varchar(255) DEFAULT NULL NULL, `occupation` varchar(255) DEFAULT NULL NULL, `emergency_contact` varchar(255) DEFAULT NULL NULL, `emergency_phone` varchar(255) DEFAULT NULL NULL, `emergency_relationship` varchar(255) DEFAULT NULL NULL, `emergency_address` varchar(255) DEFAULT NULL NULL, `emergency_city` varchar(255) DEFAULT NULL NULL, `emergency_state` varchar(255) DEFAULT NULL NULL, `emergency_zip` varchar(255) DEFAULT NULL NULL, `has_children` tinyint(1) DEFAULT NULL NULL, `number_of_children` int(11) DEFAULT NULL NULL, `list_unusual_substance_exposure` varchar(255) DEFAULT NULL NULL, `education_years` int(11) DEFAULT NULL NULL, `smoker` tinyint(1) DEFAULT NULL NULL, `was_smoker` tinyint(1) DEFAULT NULL NULL, `average_smoking` varchar(255) DEFAULT NULL NULL, `non_smoker` tinyint(1) DEFAULT NULL NULL, `alcoholic` tinyint(1) DEFAULT NULL NULL, `ounces_alcohol_weekly` int(11) DEFAULT NULL NULL, `user_id` int(11) DEFAULT NULL NULL, `chart_options` text DEFAULT NULL NULL, `favorits` text DEFAULT NULL NULL, `is_pregnant` tinyint(1) DEFAULT NULL NULL, `conception_on` date DEFAULT NULL NULL, `is_breast_feeding` tinyint(1) DEFAULT NULL NULL, `is_menopause` tinyint(1) DEFAULT NULL NULL, `blood_type` varchar(255) DEFAULT NULL NULL, `user_priority` int(11) DEFAULT 1 NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000368)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080627034956')[0m
+Migrating to CreateIllnessHistories (20080627041601)
+  [4;35;1mSQL (0.000577)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002864)[0m   [0;1mCREATE TABLE `illness_histories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `title` varchar(255) DEFAULT NULL NULL, `has` tinyint(1) DEFAULT NULL NULL, `controlled` tinyint(1) DEFAULT NULL NULL, `at_risk` tinyint(1) DEFAULT NULL NULL, `in_family_history` tinyint(1) DEFAULT NULL NULL, `concerned_about` tinyint(1) DEFAULT NULL NULL, `comment` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000363)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080627041601')[0m
+Migrating to CreateMeasurements (20080627061254)
+  [4;36;1mSQL (0.000495)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.009271)[0m   [0mCREATE TABLE `measurements` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `weight` decimal DEFAULT NULL NULL, `resting_metabolism` int(11) DEFAULT NULL NULL, `fat_percent` int(11) DEFAULT NULL NULL, `muscle_percent` int(11) DEFAULT NULL NULL, `visceral_fat` int(11) DEFAULT NULL NULL, `water_percent` int(11) DEFAULT NULL NULL, `chest` decimal DEFAULT NULL NULL, `pectoral` decimal DEFAULT NULL NULL, `bicep_left` decimal DEFAULT NULL NULL, `bicep_right` decimal DEFAULT NULL NULL, `belly` decimal DEFAULT NULL NULL, `hip` decimal DEFAULT NULL NULL, `lower_hip` decimal DEFAULT NULL NULL, `thigh_left` decimal DEFAULT NULL NULL, `thigh_right` decimal DEFAULT NULL NULL, `measured_on` datetime DEFAULT NULL NULL, `comment` varchar(255) DEFAULT NULL NULL, `is_goal` tinyint(1) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000534)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080627061254')[0m
+Migrating to CreateWorkouts (20080705011513)
+  [4;35;1mSQL (0.000832)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002877)[0m   [0;1mCREATE TABLE `workouts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `title` varchar(255) DEFAULT NULL NULL, `day` date DEFAULT NULL NULL, `start_time` time DEFAULT NULL NULL, `end_time` time DEFAULT NULL NULL, `supplements` varchar(255) DEFAULT NULL NULL, `comment` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000388)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080705011513')[0m
+Migrating to CreateFitnessPlans (20080705012212)
+  [4;36;1mSQL (0.000511)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.003320)[0m   [0mCREATE TABLE `fitness_plans` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `label` varchar(255) DEFAULT NULL NULL, `time_length_for_workout` decimal DEFAULT NULL NULL, `start` date DEFAULT NULL NULL, `end` date DEFAULT NULL NULL, `your_why` varchar(255) DEFAULT NULL NULL, `mon` tinyint(1) DEFAULT NULL NULL, `tue` tinyint(1) DEFAULT NULL NULL, `wed` tinyint(1) DEFAULT NULL NULL, `thur` tinyint(1) DEFAULT NULL NULL, `fri` tinyint(1) DEFAULT NULL NULL, `sat` tinyint(1) DEFAULT NULL NULL, `sun` tinyint(1) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000376)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080705012212')[0m
+Migrating to CreateExercises (20080705012443)
+  [4;35;1mSQL (0.000598)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002661)[0m   [0;1mCREATE TABLE `exercises` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `exercisable_id` int(11) DEFAULT NULL NULL, `exercisable_type` varchar(255) DEFAULT NULL NULL, `style` varchar(255) DEFAULT NULL NULL, `exercise` varchar(255) DEFAULT NULL NULL, `length` int(11) DEFAULT NULL NULL, `reps` int(11) DEFAULT NULL NULL, `resistance` int(11) DEFAULT NULL NULL, `unit` varchar(255) DEFAULT 'lb' NULL, `calories_burned` int(11) DEFAULT NULL NULL, `intensity` int(11) DEFAULT NULL NULL, `comfort_level` int(11) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000363)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080705012443')[0m
+Migrating to CreateSurveys (20080706170541)
+  [4;36;1mSQL (0.000526)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002238)[0m   [0mCREATE TABLE `surveys` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question` varchar(255) DEFAULT NULL NULL, `is_active` tinyint(1) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.009879)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080706170541')[0m
+Migrating to CreateQuestions (20080706171342)
+  [4;35;1mSQL (0.000916)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002968)[0m   [0;1mCREATE TABLE `questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `survey_id` int(11) DEFAULT NULL NULL, `statement` varchar(255) DEFAULT NULL NULL, `points` int(11) DEFAULT NULL NULL, `position` int(11) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000433)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080706171342')[0m
+Migrating to CreateOpinions (20080706171446)
+  [4;36;1mSQL (0.000570)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.041987)[0m   [0mCREATE TABLE `opinions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question_id` int(11) DEFAULT NULL NULL, `user_id` int(11) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000432)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080706171446')[0m
+Migrating to CreateSupports (20080711202246)
+  [4;35;1mSQL (0.000634)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002202)[0m   [0;1mCREATE TABLE `supports` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255) DEFAULT NULL NULL, `priority` int(11) DEFAULT NULL NULL, `category` varchar(255) DEFAULT NULL NULL, `reference_page` varchar(255) DEFAULT NULL NULL, `comment` text DEFAULT NULL NULL, `resolved` tinyint(1) DEFAULT NULL NULL, `resolved_on` datetime DEFAULT NULL NULL, `ok_to_contact` tinyint(1) DEFAULT NULL NULL, `contact_number` varchar(255) DEFAULT NULL NULL, `user_id` int(11) DEFAULT NULL NULL, `marked_closed` tinyint(1) DEFAULT NULL NULL, `marked_closed_on` datetime DEFAULT NULL NULL, `reopen` tinyint(1) DEFAULT NULL NULL, `reopen_on` datetime DEFAULT NULL NULL, `is_visible` tinyint(1) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000272)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080711202246')[0m
+Migrating to CreateSupportDialogs (20080711202303)
+  [4;36;1mSQL (0.000663)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.003666)[0m   [0mCREATE TABLE `support_dialogs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `support_id` int(11) DEFAULT NULL NULL, `user_id` int(11) DEFAULT NULL NULL, `note` text DEFAULT NULL NULL, `rate_helpfulness` int(11) DEFAULT NULL NULL, `is_visible` tinyint(1) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000402)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080711202303')[0m
+Migrating to CreateSleeps (20080714215417)
+  [4;35;1mSQL (0.000654)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002986)[0m   [0;1mCREATE TABLE `sleeps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `slept_in` varchar(255) DEFAULT NULL NULL, `started_at` datetime DEFAULT NULL NULL, `woke_up_at` datetime DEFAULT NULL NULL, `quality` int(11) DEFAULT NULL NULL, `interrupted` tinyint(1) DEFAULT 0 NULL, `environment` varchar(255) DEFAULT NULL NULL, `waken_by` varchar(255) DEFAULT NULL NULL, `condition_awoken` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000368)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080714215417')[0m
+Migrating to CreatePermissions (20080719024715)
+  [4;36;1mSQL (0.000624)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002334)[0m   [0mCREATE TABLE `permissions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) DEFAULT NULL NULL, `authorized_user_id` int(11) DEFAULT NULL NULL, `role` varchar(255) DEFAULT NULL NULL, `subject` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000353)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080719024715')[0m
+Migrating to CreateSubjects (20080719024733)
+  [4;35;1mSQL (0.000640)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002510)[0m   [0;1mCREATE TABLE `subjects` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `what` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000357)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080719024733')[0m
+Migrating to CreateRoles (20080719024928)
+  [4;36;1mSQL (0.000665)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001816)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `permit` varchar(255) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000293)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080719024928')[0m
+  [4;35;1mSQL (0.000786)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000996)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002126)[0m   [0mSHOW FIELDS FROM `bps`[0m
+  [4;36;1mSQL (0.001399)[0m   [0;1mdescribe `bps`[0m
+  [4;35;1mSQL (0.000965)[0m   [0mSHOW KEYS FROM `bps`[0m
+  [4;36;1mSQL (0.001230)[0m   [0;1mSHOW FIELDS FROM `cholesterols`[0m
+  [4;35;1mSQL (0.001124)[0m   [0mdescribe `cholesterols`[0m
+  [4;36;1mSQL (0.001019)[0m   [0;1mSHOW KEYS FROM `cholesterols`[0m
+  [4;35;1mSQL (0.001529)[0m   [0mSHOW FIELDS FROM `exercises`[0m
+  [4;36;1mSQL (0.001618)[0m   [0;1mdescribe `exercises`[0m
+  [4;35;1mSQL (0.000936)[0m   [0mSHOW KEYS FROM `exercises`[0m
+  [4;36;1mSQL (0.001772)[0m   [0;1mSHOW FIELDS FROM `fitness_plans`[0m
+  [4;35;1mSQL (0.001710)[0m   [0mdescribe `fitness_plans`[0m
+  [4;36;1mSQL (0.001029)[0m   [0;1mSHOW KEYS FROM `fitness_plans`[0m
+  [4;35;1mSQL (0.002473)[0m   [0mSHOW FIELDS FROM `foods`[0m
+  [4;36;1mSQL (0.001951)[0m   [0;1mdescribe `foods`[0m
+  [4;35;1mSQL (0.000977)[0m   [0mSHOW KEYS FROM `foods`[0m
+  [4;36;1mSQL (0.001655)[0m   [0;1mSHOW FIELDS FROM `illness_histories`[0m
+  [4;35;1mSQL (0.001837)[0m   [0mdescribe `illness_histories`[0m
+  [4;36;1mSQL (0.001124)[0m   [0;1mSHOW KEYS FROM `illness_histories`[0m
+  [4;35;1mSQL (0.001408)[0m   [0mSHOW FIELDS FROM `journals`[0m
+  [4;36;1mSQL (0.001261)[0m   [0;1mdescribe `journals`[0m
+  [4;35;1mSQL (0.000959)[0m   [0mSHOW KEYS FROM `journals`[0m
+  [4;36;1mSQL (0.001977)[0m   [0;1mSHOW FIELDS FROM `measurements`[0m
+  [4;35;1mSQL (0.001839)[0m   [0mdescribe `measurements`[0m
+  [4;36;1mSQL (0.000928)[0m   [0;1mSHOW KEYS FROM `measurements`[0m
+  [4;35;1mSQL (0.001416)[0m   [0mSHOW FIELDS FROM `medical_histories`[0m
+  [4;36;1mSQL (0.001445)[0m   [0;1mdescribe `medical_histories`[0m
+  [4;35;1mSQL (0.000890)[0m   [0mSHOW KEYS FROM `medical_histories`[0m
+  [4;36;1mSQL (0.001601)[0m   [0;1mSHOW FIELDS FROM `medications`[0m
+  [4;35;1mSQL (0.001620)[0m   [0mdescribe `medications`[0m
+  [4;36;1mSQL (0.000891)[0m   [0;1mSHOW KEYS FROM `medications`[0m
+  [4;35;1mSQL (0.000945)[0m   [0mSHOW FIELDS FROM `opinions`[0m
+  [4;36;1mSQL (0.000886)[0m   [0;1mdescribe `opinions`[0m
+  [4;35;1mSQL (0.000854)[0m   [0mSHOW KEYS FROM `opinions`[0m
+  [4;36;1mSQL (0.001075)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mSQL (0.001049)[0m   [0mdescribe `permissions`[0m
+  [4;36;1mSQL (0.000872)[0m   [0;1mSHOW KEYS FROM `permissions`[0m
+  [4;35;1mSQL (0.004085)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSQL (0.004280)[0m   [0;1mdescribe `profiles`[0m
+  [4;35;1mSQL (0.000988)[0m   [0mSHOW KEYS FROM `profiles`[0m
+  [4;36;1mSQL (0.001178)[0m   [0;1mSHOW FIELDS FROM `questions`[0m
+  [4;35;1mSQL (0.000992)[0m   [0mdescribe `questions`[0m
+  [4;36;1mSQL (0.000890)[0m   [0;1mSHOW KEYS FROM `questions`[0m
+  [4;35;1mSQL (0.001116)[0m   [0mSHOW FIELDS FROM `relationships`[0m
+  [4;36;1mSQL (0.001040)[0m   [0;1mdescribe `relationships`[0m
+  [4;35;1mSQL (0.000895)[0m   [0mSHOW KEYS FROM `relationships`[0m
+  [4;36;1mSQL (0.000891)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000825)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.000898)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.001410)[0m   [0mSHOW FIELDS FROM `sleeps`[0m
+  [4;36;1mSQL (0.001285)[0m   [0;1mdescribe `sleeps`[0m
+  [4;35;1mSQL (0.000859)[0m   [0mSHOW KEYS FROM `sleeps`[0m
+  [4;36;1mSQL (0.001236)[0m   [0;1mSHOW FIELDS FROM `stress_logs`[0m
+  [4;35;1mSQL (0.001234)[0m   [0mdescribe `stress_logs`[0m
+  [4;36;1mSQL (0.000870)[0m   [0;1mSHOW KEYS FROM `stress_logs`[0m
+  [4;35;1mSQL (0.001234)[0m   [0mSHOW FIELDS FROM `stresses`[0m
+  [4;36;1mSQL (0.001128)[0m   [0;1mdescribe `stresses`[0m
+  [4;35;1mSQL (0.000954)[0m   [0mSHOW KEYS FROM `stresses`[0m
+  [4;36;1mSQL (0.000981)[0m   [0;1mSHOW FIELDS FROM `subjects`[0m
+  [4;35;1mSQL (0.000828)[0m   [0mdescribe `subjects`[0m
+  [4;36;1mSQL (0.000965)[0m   [0;1mSHOW KEYS FROM `subjects`[0m
+  [4;35;1mSQL (0.001237)[0m   [0mSHOW FIELDS FROM `support_dialogs`[0m
+  [4;36;1mSQL (0.001046)[0m   [0;1mdescribe `support_dialogs`[0m
+  [4;35;1mSQL (0.000851)[0m   [0mSHOW KEYS FROM `support_dialogs`[0m
+  [4;36;1mSQL (0.001757)[0m   [0;1mSHOW FIELDS FROM `supports`[0m
+  [4;35;1mSQL (0.001710)[0m   [0mdescribe `supports`[0m
+  [4;36;1mSQL (0.001221)[0m   [0;1mSHOW KEYS FROM `supports`[0m
+  [4;35;1mSQL (0.001008)[0m   [0mSHOW FIELDS FROM `surveys`[0m
+  [4;36;1mSQL (0.000920)[0m   [0;1mdescribe `surveys`[0m
+  [4;35;1mSQL (0.000891)[0m   [0mSHOW KEYS FROM `surveys`[0m
+  [4;36;1mSQL (0.001678)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.001789)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.001067)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;35;1mSQL (0.001500)[0m   [0mSHOW FIELDS FROM `workouts`[0m
+  [4;36;1mSQL (0.001332)[0m   [0;1mdescribe `workouts`[0m
+  [4;35;1mSQL (0.001042)[0m   [0mSHOW KEYS FROM `workouts`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000156)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000109)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000156)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000111)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m

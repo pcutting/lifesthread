@@ -5,14 +5,11 @@ one:
   category: meet
   subcategory: Meat
   name: tenderloin
-  calories_per_serving: 150
+  calories: 150
   protein: 10
   fiber: 0
-  simple_carbs: 10
-  complex_carbs: 10
-  monounsaturated_fats: 11
-  polyunsaturated_fats: 12
-  saturated_fats: 13
+  carbs: 10
+  fats: 13
   meal: dinner
   date: 2008-06-24
   comment: nice and juicy
@@ -22,14 +19,11 @@ two:
   category: MyString
   subcategory: MyString
   name: MyString
-  calories_per_serving: 1
+  calories: 1
   protein: 1
   fiber: 1
-  simple_carbs: 1
-  complex_carbs: 1
-  monounsaturated_fats: 1
-  polyunsaturated_fats: 1
-  saturated_fats: 1
+  carbs: 1
+  fats: 1
   meal: MyString
   date: 2008-06-24
   comment: MyString

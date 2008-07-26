@@ -68,18 +68,15 @@ ActiveRecord::Schema.define(:version => 20080719024928) do
   end
 
   create_table "foods", :force => true do |t|
-    t.integer  "user_id",              :limit => 11
+    t.integer  "user_id",     :limit => 11
     t.string   "category"
     t.string   "subcategory"
     t.string   "name"
-    t.integer  "calories_per_serving", :limit => 11
-    t.integer  "protein",              :limit => 11
-    t.integer  "fiber",                :limit => 11
-    t.integer  "simple_carbs",         :limit => 11
-    t.integer  "complex_carbs",        :limit => 11
-    t.integer  "monounsaturated_fats", :limit => 11
-    t.integer  "polyunsaturated_fats", :limit => 11
-    t.integer  "saturated_fats",       :limit => 11
+    t.integer  "calories",    :limit => 11
+    t.integer  "protein",     :limit => 11
+    t.integer  "fiber",       :limit => 11
+    t.integer  "carbs",       :limit => 11
+    t.integer  "fats",        :limit => 11
     t.string   "meal"
     t.string   "comment"
     t.datetime "date"
