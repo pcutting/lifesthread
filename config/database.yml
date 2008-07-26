@@ -38,5 +38,5 @@ production:
   encoding: utf8
   database: lifesthread_production
   username: root
-  password: 
+  password: go4yourlife
   socket: /var/lib/mysql/mysql.sock

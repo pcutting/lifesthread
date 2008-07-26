@@ -163,7 +163,7 @@ a:hover { color: #fff; background-color:#000; }
 }
 
 #errorExplanation h2 {
-  text-align: left;
+  //text-align: left;
   font-weight: bold;
   padding: 5px 5px 5px 15px;
   font-size: 12px;
