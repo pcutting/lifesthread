@@ -26,6 +26,8 @@ class Support < ActiveRecord::Base
 belongs_to :user
 has_many :support_dialogs
 
+attr_accessor :prioritized 
+
 def prioritized
   u = User.find_by_id(self.user_id)
   self.priority * u.profile.user_priority
