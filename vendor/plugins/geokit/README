@@ -1,0 +1,70 @@
+= GeoKit
+
+* http://geokit.rubyforge.org/
+
+However, this is the all-in-one plugin.  We will probably remake the site to 
+reflect the gem and its associated plugins.
+
+== DESCRIPTION:
+
+*** NOTE ************************************************************ NOTE ***
+*** NOTE *** This is in progress -- please do not attempt to use. *** NOTE ***
+*** NOTE ************************************************************ NOTE ***
+
+This is a gem providing modules and classes which support the development of
+location-oriented applications.
+
+This gem is a repackaging of our original GeoKit Rails plugin which bound all
+this functionality together, but made it available only to Rails applications.
+This repackaging is meant to enable the basic functionality to be framework
+agnostic while paving the way for framework-specific plugins to build on top
+of.
+
+== FEATURES/PROBLEMS:
+
+* Distance calculations, for both flat and spherical environments. For 
+  example, given the location of two points on the earth, you can calculate 
+  the miles/KM between them.
+* Geocoding from multiple providers. It currently supports Google, Yahoo, 
+  Geocoder.us, and Geocoder.ca geocoders, and it provides a uniform response 
+  structure from all of them. It also provides a fail-over mechanism, in case 
+  your input fails to geocode in one service.
+* IP-based location lookup utilizing hostip.info. Provide an IP address, and 
+  get city name and latitude/longitude in return.
+
+== SYNOPSIS:
+
+  TBD.
+
+== REQUIREMENTS:
+
+  TBD.
+
+== INSTALL:
+
+* sudo gem install geokit  (but don't install this yet)
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) 2008 Bill Eisenhauer & Andre Lewis
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

@@ -2,12 +2,22 @@
 
 <table>
   <tr>
-    <th>Permit</th>
+    <th>User</th>
+    <th>Permission</th>
+    <th>Template</th>
+    <th>Conditions</th>
+    <th>Admin approved</th>
+    <th>Request comment</th>
   </tr>
 
 <% for role in @roles %>
   <tr>
-    <td><%=h role.permit %></td>
+    <td><%=h role.user %></td>
+    <td><%=h role.permission %></td>
+    <td><%=h role.template %></td>
+    <td><%=h role.conditions %></td>
+    <td><%=h role.admin_approved %></td>
+    <td><%=h role.request_comment %></td>
     <td><%= link_to 'Show', role %></td>
     <td><%= link_to 'Edit', edit_role_path(role) %></td>
     <td><%= link_to 'Destroy', role, :confirm => 'Are you sure?', :method => :delete %></td>

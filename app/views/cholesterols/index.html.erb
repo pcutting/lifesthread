@@ -9,6 +9,9 @@
 <hr />
 <%= render :partial => "new_inform" %>
 
+<br />
+
+<%= will_paginate @all_cholesterols %>
 
 <table>
   <tr>
@@ -18,7 +21,7 @@
     <th>Comment</th>
   </tr>
 
-<% for cholesterol in @cholesterols %>
+<% for cholesterol in @all_cholesterols %>
   <tr>
     <td><%=h cholesterol.hdl %></td>
     <td><%=h cholesterol.ldl %></td>

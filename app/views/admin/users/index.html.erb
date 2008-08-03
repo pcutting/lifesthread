@@ -13,7 +13,10 @@
 #    t.boolean  "admin",                                   :default => false
 #    t.boolean  "public",                                  :default => false
 #    t.string   "time_zone",                               :default => "Eastern" %>
-
+		
+		 <%= will_paginate @users %>
+		 
+		 
 		<table id="users_table" class="tablesorter">
 			<thead>
 			<tr>
@@ -26,8 +29,9 @@
 			</thead>
 			<tbody>
 		<% for user in @users %>
+		
 			<tr>
-		    <td><%= h user.login %></td>
+		    <td><%= link_to  h(user.login), edit_admin_user_path(user) %></td>
 		    <td><%= h user.full_name %></td>
 		    <td><%= h user.created_at %></td>
 		    <td><%= h user.updated_at %></td>
@@ -36,4 +40,6 @@
 		<% end %>
 			</tbody>
 		</table>
+		
+
 	

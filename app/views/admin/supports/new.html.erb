@@ -14,10 +14,7 @@
     <%= f.label :category %>
     <%= f.select :category, ["Bug", "Recommendation", "Does not operate as expected", "request for help or clarification", "opinion", "other"], :size=> 10 %>
   </p>
-  
-  
-    
-    <%= f.hidden_field :reference_page %>
+  <%= f.hidden_field :reference_page %>
 
   <p>
     <%= f.label :comment %><br />
@@ -30,9 +27,7 @@
 
   <% y_checker = false %>
   <% n_checker = true %>
- 
 
-  
   <%= f.radio_button(  :ok_to_contact, true, :options => {:checked => y_checker} ) %>Yes
   <%= f.radio_button(  :ok_to_contact, false, :options => {:checked => n_checker} ) %>No
 

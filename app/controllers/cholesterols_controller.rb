@@ -6,7 +6,7 @@ class CholesterolsController < ApplicationController
   # GET /cholesterols
   # GET /cholesterols.xml
   def index
-    @cholesterols = current_user.cholesterols.find(:all, :order => "measured_on desc")
+    @all_cholesterols = current_user.cholesterols.paginate(:all,:page => params[:page], :per_page => 30, :order => "measured_on desc")
     @cholesterol = Cholesterol.new
 
     respond_to do |format|

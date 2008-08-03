@@ -40,6 +40,7 @@ has_many :supports
 has_many :support_dialogs, :through => :supports
 has_many :sleeps
 has_many :permissions
+has_many :roles
 
 
   # Virtual attribute for the unencrypted password
@@ -57,9 +58,8 @@ has_many :permissions
   
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
-  attr_accessible :login, :email, :password, :password_confirmation, :time_zone, :first_name, :last_name,  :middle_name
-
-
+  attr_accessible :login, :email, :password, :password_confirmation, :time_zone, :first_name, :last_name,  :middle_name  #, :admin
+  
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   def self.authenticate(login, password)
     u = find_by_login(login) # need to get the salt
@@ -110,6 +110,8 @@ has_many :permissions
     @activated
   end
   
+  #---------------------------
+
   def full_name
     fullName = self.first_name + " "
     fullName += self.middle_name + " " unless self.middle_name.nil?
@@ -117,7 +119,7 @@ has_many :permissions
     
   end
 
-  protected
+  protected #----------------------
     # before filter 
     def encrypt_password
       return if password.blank?

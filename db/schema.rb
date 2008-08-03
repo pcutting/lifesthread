@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080719024928) do
+ActiveRecord::Schema.define(:version => 20080731045259) do
 
   create_table "bps", :force => true do |t|
     t.integer  "user_id",     :limit => 11
@@ -215,7 +215,7 @@ ActiveRecord::Schema.define(:version => 20080719024928) do
     t.boolean  "has_children"
     t.integer  "number_of_children",              :limit => 11
     t.string   "list_unusual_substance_exposure"
-    t.integer  "education_years",                 :limit => 11
+    t.string   "education"
     t.boolean  "smoker"
     t.boolean  "was_smoker"
     t.string   "average_smoking"
@@ -255,7 +255,12 @@ ActiveRecord::Schema.define(:version => 20080719024928) do
   end
 
   create_table "roles", :force => true do |t|
-    t.string   "permit"
+    t.integer  "user_id",         :limit => 11
+    t.string   "permission"
+    t.string   "template"
+    t.string   "conditions"
+    t.boolean  "admin_approved"
+    t.string   "request_comment"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -64,4 +64,12 @@ Rails::Initializer.run do |config|
 
   # Activate observers that should always be running
   # config.active_record.observers = :cacher, :garbage_collector
+  
+  #installed plugin
+  #http://github.com/mislav/will_paginate/tree/master
+  # gem install mislav-will_paginate --source http://gems.github.com/
+  #gem 'mislav-will_paginate', '~> 2.2'
+  #require 'will_paginate'
+
+  
 end

@@ -6,8 +6,10 @@ class BpsController < ApplicationController
   # GET /bps
   # GET /bps.xml
   def index
-    @bps = current_user.bps.find(:all, :order => "measured_on desc" )
-    
+    #@bps = current_user.bps.find(:all, :order => "measured_on desc" )
+    @blood_pressures = current_user.bps.paginate( :page => params[:page], :per_page => 30 , :order =>  "measured_on desc")
+    #   @users = User.paginate :page => params[:page]  , :order => 'login asc'
+
     @bp = Bp.new
     
     respond_to do |format|
@@ -86,4 +88,6 @@ class BpsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+
 end

@@ -7,11 +7,11 @@
 <td>
   <b>Priority:</b>
   <%=h @support.priority %> : 
-  <%= if ( @support.priority == 1 ) then " Low" 
-   elsif ( @support.priority == 2 ) then " Medium Low" 
-   elsif  ( @support.priority == 3 ) then " Neutral "
-   elsif ( @support.priority == 4 ) then " Medium High" 
-   elsif ( @support.priority == 5 ) then " Urgent" end %>
+  <%= if ( @support.priority == 1 ) then "Low" 
+   elsif ( @support.priority == 2 ) then "Medium Low" 
+   elsif  ( @support.priority == 3 ) then "Neutral "
+   elsif ( @support.priority == 4 ) then "Medium High" 
+   elsif ( @support.priority == 5 ) then "Urgent" end %>
 </td>
 <td>
 
@@ -19,6 +19,10 @@
   <%=h @support.category %>
 </td>
 </tr>
+<tr><td colspan = 100%>
+<strong>Reference page:</strong> <%= @support.reference_page %>
+
+</td></tr>
 <tr>
 <td colspan = 100%>
 

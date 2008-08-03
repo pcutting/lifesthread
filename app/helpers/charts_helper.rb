@@ -338,8 +338,8 @@ if @chartoptions[:measurements][0] || @chartoptions[:measurements][1] || @charto
     unless (measurement.weight.nil? || measurement.weight == 0) && ! (@chartoptions[:measurement_weight][0] || @chartoptions[:measurement_weight][1])  
       meas1_count += 1 
       meas1_sum += measurement.weight  
-      meas1  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{measurement.weight}] "  
-      meas1_avg  << "[ #{measurement.measured_on.to_time.to_i * 1000},#{ meas1_sum.to_f/ meas1_count.to_f}] " 
+      meas1  << "[ #{measurement.measured_on.to_i * 1000},#{measurement.weight}] "  
+      meas1_avg  << "[ #{measurement.measured_on.to_i * 1000},#{ meas1_sum.to_f/ meas1_count.to_f}] " 
     end 
     
     if !(measurement.fat_percent.nil? ) &&  ( @chartoptions[:measurement_fat_percent][0] || @chartoptions[:measurement_fat_percent][1]) 

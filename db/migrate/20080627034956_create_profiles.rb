@@ -33,7 +33,7 @@ class CreateProfiles < ActiveRecord::Migration
       t.boolean :has_children
       t.integer :number_of_children
       t.string :list_unusual_substance_exposure
-      t.integer :education_years
+      t.string :education
       t.boolean :smoker
       t.boolean :was_smoker
       t.string :average_smoking

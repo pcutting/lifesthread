@@ -1,7 +1,7 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
  
 one:
-  title: MyString
+  title: Test
   priority: 1
   category: MyString
   reference_page: MyString
@@ -16,18 +16,4 @@ one:
   reopen: false
   reopen_on: 2008-07-11 16:22:46
  
-two:
-  title: MyString
-  priority: 1
-  category: MyString
-  reference_page: MyString
-  comment: make it work make it work
-  resolved: false
-  resolved_on: 2008-07-11 16:22:46
-  ok_to_contact: false
-  contact_number: MyString
-  user: test
-  marked_closed: false
-  marked_closed_on: 2008-07-11 16:22:46
-  reopen: false
-  reopen_on: 2008-07-11 16:22:46
+ 

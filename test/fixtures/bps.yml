@@ -1,3 +1,7 @@
+<% 
+num_records = CONFIG['number_of_fixtures']
+%>
+
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
@@ -67,3 +71,30 @@ six:
   systolic: <% sys = Math.cos(y) * 20 + 130  %><%= sys.to_i %>
   diastolic: <% dias = Math.cos(y) * 15 + 80 %><%= dias.to_i %>
 <% end %>
+
+<% 1.upto(num_records) do |x_u| %>
+user_<%= "0_#{x_u}" %>:
+  user: user_<%= x_u %>
+<% year = 2008 %><% month = 1 %><% day = 1 %><% hour = 8 %><% min= 0 %><% sec = 0%><% # = "user_#{x}:" %>
+  measured_on: <%= year %>-<%= month%>-<%= day%> <%= hour %>:<%= min %>:<%= sec %>
+  systolic: <%= sys = rand(30) + 110 %>
+  diastolic: <%= dia = rand(20) + 60 %>
+  comment: user_<%= x_u %>_generated
+
+<% y = 0 %><% x = 1 %><% while x < 50 %><% x = x + 1 %><% y = y + 0.1 %><%= "z_user_#{x}_#{x_u}:" %>
+  user: z_user_<%= x_u %><% randsec = rand(99960) %><% sec = sec + randsec %><% rsec = sec %>
+<% if sec > 59 then %><% min = min + ( sec / 60)  %><% sec =  ( sec % 60 ) %>
+<% if min > 59 then %><% hour = hour + rand(8)  %><% hour = hour.to_i + (min / 60) %><% min = ( min % 60 )  %>
+<% if hour > 23 then %><% day = day + rand(3)   %><% day = day.to_i + (hour / 60) %><% hour =  ( hour % 24 ) %>
+<% if ((day > 27 && month ==2 ) || day > 30 ) then %><% month = month + 1 %><% day  = 1 %>
+<% if month > 12 then %><% year = year + 1 %><% month  = 1 %>
+<% end %><% end %><% end %><% end %><% end %>
+  comment: user_<%= x_u %>_generated
+  measured_on: <%= year %>-<%= month %>-<%= day %> <%= hour %>:<%= min %>:<%= sec %>
+  systolic: <% sys = Math.cos(y) * 20 + 130  %><%= sys.to_i %>
+  diastolic: <% dias = Math.cos(y) * 15 + 80 %><%= dias.to_i %>
+<% end %>
+<% end %>
+
+
+

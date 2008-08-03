@@ -4,8 +4,28 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :permit %><br />
-    <%= f.text_field :permit %>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.label :permission %><br />
+    <%= f.text_field :permission %>
+  </p>
+  <p>
+    <%= f.label :template %><br />
+    <%= f.text_field :template %>
+  </p>
+  <p>
+    <%= f.label :conditions %><br />
+    <%= f.text_field :conditions %>
+  </p>
+  <p>
+    <%= f.label :admin_approved %><br />
+    <%= f.check_box :admin_approved %>
+  </p>
+  <p>
+    <%= f.label :request_comment %><br />
+    <%= f.text_field :request_comment %>
   </p>
   <p>
     <%= f.submit "Update" %>

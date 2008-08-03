@@ -1,0 +1,15 @@
+defaults: &defaults
+  per_page: 100
+  number_of_fixtures: 30000
+
+development:
+  test_var: development
+  <<: *defaults
+  
+test:
+  test_var: test
+  <<: *defaults
+
+production:
+  test_var: production
+  <<: *defaults

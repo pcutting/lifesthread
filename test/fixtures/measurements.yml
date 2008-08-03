@@ -1,3 +1,7 @@
+<% 
+num_records = CONFIG['number_of_fixtures']
+%>
+
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
@@ -111,3 +115,32 @@ two:
   thigh_right: <% var = Math.cos(y) * 5 + 18 %><%= var.to_i %>
   is_goal: false
 <% end %>
+
+<% 1.upto(num_records) do |x_u| %>
+<% y = 0 %><% x = 1 %><% while x < 50 %><% x = x +1 %><% y = y + 0.1 %><%= "z_user_#{x_u}_#{x}:" %>
+  user: <%= "z_user_#{x_u}" %><% randsec = rand(3600 * 94) %><% sec = sec + randsec %><% rsec = sec %>
+<% if sec > 59 then %><% min = min + ( sec / 60)  %><% sec =  ( sec % 60 ) %>
+<% if min > 59 then %><% hour = hour + rand(8)  %><% hour = hour.to_i + (min / 60) %><% min = ( min % 60 )  %>
+<% if hour > 23 then %><% day = day + rand(3)   %><% day = day.to_i + (hour / 60) %><% hour =  ( hour % 24 ) %>
+<% if ((day > 27 && month ==2 ) || day > 30 ) then %><% month = month + 1 %><% day  = 1 %>
+<% if month > 12 then %><% year = year + 1 %><% month  = 1 %>
+<% end %><% end %><% end %><% end %><% end %>
+  comment: Sample comments
+  measured_on: <%= year %>-<%= month %>-<%= day %> <%= hour %>:<%= min %>:<%= sec %>
+  weight: <% var = Math.cos(y) * 35 + 180 %><%= var.to_i %>
+  resting_metabolism: <% var = Math.cos(y) * 40 + 1500 %><%= var.to_i %>
+  fat_percent: <% var = Math.cos(y) * 15 + 20 %><%= var.to_i %>
+  muscle_percent: <% var = Math.cos(y) * 15 + 30 %><%= var.to_i %>
+  visceral_fat: <% var = Math.cos(y) * 5 + 6 %><%= var.to_i %>
+  water_percent: <% var = Math.cos(y) * 15 + 50 %><%= var.to_i %>
+  chest: <% var = Math.cos(y) * 5 + 35 %><%= var.to_i %>
+  pectoral: <% var = Math.cos(y) * 5 + 37 %><%= var.to_i %>
+  bicep_left: <% var = Math.cos(y) * 3 + 15 %><%= var.to_i %>
+  bicep_right: <% var = Math.cos(y) * 3 + 15 %><%= var.to_i %>
+  belly: <% var = Math.cos(y) * 10 + 30 %><%= var.to_i %>
+  hip: <% var = Math.cos(y) * 10 + 32 %><%= var.to_i %>
+  lower_hip: <% var = Math.cos(y) * 8 + 28 %><%= var.to_i %>
+  thigh_left: <% var = Math.cos(y) * 5 + 18 %><%= var.to_i %>
+  thigh_right: <% var = Math.cos(y) * 5 + 18 %><%= var.to_i %>
+  is_goal: false
+<% end %><% end %>
