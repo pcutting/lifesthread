@@ -1,5 +1,5 @@
 defaults: &defaults
-  per_page: 100
+  per_page: 30000
   number_of_fixtures: 30
 
 development:
