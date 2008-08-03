@@ -11,7 +11,7 @@ set :scm_passphrase, "wellnessboard" #This is your custom users password
 
 
 set :user, "deploy"
-set :password, "wellnessboard"
+set :password, "work4you2"
 
 
 
