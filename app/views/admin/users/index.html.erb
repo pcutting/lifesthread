@@ -35,7 +35,7 @@
 		    <td><%= h user.full_name %></td>
 		    <td><%= h user.created_at %></td>
 		    <td><%= h user.updated_at %></td>
-		    <td><%= h user.admin %></td>
+		    <td <%= "bgcolor = red" if user.admin %> ><%= if user.admin then "YES" else "NO" end %></td>
 			</tr>
 		<% end %>
 			</tbody>

@@ -1,6 +1,6 @@
 defaults: &defaults
   per_page: 30
-  number_of_fixtures: 30000
+  number_of_fixtures: 500
 
 development:
   test_var: development
