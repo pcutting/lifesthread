@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080731045259) do
+ActiveRecord::Schema.define(:version => 20080803210555) do
 
   create_table "bps", :force => true do |t|
     t.integer  "user_id",     :limit => 11
@@ -261,6 +261,12 @@ ActiveRecord::Schema.define(:version => 20080731045259) do
     t.string   "conditions"
     t.boolean  "admin_approved"
     t.string   "request_comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "samples", :force => true do |t|
+    t.integer  "count",      :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,12 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :roles
-
-  map.resources :roles
-
-
-
-
-
 
   
   map.root :controller => "home", :action =>"index"
@@ -37,6 +29,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :permissions
   map.resources :sleeps
   
+  map.resources :roles
+
+
   
   
   map.namespace :admin do |admin|
@@ -45,6 +40,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :users
     admin.resources :supports
     admin.resources :supports, :has_many => :support_dialogs
+    admin.resources :samples
   end
 
 

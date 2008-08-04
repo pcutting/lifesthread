@@ -1,0 +1,13 @@
+<h1>New sample</h1>
+
+<% form_for([:admin, @sample]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+  
+  <%= f.label "Number of records to create" %> <%= f.text_field :count, :size => 8  %>
+  
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
