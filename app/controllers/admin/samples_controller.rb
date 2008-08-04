@@ -109,7 +109,7 @@ class Admin::SamplesController < Admin::BaseController
 # measurements
 ################
 
-@new_measurements = Measurement.new
+
 
 
 y = 0 
@@ -121,39 +121,33 @@ hour = 8
 min= 0 
 sec = 0
 
-while x < 100 
+while x < 50 
   x = x +1
   y = y + 0.1
-
+@new_measurements = Measurement.new
   @new_measurements.user =  @new_user
 
   randsec = rand(3600 * 94) 
   sec = sec + randsec 
   rsec = sec 
-
-
+  
   if sec > 59 then 
   min = min + ( sec / 60)  
   sec =  ( sec % 60 ) 
-
     if min > 59 then 
     hour = hour + rand(8)  
     hour = hour.to_i + (min / 60) 
     min = ( min % 60 )  
-
       if hour > 23 then 
       day = day + rand(3)   
       day = day.to_i + (hour / 60) 
       hour =  ( hour % 24 ) 
-
         if ((day > 27 && month ==2 ) || day > 30 ) then 
         month = month + 1 
         day  = 1 
-
           if month > 12 then 
           year = year + 1 
           month  = 1 
-
           end 
         end 
       end 
@@ -185,7 +179,7 @@ end
   #bp
   ########
 
-@new_bp = Bp.new
+
 y = 0 
 x = 1 
 year = 2007
@@ -195,10 +189,10 @@ hour = 8
 min= 0 
 sec = 0
 
-while x < 100 
+while x < 50 
   x = x +1
   y = y + 0.1
-
+@new_bp = Bp.new
   @new_bp.user =  @new_user
 
   randsec = rand(3600 * 94) 
@@ -246,7 +240,7 @@ end
   ############
   #cholesterol
   ############
-  @new_cholesterol = Cholesterol.new
+
 y = 0 
 x = 1 
 year = 2007
@@ -256,10 +250,10 @@ hour = 8
 min= 0 
 sec = 0
 
-while x < 100 
+while x < 50 
   x = x +1
   y = y + 0.1
-
+  @new_cholesterol = Cholesterol.new
   @new_cholesterol.user =  @new_user
 
   randsec = rand(3600 * 94) 
