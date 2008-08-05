@@ -6,7 +6,7 @@ class Admin::SamplesController < Admin::BaseController
     @samples = Sample.find(:all)
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @samples }
+ 
     end
   end
 
@@ -17,7 +17,7 @@ class Admin::SamplesController < Admin::BaseController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @sample }
+ 
     end
   end
 
@@ -29,7 +29,7 @@ class Admin::SamplesController < Admin::BaseController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @sample }
+ 
     end
   end
 
@@ -41,24 +41,27 @@ class Admin::SamplesController < Admin::BaseController
   # POST /samples
   # POST /samples.xml
   def create
-  
+    
     load_datas  #call private def
     @count = params[:sample]
     @count = @count[:count].to_i
     @sample = Sample.new(params[:sample])
     @time_now = Time.now.to_i
 
-
+    @sample.save
+    
+    puts "### #{@count} ##########"
+    
     0.upto(@count) do |x_u| 
       #########################
       # users
       #########################
       @new_user = User.new
-        @new_user.login =  "z_sample_#{@time_now}_#{x_u}"
+        @new_user.login =  "z_sample_#{@sample.id}_#{x_u}"
         @new_user.first_name= "#{@fname[rand(@fname.size - 1 )] }"
         @new_user.last_name= "#{@lname[rand(@lname.size - 1 )]  }"
         @new_user.middle_name= "#{@mname[rand(@mname.size - 1 )] }"
-        @new_user.email = "z_sample_#{x_u}@testuser.com"
+        @new_user.email = "z_sample_#{@sample.id}_#{x_u}@testuser.com"
         @new_user.salt = "#{@salt}"
         @new_user.crypted_password = "#{@pw}"
         @new_user.time_zone = "#{@timezones[rand(@timezones.size - 1 )] }"
