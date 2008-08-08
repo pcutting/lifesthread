@@ -1,5 +1,9 @@
   <fieldset>
   <legend>Address</legend>
+  <% states =  ["AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY"]
+
+ %>
+
   <p>
     <%= f.label :address %><!-- was a br -->
     <%= f.text_field :address1 , :size => 20 %>
@@ -13,7 +17,7 @@
     <%= f.text_field :city , :size => 10%>
 
     <%= f.label :state %><!-- was a br -->
-    <%= f.text_field :state , :size => 5 %>
+    <%= f.select :state, states,:size => 2 %>
 
     <%= f.label :zip %><!-- was a br -->
     <%= f.text_field :zip , :size => 5%>

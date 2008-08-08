@@ -41,6 +41,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :supports
     admin.resources :supports, :has_many => :support_dialogs
     admin.resources :samples
+    admin.resources :reports
   end
 
 

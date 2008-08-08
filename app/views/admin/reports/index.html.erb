@@ -1,0 +1,124 @@
+
+
+<div class='keep_left' >
+<% states =  ["AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY"] %>
+
+<% form_for ([:admin, :report]) , :url => { :action => :index } do |f| %>
+
+  <p>
+  
+    <%= f.label :state %><!-- was a br -->
+    <%= select_tag "state", options_for_select(states) %>
+  
+    <%= f.submit "Report" %>
+  </p>
+<% end %>
+
+<% details = Array.new %>
+<%= "These stats are for the state of #{@state}.<br />" %>
+<% details << "By Age group:<br />" %>
+
+
+<% data_set_bottom , data_set_top,axisx = Array.new, Array.new , Array.new 
+ count = 0 %>
+ 
+<% for ages in @age_group do %>
+  <% details << "There are #{ages[1].count} (#{per_population = ((ages[1].count.to_f / @users.size) * 100).to_i}%) of #{@users.size} users in the age group of \"#{ ages[0].to_s}\" yrs. #{ages[1].with_sex("F").count} (#{ per_female = (( ages[1].with_sex("F").count / ages[1].count.to_f ) * 100).to_i }%) 
+    are women and #{ages[1].with_sex("m").count} (#{per_male = (( ages[1].with_sex("m").count / ages[1].count.to_f ) * 100).to_i}%) are men.<br />" %> 
+    
+  <%
+  axisx << ages[0].to_s
+  #data_set_bottom << (per_female * ((100 - per_population) / 100.0) )
+  #data_set_top << (per_female * ((100 - per_population) / 100.0) ) + (per_male * ((100 - per_population) / 100.0) )
+  data_set_bottom << (per_female.nil? ? 0 : per_female  ) 
+  data_set_top << (per_female.nil? ? 0 : per_female) + (per_male.nil? ? 0 : per_male)
+  %>
+
+<% end %>
+
+<%
+
+bottom = data_set_bottom.join(",")
+top = data_set_top.join(",")
+
+axis_x_sub, axis_x_top = "",""
+
+count = 0
+for x in axisx do
+count += 1
+
+if (count % 2 == 0)  then
+  if count == 2
+    axis_x_sub+= ("+|" + x + "|+")
+    axis_x_top += "|" unless axis_x_top == "" 
+  else
+    axis_x_sub+= (x + "|+")
+    axis_x_top += "|" unless axis_x_top == "" 
+    
+  end
+
+
+else 
+
+    axis_x_top += (x + "|+")
+    axis_x_sub+= "|" unless axis_x_sub== ""
+
+
+end 
+
+end 
+
+ if axis_x_sub.ends_with?("|+") then axis_x_sub= axis_x_sub.to(axis_x_sub.size - 3 ) end
+ if axis_x_top.ends_with?("|+") then axis_x_top = axis_x_top.to(axis_x_top.size - 3 ) end
+
+ if axis_x_sub.ends_with?("|") then axis_x_sub= axis_x_sub.to(axis_x_sub.size - 2 ) end
+ if axis_x_top.ends_with?("|") then axis_x_top = axis_x_top.to(axis_x_top.size - 2 ) end
+
+%>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+
+<br />
+
+<div class='report' class='chart' >
+<%= image_tag( 
+"http://chart.apis.google.com/chart?
+cht=bvs&
+chtt=Sex+Ratio+Per+Age+Group&
+chdl=Women|Men&
+chco=4d89f9,00d9fd&
+chxt=x,y,r,x,x&
+chxl=
+0:|#{axis_x_top}|
+1:|0%|25%|50%|75%|100%|
+2:|Women|Men|
+3:|#{axis_x_sub}|
+4:|AGE&
+chs=600x150&
+chd=t:#{bottom}|#{top}") %> 
+</div>
+
+<div class='report' class='chart' >
+<%= image_tag(
+"http://chart.apis.google.com/chart?cht=p3&
+chtt=Distribution+of+women+by+age+group&
+chco=4d89f9,ccff00,ff0000&
+chs=600x250&
+chl=#{axisx.join("+yrs|")}+yrs&
+chd=t:#{data_set_bottom.join(",")}") %> 
+</div>
+
+<div class='report' class='chart' >
+<%= image_tag(
+"http://chart.apis.google.com/chart?cht=p3&
+chtt=Distribution+of+men+by+age+group&
+chco=4d89f9,ccff00,ff0000&
+chs=600x250&
+chl=#{axisx.join("+yrs|")}+yrs&
+chd=t:#{data_set_top.join(",")}") %> 
+</div>
+<br />
+
+<%= details %>
+
+
+</div>

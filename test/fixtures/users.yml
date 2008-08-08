@@ -201,7 +201,7 @@ lname = ["Akers","Doverspike","Tennant","Mench","Atweeke","Rohtin","Widaman","Mo
 "Gilman","Paul","Philbrick","Stroh","Romanoff","Milliron",
 "Harrow","Snyder"]
 
-mname = ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
+mname = ("A".."Z").map
 num_records = CONFIG['number_of_fixtures']
 
 

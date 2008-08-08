@@ -548,7 +548,7 @@ private #--------------------------
   "Gilman","Paul","Philbrick","Stroh","Romanoff","Milliron",
   "Harrow","Snyder"]
 
-  @mname = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O"]
+  @mname = ("A".."Z").map
   
   
   #------ profile -----------------

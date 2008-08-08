@@ -106,6 +106,9 @@ body {
   
   
 
+div.keep_left{
+text-align: left;
+}
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
