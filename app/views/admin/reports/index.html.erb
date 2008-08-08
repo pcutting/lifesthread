@@ -23,7 +23,7 @@
  count = 0 %>
  
 <% for ages in @age_group do %>
-  <% details << "There are #{ages[1].count} (#{per_population = ((ages[1].count.to_f / @users.size) * 100).to_i}%) of #{@users.size} users in the age group of \"#{ ages[0].to_s}\" yrs. #{ages[1].with_sex("F").count} (#{ per_female = (( ages[1].with_sex("F").count / ages[1].count.to_f ) * 100).to_i }%) 
+  <% details << "There are #{ages[1].count} (#{per_population = ((ages[1].count.to_f / @profiles.size) * 100).to_i}%) of #{@profiles.size} users in the age group of \"#{ ages[0].to_s}\" yrs. #{ages[1].with_sex("F").count} (#{ per_female = (( ages[1].with_sex("F").count / ages[1].count.to_f ) * 100).to_i }%) 
     are women and #{ages[1].with_sex("m").count} (#{per_male = (( ages[1].with_sex("m").count / ages[1].count.to_f ) * 100).to_i}%) are men.<br />" %> 
     
   <%

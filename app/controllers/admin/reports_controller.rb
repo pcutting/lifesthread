@@ -2,10 +2,6 @@ class Admin::ReportsController < Admin::BaseController
 
 def index
 
-
-  @users = User.all
- 
-#  @young_adult = Profile.with_age_21_35
   @age_group = Array.new
 
 
