@@ -31,7 +31,25 @@
 <td class= "dashboard" > <%= f.text_field :belly, :size => 3  %>  </td>
 <td class= "dashboard" > <%= f.text_field :hip, :size => 3  %>  / <%= f.text_field :lower_hip, :size => 4  %>  </td>
 <td class= "dashboard" > <%= f.text_field :thigh_left, :size => 3  %> / <%= f.text_field :thigh_right, :size => 4  %> </td>
-<td class= "dashboard" > <%= f.datetime_select :measured_on, :start_year => 1900, :include_seconds => true  %>  </td>
+<td class= "dashboard" > 
+
+<%#= f.datetime_select :measured_on, :start_year => 1900, :include_seconds => true  %>  
+     <%= calendar_box 'measurement', 'measured_on',
+       { :class => 'date',
+         :date => Time.zone.now,
+         :field_title => 'Measured on',
+         :button_title => 'Show calendar',
+         :value => Time.zone.now,
+         :size => 10},
+       { :firstDay => 1,
+         :range => [1900, 2015],
+         :step => 1,
+         :showsTime => 1,
+         :showOthers => true,
+         :cache => true } %>
+         
+</td>         
+
 <td class= "dashboard" > <%= f.text_field :comment , :size => 10 %> </td>
 
 </tr>

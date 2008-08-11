@@ -2,11 +2,40 @@
 <tr>
 <td>
     <%= f.label :started_at %><br />
-    <%= f.datetime_select :started_at %>
+    <%#= f.datetime_select :started_at %>
+    <%#= f.text_field :started_at %>
+ <%= calendar_box 'sleep', 'started_at',
+       { :class => 'date',
+         :date => Time.zone.now,
+         :field_title => 'Started to sleep',
+         :button_title => 'Show calendar',
+         :value => Time.zone.now },
+       { :firstDay => 1,
+         :range => [1900, 2015],
+         :step => 1,
+         :showsTime => 1,
+         :showOthers => true,
+         :cache => true }
+ %>
+
  </td>
  <td>
    <%= f.label :woke_up_at %><br />
-    <%= f.datetime_select :woke_up_at %>
+    <%#= f.datetime_select :woke_up_at %>
+     <%= calendar_box 'sleep', 'woke_up_at',
+       { :class => 'date',
+         :date => Time.zone.now,
+         :field_title => 'Woke up at',
+         :button_title => 'Show calendar',
+         :value => Time.zone.now },
+       { :firstDay => 1,
+         :range => [1900, 2015],
+         :step => 1,
+         :showsTime => 1,
+         :showOthers => true,
+         :cache => true } %>
+
+    
  </td>
  <td>
     <%= f.label :slept_in %><br />

@@ -9,7 +9,22 @@
   <tr>
     <td><%= f.text_field :systolic, :size => 4  %></td>
     <td><%= f.text_field :diastolic, :size => 4  %></td>
-    <td><%= f.datetime_select :measured_on , :start_year => 1900  %></td>
+    <td><%#= f.datetime_select :measured_on , :start_year => 1900  %>
+   
+         <%= calendar_box 'bp', 'measured_on',
+       { :class => 'date',
+         :date => Time.zone.now,
+         :field_title => 'BP measured on',
+         :button_title => 'Show calendar' ,
+         :value => Time.zone.now },
+       { :firstDay => 1,
+         :range => [1900, 2015],
+         :step => 1,
+         :showsTime => 1,
+         :showOthers => true,
+         :cache => true } %>
+    
+    </td>
     <td><%= f.text_field :comment %></td>
   </tr>
 </table>
