@@ -2,11 +2,10 @@ class CreateRoles < ActiveRecord::Migration
   def self.up
     create_table :roles do |t|
       t.references :user
-      t.string :permission
-      t.string :template
+      t.string :has_role
+      t.string :sub_roles
       t.string :conditions
-      t.boolean :admin_approved
-      t.string :request_comment
+      t.boolean :leader
 
       t.timestamps
     end

@@ -1,11 +1,3 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  user: test
-  permission: read_only
-  template: Pharmacy
-  conditions: [:zip , "04212"]
-  admin_approved: true
-  request_comment: Please please let me seee my town"
-  
 

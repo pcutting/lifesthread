@@ -5,7 +5,7 @@ class MeasurementsController < ApplicationController
   # GET /measurements
   # GET /measurements.xml
   def index
-    @body_measurements = current_user.measurements.paginate(:all,  :page => params[:page], :order => "measured_on desc")
+    @body_measurements = current_user.measurements.paginate(:all,  :page => params[:page], :per_page => 8, :order => "measured_on desc")
     @body_measurement_goals = current_user.measurements.paginate(:all,  :page => params[:page], :conditions => "is_goal",  :order => "measured_on desc")   
     @measurement = Measurement.new
     

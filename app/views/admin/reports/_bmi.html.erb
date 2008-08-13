@@ -1,0 +1,53 @@
+
+<div class='keep_left' >
+<% states =  ["AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY"] %>
+
+<% form_for ([:admin, :report]) , :url => { :action => :index } do |f| %>
+
+  <p>
+  
+    <%= f.label :state %><!-- was a br -->
+    <%= select_tag "state", options_for_select(states) %>
+  
+    <%= f.submit "Report" %>
+  </p>
+<% end %>
+
+<% details = Array.new %>
+<%= "These stats are for the state of #{@state}.<br />" %>
+
+<% by_ages = Array.new %>
+<% for ages in @age_group do %>
+  <% ages[1].each do |profile| %>
+    <% weight = profile.user.measurements.first(:conditions => "is_goal = false && weight is not null", :order => "measured_on desc") %>
+
+    <% bmi = ((weight.weight/(profile.height_inch * profile.height_inch.to_f))* 703).to_i  rescue  bmi = 0 %>
+    <% by_ages << bmi # make this list to get the average for the age group %>
+
+
+  <% end %>
+  <% details << [ages[0], bmi ] %>
+<% end %>
+
+
+<% points = Array.new %>
+<% details.each{ |x| points << x[1] } %> 
+<% label_ages = Array.new %>
+<% @age_group.each{|x| label_ages << x[0].to_s} %>
+
+<div class='report' class='chart' >
+<% link = "http://chart.apis.google.com/chart?cht=bhs&
+chtt=BMI+Per+Age+Group&
+chco=4d89f9|ff0000&
+chs=600x400&
+chg=2.5,50&
+chxt=x,y&
+chxl=
+0:|0|10|20|30|40|50|60|70|80|90|100|
+1:|#{label_ages.reverse.join("|")}&
+chd=t:#{points.join(",")}" %>
+
+
+
+<%= image_tag(link) %> 
+</div>

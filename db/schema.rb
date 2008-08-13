@@ -255,12 +255,11 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
   end
 
   create_table "roles", :force => true do |t|
-    t.integer  "user_id",         :limit => 11
-    t.string   "permission"
-    t.string   "template"
+    t.integer  "user_id",    :limit => 11
+    t.string   "has_role"
+    t.string   "sub_roles"
     t.string   "conditions"
-    t.boolean  "admin_approved"
-    t.string   "request_comment"
+    t.boolean  "leader"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
