@@ -1,0 +1,41 @@
+<% content_for :header do %>
+  <h1>Admins, please be carefull here.</h1>
+<% end %>
+
+
+
+<%= error_messages_for :user %>
+
+<% form_for([:admin, @user]) do |f| %>
+
+
+<p><label for="login">Login</label> : <%= @user.login %></p>
+
+<p><label for="email">Email</label>
+<%= f.text_field :email %></p>
+
+
+<p><label for="first_name">First Name</label>
+<%= f.text_field :first_name %></p>
+
+<p><label for="middle_name">Middle Name</label>
+<%= f.text_field :middle_name %></p>
+
+<p><label for="last_name">Last Name</label>
+<%= f.text_field :last_name %></p>
+
+
+<p><label for="Time Zone">Time Zone</label>
+<%= f.time_zone_select :time_zone, TimeZone.us_zones %>
+
+<p><label for="Admin">Admin</label>
+<%= f.check_box :admin %></p>
+
+<p><label for="Public">Public</label>
+<%= f.check_box :public %></p>
+
+
+
+  <p><%= submit_tag 'Update' %></p> 
+<% end -%>
+

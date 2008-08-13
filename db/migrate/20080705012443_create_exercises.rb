@@ -12,6 +12,10 @@ class CreateExercises < ActiveRecord::Migration
       t.integer :calories_burned
       t.integer :intensity
       t.integer :comfort_level
+      t.boolean :listable
+      t.string :documentation_at
+      t.integer :author_id
+      t.integer :approved_by
 
       t.timestamps
     end

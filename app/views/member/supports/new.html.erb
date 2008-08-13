@@ -1,0 +1,45 @@
+<h1>New support</h1>
+
+<% form_for(@support) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :priority %>[1 = Lowest, 5 = Urgent] 
+    <%= f.select :priority, [1,2,3,4,5], :size=> 5 %>
+
+    <%= f.label :category %>
+    <%= f.select :category, ["Bug", "Recommendation", "Does not operate as expected", "request for help or clarification", "opinion", "other"], :size=> 10 %>
+  </p>
+  <%= f.hidden_field :reference_page %>
+
+  <p>
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment , :rows => 8, :cols => 80%>
+  </p>
+
+  <p>
+    <%= f.label "Is it ok to contact you?" %>
+    <% # = f.check_box :ok_to_contact %> :
+
+  <% y_checker = false %>
+  <% n_checker = true %>
+
+  <%= f.radio_button(  :ok_to_contact, true, :options => {:checked => y_checker} ) %>Yes
+  <%= f.radio_button(  :ok_to_contact, false, :options => {:checked => n_checker} ) %>No
+
+
+   : <%= f.label "If yes, contact number" %>
+    <%= f.text_field :contact_number %>
+  </p>
+
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', admin_supports_path %>

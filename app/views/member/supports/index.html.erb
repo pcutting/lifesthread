@@ -1,0 +1,40 @@
+<h1>Support cases</h1>
+
+<table>
+  <tr>
+    <th>Prioritized</th>
+    <th>Title</th>
+    <th>Priority</th>
+    <th>Category</th>
+    <th>Comment</th>
+    <th>Resolved</th>
+    <th>Marked closed</th>
+    <th>Reopen</th>
+  </tr>
+
+<% for support in @supports %>
+  <tr>
+    <td><%= h support.prioritized %></td>
+    <td><%=h support.title %></td>
+    <td>
+     <%= if ( support.priority == 1 ) then "Low" 
+       elsif ( support.priority == 2 ) then "Medium Low" 
+       elsif ( support.priority == 3 ) then "Neutral"
+       elsif ( support.priority == 4 ) then "Medium High" 
+       elsif ( support.priority == 5 ) then "Urgent" end %>
+     </td>
+    <td><%=h support.category %></td>
+    <td><%=h support.comment %></td>
+    <td><%=if support.resolved then "Yes" else "Not yet" end %></td>
+    <td><%=if support.marked_closed then "Yes" else "No" end %></td>
+    <td><%=if support.reopen then "Yes" else "No" end%></td>
+    <td><%= link_to 'Show', [:admin, support] %></td>
+    <td><%= link_to 'Edit', edit_admin_support_path(support) %></td>
+    <td><%= link_to 'Destroy',[:admin, support], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New support', new_admin_support_path %>

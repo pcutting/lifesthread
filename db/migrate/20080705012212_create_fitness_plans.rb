@@ -14,6 +14,9 @@ class CreateFitnessPlans < ActiveRecord::Migration
       t.boolean :fri
       t.boolean :sat
       t.boolean :sun
+      t.boolean :public
+      t.boolean :approved
+      t.string :documented_at
 
       t.timestamps
     end

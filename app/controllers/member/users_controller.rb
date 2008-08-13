@@ -12,30 +12,11 @@ class Admin::UsersController < Admin::BaseController
 
   def edit
     @user = User.find(params[:id])
-    @roles = @user.roles.all
-    
   end
 
   def update
     @user = User.find(params[:id])
     @user.admin = true if params[:user][:admin]
-    @user.admin = false if params[:user][:admin].nil? || params[:user][:admin]== "0"
-    
-    # Parameters: {"user"=>{"public"=>"0", "admin"=>"0", "first_name"=>"Warner", "time_zone"=>"Arizona", "last_name"=>"Wardle", "email"=>"z_1218523237_0@testuser.com", "middle_name"=>"N"}, "commit"=>"Update", "leader"=>"1", "conditions"=>"04102", "authenticity_token"=>"17f223eaa077da3ac510a01515056c12d6091587", "_method"=>"put", "action"=>"update", "has_role"=>"MEMBER", "id"=>"1016097037", "controller"=>"admin/users"}
-
-    unless params[:has_role] == "" then
-      @role = @user.roles.new
-      @role.has_role = params[:has_role]
-      @role.conditions = params[:conditions]
-      @role.leader = params[:leader] rescue @role.leader = false
-      
-      if @role.save then
-        #saved message
-      else
-        #failed message
-      end
-    
-    end 
     
     respond_to do |format|
       if @user.update_attributes(params[:user])
