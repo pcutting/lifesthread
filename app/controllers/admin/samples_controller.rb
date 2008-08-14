@@ -24,7 +24,7 @@ class Admin::SamplesController < Admin::BaseController
   # GET /samples/new.xml
   def new
     @sample = Sample.new
-    @sample.count = 25
+    @sample.count = 5
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,7 +42,7 @@ class Admin::SamplesController < Admin::BaseController
   def create
     
     load_datas  #call private def
-    sub_samples = 4
+    sub_samples = 25
     
     @count = params[:sample]
     @count = @count[:count].to_i
