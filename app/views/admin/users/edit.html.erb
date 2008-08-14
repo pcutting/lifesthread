@@ -6,6 +6,8 @@
 
 <%= error_messages_for :user %>
 
+<table>
+<tr><td>
 <% form_for([:admin, @user]) do |f| %>
 
 
@@ -33,6 +35,43 @@
 
 Public:
 <%= f.check_box :public %></p>
+</td><td>
+<fieldset>
+  <legend>Address and Contact Information: </legend>
+   <%="address:".capitalize %> <!-- was a br -->
+    <%= @profile.address1.capitalize %>
+  </p>
+  <p>
+    <%="address:".capitalize %> <!-- was a br -->
+    <%= @profile.address2 %>
+  </p>
+  <p>
+    <%="city:".capitalize %> <!-- was a br -->
+    <%= @profile.city.capitalize %>
+  </p>
+  <p>
+    <%="state:".capitalize %> <!-- was a br -->
+    <%= @profile.state %>
+  </p>
+  <p>
+    <%="zip:".capitalize %> <!-- was a br -->
+    <%= @profile.zip %>
+  <p>
+    <%="cell phone:".capitalize %> <!-- was a br -->
+    <%= @profile.cell_phone %>
+  </p>
+  <p>
+    <%="phone:".capitalize %> <!-- was a br -->
+    <%= @profile.phone %>
+  </p>
+  <p>
+    <%="work phone:".capitalize %> <!-- was a br -->
+    <%= @profile.work_phone %>
+  </p>
+
+</fieldset>
+</td></tr>
+</table>
 
 
   <fieldset>

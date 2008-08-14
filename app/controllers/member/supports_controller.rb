@@ -1,4 +1,4 @@
-class Admin::SupportsController < Admin::BaseController
+class Member::SupportsController < Member::BaseController
 
   # GET /supports
   # GET /supports.xml

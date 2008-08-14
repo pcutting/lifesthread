@@ -42,7 +42,7 @@ class Admin::SamplesController < Admin::BaseController
   def create
     
     load_datas  #call private def
-    sub_samples = 50
+    sub_samples = 4
     
     @count = params[:sample]
     @count = @count[:count].to_i
@@ -57,19 +57,20 @@ class Admin::SamplesController < Admin::BaseController
 
      
      unless (params[:state] == "--" && params[:city]=="" && params[:city]=="")
-       unless (params[:what_zip] == "") then
-           @zips = @zips.find_all{ |x| x[0] == params[:what_zip] } #sets zips to city/state
+       #unless (params[:what_zip] == "") then
+       #    @zips = @zips.find_all{ |x| x[0] == params[:what_zip] } #sets zips to city/state
            
-           puts "****************** specific what_zip code.  #{@zips} *****"
-       else 
+       #    puts "****************** specific what_zip code.  #{@zips} *****"
+       #else 
          if ! (params[:state] == "--") then
            if params[:city] == "" then
              @zips = @zips.find_all{ |x| x[1]== params[:state] } #sets zips to all in state
            else
              @zips = @zips.find_all{ |x| (x[1] == params[:state] && x[2] == params[:city].upcase) } #sets zips to city/state
+             puts "********************** zips with city and state *******"
            end
-          end
-       end
+         end
+       #end
      end
  
 #  c = a.find_all { |x| x[0] =="b" }
@@ -584,7 +585,7 @@ private #--------------------------
   
   #------ profile -----------------
   
-  @zips =["35004","AL","ACMAR",6055],
+  @zips =[["35004","AL","ACMAR",6055],
 ["35005","AL","ADAMSVILLE",10616],
 ["35006","AL","ADGER",3205],
 ["35007","AL","KEYSTONE",14218],
@@ -30053,7 +30054,7 @@ private #--------------------------
 ["83122","WY","GROVER",335],
 ["83123","WY","LA BARGE",606],
 ["83126","WY","SMOOT",414],
-["83127","WY","THAYNE",505]
+["83127","WY","THAYNE",505]]
 
   
   

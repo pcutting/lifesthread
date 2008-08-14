@@ -37,6 +37,17 @@ named_scope :with_state , lambda { |*args|
 }
 #User.with_gender('m').with_age(21..35).find
 
+
+
+named_scope :with_zips , lambda { |*args| 
+if args[0].class == String then 
+{ :conditions => ["zip = ?",  args[0] ] } 
+end
+if args[0].class == Array then 
+{ :conditions => ["zip = #{args.join(" OR zip = ?")}",  "#{args.join(",")}" ] } 
+end
+}
+
 def age  
 (( Time.now - self.dob.to_time ) / 1.years).to_i
 end

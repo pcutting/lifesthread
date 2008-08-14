@@ -49,6 +49,8 @@ class CreateProfiles < ActiveRecord::Migration
       t.boolean :is_menopause 
       t.string :blood_type
       t.integer :user_priority , :default => 1
+      t.string :member_id
+      t.string :super_member_id
 
       t.timestamps
     end

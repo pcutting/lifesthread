@@ -1,41 +1,101 @@
-<% content_for :header do %>
-  <h1>Admins, please be carefull here.</h1>
+<% content_for :header do %><br />
+  <strong>Admins, please be careful here.</strong>
 <% end %>
 
 
 
 <%= error_messages_for :user %>
 
+<table>
+<tr><td>
 <% form_for([:admin, @user]) do |f| %>
 
 
 <p><label for="login">Login</label> : <%= @user.login %></p>
 
-<p><label for="email">Email</label>
+<p>Email
 <%= f.text_field :email %></p>
 
 
-<p><label for="first_name">First Name</label>
+<p>First Name
 <%= f.text_field :first_name %></p>
 
-<p><label for="middle_name">Middle Name</label>
+<p>Middle Name
 <%= f.text_field :middle_name %></p>
 
-<p><label for="last_name">Last Name</label>
+<p>Last Name
 <%= f.text_field :last_name %></p>
 
 
-<p><label for="Time Zone">Time Zone</label>
+<p>Time Zone
 <%= f.time_zone_select :time_zone, TimeZone.us_zones %>
 
-<p><label for="Admin">Admin</label>
-<%= f.check_box :admin %></p>
+<p>Admin:
+<%= f.check_box :admin %> 
 
-<p><label for="Public">Public</label>
+Public:
 <%= f.check_box :public %></p>
+</td><td>
+<fieldset>
+  <legend>Address and Contact Information: </legend>
+   <%="address:".capitalize %> <!-- was a br -->
+    <%= @profile.address1.capitalize %>
+  </p>
+  <p>
+    <%="address:".capitalize %> <!-- was a br -->
+    <%= @profile.address2 %>
+  </p>
+  <p>
+    <%="city:".capitalize %> <!-- was a br -->
+    <%= @profile.city.capitalize %>
+  </p>
+  <p>
+    <%="state:".capitalize %> <!-- was a br -->
+    <%= @profile.state %>
+  </p>
+  <p>
+    <%="zip:".capitalize %> <!-- was a br -->
+    <%= @profile.zip %>
+  <p>
+    <%="cell phone:".capitalize %> <!-- was a br -->
+    <%= @profile.cell_phone %>
+  </p>
+  <p>
+    <%="phone:".capitalize %> <!-- was a br -->
+    <%= @profile.phone %>
+  </p>
+  <p>
+    <%="work phone:".capitalize %> <!-- was a br -->
+    <%= @profile.work_phone %>
+  </p>
+
+</fieldset>
+</td></tr>
+</table>
+
+
+  <fieldset>
+  <legend>New Role</legend>
+    <% fields_for :roles do |role| %>
+    Has Role: <%= select_tag :has_role, options_for_select(["","MEMBER","SUPER MEMBER","AUTHOR","EDITOR","PUBLISHER"]) %>
+    Sub Roles: <%= select_tag :sub_role, options_for_select(["ALL","REPORT","CREATE","EDIT","PUBLISH"]) %>
+    Conditions: <%= text_field_tag :conditions %>
+    Leader: <%= check_box_tag :leader %><br />
+*NOTE: Not all 'Sub roles' apply to all 'Roles'.  Unless you want to restrict a role, give it 'Sub role' = 'ALL'.
+      <%# t.string :sub_roles %>
+
+    <% end %>
+  </fieldset>
+
 
 
 
   <p><%= submit_tag 'Update' %></p> 
 <% end -%>
+
+<% for role in @roles %>
+Role: <%= role.has_role %><br />
+Conditions: <%= role.conditions %><br />
+Leader: <%= role.leader ? "Yes" : "No" %><br />
+<% end %>
 

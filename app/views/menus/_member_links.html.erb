@@ -1,0 +1,22 @@
+<div class="menu">
+
+<script type="text/javascript">$(document).ready(function()
+{
+	$('#member_list').clickMenu();
+});
+</script>
+
+
+<ul id="member_list">
+<li>Member: </li>
+<li><%= link_to 'Users', member_users_path  %></li>
+<li><%= link_to 'Support tickets', member_supports_path %></li> 
+<li>Reports
+  <ul>
+    <li><%= link_to 'Ages,Weight Goals & BMI', member_reports_path %></li>
+  </ul>
+</li>
+</ul>
+
+</div>
+

@@ -1,36 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Homes: <%= controller.action_name %></title>
- 
-<%= dhtml_calendar_includes("blue") %>
-
-    <%= stylesheet_link_tag 'scaffold' %>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/clickmenu.css" />
-
-  <!-- flot includes  -->
-    <!--[if IE]><script language="javascript" type="text/javascript" src="/javascripts/excanvas.pack.js"></script><![endif]-->
-    <script language="javascript" type="text/javascript" src="/javascripts/jquery.js"></script>
-    <script language="javascript" type="text/javascript" src="/javascripts/jquery.flot.pack.js"></script>
-  <!-- end flot includes -->
-  <script language="javascript" type="text/javascript" src="/javascripts/jquery.clickmenu.v016/jquery.clickmenu.pack.js"></script>
-  
-  
-</head>
+<%= render :partial => "/layouts/head" %>
 <body>
 
 
 <div id="container">
 
-<div id="header">  <%= "<p style=\"color: green\">" +  flash[:notice] + " </p>" unless flash[:notice].nil?  %>
+<div id="header"> 
 <%= yield :header %>
 <%= yield :navigation %>
-<%= yield :navigation_alt %> </div>
+<%= yield :navigation_alt %> 
+<%= render :partial => "/layouts/menu" %>
+</div>
 
 <div id="wrapper"><div id="content">
+<%= "<p style=\"color: green\">" +  flash[:notice] + " </p>" unless flash[:notice].nil?  %>
 <%= yield :layout %></div></div>
 
 

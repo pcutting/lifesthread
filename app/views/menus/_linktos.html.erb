@@ -1,0 +1,63 @@
+<div class="menu">
+
+<script type="text/javascript">$(document).ready(function()
+{
+	$('#list').clickMenu();
+});
+</script>
+
+
+
+<ul id="list">
+<%= render :partial => "/menus/linkto_all" %>
+<li><%= link_to 'Home', root_path   %>
+</li>
+<li><%= link_to 'Combined Chart', charts_path %></li> 
+<li>Vitals
+  <ul>
+     <li></li> 
+     <li><%= link_to 'Sleep Chart Data', sleeps_path  %></li> 
+     <li><%= link_to 'Body Measurements', measurements_path  %></li>
+     <li><%= link_to 'Medication List', medications_path   %></li> 
+     <li><%= link_to 'Blood Pressure Chart Data', bps_path   %></li>  
+     <li><%= link_to 'Cholesterol Chart Data', cholesterols_path %></li>  
+  </ul>
+</li
+<li>Social
+  <ul>
+     <li><%= link_to 'sTressors', stresses_path %></li>  
+     <li><%= link_to 'Relationship List', relationships_path  %></li> 
+  </ul>
+</li>
+<li><%= link_to 'Food List', foods_path  %></li> 
+<li>History
+  <ul>
+     <li><%= link_to 'Medical History Repository', medical_histories_path   %></li> 
+     <li><%= link_to 'Illness History Repository', illness_histories_path %></li> 
+  </ul>
+</li>
+<li>Fitness
+  <ul>
+     <li><%= link_to 'Workouts', workouts_path %></li>
+     <li><%= link_to 'Fitness Plans', fitness_plans_path %></li>
+  </ul>
+<li>Account
+  <ul>
+    <li><%= link_to 'Profile', profile_path %></li> 
+  </ul>
+</li>
+<li>Support
+  <ul>
+     <li><%= link_to 'New Support/Bug', new_support_path(:ref_page => request.url)   %></li>
+     <li><%= link_to 'View Support/Bug', supports_path   %></li>
+
+
+  </ul>
+</li>
+<li><%= link_to 'Logout', logout_path %></p>
+</li>
+
+
+</ul>
+
+</div>

@@ -13,6 +13,7 @@ class Admin::UsersController < Admin::BaseController
   def edit
     @user = User.find(params[:id])
     @roles = @user.roles.all
+    @profile = @user.profile
     
   end
 

@@ -1,0 +1,24 @@
+<div class="menu">
+
+<script type="text/javascript">$(document).ready(function()
+{
+	$('#admin_list').clickMenu();
+});
+</script>
+
+
+<ul id="admin_list">
+<li>ADMIN: </li>
+<li><%= link_to 'Users', admin_users_path  %></li>
+<li><%= link_to 'Support tickets', admin_supports_path %></li> 
+<li>Reports
+  <ul>
+    <li><%= link_to 'Ages,Weight Goals & BMI', admin_reports_path %></li>
+  </ul>
+</li>
+
+<li><%= link_to 'Make sample Users', new_admin_sample_path %></li>
+</ul>
+
+</div>
+

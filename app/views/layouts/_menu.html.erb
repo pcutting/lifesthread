@@ -1,0 +1,11 @@
+<%= render :partial => "/menus/linktos" %>
+
+<% if current_user.admin %>
+<%= render :partial => "/menus/admin_links" %>
+<% end %>
+
+
+<% unless current_user.roles.find(:all, :conditions => ["has_role = ? OR has_role = ?", "MEMBER","SUPER MEMBER" ]) == [] %>
+<%= render :partial => "/menus/member_links" %>
+<% end %>
+

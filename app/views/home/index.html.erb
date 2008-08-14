@@ -1,13 +1,4 @@
-<% content_for :navigation do%>
-  <%= render :partial => "/layouts/linktos" %>
-<% end %>
 
-
-<% if current_user.admin %>
-  <% content_for :navigation_alt do%>
-    <%= render :partial => "/layouts/admin_links" %>
-  <% end %>
-<% end %>
 
 
 

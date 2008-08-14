@@ -43,6 +43,16 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :samples
     admin.resources :reports
   end
+  
+  map.namespace :member do |member|
+    member.root :controller => "home", :action => 'show'
+    member.resource :home, :controller => "home"
+    member.resources :users
+    member.resources :supports
+    member.resources :supports, :has_many => :support_dialogs
+    member.resources :samples
+    member.resources :reports
+  end
 
 
   #map.chart '/chart' , :controller => 'charts' , :action => 'index'
