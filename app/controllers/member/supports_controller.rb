@@ -1,5 +1,8 @@
 class Member::SupportsController < Member::BaseController
 
+before_filter :load_member_conditions
+
+
   # GET /supports
   # GET /supports.xml
   def index
@@ -91,4 +94,19 @@ class Member::SupportsController < Member::BaseController
       format.html { redirect_to(admin_supports_path) }
     end
   end
+  
+  #-----------------
+private
+
+  def load_member_conditions
+    @roles = current_user.roles.find(:all, :conditions => ["has_role = ? OR has_role = ?", "MEMBER","SUPER MEMBER" ])
+    @conditions = Array.new
+    
+    #consider getting rid of this and just doing @roles.each {|role| role.conditions ... }
+    @roles.each do |role|
+      @conditions << role.conditions
+    end
+    
+  end
+
 end

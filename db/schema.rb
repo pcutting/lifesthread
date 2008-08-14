@@ -45,6 +45,10 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.integer  "calories_burned",  :limit => 11
     t.integer  "intensity",        :limit => 11
     t.integer  "comfort_level",    :limit => 11
+    t.boolean  "listable"
+    t.string   "documentation_at"
+    t.integer  "author_id",        :limit => 11
+    t.integer  "approved_by",      :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -63,6 +67,9 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.boolean  "fri"
     t.boolean  "sat"
     t.boolean  "sun"
+    t.boolean  "public"
+    t.boolean  "approved"
+    t.string   "documented_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -231,6 +238,8 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.boolean  "is_menopause"
     t.string   "blood_type"
     t.integer  "user_priority",                   :limit => 11, :default => 1
+    t.string   "member_id"
+    t.string   "super_member_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,5 +1,7 @@
 class Member::UsersController < Member::BaseController
 
+before_filter :load_member_conditions
+
   def index
     @users = User.paginate :page => params[:page] , :per_page => 100 , :order => 'login asc'
 
@@ -36,6 +38,19 @@ class Member::UsersController < Member::BaseController
     respond_to do |format|
       format.html { redirect_to :back }
     end
+  end
+#-----------------
+private
+
+  def load_member_conditions
+    @roles = current_user.roles.find(:all, :conditions => ["has_role = ? OR has_role = ?", "MEMBER","SUPER MEMBER" ])
+    @conditions = Array.new
+    
+    #consider getting rid of this and just doing @roles.each {|role| role.conditions ... }
+    @roles.each do |role|
+      @conditions << role.conditions
+    end
+    
   end
 
 end

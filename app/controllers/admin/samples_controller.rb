@@ -24,7 +24,7 @@ class Admin::SamplesController < Admin::BaseController
   # GET /samples/new.xml
   def new
     @sample = Sample.new
-    @sample.count = 5
+    @sample.count = 25
 
     respond_to do |format|
       format.html # new.html.erb
