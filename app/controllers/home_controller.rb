@@ -12,16 +12,16 @@ def index
    else
    @profile = current_user.profile
     #I have a seperate variable for each item because I don't require them to make the complete measurements. Ie , they may put weight on on record, and then update chest and waist sizes.
-    @has_weight_nil =  current_user.measurements.find(:first, :order => "measured_on desc", :conditions => [ "is_goal = ?  && weight >  ?", false, 1] ).nil?
+    @has_weight_nil =  current_user.measurements.find(:first, :order => "measured_on desc", :conditions => [ "is_goal = ?  AND weight >  ?", false, 1] ).nil?
     
     unless @has_weight_nil
-      @current_weight =  current_user.measurements.find(:first, :order => "measured_on desc", :conditions => [ 'is_goal = ? && weight >  ?', false, 1] ).weight
+      @current_weight =  current_user.measurements.find(:first, :order => "measured_on desc", :conditions => [ 'is_goal = ? AND weight >  ?', false, 1] ).weight
     end 
 
-    @has_goal_weight_nil =  current_user.measurements.find(:first, :order => "measured_on desc", :conditions => [ (('is_goal = ? && weight >  ?')), true, 1 ] ).nil?
+    @has_goal_weight_nil =  current_user.measurements.find(:first, :order => "measured_on desc", :conditions => [ (('is_goal = ? AND weight >  ?')), true, 1 ] ).nil?
 
-    unless @has_goal_weight_nil
-      @goal_weight = current_user.measurements.find(:first, :order => "measured_on desc", :conditions => [ (('is_goal = ? && weight >  ?')), true , 1] ).weight
+  unless @has_goal_weight_nil
+      @goal_weight = current_user.measurements.find(:first, :order => "measured_on desc", :conditions => [ (('is_goal = ? AND weight >  ?')), true , 1] ).weight
     end
 
     end # if current_user.profile.dob.nil?

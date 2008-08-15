@@ -19,7 +19,7 @@
 <% by_ages = Array.new %>
 <% for ages in @age_group do %>
   <% ages[1].each do |profile| %>
-    <% weight = profile.user.measurements.first(:conditions => "is_goal = false && weight is not null", :order => "measured_on desc") %>
+    <% weight = profile.user.measurements.first(:conditions => "is_goal = false AND weight is not null", :order => "measured_on desc") %>
 
     <% bmi = ((weight.weight/(profile.height_inch * profile.height_inch.to_f))* 703).to_i  rescue  bmi = 0 %>
     <% by_ages << bmi # make this list to get the average for the age group %>
