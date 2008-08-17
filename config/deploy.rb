@@ -1,6 +1,6 @@
 set :application, "lifesthread"
-set :domain, "208.113.123.94"  #set :domain, "208.113.123.93"
-
+#set :domain, "208.113.123.94"  #set :domain, "208.113.123.93"
+set :domain, "208.113.123.92"  #set :domain, "208.113.123.93"
 
 ## http://github.com/guides/deploying-with-capistrano
 
