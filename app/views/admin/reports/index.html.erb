@@ -1,8 +1,8 @@
-
-<%= render :partial => "ages" %>
-
-
+<%= render :partial => "filter" %>
 <br />
-<%= render :partial => "weight" %>
+
+<%= render :partial => "ages" if params[:what] == "all" or params[:what] == "ages"  or params[:what].nil? %>
 <br />
-<%= render :partial => "bmi" %>
+<%= render :partial => "weight" if params[:what] == "all" or params[:what] == "weight" or params[:what].nil?%>
+<br />
+<%= render :partial => "bmi" if params[:what] == "all" or params[:what] == "bmi" or params[:what].nil?%>

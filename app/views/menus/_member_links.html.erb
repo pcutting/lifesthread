@@ -13,7 +13,11 @@
 <li><%= link_to 'Support tickets', member_supports_path %></li> 
 <li>Reports
   <ul>
-    <li><%= link_to 'Ages,Weight Goals & BMI', member_reports_path %></li>
+    <li>Some reports may take a few minutes.</li>
+    <li><%= link_to 'Ages', member_reports_path(:what => "ages") %></li>
+    <li><%= link_to 'Weight Goals', member_reports_path(:what => "weight") %></li>
+    <li><%= link_to 'BMI', member_reports_path(:what => "bmi") %></li>
+    <li><%= link_to 'ALL (May take a few min)', member_reports_path(:what => "all") %></li>
   </ul>
 </li>
 </ul>

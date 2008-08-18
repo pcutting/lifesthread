@@ -1,17 +1,6 @@
 
 <div class='keep_left' >
-<% states =  ["AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY"] %>
 
-<% form_for ([:admin, :report]) , :url => { :action => :index } do |f| %>
-
-  <p>
-  
-    <%= f.label :state %><!-- was a br -->
-    <%= select_tag "state", options_for_select(states) %>
-  
-    <%= f.submit "Report" %>
-  </p>
-<% end %>
 
 <% details = Array.new %>
 <%= "These stats are for the state of #{@state}.<br />" %>

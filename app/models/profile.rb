@@ -105,6 +105,10 @@ elsif args.size > 1 then
 end
 }
 
+named_scope :with_rx_affiliate_no , lambda { |*args| 
+{ :conditions => ["rx_affiliate_no = ?", args[0] ] } 
+}
+
 def age  
 (( Time.now - self.dob.to_time ) / 1.years).to_i
 end
