@@ -50,6 +50,8 @@ background:#FFFF70;
 border: 1px groove;
 }
 
+
+
 div#footer{
 background: #333;
 /*color: #FFF */
@@ -84,6 +86,14 @@ div#option td {
   margin: 3;
 }
 
+
+div.make_left{
+text-align: left;
+}
+
+div.make_small{
+font-size: 10px ;
+}
 
 div#wrapper{float:left;width:100%;margin-left: 1px}
 div#content{margin-left:000px}

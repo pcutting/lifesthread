@@ -2,19 +2,16 @@ class Admin::UsersController < Admin::BaseController
 
   def index
     @users = User.paginate :page => params[:page] , :per_page => 100 , :order => 'login asc'
-
   end
 
   def show
     @user = User.find(params[:id])
-
   end
 
   def edit
     @user = User.find(params[:id])
     @roles = @user.roles.all
     @profile = @user.profile
-    
   end
 
   def update
