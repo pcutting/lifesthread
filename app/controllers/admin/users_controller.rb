@@ -41,7 +41,7 @@ class Admin::UsersController < Admin::BaseController
     respond_to do |format|
       if @user.update_attributes(params[:user])
         flash[:notice] = 'User was successfully updated.'
-        format.html { redirect_to( admin_users_path) }
+        format.html { redirect_to( edit_admin_user_path(params[:user])) }
       else
         flash[:notice] = 'Unable to save changes.'
         format.html { render :action => "edit" }
@@ -50,9 +50,9 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def destroy
-    @user = User.find(params[:id])
-    #currently will not delete users.
-    #@user.destroy
+    @role = Role.find(params[:id])
+    #currently will not delete users, just roles.
+    @role.destroy
     respond_to do |format|
       format.html { redirect_to :back }
     end
