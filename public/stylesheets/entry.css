@@ -29,8 +29,8 @@ div#content p{
 
 
 div#header{
- background:#3399FF; 
- border: 1px groove; /*       hidden, double, solid, dashed, dotted, ridge, outset, groove, inset,none. */
+  
+# border: 1px groove; /*       hidden, double, solid, dashed, dotted, ridge, outset, groove, inset,none. */
 }
 
 div#navigation{
@@ -95,11 +95,11 @@ display: none
 
 
 body { 
-background-image: url("/images/lifesthread.jpg"); 
-background-color: #000000;
-  color: #333; 
-  text-align: center;
- /* width: 900px; */
+ background-image: url("/images/lifesthread1.jpg"); 
+ background-color: #000000;
+ color: #333; 
+ text-align: center;
+ width: 950px;
   }
   
   
