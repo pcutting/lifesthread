@@ -14,7 +14,7 @@ class CreateProfiles < ActiveRecord::Migration
       t.string :body_shape
       t.string :sex
       t.string :race
-      t.string :rx_affiliate_no , :default => "SELF"
+      t.string :rx_affiliate_no , :default => "NONE"
       t.string :sale_code , :default => "SELF"
       t.boolean :terms_agreed
       t.datetime :terms_agreed_on
@@ -47,11 +47,15 @@ class CreateProfiles < ActiveRecord::Migration
       t.date :conception_on
       t.boolean :is_breast_feeding
       t.boolean :is_menopause 
+      t.date  :started_menopause
       t.string :blood_type
       t.integer :user_priority , :default => 1
       t.string :member_id
       t.string :super_member_id
-
+      t.integer :cache_current_weight , :default => 0
+      t.integer :cache_current_weight_goal , :default => 0
+      t.datetime :cache_last_updated , :default => Time.now
+      
       t.timestamps
     end
   end

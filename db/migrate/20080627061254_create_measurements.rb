@@ -19,7 +19,7 @@ class CreateMeasurements < ActiveRecord::Migration
       t.decimal :thigh_right
       t.datetime :measured_on
       t.string :comment
-      t.boolean :is_goal
+      t.boolean :is_goal, :default => false 
 
       t.timestamps
     end

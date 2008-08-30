@@ -135,7 +135,7 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.decimal  "thigh_right"
     t.datetime "measured_on"
     t.string   "comment"
-    t.boolean  "is_goal"
+    t.boolean  "is_goal",            :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -203,7 +203,7 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.string   "body_shape"
     t.string   "sex"
     t.string   "race"
-    t.string   "rx_affiliate_no",                 :default => "SELF"
+    t.string   "rx_affiliate_no",                 :default => "NONE"
     t.string   "sale_code",                       :default => "SELF"
     t.boolean  "terms_agreed"
     t.datetime "terms_agreed_on"
@@ -236,10 +236,14 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.date     "conception_on"
     t.boolean  "is_breast_feeding"
     t.boolean  "is_menopause"
+    t.date     "started_menopause"
     t.string   "blood_type"
     t.integer  "user_priority",                   :default => 1
     t.string   "member_id"
     t.string   "super_member_id"
+    t.integer  "cache_current_weight",            :default => 0
+    t.integer  "cache_current_weight_goal",       :default => 0
+    t.datetime "cache_last_updated",              :default => '2008-08-30 16:42:13'
     t.datetime "created_at"
     t.datetime "updated_at"
   end

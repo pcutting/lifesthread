@@ -4,7 +4,7 @@ AGE: <% ( age = ((  Time.now - @profile.dob.to_time ) / 1.years).to_i) %>
 <%= age %> <br />
 
 
-<% if @has_weight_nil then %>
+<% if @profile.cache_current_weight.to_i == 0 then %>
   <br />Please enter your initial body measurements: <%= link_to 'Body Image', new_measurement_path %>.  Thank you.<br />
   
   
@@ -12,16 +12,16 @@ AGE: <% ( age = ((  Time.now - @profile.dob.to_time ) / 1.years).to_i) %>
   
   
   
-  <% if @has_goal_weight_nil %>
+  <% if @profile.cache_current_weight_goal.to_i == 0 %>
     <br />  Please go to body measurements, and put your goals and make sure 'Is goal' is checked: <%= link_to 'Body Image', new_measurement_path %> :.  Thank you.<br />
       
   <% else %>
-    Weight: <%= @current_weight %>,   
+    Weight: <%= @profile.cache_current_weight %>,   
     Your Goal is: 
 
-    <%= @goal_weight %>,  and you are <%  to_goal =  (@goal_weight.to_f / @current_weight) *100 %><%= to_goal.to_i %>% there!<br />
+    <%= @profile.cache_current_weight_goal %>,  and you are <%  to_goal =  (@profile.cache_current_weight_goal.to_f / @profile.cache_current_weight) *100 %><%= to_goal.to_i %>% there!<br />
   <% end %>
-  BMI: <%= ((@current_weight/(@profile.height_inch * @profile.height_inch.to_f))* 703).to_i %> <br/>
+  BMI: <%= ((@profile.cache_current_weight_goal/(@profile.height_inch * @profile.height_inch.to_f))* 703).to_i %> <br/>
 <% end %>  
 </div>
 
