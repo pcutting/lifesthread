@@ -21,14 +21,6 @@ class ApplicationController < ActionController::Base
     active_scaffold_calendar(column, options)
   end
   
-  def rescue_action_in_public(exception)
-    case exception
-    when ActiveRecord::RecordNotFound
-      flash[:error] = "bang"
-    else
-      super
-    end
-end
   
   # See ActionController::Base for details 
   # Uncomment this to filter the contents of submitted sensitive data parameters
