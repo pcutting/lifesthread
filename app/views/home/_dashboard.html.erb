@@ -32,7 +32,7 @@
 
   <fieldset>
   <legend><%= link_to 'Body Image', measurements_path %></legend>
-    <% fields_for :measurements do |measurement| %>
+    <% fields_for :measurement do |measurement| %>
       <%= render :partial => "/measurements/new" , :locals => {:f => measurement }  %>
     <% end %>
   </fieldset>

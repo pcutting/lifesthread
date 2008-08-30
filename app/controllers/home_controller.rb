@@ -55,7 +55,7 @@ if params[:commit] == "survey" then
 else
       did_save = false
       @bp = current_user.bps.new(params[:bp])
-      @measurement = current_user.measurements.new(params[:measurements])
+      @measurement = current_user.measurements.new(params[:measurement])
       @food = current_user.foods.new(params[:foods])
       @sleep = current_user.sleeps.new(params[:sleep])
       
