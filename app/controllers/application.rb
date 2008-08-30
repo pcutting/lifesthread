@@ -18,7 +18,16 @@ class ApplicationController < ActionController::Base
   
   
   def active_scaffold_input_date(column, options)
-  active_scaffold_calendar(column, options)
+    active_scaffold_calendar(column, options)
+  end
+  
+  def rescue_action_in_public(exception)
+    case exception
+    when ActiveRecord::RecordNotFound
+      flash[:error] = "bang"
+    else
+      super
+    end
 end
   
   # See ActionController::Base for details 
