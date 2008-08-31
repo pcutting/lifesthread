@@ -1,5 +1,5 @@
 <% content_for :header do %><br />
-  <strong>Admins, please be careful here.</strong>
+  <strong>Members, please be careful here.</strong>
 <% end %>
 
 
@@ -8,7 +8,7 @@
 
 <table>
 <tr><td>
-<% form_for([:admin, @user]) do |f| %>
+<% form_for([:member, @user]) do |f| %>
 
 
 <p><label for="login">Login</label> : <%= @user.login %></p>

@@ -21,12 +21,11 @@ before_filter :load_member_conditions
 
   def update
     @user = User.find(params[:id])
-    @user.admin = true if params[:user][:admin]
     
     respond_to do |format|
       if @user.update_attributes(params[:user])
         flash[:notice] = 'User was successfully updated.'
-        format.html { redirect_to( admin_users_path) }
+        format.html { redirect_to( member_users_path) }
       else
         flash[:notice] = 'Unable to save changes.'
         format.html { render :action => "edit" }

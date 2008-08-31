@@ -62,7 +62,7 @@ before_filter :load_member_conditions
     respond_to do |format|
       if saved
         flash[:notice] = 'Thank you for your support.'
-        format.html { redirect_to([:admin, @support]) }
+        format.html { redirect_to([:member, @support]) }
       else
         format.html { render :action => "new" }
       end
@@ -80,7 +80,7 @@ before_filter :load_member_conditions
     respond_to do |format|
       if @support.update_attributes(params[:support])
         flash[:notice] = 'Support was successfully updated.'
-        format.html { redirect_to([:admin, @support]) }
+        format.html { redirect_to([:member, @support]) }
       else
         format.html { render :action => "edit" }
       end
@@ -94,7 +94,7 @@ before_filter :load_member_conditions
     @support.destroy
 
     respond_to do |format|
-      format.html { redirect_to(admin_supports_path) }
+      format.html { redirect_to(member_supports_path) }
     end
   end
   

@@ -28,13 +28,13 @@
     <td><%=if support.resolved then "Yes" else "Not yet" end %></td>
     <td><%=if support.marked_closed then "Yes" else "No" end %></td>
     <td><%=if support.reopen then "Yes" else "No" end%></td>
-    <td><%= link_to 'Show', [:admin, support] %></td>
-    <td><%= link_to 'Edit', edit_admin_support_path(support) %></td>
-    <td><%= link_to 'Destroy',[:admin, support], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', [:member, support] %></td>
+    <td><%= link_to 'Edit', edit_member_support_path(support) %></td>
+    <td><%= link_to 'Destroy',[:member, support], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New support', new_admin_support_path %>
+<%= link_to 'New support', new_member_support_path %>
