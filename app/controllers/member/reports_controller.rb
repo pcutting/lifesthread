@@ -35,6 +35,22 @@ if  ( params[:commit] == "By Zip" ) then
       set_default
     end 
   end 
+  
+elsif ( params[:commit] == "National" ) then 
+  @filter = "National stats"
+  @profiles = Profile.with_all
+    
+elsif ( params[:commit] == "State" ) then 
+  @profiles = Profile.with_state(params[:state])
+   
+    if params[:state].nil?  or params[:state] == "" then
+      @state = "ME"
+    else
+      @state = params[:state]
+    end
+    @filter = "By State #{@state}"
+    @profiles = Profile.with_state(@state) 
+    
 else
   # this condition if nothing else works.
   set_default

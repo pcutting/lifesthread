@@ -108,6 +108,9 @@ named_scope :with_zips , lambda { |*zips|
 
 }
 
+named_scope :with_all, { }
+
+
 named_scope :with_rx_affiliate_no , lambda { |*args| 
 { :conditions => ["rx_affiliate_no = ?", args[0] ] } 
 }

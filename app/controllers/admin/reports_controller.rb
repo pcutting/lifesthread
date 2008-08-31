@@ -25,7 +25,7 @@ elsif  ( params[:commit] == "By Zip" ) then
   
 elsif ( params[:commit] == "National" ) then 
   @filter = "National stats"
-  @profiles = Profile.all
+  @profiles = Profile.with_all
   
 else  #default to state report.
   set_default
