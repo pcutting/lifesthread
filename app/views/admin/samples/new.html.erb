@@ -1,12 +1,13 @@
-<h1>New sample</h1>
+<h1>Create Sample users.</h1>
 
 <% form_for([:admin, @sample]) do |f| %>
   <%= f.error_messages %>
 
 <% states =  ["--", "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY"] %>
   
-Number of records to create<%= f.text_field :count, :size => 8  %><br />
-  
+Number of users to create <%= f.text_field :count, :size => 8  %><br />
+Number of samples per user <%= text_field_tag "sub_samples", 10 %><br />
+    
 
 Optional:<br />
     <!--

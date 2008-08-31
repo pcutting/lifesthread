@@ -25,6 +25,7 @@ class Admin::SamplesController < Admin::BaseController
   def new
     @sample = Sample.new
     @sample.count = 100
+    
 
     respond_to do |format|
       format.html # new.html.erb
@@ -45,6 +46,7 @@ class Admin::SamplesController < Admin::BaseController
     sub_samples = 25
     
     @count = params[:sample]
+    sub_samples = params[:sub_samples].to_i unless params[:sub_samples].nil? or params[:sub_samples] == 0
     @count = @count[:count].to_i
     @sample = Sample.new(params[:sample])
     @time_now = Time.now.to_i
@@ -59,15 +61,13 @@ class Admin::SamplesController < Admin::BaseController
      unless (params[:state] == "--" && params[:city]=="" && params[:city]=="")
        #unless (params[:what_zip] == "") then
        #    @zips = @zips.find_all{ |x| x[0] == params[:what_zip] } #sets zips to city/state
-           
-       #    puts "****************** specific what_zip code.  #{@zips} *****"
        #else 
          if ! (params[:state] == "--") then
            if params[:city] == "" then
              @zips = @zips.find_all{ |x| x[1]== params[:state] } #sets zips to all in state
            else
              @zips = @zips.find_all{ |x| (x[1] == params[:state] && x[2] == params[:city].upcase) } #sets zips to city/state
-             puts "********************** zips with city and state *******"
+    
            end
          end
        #end
@@ -109,7 +109,7 @@ if @zips.size > 0 then
   zip_no = rand(@zips.size - 1) 
 else 
  @zips   = ["35016","AL","ARAB", 12345]
- puts "*********************************************** zips.size <= 0 "
+
  zip_no = 0
 end
  
@@ -145,7 +145,7 @@ end
 ################
 
 
-
+set_goal = true
 
 y = 0 
 x = 1 
@@ -156,7 +156,7 @@ hour = 8
 min= 0 
 sec = 0
 
-while x < sub_samples 
+while x < (sub_samples.to_i + 1) 
   x = x +1
   y = y + 0.1
 @new_measurements = Measurement.new
@@ -188,6 +188,9 @@ while x < sub_samples
       end 
     end 
   end 
+  
+
+  
   @new_measurements.comment = "Sample"
   @new_measurements.measured_on = "#{year}-#{month}-#{day} #{hour}:#{min}:#{sec}".to_datetime
   @new_measurements.weight = Math.cos(y) * 35 + 180
@@ -205,8 +208,10 @@ while x < sub_samples
   @new_measurements.lower_hip = Math.cos(y) * 8 + 28 
   @new_measurements.thigh_left = Math.cos(y) * 5 + 18 
   @new_measurements.thigh_right = Math.cos(y) * 5 + 18 
-  @new_measurements.is_goal = if rand(100) > 90  then true else false end
+  @new_measurements.is_goal = if ( rand(100) > 90 or set_goal )  then true else false end
   @new_measurements.save
+
+  set_goal = false
 
 end 
   

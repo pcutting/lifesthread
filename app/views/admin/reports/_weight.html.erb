@@ -1,20 +1,19 @@
-
 <div class='keep_left' >
 
+<% summery = Array.new %>
 <% details = Array.new %>
 <%= "These stats are for the state of #{@state}.<br />" %>
 
 <% by_ages = Array.new %>
 <% for ages in @age_group do %>
-  <% ages[1].each do |profile| %>
-    <% weight = profile.user.measurements.first(:conditions => "is_goal = false", :order => "measured_on desc") %>
-    <% weight_goal = profile.user.measurements.first(:conditions => "is_goal = true", :order => "measured_on desc" ) %>
-    <% goal_completion = (weight.weight - weight_goal.weight).abs / weight.weight.to_f * 100 rescue goal_completion = 0 %>
-    <% by_ages << (goal_completion - 100).abs # make this list to get the average for the age group %>
-
-
-  <% end %>
-  <% details << [ages[0], (by_ages.sum / by_ages.size).to_i ] %>
+<% weight_sum = ages[1].sum(:cache_current_weight) %>
+<% weight_count = ages[1].count(:conditions => 'cache_current_weight > 0') %>
+<% goal_sum = ages[1].sum(:cache_current_weight_goal) %>
+<% weight_goal_count = ages[1].count(:conditions => 'cache_current_weight_goal > 0') %>
+<% goal_completion = 100 - (( (weight_sum - goal_sum).abs / weight_sum.to_f ) * 100)  rescue goal_completion = 0 %>
+<% by_ages << goal_completion # make this list to get the average for the age group %>
+<% summery << "#{ages[1].count} people are #{ages[0]} yrs old. #{weight_count} entered weight & #{weight_goal_count} entered goals. Avg completion is #{goal_completion.round_with_precision(2)}%."  %>
+<% details << [ages[0], goal_completion ] %>
 <% end %>
 
 
@@ -38,4 +37,10 @@ chd=t:#{points.join(",")}" %>
 
 
 <%= image_tag(link) %> 
+
+<br />
+
+<%= summery.join("<br /> \n") %>
+
+
 </div>
