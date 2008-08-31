@@ -15,6 +15,8 @@ before_filter :load_member_conditions
 
   def edit
     @user = User.find(params[:id])
+    @roles = @user.roles.all
+    @profile = @user.profile
   end
 
   def update

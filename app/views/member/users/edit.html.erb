@@ -29,45 +29,28 @@
 
 <p>Time Zone
 <%= f.time_zone_select :time_zone, TimeZone.us_zones %>
-
-<p>Admin:
-<%= f.check_box :admin %> 
-
-Public:
-<%= f.check_box :public %></p>
 </td><td>
 <fieldset>
   <legend>Address and Contact Information: </legend>
-   <%="address:".capitalize %> <!-- was a br -->
-    <%= @profile.address1.capitalize %>
-  </p>
-  <p>
-    <%="address:".capitalize %> <!-- was a br -->
-    <%= @profile.address2 %>
-  </p>
-  <p>
-    <%="city:".capitalize %> <!-- was a br -->
+ <div class="make_left"> <p>
+  Address:<br />
+    <%= @profile.address1.capitalize %><br />  
+    <%= "#{@profile.address2 } <br />"  unless @profile.address2.nil? %>
     <%= @profile.city.capitalize %>
-  </p>
-  <p>
-    <%="state:".capitalize %> <!-- was a br -->
+,
     <%= @profile.state %>
-  </p>
-  <p>
-    <%="zip:".capitalize %> <!-- was a br -->
+
+
     <%= @profile.zip %>
   <p>
     <%="cell phone:".capitalize %> <!-- was a br -->
-    <%= @profile.cell_phone %>
-  </p>
-  <p>
+    <%= @profile.cell_phone %><br />
     <%="phone:".capitalize %> <!-- was a br -->
-    <%= @profile.phone %>
-  </p>
-  <p>
+    <%= @profile.phone %><br />
     <%="work phone:".capitalize %> <!-- was a br -->
     <%= @profile.work_phone %>
   </p>
+  </div>
 
 </fieldset>
 </td></tr>
@@ -77,10 +60,10 @@ Public:
   <fieldset>
   <legend>New Role</legend>
     <% fields_for :roles do |role| %>
-    Has Role: <%= select_tag :has_role, options_for_select(["","MEMBER","SUPER MEMBER","AUTHOR","EDITOR","PUBLISHER"]) %>
+    Has Role: <%= select_tag :has_role, options_for_select(["","MEMBER","SUPER MEMBER"]) %>
     Sub Roles: <%= select_tag :sub_role, options_for_select(["ALL","REPORT","CREATE","EDIT","PUBLISH"]) %>
-    Conditions: <%= text_field_tag :conditions %>
-    Leader: <%= check_box_tag :leader %><br />
+    Conditions: <%= select_tag :conditions , options_for_select (@member_conditions)%><br />
+    
 *NOTE: Not all 'Sub roles' apply to all 'Roles'.  Unless you want to restrict a role, give it 'Sub role' = 'ALL'.
       <%# t.string :sub_roles %>
 
