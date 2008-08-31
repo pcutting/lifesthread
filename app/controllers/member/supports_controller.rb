@@ -6,7 +6,10 @@ before_filter :load_member_conditions
   # GET /supports
   # GET /supports.xml
   def index
-    @supports = Support.find(:all )
+   u = User.find(:all, :include => :profile, :conditions => ["profiles.zip IN (?)", @member_conditions ] )
+  @supports = Support.find(:all, :conditions => ["user_id IN (?)", u])
+
+    #@supports = Support.find(:all )
 
     respond_to do |format|
       format.html # index.html.erb
@@ -98,15 +101,5 @@ before_filter :load_member_conditions
   #-----------------
 private
 
-  def load_member_conditions
-    @roles = current_user.roles.find(:all, :conditions => ["has_role = ? OR has_role = ?", "MEMBER","SUPER MEMBER" ])
-    @conditions = Array.new
-    
-    #consider getting rid of this and just doing @roles.each {|role| role.conditions ... }
-    @roles.each do |role|
-      @conditions << role.conditions
-    end
-    
-  end
 
 end
