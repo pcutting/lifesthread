@@ -8,11 +8,15 @@ class Member::BaseController < ApplicationController
   def load_member_conditions
     @roles = current_user.roles.find(:all, :conditions => ["has_role = ? OR has_role = ?", "MEMBER","SUPER MEMBER" ])
     @member_conditions = Array.new
+    @member_roles = Array.new
     
     #consider getting rid of this and just doing @roles.each {|role| role.conditions ... }
     @roles.each do |role|
       @member_conditions << role.conditions
+      @member_roles << role.has_role
     end
+    
+    @member_roles.uniq!
    
     puts "***member/base_controller.rb** @member_conditions : #{@member_conditions.join(",")}   #{@member_conditions.class}"
   end
