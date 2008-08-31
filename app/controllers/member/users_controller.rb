@@ -3,7 +3,8 @@ class Member::UsersController < Member::BaseController
 before_filter :load_member_conditions
 
   def index
-    @users = User.paginate :page => params[:page] , :per_page => 100 , :order => 'login asc'
+    @users = User.paginate :page => params[:page] , :per_page => 100 , :order => 'login asc' ,  :include => :profile, :conditions => ["profiles.zip IN (?)", ["04102","04101"] ] 
+
 
   end
 

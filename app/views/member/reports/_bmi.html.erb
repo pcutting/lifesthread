@@ -1,31 +1,21 @@
-
 <div class='keep_left' >
-<% states =  ["AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY"] %>
 
-<% form_for ([:admin, :report]) , :url => { :action => :index } do |f| %>
-
-  <p>
-  
-    <%= f.label :state %><!-- was a br -->
-    <%= select_tag "state", options_for_select(states) %>
-  
-    <%= f.submit "Report" %>
-  </p>
-<% end %>
-
+<% summery = Array.new %>
 <% details = Array.new %>
-<%= "These stats are for the state of #{@state}.<br />" %>
 
 <% by_ages = Array.new %>
 <% for ages in @age_group do %>
-  <% ages[1].each do |profile| %>
-    <% weight = profile.user.measurements.first(:conditions => "is_goal = false AND weight is not null", :order => "measured_on desc") %>
 
-    <% bmi = ((weight.weight/(profile.height_inch * profile.height_inch.to_f))* 703).to_i  rescue  bmi = 0 %>
+    <% weight_sum = ages[1].sum(:cache_current_weight) %>
+    <% age_count = ages[1].count(:conditions => 'cache_current_weight > 0') %>
+    <% height_sum = ages[1].sum(:height_inch) %>
+
+
+    <% bmi = (( (weight_sum/age_count.to_f)/( (height_sum/age_count) * (height_sum/age_count).to_f))* 703).to_i  %>
+
     <% by_ages << bmi # make this list to get the average for the age group %>
 
-
-  <% end %>
+    <% summery << "There are #{ages[1].count} people in the #{ages[0]} yrs old group.  #{age_count} have entered a weight.  The avg BMI for this group is #{bmi}."  %>
   <% details << [ages[0], bmi ] %>
 <% end %>
 
@@ -50,4 +40,9 @@ chd=t:#{points.join(",")}" %>
 
 
 <%= image_tag(link) %> 
+
+<br /> 
+<%= summery.join(" <br />\n") %>
+
+
 </div>

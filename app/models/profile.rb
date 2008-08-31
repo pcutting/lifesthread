@@ -94,15 +94,18 @@ named_scope :with_state , lambda { |*args|
 
 
 
-named_scope :with_zips , lambda { |*args| 
+named_scope :with_zips , lambda { |*zips| 
 #if args[0].class == String then 
 #{ :conditions => ["zip = ?",  "#{args[0]}" ] } 
 #end
-if args.size == 1 then 
-{ :conditions => ["zip = ?",  "#{args[0]}" ] } 
-elsif args.size > 1 then
-{ :conditions => ["zip IN ?",  "(\"#{ args.join("\",\"") }\")" ] } 
-end
+#if args.size == 1 then 
+#{ :conditions => ["zip = ?",  "#{args[0]}" ] } 
+#elsif args.size > 1 then
+#{ :conditions => ["zip IN ?",  "(\"#{ args.join("\",\"") }\")" ] } 
+#end
+
+{ :conditions => ["zip IN (?)", zips[0] ]  }
+
 }
 
 named_scope :with_rx_affiliate_no , lambda { |*args| 

@@ -3,8 +3,9 @@ class Admin::ReportsController < Admin::BaseController
 def index
 
   @age_group = Array.new
-
+  @filter = ""
 if ( params[:commit] == "By Member" )then
+  @filter = "By Member #{params[:report_option]}"
   if params[:report_option] != "" then
     @profiles = Profile.with_rx_affiliate_no(params[:report_option])
   else 
@@ -13,15 +14,17 @@ if ( params[:commit] == "By Member" )then
   end
   
 elsif  ( params[:commit] == "By Zip" ) then 
+  @filter = "By Zip #{params[:report_option]}"
   if params[:report_option]=="" then 
    set_default 
    flash[:notice] = "Please enter the Zip code you want to report on and press 'By Zip' again."
    
   else
-   @profiles = Profile.with_zips(params[:zip])
+   @profiles = Profile.with_zips(params[:report_option])
   end
   
 elsif ( params[:commit] == "National" ) then 
+  @filter = "National stats"
   @profiles = Profile.all
   
 else  #default to state report.
@@ -49,6 +52,7 @@ private
     else
       @state = params[:state]
     end
+    @filter = "By State #{@state}"
     @profiles = Profile.with_state(@state)  
   end
   

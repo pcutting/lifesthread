@@ -1,3 +1,7 @@
+<%= "Member zip codes available : #{@member_conditions.join(",")}." %>
+<%= "Valid Zip codes entered : #{@valid_zips}" unless @valid_zips.nil? %>    
+
+
 <%= render :partial => "filter" %>
 <br />
 
