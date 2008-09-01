@@ -42,7 +42,7 @@ class CreateProfiles < ActiveRecord::Migration
       t.integer :ounces_alcohol_weekly
       t.references :user
       t.text :chart_options
-      t.text :favorits
+      t.text :favorites
       t.boolean :is_pregnant
       t.date :conception_on
       t.boolean :is_breast_feeding
@@ -55,6 +55,9 @@ class CreateProfiles < ActiveRecord::Migration
       t.integer :cache_current_weight , :default => 0
       t.integer :cache_current_weight_goal , :default => 0
       t.datetime :cache_last_updated , :default => Time.now
+      t.text :unit_preferences
+      t.string :member_id
+      t.string :sponsor_id 
       
       t.timestamps
     end

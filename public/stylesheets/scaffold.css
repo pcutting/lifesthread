@@ -1,124 +1,27 @@
-
-a{
-display:inline;
-color: #981793; 
-padding:0px
-}
-
-div#header h1{
-height:80px;
-line-height:80px;
-margin:0;
-padding-left:10px;
-/*  background: #EEE; */
-/*  color: #79B30B */
-  }
-  
-div#navigation a{
-display:block;
-color: #2D006B; 
-padding:1px
-} 
-div#navigation a:hover {
-  color: #FFFFCC;
-}
-  
-div#navigation_alt a{
-display:block;
-color: #2D006B; 
-padding:1px
-} 
-div#navigation_alt a:hover {
-  color: #FFFFCC;
-}
-
-
-div#content p{
-/* line-height:1.4 */
-}
-
-
-div#header{
- background:#3399FF; 
- border: 1px groove; /*       hidden, double, solid, dashed, dotted, ridge, outset, groove, inset,none. */
-}
-
-
-div#option{
-text-align: left;
-background:#FFFF70;
-border: 1px groove;
-}
-
-
-
-div#footer{
-background: #333;
-/*color: #FFF */
-}
-
-
-div#content table {
-  margin-left: auto;
-  margin-right: auto;
-  border-color: #600;
-  border: 0px;
-  border-style: solid;
-  border-collapse: collapse;
-  font-size: 13px;
-}
-
-
-div#option table{
-  margin-left: auto;
-  margin-right: auto;
-  border-color: #600;
-  border: 1px;
-  border-style: solid;
-  border-collapse: seperate;
-  font-size: 13px;
-}
-
-div#option td {
-  border-color: #600;
-  border: 1px;
-  border-style: solid;
-  margin: 3;
-}
-
-
-div.make_left{
-text-align: left;
-}
-
-div.make_small{
-font-size: 10px ;
-}
-
-div#wrapper{float:left;width:100%;margin-left: 1px}
-div#content{margin-left:000px}
-div#option{clear:both;width:100%}
-div#footer{clear:both;width:100%}
-
 div.make_hidden{
 display: none
 }
-
-
+div.hide_for_load{
+display: none
+}
 
 body { 
   width: 925px;
-  background-color: #FFFFCC;
+  background-color: #fff;
   color: #333; 
   text-align: center;
  /* width: 900px; */
   }
-  
-  
-
+ 
 div.keep_left{
 text-align: left;
 }
+
+div.menu {background-image: url("/images/menu.gif") 15px 5px repeat-x;}
+
+div.keep_right{ text-align: right;}
+
+div.header em{color: #0000DD }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -130,10 +33,10 @@ table {
   margin-left: auto;
   margin-right: auto;
   border-color: #600;
-  border: 1px solid;
+ /* border: 1px solid;
   border-style: solid;
   border-collapse: collapse;
-  font-size: 13px;
+  font-size: 13px;  */
 }
 
 th {

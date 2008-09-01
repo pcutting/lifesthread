@@ -1,7 +1,6 @@
 <div class = "progress">
-Local Time: <%= Time.zone.now.to_s(:time) %><br />
-AGE: <% ( age = ((  Time.now - @profile.dob.to_time ) / 1.years).to_i) %>
-<%= age %> <br />
+AGE:<strong><% (age = (( Time.now - @profile.dob.to_time ) / 1.years).to_i) %><%= age %></strong>
+<br />
 
 
 <% if @profile.cache_current_weight.to_i == 0 then %>
@@ -9,19 +8,19 @@ AGE: <% ( age = ((  Time.now - @profile.dob.to_time ) / 1.years).to_i) %>
   
   
 <% else %>
-  
-  
-  
-  <% if @profile.cache_current_weight_goal.to_i == 0 %>
-    <br />  Please go to body measurements, and put your goals and make sure 'Is goal' is checked: <%= link_to 'Body Image', new_measurement_path %> :.  Thank you.<br />
-      
-  <% else %>
-    Weight: <%= @profile.cache_current_weight %>,   
-    Your Goal is: 
 
-    <%= @profile.cache_current_weight_goal %>,  and you are <%  to_goal =  (@profile.cache_current_weight_goal.to_f / @profile.cache_current_weight) *100 %><%= to_goal.to_i %>% there!<br />
-  <% end %>
-  BMI: <%= ((@profile.cache_current_weight_goal/(@profile.height_inch * @profile.height_inch.to_f))* 703).to_i %> <br/>
+
+
+<% if @profile.cache_current_weight_goal.to_i == 0 %>
+<br />  Please go to body measurements, and put your goals and make sure 'Is goal' is checked: <%= link_to 'Body Image', new_measurement_path %> :.  Thank you.<br />
+
+<% else %>
+
+Weight: <strong><%= @profile.cache_current_weight %></strong> 
+Goal Weight: <strong><%= @profile.cache_current_weight_goal %></strong><br /> Goal accomplishment: <strong><%  to_goal =  (@profile.cache_current_weight_goal.to_f / @profile.cache_current_weight) *100 %><%= to_goal.to_i %>%</strong><br />
+BMI: <strong><%= ((@profile.cache_current_weight_goal/(@profile.height_inch * @profile.height_inch.to_f))* 703).to_i %><strong>
+<% end %>
+
 <% end %>  
 </div>
 

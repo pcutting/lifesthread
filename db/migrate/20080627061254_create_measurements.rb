@@ -9,14 +9,12 @@ class CreateMeasurements < ActiveRecord::Migration
       t.integer :visceral_fat
       t.integer :water_percent
       t.decimal :chest
-      t.decimal :pectoral
-      t.decimal :bicep_left
-      t.decimal :bicep_right
+      t.decimal :neck
+      t.decimal :bicep
       t.decimal :belly
       t.decimal :hip
-      t.decimal :lower_hip
-      t.decimal :thigh_left
-      t.decimal :thigh_right
+      t.decimal :calf
+      t.decimal :thigh
       t.datetime :measured_on
       t.string :comment
       t.boolean :is_goal, :default => false 

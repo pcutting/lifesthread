@@ -125,14 +125,12 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.integer  "visceral_fat"
     t.integer  "water_percent"
     t.decimal  "chest"
-    t.decimal  "pectoral"
-    t.decimal  "bicep_left"
-    t.decimal  "bicep_right"
+    t.decimal  "neck"
+    t.decimal  "bicep"
     t.decimal  "belly"
     t.decimal  "hip"
-    t.decimal  "lower_hip"
-    t.decimal  "thigh_left"
-    t.decimal  "thigh_right"
+    t.decimal  "calf"
+    t.decimal  "thigh"
     t.datetime "measured_on"
     t.string   "comment"
     t.boolean  "is_goal",            :default => false
@@ -243,7 +241,7 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.string   "super_member_id"
     t.integer  "cache_current_weight",            :default => 0
     t.integer  "cache_current_weight_goal",       :default => 0
-    t.datetime "cache_last_updated",              :default => '2008-08-30 16:42:13'
+    t.datetime "cache_last_updated",              :default => '2008-09-01 10:17:54'
     t.datetime "created_at"
     t.datetime "updated_at"
   end

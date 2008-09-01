@@ -18,14 +18,12 @@ class ChartsController < ApplicationController
      :measurement_visceral_fat=>[false, false, false],
      :measurement_water_percent=>[false, false, false],
      :measurement_chest=>[false, false, false],
-     :measurement_pectoral=>[false, false, false],
-     :measurement_bicep_left=>[false, false, false],
-     :measurement_bicep_right=>[false, false, false],
+     :measurement_neck=>[false, false, false],
+     :measurement_bicep=>[false, false, false],
      :measurement_belly=>[false, false, false],
      :measurement_hip=>[false, false, false],
-     :measurement_lower_hip=>[false, false, false],
-     :measurement_thigh_left=>[false, false, false],
-     :measurement_thigh_right=>[false, false, false],
+     :measurement_calf=>[false, false, false],
+     :measurement_thigh=>[false, false, false],
      :cholesterol=>[true,true,true],
      :sleep=>[true,true,true],
      :stress=>[true,true,true]
@@ -180,32 +178,24 @@ else @results[:measurement_chest] = [false, false, false]
 
 end
 
-unless @returned[:measurement_pectoral].nil?   
- @results[:measurement_pectoral]=
-[if  @returned[:measurement_pectoral][:a].nil? then false else true end,
-if  @returned[:measurement_pectoral][:b].nil? then false else true end,
-if  @returned[:measurement_pectoral][:c].nil? then false else true end]
-else @results[:measurement_pectoral] = [false, false, false]
+unless @returned[:measurement_neck].nil?   
+ @results[:measurement_neck]=
+[if  @returned[:measurement_neck][:a].nil? then false else true end,
+if  @returned[:measurement_neck][:b].nil? then false else true end,
+if  @returned[:measurement_neck][:c].nil? then false else true end]
+else @results[:measurement_neck] = [false, false, false]
  
 end
 
-unless @returned[:measurement_bicep_left].nil?   
- @results[:measurement_bicep_left]=
-[if  @returned[:measurement_bicep_left][:a].nil? then false else true end,
-if  @returned[:measurement_bicep_left][:b].nil? then false else true end,
-if  @returned[:measurement_bicep_left][:c].nil? then false else true end]
-else @results[:measurement_bicep_left] = [false, false, false]
+unless @returned[:measurement_bicep].nil?   
+ @results[:measurement_bicep]=
+[if  @returned[:measurement_bicep][:a].nil? then false else true end,
+if  @returned[:measurement_bicep][:b].nil? then false else true end,
+if  @returned[:measurement_bicep][:c].nil? then false else true end]
+else @results[:measurement_bicep] = [false, false, false]
  
 end
 
-unless @returned[:measurement_bicep_right].nil?   
- @results[:measurement_bicep_right]=
-[if  @returned[:measurement_bicep_right][:a].nil? then false else true end,
-if  @returned[:measurement_bicep_right][:b].nil? then false else true end,
-if  @returned[:measurement_bicep_right][:c].nil? then false else true end] 
-else @results[:measurement_bicep_right] = [false, false, false]
-
-end
 
 unless @returned[:measurement_belly].nil?   
  @results[:measurement_belly]=
@@ -225,32 +215,25 @@ else @results[:measurement_hip] = [false, false, false]
 
 end
 
-unless @returned[:measurement_lower_hip].nil?   
- @results[:measurement_lower_hip]=
-[if  @returned[:measurement_lower_hip][:a].nil? then false else true end,
-if  @returned[:measurement_lower_hip][:b].nil? then false else true end,
-if  @returned[:measurement_lower_hip][:c].nil? then false else true end] 
-else @results[:measurement_lower_hip] = [false, false, false]
+unless @returned[:measurement_calf].nil?   
+ @results[:measurement_calf]=
+[if  @returned[:measurement_calf][:a].nil? then false else true end,
+if  @returned[:measurement_calf][:b].nil? then false else true end,
+if  @returned[:measurement_calf][:c].nil? then false else true end] 
+else @results[:measurement_calf] = [false, false, false]
 
 end
 
-unless @returned[:measurement_thigh_left].nil?   
- @results[:measurement_thigh_left]=
-[if  @returned[:measurement_thigh_left][:a].nil? then false else true end,
-if  @returned[:measurement_thigh_left][:b].nil? then false else true end,
-if  @returned[:measurement_thigh_left][:c].nil? then false else true end] 
-else @results[:measurement_thigh_left] = [false, false, false]
+unless @returned[:measurement_thigh].nil?   
+ @results[:measurement_thigh]=
+[if  @returned[:measurement_thigh][:a].nil? then false else true end,
+if  @returned[:measurement_thigh][:b].nil? then false else true end,
+if  @returned[:measurement_thigh][:c].nil? then false else true end] 
+else @results[:measurement_thigh] = [false, false, false]
 
 end
 
-unless @returned[:measurement_thigh_right].nil?   
- @results[:measurement_thigh_right]=
-[if  @returned[:measurement_thigh_right][:a].nil? then false else true end,
-if  @returned[:measurement_thigh_right][:b].nil? then false else true end,
-if  @returned[:measurement_thigh_right][:c].nil? then false else true end] 
-else @results[:measurement_thigh_right] = [false, false, false]
 
-end
      
         puts "create: results[:bp] ==========================="
     puts @results[:bp]

@@ -1,15 +1,6 @@
-
-
-
-
 <!-- home/index.rhtml -->
-
-
 <% if logged_in? %>
 
-  <% content_for :header do%>
-    <strong>Welcome to your Wellness Board, <%=h current_user.first_name -%></strong> 
-  <% end -%>
   <%= render :partial => "dashboard" %>
 
 <% else %>

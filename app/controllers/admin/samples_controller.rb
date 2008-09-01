@@ -200,14 +200,12 @@ while x < (sub_samples.to_i + 1)
   @new_measurements.visceral_fat = Math.cos(y) * 5 + 6 
   @new_measurements.water_percent = Math.cos(y) * 15 + 50 
   @new_measurements.chest = Math.cos(y) * 5 + 35 
-  @new_measurements.pectoral = Math.cos(y) * 5 + 37 
-  @new_measurements.bicep_left = Math.cos(y) * 3 + 15 
-  @new_measurements.bicep_right = Math.cos(y) * 3 + 15 
+  @new_measurements.neck = Math.cos(y) * 5 + 16 
+  @new_measurements.bicep = Math.cos(y) * 3 + 15 
   @new_measurements.belly = Math.cos(y) * 10 + 30 
   @new_measurements.hip = Math.cos(y) * 10 + 32 
-  @new_measurements.lower_hip = Math.cos(y) * 8 + 28 
-  @new_measurements.thigh_left = Math.cos(y) * 5 + 18 
-  @new_measurements.thigh_right = Math.cos(y) * 5 + 18 
+  @new_measurements.calf = Math.cos(y) * 8 + 14 
+  @new_measurements.thigh = Math.cos(y) * 5 + 18 
   @new_measurements.is_goal = if ( rand(100) > 90 or set_goal )  then true else false end
   @new_measurements.save
 

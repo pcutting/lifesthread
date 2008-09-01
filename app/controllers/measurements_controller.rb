@@ -67,7 +67,7 @@ class MeasurementsController < ApplicationController
     respond_to do |format|
       if @measurement.update_attributes(params[:measurement])
         flash[:notice] = 'Measurement was successfully updated.'
-        format.html { redirect_to(@measurement) }
+        format.html { redirect_to(measurements_path) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

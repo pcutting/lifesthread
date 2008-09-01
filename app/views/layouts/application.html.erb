@@ -1,35 +1,49 @@
 <%= render :partial => "/layouts/head" %>
 <body>
 
-<div id="container">
 
-<div id="header">
-  <strong>Welcome <%= h current_user.first_name -%></strong>
-  <% puts "** Users Login: #{current_user.login} Time: #{Time.now} **" %>
+<div class="container">
 
- 
-<%= yield :header %> 
+<div class="span-24 last header keep_left">
+<div class="span-4 localtime">
+Local Time<br /> <em><%= Time.zone.now.to_s(:short) %></em>
+<%= yield :localtime %>
+</div>
+<div class="span-16 center">
+<h3><strong>Welcome to your Wellness Board, <em><%=h current_user.first_name -%></em></strong> <%= yield :header %></h3>
+</div>
+<div class="span-4 last logout keep_right">
+<%= link_to 'Support', new_support_path(:ref_page => request.url)   %>
+<%= link_to '<img src="/icons/mini_help1.jpg" />', new_support_path(:ref_page => request.url)   %>
+ |
+<strong><%= link_to 'LOGOUT', logout_path %></strong>
+</div>
+</div>
+
+<div class="span-24 last menu">
+<%= yield :navigation %>
+<%= yield :navigation_alt %> 
 <%= render :partial => "/layouts/menu" %>
 </div>
 
-<div id="wrapper"><div id="content">
- <%= "<p style=\"color: green\">" +  flash[:notice] + " </p>" unless flash[:notice].nil?  %>
- <%= yield :layout %>
- </div>
- </div>
+<div class="span-24 last content" >
+<%= "<p style=\"color: green\">" +  flash[:notice] + " </p>" unless flash[:notice].nil?  %>
+<%= yield :layout %></div></div>
 
 
-<div id="option"><%= yield :option %></div>
-<div id="footer"><p>FOOTER</p><%= yield :footer %></div>
-</div>
+<% if logged_in? %>
+<% puts "** Users Login: #{current_user.login} Time: #{Time.now} **" %>
+<div id="footer"><%= yield :footer %></div>
 
-<% # end %>
-
+<% end %>
 
 
 
+
+
+
+
+
+</div <%# /div for class container %>>
 </body>
 </html>
-
-
-

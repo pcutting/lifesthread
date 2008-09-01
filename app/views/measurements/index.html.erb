@@ -26,15 +26,14 @@
     <th>Muscle %</th>
     <th>Visceral fat</th>
     <th>Water %</th>
+    <th>Neck</th>
     <th>Chest</th>
     <th>Pectoral</th>
-    <th>Bicep left</th>
-    <th>Bicep right</th>
+    <th>Bicep</th>
     <th>Belly</th>
     <th>Hip</th>
-    <th>Lower hip</th>
     <th>Thigh left</th>
-    <th>Thigh right</th>
+    <th>Calf</th>
     <th>Measured on</th>
     <th>Comment</th>
   </tr>
@@ -47,15 +46,13 @@
     <td><%=h measurement.muscle_percent %></td>
     <td><%=h measurement.visceral_fat %></td>
     <td><%=h measurement.water_percent %></td>
+    <td><%=h measurement.neck %></td>
     <td><%=h measurement.chest %></td>
-    <td><%=h measurement.pectoral %></td>
-    <td><%=h measurement.bicep_left %></td>
-    <td><%=h measurement.bicep_right %></td>
+    <td><%=h measurement.bicep%></td>
     <td><%=h measurement.belly %></td>
     <td><%=h measurement.hip %></td>
-    <td><%=h measurement.lower_hip %></td>
-    <td><%=h measurement.thigh_left %></td>
-    <td><%=h measurement.thigh_right %></td>
+    <td><%=h measurement.thigh %></td>
+    <td><%=h measurement.calf %></td>
     <td><%=h measurement.measured_on.to_s(:long) %></td>
     <td><%=h measurement.comment %></td>
     <td><%= link_to 'Edit', edit_measurement_path(measurement) %></td>
@@ -77,15 +74,14 @@ History <br />
     <th>Muscle %</th>
     <th>Visceral fat</th>
     <th>Water %</th>
+    <th>Neck</th>
     <th>Chest</th>
     <th>Pectoral</th>
-    <th>Bicep left</th>
-    <th>Bicep right</th>
+    <th>Bicep</th>
     <th>Belly</th>
     <th>Hip</th>
-    <th>Lower hip</th>
     <th>Thigh left</th>
-    <th>Thigh right</th>
+    <th>Calf</th>
     <th>Measured on</th>
     <th>Comment</th>
   </tr>
@@ -98,16 +94,14 @@ History <br />
     <td><%=h measurement.muscle_percent %></td>
     <td><%=h measurement.visceral_fat %></td>
     <td><%=h measurement.water_percent %></td>
+    <td><%=h measurement.neck %></td>
     <td><%=h measurement.chest %></td>
-    <td><%=h measurement.pectoral %></td>
-    <td><%=h measurement.bicep_left %></td>
-    <td><%=h measurement.bicep_right %></td>
+    <td><%=h measurement.bicep%></td>
     <td><%=h measurement.belly %></td>
     <td><%=h measurement.hip %></td>
-    <td><%=h measurement.lower_hip %></td>
-    <td><%=h measurement.thigh_left %></td>
-    <td><%=h measurement.thigh_right %></td>
-    <td><%=h measurement.measured_on.to_s(:long) rescue  "Error" %></td>
+    <td><%=h measurement.thigh %></td>
+    <td><%=h measurement.calf %></td>
+    <td><%=h measurement.measured_on.to_s(:long) %></td>
     <td><%=h measurement.comment %></td>
     <td><%= link_to 'Edit', edit_measurement_path(measurement) %></td>
     <td><%= link_to 'Destroy', measurement, :confirm => 'Are you sure?', :method => :delete %></td>

@@ -13,14 +13,12 @@ one:
   visceral_fat: 15
   water_percent: 11
   chest: 31
-  pectoral: 34
-  bicep_left: 8
-  bicep_right: 9
+  neck: 17
+  bicep: 8
   belly: 45
   hip: 47
-  lower_hip: 46
-  thigh_left: 25
-  thigh_right: 24
+  calf: 18
+  thigh: 25
   measured_on: 2007-06-27 12:11:43
   comment: going to the gym time
   is_goal: false
@@ -35,14 +33,12 @@ three:
   visceral_fat: 15
   water_percent: 11
   chest: 31
-  pectoral: 34
-  bicep_left: 8
-  bicep_right: 9
+  neck: 16
+  bicep: 8
   belly: 45
   hip: 47
-  lower_hip: 46
-  thigh_left: 25
-  thigh_right: 24
+  calf: 15
+  thigh: 25
   measured_on: 2007-06-27 12:11:43
   comment: initial goal to the gym time
   is_goal: true
@@ -56,14 +52,12 @@ two:
   visceral_fat: 11
   water_percent: 11
   chest: 41
-  pectoral: 45
-  bicep_left: 11
-  bicep_right: 11
+  neck: 21
+  bicep: 11
   belly: 33
   hip: 35
-  lower_hip: 32
-  thigh_left: 24
-  thigh_right: 24
+  calf: 17
+  thigh: 24
   measured_on: 2008-06-27 12:11:43
   comment: protein
   is_goal: false
@@ -78,14 +72,12 @@ two:
   visceral_fat: <% var = Math.cos(y) * 5 + 6 %><%= var.to_i %>
   water_percent: <% var = Math.cos(y) * 15 + 50 %><%= var.to_i %>
   chest: <% var = Math.cos(y) * 5 + 35 %><%= var.to_i %>
-  pectoral: <% var = Math.cos(y) * 5 + 37 %><%= var.to_i %>
-  bicep_left: <% var = Math.cos(y) * 3 + 15 %><%= var.to_i %>
-  bicep_right: <% var = Math.cos(y) * 3 + 15 %><%= var.to_i %>
+  neck: <% var = Math.cos(y) * 5 + 16%><%= var.to_i %>
+  bicep: <% var = Math.cos(y) * 3 + 15 %><%= var.to_i %>
   belly: <% var = Math.cos(y) * 10 + 30 %><%= var.to_i %>
   hip: <% var = Math.cos(y) * 10 + 32 %><%= var.to_i %>
-  lower_hip: <% var = Math.cos(y) * 8 + 28 %><%= var.to_i %>
-  thigh_left: <% var = Math.cos(y) * 5 + 18 %><%= var.to_i %>
-  thigh_right: <% var = Math.cos(y) * 5 + 18 %><%= var.to_i %>
+  calf: <% var = Math.cos(y) * 8 + 12 %><%= var.to_i %>
+  thigh: <% var = Math.cos(y) * 5 + 18 %><%= var.to_i %>
   is_goal: false
 
 <% y = 0 %><% x = 1 %><% while x < 150 %><% x = x +1 %><% y = y + 0.1 %><%= "gen#{x}:" %>
@@ -105,14 +97,12 @@ two:
   visceral_fat: <% var = Math.cos(y) * 5 + 6 %><%= var.to_i %>
   water_percent: <% var = Math.cos(y) * 15 + 50 %><%= var.to_i %>
   chest: <% var = Math.cos(y) * 5 + 35 %><%= var.to_i %>
-  pectoral: <% var = Math.cos(y) * 5 + 37 %><%= var.to_i %>
-  bicep_left: <% var = Math.cos(y) * 3 + 15 %><%= var.to_i %>
-  bicep_right: <% var = Math.cos(y) * 3 + 15 %><%= var.to_i %>
+  neck: <% var = Math.cos(y) * 5 + 16%><%= var.to_i %>
+  bicep: <% var = Math.cos(y) * 3 + 15 %><%= var.to_i %>
   belly: <% var = Math.cos(y) * 10 + 30 %><%= var.to_i %>
   hip: <% var = Math.cos(y) * 10 + 32 %><%= var.to_i %>
-  lower_hip: <% var = Math.cos(y) * 8 + 28 %><%= var.to_i %>
-  thigh_left: <% var = Math.cos(y) * 5 + 18 %><%= var.to_i %>
-  thigh_right: <% var = Math.cos(y) * 5 + 18 %><%= var.to_i %>
+  calf: <% var = Math.cos(y) * 8 + 12 %><%= var.to_i %>
+  thigh: <% var = Math.cos(y) * 5 + 18 %><%= var.to_i %>
   is_goal: false
 <% end %>
 
@@ -134,13 +124,11 @@ two:
   visceral_fat: <% var = Math.cos(y) * 5 + 6 %><%= var.to_i %>
   water_percent: <% var = Math.cos(y) * 15 + 50 %><%= var.to_i %>
   chest: <% var = Math.cos(y) * 5 + 35 %><%= var.to_i %>
-  pectoral: <% var = Math.cos(y) * 5 + 37 %><%= var.to_i %>
-  bicep_left: <% var = Math.cos(y) * 3 + 15 %><%= var.to_i %>
-  bicep_right: <% var = Math.cos(y) * 3 + 15 %><%= var.to_i %>
+  neck: <% var = Math.cos(y) * 5 + 16%><%= var.to_i %>
+  bicep: <% var = Math.cos(y) * 3 + 15 %><%= var.to_i %>
   belly: <% var = Math.cos(y) * 10 + 30 %><%= var.to_i %>
   hip: <% var = Math.cos(y) * 10 + 32 %><%= var.to_i %>
-  lower_hip: <% var = Math.cos(y) * 8 + 28 %><%= var.to_i %>
-  thigh_left: <% var = Math.cos(y) * 5 + 18 %><%= var.to_i %>
-  thigh_right: <% var = Math.cos(y) * 5 + 18 %><%= var.to_i %>
+  calf: <% var = Math.cos(y) * 8 + 12 %><%= var.to_i %>
+  thigh: <% var = Math.cos(y) * 5 + 18 %><%= var.to_i %>
   is_goal: false
 <% end %><% end %>

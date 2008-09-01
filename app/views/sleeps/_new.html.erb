@@ -1,8 +1,32 @@
 <table>
 <tr>
-<td>
+<th>
     <%= f.label :started_at %><br />
-    <%#= f.datetime_select :started_at %>
+</th>
+<th>
+   <%= f.label :woke_up_at %><br />
+</th>   
+<th>
+    <%= f.label :slept_in %><br />
+</th>
+<th>
+    <%= f.label :quality %><br />
+</th>
+<th>
+    <%= f.label :interrupted %><br />
+</th>
+<th>
+    <%= f.label :environment %><br />
+</th>  
+<th>
+    <%= f.label :waken_by %><br />
+</th>   
+<th>
+    <%= f.label "Woke Feeling" %><br />
+</th>
+</tr>
+<tr>
+<td> <%#= f.datetime_select :started_at %>
     <%#= f.text_field :started_at %>
  <%= calendar_box 'sleep', 'started_at',
        { :class => 'date',
@@ -16,12 +40,8 @@
          :showsTime => 1,
          :showOthers => true,
          :cache => true }
- %>
-
- </td>
- <td>
-   <%= f.label :woke_up_at %><br />
-    <%#= f.datetime_select :woke_up_at %>
+ %></td>
+<td>    <%#= f.datetime_select :woke_up_at %>
      <%= calendar_box 'sleep', 'woke_up_at',
        { :class => 'date',
          :date => Time.zone.now,
@@ -33,39 +53,14 @@
          :step => 1,
          :showsTime => 1,
          :showOthers => true,
-         :cache => true } %>
-
-    
- </td>
- <td>
-    <%= f.label :slept_in %><br />
-    <%= f.select :slept_in, ["Bed", "Chair", "Recliner" , "Vehicle", "Floor", "Sofa", "Cot" , "Camping"],:size => 8 %>
-</td>
-<td>
-    <%= f.label :quality %><br />
-    <%= f.select :slept_in, [1 ,10,20,30,40,50,60, 70, 80,90, 100], :size => 3%>
-</td>
-<td>
-    <%= f.label :interrupted %><br />
-    <%= f.check_box :interrupted %>
-</td>
+         :cache => true } %></td>
+<td><%= f.select :slept_in, ["Bed", "Chair", "Recliner" , "Vehicle", "Floor", "Sofa", "Cot" , "Camping"],:size => 8 %></td>    
+<td><%= f.select :slept_in, [1 ,10,20,30,40,50,60, 70, 80,90, 100], :size => 3 %></td>    
+<td><%= f.check_box :interrupted %></td>    
+<td><%= f.select :environment, ["Very Quiet", "Quiet", "TV on", "Radio on", "Noisy" , "Moving vehicle"],:size => 6 %></td>    
+<td><%= f.select :waken_by, ["Alarm", "Naturally", "Person", "Dream", "Noise"] ,:size => 8%></td>
+<td><%= f.select :condition_awoken, ["Rested", "Tired"],:size => 5 %></td>
 
 
-<td>
-    <%= f.label :environment %><br />
-    <%= f.select :environment, ["Very Quiet", "Quiet", "TV on", "Radio on", "Noisy" , "Moving vehicle"],:size => 6 %>
 
-</td>
-<td>
-
-    <%= f.label :waken_by %><br />
-    <%= f.select :waken_by, ["Alarm", "Naturally", "Person", "Dream", "Noise"] ,:size => 8%>
-
-</td>
-<td>
-
-    <%= f.label "Woke Feeling" %><br />
-    <%= f.select :condition_awoken, ["Rested", "Tired"],:size => 5 %>
-</td>
-</td>
 </table>

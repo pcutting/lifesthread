@@ -6,13 +6,14 @@
 <th class = "dashboard" > <%= f.label "Fat %"  %> </th>
 <th class = "dashboard" > <%= f.label "Muscle %" %> </th>
 <th class = "dashboard" > <%= f.label :visceral_fat %> </th>
-<th class = "dashboard" > <%= f.label "Water %"  %> </th>
+<th class = "dashboard" > <%= f.label "H2O%"  %> </th>
+<th class = "dashboard" > <%= f.label :neck %><!-- was a br --> </th>
 <th class = "dashboard" > <%= f.label :chest  %><!-- was a br --> </th>
-<th class = "dashboard" > <%= f.label :pectoral %><!-- was a br --> </th>
-<th class = "dashboard" > <%= f.label "Bicep Left / Right"  %> </th>
+<th class = "dashboard" > <%= f.label "Bicep"  %> </th>
 <th class = "dashboard" > <%= f.label :belly%> </th>
-<th class = "dashboard" > <%= f.label "Hip Upper / Lower" %>  </th>
-<th class = "dashboard" > <%= f.label "Thigh Left / Right"  %> </th>
+<th class = "dashboard" > <%= f.label "Hip" %>  </th>
+<th class = "dashboard" > <%= f.label "Thigh"  %> </th>
+<th class = "dashboard" > <%= f.label "Calf"  %> </th>
 <th class = "dashboard" > <%= f.label :measured_on %> </th>
 <th class = "dashboard" > <%= f.label :comment %> </th>
 
@@ -21,16 +22,17 @@
 <tr>
 <td class= "dashboard" > <%= f.text_field :weight , :size => 3 %>  </td>
 <td class= "dashboard" > <%= f.text_field :resting_metabolism , :size => 4  %>  </td>
-<td class= "dashboard" > <%= f.text_field :fat_percent , :size => 3  %> </td>
-<td class= "dashboard" > <%= f.text_field :muscle_percent , :size => 3 %> </td>
-<td class= "dashboard" > <%= f.text_field :visceral_fat , :size => 3 %> </td>
-<td class= "dashboard" > <%= f.text_field :water_percent , :size => 3 %>  </td>
-<td class= "dashboard" > <%= f.text_field :chest , :size => 3 %>  </td>
-<td class= "dashboard" > <%= f.text_field :pectoral , :size => 3 %> </td>
-<td class= "dashboard" > <%= f.text_field :bicep_left , :size => 3 %> / <%= f.text_field :bicep_right, :size => 4 %> </td>
-<td class= "dashboard" > <%= f.text_field :belly, :size => 3  %>  </td>
-<td class= "dashboard" > <%= f.text_field :hip, :size => 3  %>  / <%= f.text_field :lower_hip, :size => 4  %>  </td>
-<td class= "dashboard" > <%= f.text_field :thigh_left, :size => 3  %> / <%= f.text_field :thigh_right, :size => 4  %> </td>
+<td class= "dashboard" > <%= f.text_field :fat_percent , :size => 2  %> </td>
+<td class= "dashboard" > <%= f.text_field :muscle_percent , :size => 2 %> </td>
+<td class= "dashboard" > <%= f.text_field :visceral_fat , :size => 2 %> </td>
+<td class= "dashboard" > <%= f.text_field :water_percent , :size => 2 %>  </td>
+<td class= "dashboard" > <%= f.text_field :neck , :size => 2 %> </td>
+<td class= "dashboard" > <%= f.text_field :chest , :size => 2 %>  </td>
+<td class= "dashboard" > <%= f.text_field :bicep , :size => 2 %> </td>
+<td class= "dashboard" > <%= f.text_field :belly, :size => 2  %>  </td>
+<td class= "dashboard" > <%= f.text_field :hip, :size => 2  %> </td>
+<td class= "dashboard" > <%= f.text_field :thigh, :size => 2  %></td>
+<td class= "dashboard" > <%= f.text_field :calf, :size => 2  %>  </td>
 <td class= "dashboard" > 
 
      <%# = f.datetime_select :measured_on, :start_year => 1900, :include_seconds => true  %>  
