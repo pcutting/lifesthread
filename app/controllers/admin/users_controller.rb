@@ -1,7 +1,7 @@
 class Admin::UsersController < Admin::BaseController
 
   def index
-    @users = User.paginate :page => params[:page] , :per_page => 100 , :order => 'login asc'
+    @users = User.paginate :page => params[:page] , :per_page => 2000 , :order => 'login asc'
   end
 
   def show
