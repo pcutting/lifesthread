@@ -18,14 +18,10 @@
   <!-- flot includes  -->
     <!--[if IE]><script language="javascript" type="text/javascript" src="javascripts/excanvas.pack.js"></script><![endif]-->
     <script language="javascript" type="text/javascript" src="/javascripts/jquery.js"></script>
-
 </head>
+
 <body class="login">
-
-
-
 <div id="container" class="container">
-
 <div id="header" class="span-24 last">
 <%= yield :header %>
 <%= "<p style=color: 'green'>#{flash[:notice]}</p>" unless flash[:notice].nil? %>
@@ -34,26 +30,7 @@
 <div id="wrapper" class="span-24 last">
 <%= yield :layout %>
 </div>
-
-
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>

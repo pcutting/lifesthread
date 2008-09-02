@@ -1,7 +1,8 @@
 
-<div class='keep_left' >
-
-
+<div class='span-24 last keep_left' >
+<hr />
+<% table_labels = Array.new %>
+<% table_details = Array.new %>
 <% details = Array.new %>
 <% details << "By Age group:<br />" %>
 
@@ -10,9 +11,14 @@
  count = 0 %>
  
 <% for ages in @age_group do %>
-  <% details << "There are #{ages[1].count} (#{per_population = ((ages[1].count.to_f / @profiles.size) * 100).to_i}%) of #{@profiles.size} users in the age group of \"#{ ages[0].to_s}\" yrs. #{ages[1].with_sex("F").count} (#{ per_female = (( ages[1].with_sex("F").count / ages[1].count.to_f ) * 100).to_i }%) 
-    are women and #{ages[1].with_sex("m").count} (#{per_male = (( ages[1].with_sex("m").count / ages[1].count.to_f ) * 100).to_i}%) are men.<br />" %> 
-    
+  <% details << "There are #{ages[1].count} (#{per_population = ((ages[1].count.to_f / @profiles.size) * 100).to_i}%) of #{@profiles.size} users in the age group of \"#{ ages[0].to_s}\" yrs. #{ages[1].with_sex("F").count} (#{ per_female = (( ages[1].with_sex("F").count / ages[1].count.to_f ) * 100).to_i }%) are women and #{ages[1].with_sex("m").count} (#{per_male = (( ages[1].with_sex("m").count / ages[1].count.to_f ) * 100).to_i}%) are men.<br />" %> 
+  <% table_header = "Details for the #{@profiles.size} users below." %>
+  <% table_labels = ["#Users","Pop%","Age Range", "F","%","M","%" ] %>
+  <% table_details <<  [ages[1].count,per_population,ages[0].to_s,ages[1].with_sex("F").count,per_female,ages[1].with_sex("m").count,per_male]
+  
+  
+   %> 
+ 
   <%
   axisx << ages[0].to_s
   #data_set_bottom << (per_female * ((100 - per_population) / 100.0) )
@@ -66,7 +72,7 @@ end
 
 <br />
 
-<div class='report' class='chart' >
+<div class='span-11 report chart' >
 <%= image_tag( 
 "http://chart.apis.google.com/chart?
 cht=bvs&
@@ -78,18 +84,27 @@ chxl=
 0:|#{axis_x_top}|
 1:|0%|25%|50%|75%|100%|
 2:|Women|Men|
-3:|#{axis_x_sub}|
+3:|#{axis_x_sub}|             
 4:|AGE&
-chs=600x150&
+chs=450x150&
 chd=t:#{bottom}|#{top}") %> 
+
+
+<br />Mini Summery:<br />
+
+<%= minitable(table_header, table_labels,table_details) %>
+
+
+
 </div>
 
-<div class='report' class='chart' >
+<div class='span-13 last report chart' >
+<div class='report chart' >
 <%= image_tag(
 "http://chart.apis.google.com/chart?cht=p3&
 chtt=Distribution+of+women+by+age+group&
 chco=4d89f9,ccff00,ff0000&
-chs=600x250&
+chs=500x250&
 chl=#{axisx.join("+yrs|")}+yrs&
 chd=t:#{data_set_bottom.join(",")}") %> 
 </div>
@@ -99,13 +114,14 @@ chd=t:#{data_set_bottom.join(",")}") %>
 "http://chart.apis.google.com/chart?cht=p3&
 chtt=Distribution+of+men+by+age+group&
 chco=4d89f9,ccff00,ff0000&
-chs=600x250&
+chs=500x250&
 chl=#{axisx.join("+yrs|")}+yrs&
 chd=t:#{data_set_top.join(",")}") %> 
 </div>
-<br />
+</div>
+<div class = "span-24 last">
 
 <%= details %>
 
-
+</div>
 </div>

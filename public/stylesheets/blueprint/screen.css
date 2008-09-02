@@ -72,7 +72,8 @@ caption {background:#eee;}
 .bottom {margin-bottom:0;padding-bottom:0;}
 
 /* grid.css */
-.container {width:950px;margin:0 auto;}
+.center {text-align: center;}
+.container {width:950px;margin:0.0em auto;}
 .showgrid {background:url(src/grid.png);}
 body {margin:0.0em auto;}
 body.common {background-image: url('/images/blank_bg.gif');background-repeat: repeat-y;background-position: top center;}

@@ -3,19 +3,19 @@
 
 <div class="container">
 
-<div class="span-24 last header keep_left">
-<div class="span-4 localtime">
+<div class="span-24 last header">
+<div class="span-5 center">
 Local Time<br /> <em><%= Time.zone.now.to_s(:short) %></em>
 <%= yield :localtime %>
 </div>
-<div class="span-16 center">
+<div class="span-14 center">
 <h3><strong>Welcome to your Wellness Board, <em><%=h current_user.first_name -%></em></strong> <%= yield :header %></h3>
 </div>
-<div class="span-4 last logout keep_right">
+<div class="span-5 last keep_left">
 <%= link_to 'Support', new_support_path(:ref_page => request.url)   %>
 <%= link_to '<img src="/images/mini_help1.jpg" />', new_support_path(:ref_page => request.url)   %>
  |
-<strong><%= link_to 'LOGOUT', logout_path %></strong>
+<strong><%= link_to 'LOGOUT', logout_path %> </strong>
 </div>
 </div>
 

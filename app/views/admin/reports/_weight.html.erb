@@ -1,5 +1,5 @@
-<div class='keep_left' >
-
+<div class='span-24 last keep_left' >
+<hr />
 <% summery = Array.new %>
 <% details = Array.new %>
 
@@ -22,11 +22,11 @@
 <% label_ages = Array.new %>
 <% @age_group.each{|x| label_ages << x[0].to_s} %>
 
-<div class='report' class='chart' >
+<div class='span-6 report' class='chart' >
 <% link = "http://chart.apis.google.com/chart?cht=bhs&
-chtt=Goal+Accomplishment+Per+Age+Group&
+chtt=Goal+Accomplishment&
 chco=4d89f9|ff0000&
-chs=600x400&
+chs=250x400&
 chg=5,50&
 chxt=x,y&
 chxl=
@@ -37,10 +37,9 @@ chd=t:#{points.join(",")}" %>
 
 
 <%= image_tag(link) %> 
-
-<br />
-
+</div>
+<div class="span-18 last"
 <%= summery.join("<br /> \n") %>
-
+</div>
 
 </div>

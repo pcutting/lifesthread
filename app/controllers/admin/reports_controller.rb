@@ -1,5 +1,6 @@
 class Admin::ReportsController < Admin::BaseController
 
+
 def index
 
   @age_group = Array.new
