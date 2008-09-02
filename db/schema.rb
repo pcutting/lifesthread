@@ -229,7 +229,7 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.integer  "ounces_alcohol_weekly"
     t.integer  "user_id"
     t.text     "chart_options"
-    t.text     "favorits"
+    t.text     "favorites"
     t.boolean  "is_pregnant"
     t.date     "conception_on"
     t.boolean  "is_breast_feeding"
@@ -241,7 +241,9 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.string   "super_member_id"
     t.integer  "cache_current_weight",            :default => 0
     t.integer  "cache_current_weight_goal",       :default => 0
-    t.datetime "cache_last_updated",              :default => '2008-09-01 10:17:54'
+    t.datetime "cache_last_updated",              :default => '2008-09-01 18:54:58'
+    t.text     "unit_preferences"
+    t.string   "sponsor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
