@@ -1,8 +1,13 @@
-div.make_hidden{
-display: none
+/*div.menu{
+visibility: hidden;
+}*/
+
+#menu{
+visibility: hidden;
 }
+
 div.hide_for_load{
-display: none
+display: none;
 }
 
 body { 

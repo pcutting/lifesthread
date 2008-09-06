@@ -19,11 +19,12 @@ Local Time<br /> <em><%= Time.zone.now.to_s(:short) %></em>
 </div>
 </div>
 
-<div class="span-24 last menu">
+<div id="menu" class="span-24 last">
 <%= yield :navigation %>
 <%= yield :navigation_alt %> 
 <%= render :partial => "/layouts/menu" %>
 </div>
+
 
 <div class="span-24 last content" >
 <%= "<p style=\"color: green\">" +  flash[:notice] + " </p>" unless flash[:notice].nil?  %>
