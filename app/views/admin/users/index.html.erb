@@ -25,6 +25,7 @@
 				<th>Created on</th>
 				<th>Updated on</th>
 		    <th>Is Admin</th>
+		    <th>Roles</th>
 			</tr>
 			</thead>
 			<tbody>
@@ -36,6 +37,7 @@
 		    <td><%= h user.created_at %></td>
 		    <td><%= h user.updated_at %></td>
 		    <td <%= "bgcolor = red" if user.admin %> ><%= if user.admin then "YES" else "NO" end %></td>
+		    <td><%= h user.myroles %></td>
 			</tr>
 		<% end %>
 			</tbody>

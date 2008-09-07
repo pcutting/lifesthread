@@ -2,6 +2,8 @@ class Role < ActiveRecord::Base
 
 belongs_to :user
 
+
+
 #current_user.roles.find(:all, :conditions => ["has_role = ? OR has_role = ?", "MEMBER","SUPER MEMBER" ]) == []
 
 #named_scope :with_sex , lambda { |*args| 

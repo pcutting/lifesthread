@@ -119,6 +119,19 @@ has_many :roles
     
   end
 
+
+  def myroles
+    titles = []
+    self.roles.each  {|x| titles << x.has_role}
+    if self.admin then titles << "Admin" end
+    
+    if titles==[] then titles << "VIP" end
+    titles.uniq!
+    titles.join(",")
+
+  end
+  
+  
   protected #----------------------
     # before filter 
     def encrypt_password
@@ -131,5 +144,6 @@ has_many :roles
       crypted_password.blank? || !password.blank?
     end
     
+
     
 end
