@@ -119,6 +119,240 @@ def age
 (( Time.now - self.dob.to_time ) / 1.years).to_i
 end
 
+def updateChartOptions(returned)
+  results = Hash.new 
+     
+  unless returned[:bp].nil?   
+   results[:bp]=
+   [if  returned[:bp][:a].nil? then false else true end,
+  if  returned[:bp][:b].nil? then false else true end,
+  if  returned[:bp][:c].nil? then false else true end] 
+  else results[:bp] = [false, false, false]
+  end
+
+  unless returned[:stress].nil?   
+   results[:stress]=
+   [if  returned[:stress][:a].nil? then false else true end,
+  if  returned[:stress][:b].nil? then false else true end,
+  if  returned[:stress][:c].nil? then false else true end] 
+  else results[:stress] = [false, false, false]
+  end
+
+
+  unless returned[:sleep].nil?   
+   results[:sleep]=
+   [if  returned[:sleep][:a].nil? then false else true end,
+  if  returned[:sleep][:b].nil? then false else true end,
+  if  returned[:sleep][:c].nil? then false else true end] 
+  else results[:sleep] = [false, false, false]
+  end
+
+  unless returned[:cholesterol].nil?   
+   results[:cholesterol]=
+  [if  returned[:cholesterol][:a].nil? then false else true end,
+  if  returned[:cholesterol][:b].nil? then false else true end,
+  if  returned[:cholesterol][:c].nil? then false else true end] 
+  else results[:cholesterol] = [false, false, false]
+
+  end
+
+  unless returned[:chol_ldl].nil?   
+   results[:chol_ldl]=
+  [if  returned[:chol_ldl][:a].nil? then false else true end,
+  if  returned[:chol_ldl][:b].nil? then false else true end,
+  if  returned[:chol_ldl][:c].nil? then false else true end] 
+  else results[:chol_ldl] = [false, false, false]
+
+  end
+
+  unless returned[:chol_hdl].nil?   
+   results[:chol_hdl]=
+  [if  returned[:chol_hdl][:a].nil? then false else true end,
+  if  returned[:chol_hdl][:b].nil? then false else true end,
+  if  returned[:chol_hdl][:c].nil? then false else true end]
+  else results[:chol_hdl] = [false, false, false]
+
+  end
+
+  unless returned[:measurements].nil?    
+  results[:measurements]=
+  [if  returned[:measurements][:a].nil? then false else true end,
+  if  returned[:measurements][:b].nil? then false else true end,
+  if  returned[:measurements][:c].nil? then false else true end]
+  else results[:measurements] = [false, false, false]
+
+  end
+
+  unless returned[:measurement_weight].nil?   
+   results[:measurement_weight]=
+  [if  returned[:measurement_weight][:a].nil? then false else true end,
+  if  returned[:measurement_weight][:b].nil? then false else true end,
+  if  returned[:measurement_weight][:c].nil? then false else true end]
+  else results[:measurement_weight] = [false, false, false]
+
+  end
+
+  unless returned[:measurement_resting_metabolism].nil?   
+   results[:measurement_resting_metabolism]=
+  [if  returned[:measurement_resting_metabolism][:a].nil? then false else true end,
+  if  returned[:measurement_resting_metabolism][:b].nil? then false else true end,
+  if  returned[:measurement_resting_metabolism][:c].nil? then false else true end]
+  else results[:measurement_resting_metabolism] = [false, false, false]
+
+  end
+
+  unless returned[:measurement_fat_percent].nil?   
+   results[:measurement_fat_percent]=
+  [if  returned[:measurement_fat_percent][:a].nil? then false else true end,
+  if  returned[:measurement_fat_percent][:b].nil? then false else true end,
+  if  returned[:measurement_fat_percent][:c].nil? then false else true end]
+  else results[:measurement_fat_percent] = [false, false, false]
+
+  end
+
+  unless returned[:measurement_muscle_percent].nil?   
+   results[:measurement_muscle_percent]=
+  [if  returned[:measurement_muscle_percent][:a].nil? then false else true end,
+  if  returned[:measurement_muscle_percent][:b].nil? then false else true end,
+  if  returned[:measurement_muscle_percent][:c].nil? then false else true end] 
+  else results[:measurement_muscle_percent] = [false, false, false]
+
+  end
+
+  unless returned[:measurement_visceral_fat].nil?   
+   results[:measurement_visceral_fat]=
+  [if  returned[:measurement_visceral_fat][:a].nil? then false else true end,
+  if  returned[:measurement_visceral_fat][:b].nil? then false else true end,
+  if  returned[:measurement_visceral_fat][:c].nil? then false else true end]
+  else results[:measurement_visceral_fat] = [false, false, false]
+
+  end
+
+  unless returned[:measurement_water_percent].nil?   
+   results[:measurement_water_percent]=
+  [if  returned[:measurement_water_percent][:a].nil? then false else true end,
+  if  returned[:measurement_water_percent][:b].nil? then false else true end,
+  if  returned[:measurement_water_percent][:c].nil? then false else true end] 
+  else results[:measurement_water_percent] = [false, false, false]
+
+  end
+
+  unless returned[:measurement_chest].nil?   
+   results[:measurement_chest]=
+  [if  returned[:measurement_chest][:a].nil? then false else true end,
+  if  returned[:measurement_chest][:b].nil? then false else true end,
+  if  returned[:measurement_chest][:c].nil? then false else true end]
+  else results[:measurement_chest] = [false, false, false]
+
+  end
+
+  unless returned[:measurement_neck].nil?   
+   results[:measurement_neck]=
+  [if  returned[:measurement_neck][:a].nil? then false else true end,
+  if  returned[:measurement_neck][:b].nil? then false else true end,
+  if  returned[:measurement_neck][:c].nil? then false else true end]
+  else results[:measurement_neck] = [false, false, false]
+   
+  end
+
+  unless returned[:measurement_bicep].nil?   
+   results[:measurement_bicep]=
+  [if  returned[:measurement_bicep][:a].nil? then false else true end,
+  if  returned[:measurement_bicep][:b].nil? then false else true end,
+  if  returned[:measurement_bicep][:c].nil? then false else true end]
+  else results[:measurement_bicep] = [false, false, false]
+   
+  end
+
+
+  unless returned[:measurement_belly].nil?   
+   results[:measurement_belly]=
+  [if  returned[:measurement_belly][:a].nil? then false else true end,
+  if  returned[:measurement_belly][:b].nil? then false else true end,
+  if  returned[:measurement_belly][:c].nil? then false else true end]
+  else results[:measurement_belly] = [false, false, false]
+
+  end
+
+  unless returned[:measurement_hip].nil?   
+   results[:measurement_hip]=
+  [if  returned[:measurement_hip][:a].nil? then false else true end,
+  if  returned[:measurement_hip][:b].nil? then false else true end,
+  if  returned[:measurement_hip][:c].nil? then false else true end]
+  else results[:measurement_hip] = [false, false, false]
+
+  end
+
+  unless returned[:measurement_calf].nil?   
+   results[:measurement_calf]=
+  [if  returned[:measurement_calf][:a].nil? then false else true end,
+  if  returned[:measurement_calf][:b].nil? then false else true end,
+  if  returned[:measurement_calf][:c].nil? then false else true end] 
+  else results[:measurement_calf] = [false, false, false]
+
+  end
+
+  unless returned[:measurement_thigh].nil?   
+   results[:measurement_thigh]=
+  [if  returned[:measurement_thigh][:a].nil? then false else true end,
+  if  returned[:measurement_thigh][:b].nil? then false else true end,
+  if  returned[:measurement_thigh][:c].nil? then false else true end] 
+  else results[:measurement_thigh] = [false, false, false]
+  end
+  
+  results
+end
+
+
+def myChartOptions
+
+   if self.chart_options.nil? then
+     #@conditions = Hash[:plot => true, :average => true , :show_goal => true]
+     @chartoptions=Hash[
+     :bp=>[true,true,true],
+     :chol_ldl=>[true,true,true],
+     :chol_hdl=>[true,true,true],
+     :measurements=>[true,true,true],
+     :measurement_weight=>[false, false, false],
+     :measurement_resting_metabolism=>[false, false, false],
+     :measurement_fat_percent=>[false, false, false],
+     :measurement_muscle_percent=>[false, false, false],
+     :measurement_visceral_fat=>[false, false, false],
+     :measurement_water_percent=>[false, false, false],
+     :measurement_chest=>[false, false, false],
+     :measurement_neck=>[false, false, false],
+     :measurement_bicep=>[false, false, false],
+     :measurement_belly=>[false, false, false],
+     :measurement_hip=>[false, false, false],
+     :measurement_calf=>[false, false, false],
+     :measurement_thigh=>[false, false, false],
+     :cholesterol=>[true,true,true],
+     :sleep=>[true,true,true],
+     :stress=>[true,true,true]
+     ]
+ 
+     
+     self.chart_options = @chartoptions
+     self.save
+ 
+   
+   
+    else
+      self.chart_options = @chartoptions   
+   
+   
+   
+   # elsif @chartoptions[:stress].nil?
+     
+   #  @chartoptions[:stress] = [true,true,true]
+   #  current_user.profile.chart_options = @chartoptions
+   #  current_user.profile.save
+
+    end #end if chart_options...
+    
+    @chartoptions    
+
+end
 
 
 

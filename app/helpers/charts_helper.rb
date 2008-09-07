@@ -148,12 +148,15 @@ unless options == "all"
      :sleep=>[true,true,true],
      :stress=>[true,true,true]
      ]
+   else
+   @chartoptions = current_user.profile.myChartOptions
+   
 end
 
 
   if options == "all" || options == "bp" || options == "stress"
     @bps = current_user.bps.find(:all, :order => "measured_on asc") 
-    getBP  unless @bps.nil? #function call
+    getBP(@bps)  unless @bps.nil? #function call
   end
 
   if options == "all" || options == "stress"
@@ -261,12 +264,12 @@ end #def getSleep
 # Gets Blood Pressure
 #####################
   
-def getBP
+def getBP(chart_bps)
   #Bloodpressure
   bp1, bp2 , bp1_avg , bp2_avg = [], [], [], []  
   sum_bp1, sum_bp2 , count = 0,0,0 
   if ( @chartoptions[:bp][0]|| @chartoptions[:bp][1]) 
-    for bps in @bps
+    for bps in chart_bps
       count += 1 
 
       bp1 << [ "[#{bps.measured_on.to_i * 1000}, #{bps.systolic} ]" ] 
