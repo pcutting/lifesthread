@@ -53,7 +53,7 @@ class MeasurementsController < ApplicationController
       
       if ( params[:water_percent] == "" && params[:comment]  == "" && params[:visceral_fat] == "" && params[:is_goal] == "0" &&  params[:belly]  == "" && params[:calf]  == "" && params[:muscle_percent]  == "" && params[:chest]  == "" &&  params[:weight]  == "" && params[:hip]  =="" && params[:thigh]  =="" && params[:resting_metabolism]  =="" &&  params[:fat_percent]  == "" &&  params[:neck]  == "" && params[:bicep]  == "" )
         flash[:notice] = 'Your Measurement was not updated.'
-        format.html { render :action => "new" } 
+        form at.html { render :action => "new" } 
       elsif @measurement.save
         flash[:notice] = 'Measurement was successfully created.'
         format.html { redirect_to(measurements_path) }

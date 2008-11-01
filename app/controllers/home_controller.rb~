@@ -57,7 +57,7 @@ else
         flash[:notice] ="Records updated."
       end
 
-      if !( @measurement.water_percent.blank? && @measurement.muscle_percent.blank? && @measurement.chest.blank? && @measurement.weight.blank? &&   @measurement.visceral_fat.blank? &&   @measurement.bicep.blank? &&   @measurement.belly.blank? &&     @measurement.hip.blank? &&     @measurement.thigh.blank? &&     @measurement.resting_metabolism.blank? &&     @measurement.fat_percent.blank? &&     @measurement.comment.blank?   ) then
+      if !( @measurement.water_percent.blank? && @measurement.muscle_percent.blank? && @measurement.chest.blank? && @measurement.weight.blank? &&   @measurement.visceral_fat.blank? &&   @measurement.bicep.blank? &&   @measurement.belly.blank? &&     @measurement.hip.blank? &&     @measurement.thigh.blank? &&     @measurement.resting_metabolism.blank? &&     @measurement.fat_percent.blank? &&     @measurement.comment.blank? &&     @measurement.lower_hip.blank?   ) then
        did_save =  @measurement.save
         flash[:notice] = "Records updated."
       end

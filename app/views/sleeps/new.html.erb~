@@ -1,0 +1,10 @@
+<h1>New sleep</h1>
+
+<% form_for(@sleep) do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => "contents", :locals => { :f => f } %>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+

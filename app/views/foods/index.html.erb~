@@ -1,11 +1,4 @@
-
-
 <h1>Food Journal</h1>
-
-<br/>
-<% if params[:view] == "dataentry" %> 
-<%= render :partial => "new_inform" %>
-<% else %>
 
 <table>
   <tr>
@@ -43,5 +36,3 @@
 <br />
 
 <%= link_to 'New food', new_food_path %>
-<% end %>
-

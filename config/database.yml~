@@ -6,7 +6,7 @@ development:
   encoding: utf8
   database: lifesthread_development
   username: root
-  password: sprint
+  password:
   socket: /var/run/mysqld/mysqld.sock
 
 #  adapter: postgresql

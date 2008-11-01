@@ -1,4 +1,3 @@
-<br/>
 <% if params[:view] == "dataentry" %> 
 <%= render :partial => "new_inform" %>
 <% else %>

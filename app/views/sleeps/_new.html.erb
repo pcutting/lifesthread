@@ -1,32 +1,15 @@
 <table>
 <tr>
-<th>
-    <%= f.label :started_at %><br />
-</th>
-<th>
-   <%= f.label :woke_up_at %><br />
-</th>   
-<th>
-    <%= f.label :slept_in %><br />
-</th>
-<th>
-    <%= f.label :quality %><br />
-</th>
-<th>
-    <%= f.label :interrupted %><br />
-</th>
-<th>
-    <%= f.label :environment %><br />
-</th>  
-<th>
-    <%= f.label :waken_by %><br />
-</th>   
-<th>
-    <%= f.label "Woke Feeling" %><br />
-</th>
+<th><%= f.label :started_at %><br /></th>
+<th><%= f.label :woke_up_at %><br /></th>   
+<th><%= f.label :slept_in %><br /></th>
+<th><%= f.label :quality %><br /></th>
+<th><%= f.label :interrupted %><br /></th>
+<th><%= f.label :environment %><br /></th>  
+<th><%= f.label :waken_by %><br /></th>   
+<th><%= f.label "Woke Feeling" %><br /></th>
 </tr>
-<tr>
-<td> <%#= f.datetime_select :started_at %>
+<tr><td> <%#= f.datetime_select :started_at %>
     <%#= f.text_field :started_at %>
  <%= calendar_box 'sleep', 'started_at',
        { :class => 'date',

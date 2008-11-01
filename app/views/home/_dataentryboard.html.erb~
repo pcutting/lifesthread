@@ -1,0 +1,45 @@
+
+  <%= render :partial => "progress" %>
+  
+  <% form_for :profile , :url => { :action => :create } do |form| %>
+
+  <fieldset>
+  <legend><%= link_to '<img src="/images/sleep.resized.gif" />Sleep', sleeps_path %> </legend>
+    <% fields_for :sleep do |sleep| %>
+     <%= render :partial => "/sleeps/new" , :locals => { :f => sleep} %>
+    <% end %>
+  </fieldset>
+
+
+  <fieldset>
+  <legend><%= link_to '<img src="/images/heart.gif" />Blood Pressure', bps_path %> </legend>
+    <% fields_for :bp do |bp| %>
+     <%= render :partial => "/bps/new" , :locals => { :f => bp} %>
+    <% end %>
+  </fieldset>
+
+
+  <fieldset>
+  <legend><%= link_to '<img src="/images/tapemeasure_mini.jpg" />Measurements', measurements_path %></legend>
+    <% fields_for :measurement do |measurement| %>
+      <%= render :partial => "/measurements/new" , :locals => {:f => measurement }  %>
+    <% end %>
+  </fieldset>
+
+  <fieldset>
+  <legend><%= link_to '<img src="/images/food.jpg" />Food', foods_path %></legend>
+    <% fields_for :foods do |food| %>
+      <%= render :partial => "/foods/new" , :locals => {:f => food }  %>
+    <% end %>
+  </fieldset>
+
+
+  <br />
+  <%= submit_tag %>
+  <% end %> 
+
+
+
+
+
+

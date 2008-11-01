@@ -1,11 +1,3 @@
-<br/>
-<% if params[:view] == "dataentry" %> 
-<%= render :partial => "new_inform" %>
-<% else %>
-
-
-
-
 <h1>Sleep Chart</h1>
 
 <%- @plot_data = [] -%>
@@ -49,5 +41,3 @@
 <br />
 
 <%= link_to 'New sleep period', new_sleep_path %>
-
-<% end %>

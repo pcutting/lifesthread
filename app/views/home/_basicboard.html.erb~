@@ -1,0 +1,36 @@
+<table>
+<tr>
+<td>
+<%# data entry fields %>
+<center>
+<%# "img from http://www.famfamfam.com/lab/icons/silk/" %>
+<img src="/images/table_edit.png" /><br/>
+<%= link_to '<img src="/images/sleep.resized.gif" />Sleep', sleeps_path( :view => "dataentry") %> <br/>
+<%= link_to '<img src="/images/heart.gif" />Blood Pressure', bps_path( :view => "dataentry") %> <br/>
+<%= link_to '<img src="/images/tapemeasure_mini.jpg" />Measurements', measurements_path( :view => "dataentry") %><br/>
+<%= link_to '<img src="/images/food.jpg" />Food', foods_path( :view => "dataentry") %> <br/>
+<br/>
+<%= link_to "Quick entry" , root_path( :view => "dataentryboard") %> <br/>
+
+</center>
+</td>
+<td>
+<%# Chart views %>
+<center>
+<img src="/images/chart.jpg"/><br/>
+
+<%= link_to '<img src="/images/sleep.resized.gif" />Sleep', sleeps_path %> <br/>
+<%= link_to '<img src="/images/heart.gif" />Blood Pressure', bps_path %> <br/>
+<%= link_to '<img src="/images/tapemeasure_mini.jpg" />Measurements', measurements_path %><br/>
+<%= link_to '<img src="/images/food.jpg" />Food', foods_path %><br/>
+
+</center>
+</td>
+</tr>
+</table>
+
+
+
+
+
+

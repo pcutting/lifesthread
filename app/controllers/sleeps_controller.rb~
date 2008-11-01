@@ -5,7 +5,7 @@ class SleepsController < ApplicationController
   # GET /sleeps.xml
   def index
     @sleeps = current_user.sleeps.find(:all)
-    @sleep = Sleep.new
+
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @sleeps }

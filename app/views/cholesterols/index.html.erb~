@@ -1,12 +1,3 @@
-<br/>
-<% if params[:view] == "dataentry" %> 
-<%= render :partial => "new_inform" %>
-<% else %>
-
-
-
-
-
 <h1>Cholesterol Chart</h1>
 
 <%- @plot_data = [] -%>
@@ -44,6 +35,3 @@
 <br />
 
 <%= link_to 'New cholesterol', new_cholesterol_path %>
-
-<% end %>
-

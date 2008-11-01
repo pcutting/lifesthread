@@ -6,7 +6,6 @@ class FoodsController < ApplicationController
   # GET /foods.xml
   def index
     @foods = current_user.foods.find(:all)
-    @food = Food.new
 
     respond_to do |format|
       format.html # index.html.erb

@@ -1,15 +1,9 @@
 <% if @profile.blank? %> 
   <h1> <%= link_to 'Please update your profile.', profile_path, :action => "show" %> </h1>
 <% else %>
-<% # If it is passed with a param for data entry, display %>
-<% #   dataentryboard, else standard board %>
-
-<% if params[:view] == "dataentryboard" %> 
+<% # if it is passed with a param for data entry, display dataentryboard, else standard board %>
+<% if 
 <%= render :partial => "dataentryboard" %>
-<% else %>
-<%= render :partial => "basicboard" %>
-<% end %>
-
 
 <% end # ends the required profile model %>
  <br />

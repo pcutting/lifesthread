@@ -1,0 +1,28 @@
+
+<table>
+  <tr>
+    <th colspan = 3> <%= f.label :date %> </th>
+    <th> <%= f.label :meal %> </th>
+    <th> <%= f.label :category %> </th>
+    <th> <%= f.label :name %> </th>
+    <th> <%= f.label :calories  %> </th>
+    <th> <%= f.label :protein %> </th>
+    <th> <%= f.label :fiber %> </th>
+    <th> <%= f.label :carbs %> </th>
+    <th> <%= f.label :fats %> </th>
+    <th> <%= f.label :comment %> </th>
+</tr>
+<tr>
+    <td colspan = 3> <%= f.date_select :date %> </td>
+       <td><%= f.select :meal, ["Pre-breakfast", "Breakfast", "Mid-morning" , "Lunch", "Mid-afternoon", "Dinner", "Late"],:size => 6 %></td>
+    <td> <%= f.select :category, ["Grain", "Vegetable", "Fruit", "Dairy", "Meat/Protein", "Fats/Sweets"],:size => 6 %></td>
+    <td><%= f.text_field :name  , :size => 6 %></td>
+    <td> <%= f.text_field :calories  , :size => 5 %> </td>
+    <td> <%= f.text_field :protein  , :size =>  2 %> </td>
+    <td> <%= f.text_field :fiber , :size => 2 %> </td>
+    <td> <%= f.text_field :carbs , :size => 2 %> </td>
+    <td> <%= f.text_field :fats , :size => 2 %> </td>
+    <td><%= f.text_field :comment, :size => 10 %> </td>
+</tr>
+</table>
+

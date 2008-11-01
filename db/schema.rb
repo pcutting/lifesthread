@@ -12,51 +12,51 @@
 ActiveRecord::Schema.define(:version => 20080803210555) do
 
   create_table "bps", :force => true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",     :limit => 11
     t.datetime "measured_on"
     t.string   "comment"
     t.boolean  "is_goal"
-    t.integer  "systolic"
-    t.integer  "diastolic"
+    t.integer  "systolic",    :limit => 11
+    t.integer  "diastolic",   :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "cholesterols", :force => true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",     :limit => 11
     t.datetime "measured_on"
     t.string   "comment"
     t.boolean  "is_goal"
-    t.integer  "hdl"
-    t.integer  "ldl"
+    t.integer  "hdl",         :limit => 11
+    t.integer  "ldl",         :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "exercises", :force => true do |t|
-    t.integer  "exercisable_id"
+    t.integer  "exercisable_id",   :limit => 11
     t.string   "exercisable_type"
     t.string   "style"
     t.string   "exercise"
-    t.integer  "length"
-    t.integer  "reps"
-    t.integer  "resistance"
-    t.string   "unit",             :default => "lb"
-    t.integer  "calories_burned"
-    t.integer  "intensity"
-    t.integer  "comfort_level"
+    t.integer  "length",           :limit => 11
+    t.integer  "reps",             :limit => 11
+    t.integer  "resistance",       :limit => 11
+    t.string   "unit",                           :default => "lb"
+    t.integer  "calories_burned",  :limit => 11
+    t.integer  "intensity",        :limit => 11
+    t.integer  "comfort_level",    :limit => 11
     t.boolean  "listable"
     t.string   "documentation_at"
-    t.integer  "author_id"
-    t.integer  "approved_by"
+    t.integer  "author_id",        :limit => 11
+    t.integer  "approved_by",      :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "fitness_plans", :force => true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",                 :limit => 11
     t.string   "label"
-    t.decimal  "time_length_for_workout"
+    t.integer  "time_length_for_workout", :limit => 10, :precision => 10, :scale => 0
     t.date     "start"
     t.date     "end"
     t.string   "your_why"
@@ -75,15 +75,15 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
   end
 
   create_table "foods", :force => true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",     :limit => 11
     t.string   "category"
     t.string   "subcategory"
     t.string   "name"
-    t.integer  "calories"
-    t.integer  "protein"
-    t.integer  "fiber"
-    t.integer  "carbs"
-    t.integer  "fats"
+    t.integer  "calories",    :limit => 11
+    t.integer  "protein",     :limit => 11
+    t.integer  "fiber",       :limit => 11
+    t.integer  "carbs",       :limit => 11
+    t.integer  "fats",        :limit => 11
     t.string   "meal"
     t.string   "comment"
     t.datetime "date"
@@ -92,7 +92,7 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
   end
 
   create_table "illness_histories", :force => true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",           :limit => 11
     t.string   "title"
     t.boolean  "has"
     t.boolean  "controlled"
@@ -105,41 +105,41 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
   end
 
   create_table "journals", :force => true do |t|
-    t.integer  "relationship_id"
+    t.integer  "relationship_id", :limit => 11
     t.string   "event"
     t.string   "description"
-    t.integer  "temperature"
-    t.integer  "comfort_zone"
-    t.integer  "satisfaction"
+    t.integer  "temperature",     :limit => 11
+    t.integer  "comfort_zone",    :limit => 11
+    t.integer  "satisfaction",    :limit => 11
     t.datetime "occurred_on"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "measurements", :force => true do |t|
-    t.integer  "user_id"
-    t.decimal  "weight"
-    t.integer  "resting_metabolism"
-    t.integer  "fat_percent"
-    t.integer  "muscle_percent"
-    t.integer  "visceral_fat"
-    t.integer  "water_percent"
-    t.decimal  "chest"
-    t.decimal  "neck"
-    t.decimal  "bicep"
-    t.decimal  "belly"
-    t.decimal  "hip"
-    t.decimal  "calf"
-    t.decimal  "thigh"
+    t.integer  "user_id",            :limit => 11
+    t.integer  "weight",             :limit => 10, :precision => 10, :scale => 0
+    t.integer  "resting_metabolism", :limit => 11
+    t.integer  "fat_percent",        :limit => 11
+    t.integer  "muscle_percent",     :limit => 11
+    t.integer  "visceral_fat",       :limit => 11
+    t.integer  "water_percent",      :limit => 11
+    t.integer  "chest",              :limit => 10, :precision => 10, :scale => 0
+    t.integer  "neck",               :limit => 10, :precision => 10, :scale => 0
+    t.integer  "bicep",              :limit => 10, :precision => 10, :scale => 0
+    t.integer  "belly",              :limit => 10, :precision => 10, :scale => 0
+    t.integer  "hip",                :limit => 10, :precision => 10, :scale => 0
+    t.integer  "calf",               :limit => 10, :precision => 10, :scale => 0
+    t.integer  "thigh",              :limit => 10, :precision => 10, :scale => 0
     t.datetime "measured_on"
     t.string   "comment"
-    t.boolean  "is_goal",            :default => false
+    t.boolean  "is_goal",                                                         :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "medical_histories", :force => true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",                  :limit => 11
     t.date     "approx_date"
     t.string   "hospital"
     t.string   "problem"
@@ -154,15 +154,15 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
   end
 
   create_table "medications", :force => true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",          :limit => 11
     t.string   "name"
-    t.integer  "strength"
+    t.integer  "strength",         :limit => 11
     t.string   "unit_type"
     t.date     "prescribed_start"
     t.date     "prescribed_end"
     t.date     "actual_start"
     t.date     "actual_stop"
-    t.integer  "dosage"
+    t.integer  "dosage",           :limit => 11
     t.string   "dosage_unit"
     t.string   "purpose"
     t.string   "result"
@@ -172,15 +172,15 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
   end
 
   create_table "opinions", :force => true do |t|
-    t.integer  "question_id"
-    t.integer  "user_id"
+    t.integer  "question_id", :limit => 11
+    t.integer  "user_id",     :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "permissions", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "authorized_user_id"
+    t.integer  "user_id",            :limit => 11
+    t.integer  "authorized_user_id", :limit => 11
     t.string   "role"
     t.string   "subject"
     t.datetime "created_at"
@@ -197,12 +197,12 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.string   "cell_phone"
     t.string   "phone"
     t.string   "work_phone"
-    t.integer  "height_inch"
+    t.integer  "height_inch",                     :limit => 11
     t.string   "body_shape"
     t.string   "sex"
     t.string   "race"
-    t.string   "rx_affiliate_no",                 :default => "NONE"
-    t.string   "sale_code",                       :default => "SELF"
+    t.string   "rx_affiliate_no",                               :default => "NONE"
+    t.string   "sale_code",                                     :default => "SELF"
     t.boolean  "terms_agreed"
     t.datetime "terms_agreed_on"
     t.string   "primary_care_physician"
@@ -218,7 +218,7 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.string   "emergency_state"
     t.string   "emergency_zip"
     t.boolean  "has_children"
-    t.integer  "number_of_children"
+    t.integer  "number_of_children",              :limit => 11
     t.string   "list_unusual_substance_exposure"
     t.string   "education"
     t.boolean  "smoker"
@@ -226,8 +226,8 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.string   "average_smoking"
     t.boolean  "non_smoker"
     t.boolean  "alcoholic"
-    t.integer  "ounces_alcohol_weekly"
-    t.integer  "user_id"
+    t.integer  "ounces_alcohol_weekly",           :limit => 11
+    t.integer  "user_id",                         :limit => 11
     t.text     "chart_options"
     t.text     "favorites"
     t.boolean  "is_pregnant"
@@ -236,12 +236,12 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.boolean  "is_menopause"
     t.date     "started_menopause"
     t.string   "blood_type"
-    t.integer  "user_priority",                   :default => 1
+    t.integer  "user_priority",                   :limit => 11, :default => 1
     t.string   "member_id"
     t.string   "super_member_id"
-    t.integer  "cache_current_weight",            :default => 0
-    t.integer  "cache_current_weight_goal",       :default => 0
-    t.datetime "cache_last_updated",              :default => '2008-09-01 18:54:58'
+    t.integer  "cache_current_weight",            :limit => 11, :default => 0
+    t.integer  "cache_current_weight_goal",       :limit => 11, :default => 0
+    t.datetime "cache_last_updated",                            :default => '2008-10-31 15:04:35'
     t.text     "unit_preferences"
     t.string   "sponsor_id"
     t.datetime "created_at"
@@ -249,16 +249,16 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
   end
 
   create_table "questions", :force => true do |t|
-    t.integer  "survey_id"
+    t.integer  "survey_id",  :limit => 11
     t.string   "statement"
-    t.integer  "points"
-    t.integer  "position"
+    t.integer  "points",     :limit => 11
+    t.integer  "position",   :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "relationships", :force => true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",           :limit => 11
     t.string   "relationship_type"
     t.string   "nick_name"
     t.date     "known_since"
@@ -268,7 +268,7 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
   end
 
   create_table "roles", :force => true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",    :limit => 11
     t.string   "has_role"
     t.string   "sub_roles"
     t.string   "conditions"
@@ -278,18 +278,18 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
   end
 
   create_table "samples", :force => true do |t|
-    t.integer  "count"
+    t.integer  "count",      :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "sleeps", :force => true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",          :limit => 11
     t.string   "slept_in"
     t.datetime "started_at"
     t.datetime "woke_up_at"
-    t.integer  "quality"
-    t.boolean  "interrupted",      :default => false
+    t.integer  "quality",          :limit => 11
+    t.boolean  "interrupted",                    :default => false
     t.string   "environment"
     t.string   "waken_by"
     t.string   "condition_awoken"
@@ -298,24 +298,24 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
   end
 
   create_table "stress_logs", :force => true do |t|
-    t.integer  "stress_id"
+    t.integer  "stress_id",            :limit => 11
     t.datetime "measured_on"
     t.string   "event"
     t.string   "description"
     t.string   "action_taken"
-    t.integer  "effect_on_life"
-    t.integer  "perceivable_progress"
+    t.integer  "effect_on_life",       :limit => 11
+    t.integer  "perceivable_progress", :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "stresses", :force => true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",                     :limit => 11
     t.string   "category"
     t.string   "title"
     t.date     "first_acknowledged"
-    t.integer  "initial_effect_on_life"
-    t.integer  "desired_effect_on_lifestyle"
+    t.integer  "initial_effect_on_life",      :limit => 11
+    t.integer  "desired_effect_on_lifestyle", :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -327,10 +327,10 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
   end
 
   create_table "support_dialogs", :force => true do |t|
-    t.integer  "support_id"
-    t.integer  "user_id"
+    t.integer  "support_id",       :limit => 11
+    t.integer  "user_id",          :limit => 11
     t.text     "note"
-    t.integer  "rate_helpfulness"
+    t.integer  "rate_helpfulness", :limit => 11
     t.boolean  "is_visible"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -338,7 +338,7 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
 
   create_table "supports", :force => true do |t|
     t.string   "title"
-    t.integer  "priority"
+    t.integer  "priority",         :limit => 11
     t.string   "category"
     t.string   "reference_page"
     t.text     "comment"
@@ -346,7 +346,7 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.datetime "resolved_on"
     t.boolean  "ok_to_contact"
     t.string   "contact_number"
-    t.integer  "user_id"
+    t.integer  "user_id",          :limit => 11
     t.boolean  "marked_closed"
     t.datetime "marked_closed_on"
     t.boolean  "reopen"
@@ -382,7 +382,7 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
   end
 
   create_table "workouts", :force => true do |t|
-    t.integer  "user_id"
+    t.integer  "user_id",     :limit => 11
     t.string   "title"
     t.date     "day"
     t.time     "start_time"
