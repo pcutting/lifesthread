@@ -115,7 +115,7 @@ display = "
 <div id='overview' style='width:600px;height:50px'></div>
 <p> Try zooming. Click and drag to select a zone.</p>
 
-<div id='placeholder' style='width:600px;height:500px;'></div>
+<div id='placeholder' style='width:600px;height:300px;'></div>
 
 </div>
 
