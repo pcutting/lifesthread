@@ -1,24 +1,10 @@
 class ChartsController < ApplicationController
 
-  class ChartItem
-    
-
-
-   
-  end
-
-  class Point
-    
-    def Point
-
-    end
-
-  end
 
 def index
+
   @chartoptions = current_user.profile.myChartOptions
 
-  puts "**charts_controller.rb ** #{@chartoptions} *"
   respond_to do |format|
     format.html # index.html.erb
   end

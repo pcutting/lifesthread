@@ -1,15 +1,15 @@
 class ChartsController < ApplicationController
 
-  public class ChartItem
+  class ChartItem
     
 
 
    
   end
 
-  public class Point
+  class Point
     
-    def Point()
+    def Point
 
     end
 
