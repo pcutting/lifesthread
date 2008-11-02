@@ -12,7 +12,7 @@
 <% @chartoptions = current_user.profile.chart_options %>
 <% myPlots("sleep") %>
 <%= makeChart %>
-
+<div class='span-24 last'>
 
 <table>
   <tr>
@@ -49,5 +49,5 @@
 <br />
 
 <%= link_to 'New sleep period', new_sleep_path %>
-
+</div>
 <% end %>

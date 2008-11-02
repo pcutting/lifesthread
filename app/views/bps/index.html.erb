@@ -12,7 +12,7 @@
 <% @chartoptions = current_user.profile.chart_options %>
 <% myPlots("bp") %>
 <%= makeChart %>
-
+<div class='span-24 last'>
 <hr />
 
 <%= render :partial => "new_inform" %>
@@ -50,6 +50,6 @@
 
 
 <br />
-
+</div>
 <% end %>
 

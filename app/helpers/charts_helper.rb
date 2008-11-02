@@ -109,9 +109,9 @@ end
 def makeChart(*options)
 
 display = "
-<div class='span-24 last header'>
+<div class='span-24 last'>
 
-<div class='span-15 center'>
+<div class='span-15'>
 <div id='overview' style='width:600px;height:50px'></div>
 <p> Try zooming. Click and drag to select a zone.</p>
 
@@ -120,16 +120,16 @@ display = "
 </div>
 
 
-<div class='span-2 center'><br/>
+<div class='span-1'><br/>
 </div>
 
 <div class='span-7 last'>
 <div id='legendholder' style='width:200px;height:1px;'></div>
 </div>
 
-</div>
-<script id='source' language='javascript' type='text/javascript'>
 
+<script id='source' language='javascript' type='text/javascript'>
+<div class='span-24 last'></div>
 
 $(function () {
 var options = {

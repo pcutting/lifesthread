@@ -4,7 +4,7 @@
 <% @chartoptions = current_user.profile.chart_options %>
 <% myPlots("stress") %>
 <%= makeChart %>
-
+<div class='span-24 last'>
 <table>
   <tr>
     <th>Category</th>
@@ -30,3 +30,5 @@
 <br />
 
 <%= link_to 'New sTressor', new_stress_path %>
+</div>
+
