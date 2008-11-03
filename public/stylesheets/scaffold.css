@@ -11,7 +11,6 @@ display: none;
 }
 
 body { 
-
   background-color: #69f;
   color: #333; 
   text-align: center;
@@ -30,7 +29,7 @@ div.header em{color: #0000DD }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   14px;
+  font-size:   18px;
   line-height: 18px;
 }
 
