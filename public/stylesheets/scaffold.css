@@ -11,6 +11,7 @@ display: none;
 }
 
 body { 
+
   background-color: #69f;
   color: #333; 
   text-align: center;
@@ -63,7 +64,9 @@ pre {
   font-size: 11px;
 }
 
-a { color: #000; }
+a { color: #000;
+text-decoration: none;
+ }
 a:visited { color: #666; }
 a:hover { color: #fff; background-color:#000; }
 
