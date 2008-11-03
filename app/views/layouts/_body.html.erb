@@ -10,7 +10,7 @@
 <em><a href="http://lifesthread.com/index.php?option=com_content&view=section&id=7&Itemid=59">GIVING THE GIFTS OF WELLNESS</em></a>
 </div>
 <div class="span-14 center">
-<h3><strong>Welcome to your Wellness Board,<br /><em><%=h current_user.first_name -%> <%= current_user.myroles %></em></strong> <%= yield :header %></h3>
+<h3>Welcome to your Wellness Board,</h3><h3><em><%=h current_user.first_name -%></em></h3><h4><%= current_user.myroles %><%= yield :header %></em></h4>
 </div>
 <div class="span-5 last keep_left">
 <%= link_to 'Support', new_support_path(:ref_page => request.url)   %>
