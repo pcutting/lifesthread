@@ -1,4 +1,10 @@
-<h1>Medical History</h1>
+
+<h3>Medical Event Timeline Repository</h3>
+
+<%= make_table %>
+<br />
+
+<h3>Medical History</h3>
 
 <table>
   <tr>
@@ -32,5 +38,33 @@
 </table>
 
 <br />
+<%= link_to 'New medical history', new_medical_history_path %>
+<br/>
+<h3>Illness Journal</h3>
 
-<%= link_to 'New medical_history', new_medical_history_path %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Has</th>
+    <th>Controlled</th>
+    <th>At risk</th>
+    <th>In family history</th>
+    <th>Concerned about</th>
+    <th>Comment</th>
+  </tr>
+
+<% for illness_history in @illness %>
+  <tr>
+    <td><%=h illness_history.title %></td>
+    <td><%=h illness_history.has %></td>
+    <td><%=h illness_history.controlled %></td>
+    <td><%=h illness_history.at_risk %></td>
+    <td><%=h illness_history.in_family_history %></td>
+    <td><%=h illness_history.concerned_about %></td>
+    <td><%=h illness_history.comment %></td>
+    <td><%= link_to 'Edit', edit_illness_history_path(illness_history) %></td>
+  </tr>
+<% end %>
+</table>
+<br/>
+<%= link_to 'New illness history', new_illness_history_path %>

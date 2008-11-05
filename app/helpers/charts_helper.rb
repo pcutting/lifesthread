@@ -1,4 +1,35 @@
 module ChartsHelper
+  class Calendar 
+    
+    attr_accessor :events
+    
+    def initialize
+      @events = Array.new
+    end
+  end
+  
+  class Event
+    attr_reader :date, :label, :summary 
+    attr_writer  :label, :summary
+    
+    def date 
+      @date.to_date
+    end
+    
+    def initialize
+      
+    end
+    
+    def initialize(date,label,summary)
+      @date = date.to_date
+      @label = label
+      @summary = summary
+    end
+    
+    def to_s
+      "#{@label}: #{@date} <br/>#{@summary}"
+    end
+  end
 
   class Point
     attr_accessor :x, :y
@@ -342,7 +373,7 @@ def getStresses
     
    
     for stress in @stresses
-      @set1 = ChartItem.new("")
+      @set1 = ChartItem.new("stress")
       @set1.addPoint(stress.first_acknowledged.to_time.to_i * 1000,  stress.initial_effect_on_life)
       for stress_log in stress.stress_logs
         @set1.addPoint(stress_log.measured_on.to_i * 1000, stress_log.effect_on_life) 
@@ -616,8 +647,86 @@ if @chartoptions[:measurements][0] || @chartoptions[:measurements][1] || @charto
 end # if @chartoptions[:measurments] 
 end #def getMeasurements
 
+###########################################
+# table generation.
+###########################################
 
-
+def make_table
+  #medical      #t.date :approx_date      #t.string :hospital      #t.string :problem      #t.string :treatment      #t.string :doctor      #t.string :city      #t.string :state      #t.string :dr_phone      #t.boolean :required_hospitalization
+  #illness      #t.string :title      #t.boolean :has      #t.boolean :controlled      #t.boolean :at_risk      #t.boolean :in_family_history      #t.boolean :concerned_about      #t.string :comment
   
+  @calendar = Calendar.new
+  counter = 0
+
+  unless @medical_histories.nil?
+    
+    for med in @medical_histories
+      counter += 1
+      @calendar.events.push(Event.new(med.approx_date.to_date, "H#{counter}" , "<em>Dr Name:</em>#{med.doctor} <em>Hospital:</em>#{med.hospital},<br/><em>Purpose:</em>#{med.problem}, <em>Hospitalization:</em>#{if med.required_hospitalization then 'Yes' else 'No' end}"))
+    end
+  end
+  
+  unless @illness.nil?
+    counter = 0
+    for ill in @illness
+      counter += 1
+      #i need to add a date field for this.
+      @calendar.events.push(Event.new(ill.created_at.to_date, "I#{counter}", "Condition:#{ill.title}, Controlled:#{if ill.controlled then 'Yes' else 'No' end}"))
+    end
+  end
+  
+  @calendar.events.sort! { |a,b| a.date <=> b.date }
+  
+  #if @calendar.events.size > 1 then
+  #  @calendar.events.sort! { |a,b| a.date <=> b.date } 
+  #end 
+  
+  table = "<br/><table>"
+  for event in @calendar.events
+     table += "<tr><td>#{event.label}</td><td>#{event.date}</td><td>#{event.summary}</td></tr>"
+  end 
+  table += "</table></br>"
+  
+  chart = "<table><tr>"
+  i = 0
+  column = 0
+  max_column = 20
+  cell_width = 600/ max_column
+  
+  while i < @calendar.events.size
+     
+    currentDate = @calendar.events[i].date
+    previousDate = currentDate if previousDate.nil?
+    
+    
+    chart += "<td width= #{cell_width}>"
+       
+      while i < @calendar.events.size && @calendar.events[i].date == currentDate
+        chart += @calendar.events[i].label + "<br/>"
+        i += 1
+      end #@calendar... == currentDate
+
+      
+    chart += "</td>"
+    column += 1
+    if column >=  max_column 
+      column = 0
+      chart += "</tr><tr><td colspan = #{ max_column }><div align = left>#{[previousDate]}</div><div align = right>#{@calendar.events[i].date}</div></td></tr><tr>"
+      previousDate = @calendar.events[i].date
+    end
+  end #while x< @cal...
+  
+  while column < max_column 
+    chart += "<td width = #{cell_width}></td>"
+    column += 1
+  end 
+  
+  chart += "</tr><tr><td colspan = #{ max_column }><div align = left>#{previousDate}</div><div align = right>#{@calendar.events.last.date}</div></td></tr><tr>"
+  chart += "</tr></table>"
+  
+  chart += "<br/>Summary<br/>" + table 
+  
+end
+ 
 end # ends helper
 
