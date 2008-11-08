@@ -3,13 +3,13 @@ class CreateMedications < ActiveRecord::Migration
     create_table :medications do |t|
       t.references :user
       t.string :name
-      t.integer :strength
+      t.decimal :strength
       t.string :unit_type
       t.date :prescribed_start
       t.date :prescribed_end
       t.date :actual_start
       t.date :actual_stop
-      t.integer :dosage
+      t.decimal :dosage
       t.string :dosage_unit
       t.string :purpose
       t.string :result

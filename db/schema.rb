@@ -99,6 +99,7 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.boolean  "at_risk"
     t.boolean  "in_family_history"
     t.boolean  "concerned_about"
+    t.datetime "measured_on"
     t.string   "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -129,6 +130,7 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.integer  "bicep",              :limit => 10, :precision => 10, :scale => 0
     t.integer  "belly",              :limit => 10, :precision => 10, :scale => 0
     t.integer  "hip",                :limit => 10, :precision => 10, :scale => 0
+    t.integer  "lowerhip",           :limit => 10, :precision => 10, :scale => 0
     t.integer  "calf",               :limit => 10, :precision => 10, :scale => 0
     t.integer  "thigh",              :limit => 10, :precision => 10, :scale => 0
     t.datetime "measured_on"
@@ -156,13 +158,13 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
   create_table "medications", :force => true do |t|
     t.integer  "user_id",          :limit => 11
     t.string   "name"
-    t.integer  "strength",         :limit => 11
+    t.integer  "strength",         :limit => 10, :precision => 10, :scale => 0
     t.string   "unit_type"
     t.date     "prescribed_start"
     t.date     "prescribed_end"
     t.date     "actual_start"
     t.date     "actual_stop"
-    t.integer  "dosage",           :limit => 11
+    t.integer  "dosage",           :limit => 10, :precision => 10, :scale => 0
     t.string   "dosage_unit"
     t.string   "purpose"
     t.string   "result"
@@ -241,7 +243,7 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.string   "super_member_id"
     t.integer  "cache_current_weight",            :limit => 11, :default => 0
     t.integer  "cache_current_weight_goal",       :limit => 11, :default => 0
-    t.datetime "cache_last_updated",                            :default => '2008-10-31 15:04:35'
+    t.datetime "cache_last_updated",                            :default => '2008-11-07 22:24:34'
     t.text     "unit_preferences"
     t.string   "sponsor_id"
     t.datetime "created_at"

@@ -131,11 +131,6 @@ module ChartsHelper
 # return html string
 #
 ####################
-def templateSliderBar
-
-end
-
-
 
 def makeChart(*options)
 
@@ -621,6 +616,8 @@ if @chartoptions[:measurements][0] || @chartoptions[:measurements][1] || @charto
 @chartable.add(@set7)
     end 
   end # if @chartoptions[:measurements][0]
+  
+  
   if @chartoptions[:measurements][1]
     if @chartoptions[:measurement_weight][1]
       @chartable.add(@set1Avg)

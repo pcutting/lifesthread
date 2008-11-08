@@ -8,6 +8,7 @@ class CreateIllnessHistories < ActiveRecord::Migration
       t.boolean :at_risk
       t.boolean :in_family_history
       t.boolean :concerned_about
+      t.datetime :measured_on
       t.string :comment
 
       t.timestamps

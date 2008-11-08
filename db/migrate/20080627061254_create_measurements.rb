@@ -13,6 +13,7 @@ class CreateMeasurements < ActiveRecord::Migration
       t.decimal :bicep
       t.decimal :belly
       t.decimal :hip
+      t.decimal :lowerhip
       t.decimal :calf
       t.decimal :thigh
       t.datetime :measured_on

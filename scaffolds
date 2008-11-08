@@ -1,3 +1,8 @@
+# :string, :text, :integer, :float, :decimal, :datetime, :timestamp, :time, :date, :binary, :boolean. 
+
+script/generate migration create_table_weight user:references weight:float isGoal:boolean :measured_on:dateTime comment:string
+
+
 script/generate scaffold Permission user:references authorized_user_id:integer role:string subject:string
 
 
