@@ -2,7 +2,8 @@ class Member::BaseController < ApplicationController
   
   before_filter :login_required
   before_filter :must_be_member
-  before_filter :load_member_conditions
+  layout "member"
+   before_filter :load_member_conditions
 
   
   def load_member_conditions

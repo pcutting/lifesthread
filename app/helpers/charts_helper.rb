@@ -135,9 +135,9 @@ module ChartsHelper
 def makeChart(*options)
 
 display = "
-<div class='span-24 last'>
+<div class='charts last'>
 
-<div class='span-15'>
+<div class='left'>
 <div id='overview' style='width:600px;height:50px'></div>
 <p> Try zooming. Click and drag to select a zone.</p>
 
@@ -146,12 +146,8 @@ display = "
 </div>
 
 
-<div class='span-1'><br/>
-</div>
+<div id='legendholder' class='right' style='width:200px;height:1px;'></div>
 
-<div class='span-7 last'>
-<div id='legendholder' style='width:200px;height:1px;'></div>
-</div>
 
 
 <script id='source' language='javascript' type='text/javascript'>

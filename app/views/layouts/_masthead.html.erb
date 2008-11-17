@@ -1,0 +1,14 @@
+<div class="masthead"> 
+<a class="giving" href="http://lifesthread.com/index.php?option=com_content&view=section&id=7&Itemid=59">Giving The Gifts Of Wellness</a>
+
+<div class="topNavigation">
+<%= render :partial => "/menus/master_tab_layout" %>
+</div>
+
+<div class="welcome" >
+<h3><em>Welcome to your Wellness Board,</em></h3>
+<h3><em><%= h current_user.first_name -%></em></h3>
+<h4><%= current_user.myroles -%></h4>
+<%= yield :header -%>
+</div>
+</div>

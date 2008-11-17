@@ -4,32 +4,149 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Welcome to your Wellnessboard <%= h current_user.first_name -%></title>
+  <title>Welcome to your Wellness Board <%= h current_user.first_name -%></title>
 
 <!--  blue print  -->
-<link rel="stylesheet" href="/stylesheets/blueprint/screen.css" type="text/css" media="screen, projection">
-<link rel="stylesheet" href="/stylesheets/blueprint/print.css" type="text/css" media="print"> &nbsp; &nbsp;
+<!--link rel="stylesheet" href="/stylesheets/blueprint/screen.css" type="text/css" media="screen, projection" -->
+<!--link rel="stylesheet" href="/stylesheets/blueprint/print.css" type="text/css" media="print" --> 
 <!--[if IE]><link rel="stylesheet" href="/stylesheets/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
  
 <%= dhtml_calendar_includes("blue") %>
-
-    <%= stylesheet_link_tag 'scaffold' %>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/clickmenu.css" />
+   
+    <%# = stylesheet_link_tag 'scaffold' %>
+    <!-- link rel="stylesheet" type="text/css" href="/stylesheets/clickmenu.css" / -->
 
   <!-- flot includes  -->
-    <!--[if IE]><script language="javascript" type="text/javascript" src="/javascripts/excanvas.pack.js"></script><![endif]-->
+    <!--[if list-style-image: none"IE]><script language="javascript" type="text/javascript" src="/javascripts/excanvas.pack.js"></script><![endif]-->
     <script language="javascript" type="text/javascript" src="/javascripts/jquery.js"></script>
     <script language="javascript" type="text/javascript" src="/javascripts/jquery.flot.pack.js"></script>
   <!-- end flot includes -->
-  <script language="javascript" type="text/javascript" src="/javascripts/jquery.clickmenu.v016/jquery.clickmenu.pack.js"></script>
+  <!-- script language="javascript" type="text/javascript" src="/javascripts/jquery.clickmenu.v016/jquery.clickmenu.pack.js"></script -->
 
 
-    <script language="javascript" >
-$(function() {
-  $('#menu').css("visibility","visible");
-});
+  <%# script language="javascript" >$(function() {  $('#menu').css("visibility","visible");});</script> %>
+  <%#  eventually put this into a nice css file!! %>
+  <style type="text/css">
+    html { 
+      background : #FFF; }
+    
+    body { 
+      border : 1px solid gray;
+      background :  #DCF1F4  ;  
+      width : 950px;
+      margin : 0 auto  0 auto;
+      padding : 3px 3px 3px 3px; 
+      font-family : sans-serif, Verdana;}
+      
+    .charts .left { float : left ; }
+    
+    .charts { overflow : auto; width :100% } 
+    
+    #legend  { float : right  ; }
+    .last { clear : both ; }
+    
+    .center { margin : 0 auto 0 auto ; }
+      
+    .layout { clear : both ; overflow : auto; }
+    
+    .footer { clear : both  ; margin : 1em auto 1em auto; position : fixed; bottom : 1em; } 
+        
+    .masthead { background : #CFC ; 
+      overflow : auto;
+      }
+ 
+    .masthead .giving { 
+      font-variant: small-caps;
+      float :left ; 
+      font-size : 1em; }
+      
+    .masthead .topNavigation {  
+      float : right;
+      font-size : 0.9em ;
+      margin-top : 0em;
+      }  
+      
+     
+    .menu { 
+      background-color : silver ;
+      background-image : url(/images/menubg.jpg);
+      background-repeat : repeat-x;  
+      clear : both ;
+      font-size : 0.9em;
+      margin : 0 0 0 0 ; }
+      
+    .menu li { 
+      display : inline ;  
+      border-right : 1px solid #000; 
+      padding : 0 1em 0 1em; }
+      
+    .menu li.last { border-right : 0; }
+      
+    .masthead .welcome { 
+      clear : left ;  
+      float: left ; }
+    
+    .content { clear : both ;}
+    
+    h6, h5, h4, h3, h2, h1 { margin : 0; font-variant: small-caps; }
+    
+    /*.dataEntry {
+      background: url(/images/data_entry.gif) ;
+      background-repeat:  no-repeat; 
+      background-attachment: relative;
+      background-position: center top;
+      } */
+      
+     div.dataEntry { margin-left : 2em;
+      margin-top : 1em; }
+     
+     div.viewCharts { margin-top : 1em; }
+     
+     img.dataEntry {  float : right; 
+      position : relative ;
+      margin : 0.7em 16em 0 0;
+      size : 70px; }
+       
+     img.viewCharts { float : right; 
+      position : relative ;
+      margin : 0.7em 5em 0 0;
+      size : 70px; }
+           
+    .left {  
+      float : left; width : 45%; margin-bottom : 3em;}
+      
+    .right {
+      float : right; width : 45%; margin-bottom : 3em; }
+     
+    ul { margin-top : 1em; }
+    
+    .noStyle li { 
+      margin-left : 0 ;
+      padding-left : 0 ;
+      list-style-image: url(/images/phils_arrow.png) ;
+      font-size : 1.25em;
+      }
+    
+    li.label { font-style : italic ;  font-weight :  bold; }
+    img { border : none ;
+      list-style : none; 
+      list-style-image : none;  }
+          
+    a {
+      color : #309;
+      font-weight:bold;
+      text-decoration:none;
+      }
+    
+    a:hover {
+      color:   #636  ;  // #808080;
+      text-decoration:underline;
+      }
+      
+    td { background : #fff ; }
 
-  </script>
-
+    th { border : 1px solid #FFF ; 
+    font-size : 0.9em; }
+  </style>
     
 </head>

@@ -3,6 +3,7 @@ class Admin::BaseController < ApplicationController
   before_filter :login_required
   before_filter :must_be_admin
   
+  layout "admin"
 protected #-----------------------------
 
   def must_be_admin

@@ -1,42 +1,29 @@
-<table>
-<tr>
-<td>
+<div class="dataEntry left center" >
 <%# data entry fields %>
-<center>
-<br/>
 <%# "img from http://www.famfamfam.com/lab/icons/silk/" %>
-<img src="/images/table_edit.png" /><br/>
-Data Entry<br/>
-<%= link_to '<img src="/images/sleep.resized.gif" />Sleep', sleeps_path( :view => "dataentry") %> <br/>
-<%= link_to '<img src="/images/heart.gif" />Blood Pressure', bps_path( :view => "dataentry") %> <br/>
-<%= link_to '<img src="/images/tapemeasure_mini.jpg" />Measurements', measurements_path( :view => "dataentry") %><br/>
-<%= link_to '<img src="/images/food.jpg" />Food', foods_path( :view => "dataentry") %> <br/><br/>
-<%= link_to 'New medical history', new_medical_history_path %><br/>
-<%= link_to 'New illness history', new_illness_history_path %><br/>
-<br/>
-<%= link_to "Quick entry" , root_path( :view => "dataentryboard") %> <br/>
+<img class="dataEntry" src="/images/data_entry.gif" width='70' />
+<h2>Data</h2><h2>Entry</h2>
+<ul class="noStyle">
+<li><%= link_to 'Blood Pressure', bps_path( :view => "dataentry") %> </li>
+<li><%= link_to 'Food', foods_path( :view => "dataentry") %> </li>
+<li><%= link_to 'Illness History', new_illness_history_path %></li>
+<li><%= link_to 'Measurements', measurements_path( :view => "dataentry") %></li>
+<li><%= link_to 'Medical History', new_medical_history_path %></li>
+<li><%= link_to 'Sleep', sleeps_path( :view => "dataentry") %> </li>
+<li><%= link_to "Quick Entry" , root_path( :view => "dataentryboard") %> </li>
+</ul>
+</div>
 
-</center>
-</td>
-<td>
+<div class="viewCharts right center">
 <%# Chart views %>
-<center>
-<img src="/images/chart.jpg"/><br/>
-Results Progress <br/>
-Charts/Summeries<br>
-<%= link_to '<img src="/images/sleep.resized.gif" />Sleep', sleeps_path %> <br/>
-<%= link_to '<img src="/images/heart.gif" />Blood Pressure', bps_path %> <br/>
-<%= link_to '<img src="/images/tapemeasure_mini.jpg" />Measurements', measurements_path %><br/>
-<%= link_to '<img src="/images/food.jpg" />Food', foods_path %><br/><br/>
-<%= link_to 'Medical History Repository', medical_histories_path   %>
-
-</center>
-</td>
-</tr>
-</table>
-
-
-
-
-
-
+<img class="viewCharts" src="/images/charts_coffee.jpg" width='90' />
+<h2>Results Progress</h2>
+<h2>Charts/Summeries</h2>
+<ul class="noStyle">
+<li><%= link_to 'Sleep', sleeps_path %> </li>
+<li><%= link_to 'Blood Pressure', bps_path %> </li>
+<li><%= link_to 'Measurements', measurements_path %></li>
+<li><%= link_to 'Food', foods_path %></li>
+<li><%= link_to 'Medical History Repository', medical_histories_path   %></li>
+</ul>
+</div>
