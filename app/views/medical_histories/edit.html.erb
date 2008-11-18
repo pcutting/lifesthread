@@ -9,10 +9,6 @@
 <th><%= f.label :hospital %></th>
 <th><%= f.label :problem %></th>
 <th><%= f.label :treatment %></th>
-<th><%= f.label :doctor %></th>
-<th><%= f.label :city %></th>
-<th><%= f.label :state %></th>
-<th><%= f.label :dr_phone %></th>
 <th><%= f.label :required_hospitalization %></th>
 </tr></tr>
 <td><%#= f.date_select :approx_date %>
@@ -28,19 +24,28 @@
          :showOthers => false,
          :cache => true } %>
 </td>
-<td><%= f.text_field :hospital %></td>
-<td><%= f.text_field :problem %></td>
-<td><%= f.text_field :treatment %></td>
-<td><%= f.text_field :doctor %></td>
-<td><%= f.text_field :city %></td>
-<td><%= f.text_field :state %></td>
-<td><%= f.text_field :dr_phone %></td>
+<td><%= f.text_field :hospital, :size => 10%></td>
+<td><%= f.text_field :problem, :size => 10%></td>
+<td><%= f.text_field :treatment, :size =>10 %></td>
+
 <td><%= f.check_box :required_hospitalization %></td>
 </tr>
 </table>
 
+<table>
+<th><%= f.label :doctor %></th>
+<th><%= f.label :dr_phone %></th>
+<th><%= f.label :city %></th>
+<th><%= f.label :state %></th>
+</tr><tr>
+<td><%= f.text_field :doctor , :size => 10%></td>
+<td><%= f.text_field :dr_phone, :size => 12 %></td>
+<td><%= f.text_field :city , :size => 10 %></td>
+<td><%= f.text_field :state, :size => 2 %></td>
+</tr></table>
+
+
 <%= f.submit "Update" %>
 <% end %>
+<br/>
 
-<%= link_to 'Show', @medical_history %> |
-<%= link_to 'Back', medical_histories_path %>
