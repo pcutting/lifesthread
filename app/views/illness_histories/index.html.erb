@@ -8,6 +8,7 @@
     <th>At risk</th>
     <th>In family history</th>
     <th>Concerned about</th>
+    <ht>Measured On</th>
     <th>Comment</th>
   </tr>
 
@@ -19,6 +20,7 @@
     <td><%=h illness_history.at_risk %></td>
     <td><%=h illness_history.in_family_history %></td>
     <td><%=h illness_history.concerned_about %></td>
+    <td><%=h illness_history.measured_on %></td>
     <td><%=h illness_history.comment %></td>
     <td><%= link_to 'Edit', edit_illness_history_path(illness_history) %></td>
   </tr>
@@ -27,4 +29,4 @@
 
 <br />
 
-<%= link_to 'New illness history', new_illness_history_path %>
+<%= link_to 'Add New Illness History Event', new_illness_history_path %>

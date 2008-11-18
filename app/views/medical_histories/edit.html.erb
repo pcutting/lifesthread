@@ -3,46 +3,43 @@
 <% form_for(@medical_history) do |f| %>
   <%= f.error_messages %>
 
+ 
+<table><tr>
+<th><%= f.label :approx_date %></th>
+<th><%= f.label :hospital %></th>
+<th><%= f.label :problem %></th>
+<th><%= f.label :treatment %></th>
+<th><%= f.label :doctor %></th>
+<th><%= f.label :city %></th>
+<th><%= f.label :state %></th>
+<th><%= f.label :dr_phone %></th>
+<th><%= f.label :required_hospitalization %></th>
+</tr></tr>
+<td><%#= f.date_select :approx_date %>
+<%= calendar_box :medical_history, :approx_date,
+       { :class => 'date',
+         :field_title => 'Measured on',
+         :button_title => 'Show calendar' ,
+          },
+       { :firstDay => 1,
+         :range => [1900, 2020],
+         :step => 1,
+         :showsTime => 1,
+         :showOthers => false,
+         :cache => true } %>
+</td>
+<td><%= f.text_field :hospital %></td>
+<td><%= f.text_field :problem %></td>
+<td><%= f.text_field :treatment %></td>
+<td><%= f.text_field :doctor %></td>
+<td><%= f.text_field :city %></td>
+<td><%= f.text_field :state %></td>
+<td><%= f.text_field :dr_phone %></td>
+<td><%= f.check_box :required_hospitalization %></td>
+</tr>
+</table>
 
-  <p>
-    <%= f.label :approx_date %><br />
-    <%= f.date_select :approx_date %>
-  </p>
-  <p>
-    <%= f.label :hospital %><br />
-    <%= f.text_field :hospital %>
-  </p>
-  <p>
-    <%= f.label :problem %><br />
-    <%= f.text_field :problem %>
-  </p>
-  <p>
-    <%= f.label :treatment %><br />
-    <%= f.text_field :treatment %>
-  </p>
-  <p>
-    <%= f.label :doctor %><br />
-    <%= f.text_field :doctor %>
-  </p>
-  <p>
-    <%= f.label :city %><br />
-    <%= f.text_field :city %>
-  </p>
-  <p>
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
-  </p>
-  <p>
-    <%= f.label :dr_phone %><br />
-    <%= f.text_field :dr_phone %>
-  </p>
-  <p>
-    <%= f.label :required_hospitalization %><br />
-    <%= f.check_box :required_hospitalization %>
-  </p>
-  <p>
-    <%= f.submit "Update" %>
-  </p>
+<%= f.submit "Update" %>
 <% end %>
 
 <%= link_to 'Show', @medical_history %> |

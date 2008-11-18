@@ -3,8 +3,35 @@
 <% form_for(@bp) do |f| %>
   <%= f.error_messages %>
 
-  <%= render :partial => "new" , :locals => {:f => f} %>
-
+<table>
+  <tr>
+    <th><%= f.label :systolic %></th>
+    <th><%= f.label :diastolic %> </th>
+    <th><%= f.label :measured_on %> </th>
+    <th><%= f.label :comment %></th>
+  </tr>
+  <tr>
+    <td><%= f.text_field :systolic, :size => 4  %></td>
+    <td><%= f.text_field :diastolic, :size => 4  %></td>
+    <td><%#= f.datetime_select :measured_on , :start_year => 1900  %>
+   
+         <%= calendar_box 'bp', 'measured_on',
+       { :class => 'date',
+         
+         :field_title => 'BP measured on',
+         :button_title => 'Show calendar' ,
+          },
+       { :firstDay => 1,
+         :range => [1900, 2015],
+         :step => 1,
+         :showsTime => 1,
+         :showOthers => true,
+         :cache => true } %>
+    
+    </td>
+    <td><%= f.text_field :comment %></td>
+  </tr>
+</table>
   <p>
     <%= f.submit "Update" %>
   </p>

@@ -664,7 +664,7 @@ def make_table
     for ill in @illness
       counter += 1
       #i need to add a date field for this.
-      @calendar.events.push(Event.new(ill.created_at.to_date, "I#{counter}", "Condition:#{ill.title}, Controlled:#{if ill.controlled then 'Yes' else 'No' end}"))
+      @calendar.events.push(Event.new(ill.measured_on.to_date, "I#{counter}", "Condition:#{ill.title}, Controlled:#{if ill.controlled then 'Yes' else 'No' end}"))
     end
   end
   
@@ -709,15 +709,15 @@ def make_table
     end
   end #while x< @cal...
   
-  while column < max_column 
-    chart += "<td width = #{cell_width}></td>"
-    column += 1
-  end 
+#  while column < max_column 
+#    chart += "<td width = #{cell_width}></td>"
+#    column += 1
+#  end 
   
   chart += "</tr><tr><td colspan = #{ max_column }><div align = left>#{previousDate}</div><div align = right>#{@calendar.events.last.date}</div></td></tr><tr>"
   chart += "</tr></table>"
   
-  chart += "<br/>Summary<br/>" + table 
+  chart += "<br/><h3>Summary</h3>[H = Hospital Medical Event, I = Illness History]<br/>" + table 
   
 end
  

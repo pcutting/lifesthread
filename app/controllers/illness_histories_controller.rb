@@ -45,7 +45,7 @@ class IllnessHistoriesController < ApplicationController
     respond_to do |format|
       if @illness_history.save
         flash[:notice] = 'IllnessHistory was successfully created.'
-        format.html { redirect_to(@illness_history) }
+        format.html { redirect_to(medical_histories_path) }
       else
         format.html { render :action => "new" }
       end
@@ -60,7 +60,7 @@ class IllnessHistoriesController < ApplicationController
     respond_to do |format|
       if @illness_history.update_attributes(params[:illness_history])
         flash[:notice] = 'IllnessHistory was successfully updated.'
-        format.html { redirect_to(@illness_history) }
+        format.html { redirect_to(medical_histories_path) }
       else
         format.html { render :action => "edit" }
       end
