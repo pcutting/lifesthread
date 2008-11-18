@@ -9,8 +9,8 @@ module ChartsHelper
   end
   
   class Event
-    attr_reader :date, :label, :summary 
-    attr_writer  :label, :summary
+    attr_reader :date, :label, :summary, :type 
+    attr_writer  :label, :summary, :type
     
     def date 
       @date.to_date
@@ -20,10 +20,11 @@ module ChartsHelper
       
     end
     
-    def initialize(date,label,summary)
+    def initialize(date,label,summary,type)
       @date = date.to_date
       @label = label
       @summary = summary
+      @type = type
     end
     
     def to_s
@@ -655,7 +656,7 @@ def make_table
     
     for med in @medical_histories
       counter += 1
-      @calendar.events.push(Event.new(med.approx_date.to_date, "H#{counter}" , "<em>Dr Name:</em>#{med.doctor} <em>Hospital:</em>#{med.hospital},<br/><em>Purpose:</em>#{med.problem}, <em>Hospitalization:</em>#{if med.required_hospitalization then 'Yes' else 'No' end}"))
+      @calendar.events.push(Event.new(med.approx_date.to_date, "H#{counter}" , "<em>Dr Name:</em>#{med.doctor} <em>Hospital:</em>#{med.hospital},<br/><em>Purpose:</em>#{med.problem}, <em>Hospitalization:</em>#{if med.required_hospitalization then 'Yes' else 'No' end}","H"))
     end
   end
   
@@ -664,7 +665,7 @@ def make_table
     for ill in @illness
       counter += 1
       #i need to add a date field for this.
-      @calendar.events.push(Event.new(ill.measured_on.to_date, "I#{counter}", "Condition:#{ill.title}, Controlled:#{if ill.controlled then 'Yes' else 'No' end}"))
+      @calendar.events.push(Event.new(ill.measured_on.to_date, "I#{counter}", "Condition:#{ill.title}, Controlled:#{if ill.controlled then 'Yes' else 'No' end}", "I"))
     end
   end
   
@@ -676,15 +677,21 @@ def make_table
   
   table = "<br/><table>"
   for event in @calendar.events
-     table += "<tr><td>#{event.label}</td><td>#{event.date}</td><td>#{event.summary}</td></tr>"
+     table += "<tr><td" 
+     if event.type == "H" then table += ' class="Hospital" '
+     elsif event.type == "I" then table += ' class="Illness" ' 
+     elsif event.type == "M" then table += ' class="Medication" '
+     end
+     
+     table += ">#{event.label}</td><td>#{event.date}</td><td>#{event.summary}</td></tr>"
   end 
   table += "</table></br>"
   
   chart = "<table><tr>"
   i = 0
   column = 0
-  max_column = 20
-  cell_width = 600/ max_column
+  max_column = 30
+  cell_width = 800/ max_column
   
   while i < @calendar.events.size
      
@@ -695,7 +702,14 @@ def make_table
     chart += "<td width= #{cell_width}>"
        
       while i < @calendar.events.size && @calendar.events[i].date == currentDate
-        chart += @calendar.events[i].label + "<br/>"
+        chart += '<table><tr><td'
+        
+        if @calendar.events[i].type == "H" then chart += ' class="Hospital" '
+         elsif @calendar.events[i].type == "I" then chart += ' class="Illness" ' 
+         elsif @calendar.events[i].type == "M" then chart += ' class="Medication" '
+        end
+     
+        chart += ">" +@calendar.events[i].label + "</td></tr></table><br/>"
         i += 1
       end #@calendar... == currentDate
 
