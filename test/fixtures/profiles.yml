@@ -29703,7 +29703,7 @@ five:
 z_user_<%= x %>:
   user: z_user_<%= x %>
   dob: <%= 1900 + rand(100)  %>-<%=  rand(11) + 1  %>-<%=  rand(26) + 1  %>
-  address1: <%= "#{rand(200)} #{streets[rand(streets.size - 1 )]}  #{street_type[rand(street_type.size - 1 )] }" %><%  zip_no = rand(zips.size - 1)   #["35016","AL","ARAB"],%>
+  address1: <%= "#{rand(200)} #{streets[rand(streets.size - 1 )]}  #{street_type[rand(street_type.size - 1 )] }" %><%  zip_no = rand(zips.size - 1) %>
   city: <%= zips[zip_no][2] %>
   state: <%= zips[zip_no][1] %>
   zip: <%= zips[zip_no][0] %>

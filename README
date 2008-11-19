@@ -1,4 +1,6 @@
 current db operations under user rails : work4you2
+ sudo rake db:migrate VERSION=0  RAILS_ENV=production
+ sudo rake db:migrate RAILS_ENV=production
 
 
 Learn how to set up new server.  notes started below: 
