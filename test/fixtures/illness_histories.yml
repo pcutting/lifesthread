@@ -9,6 +9,7 @@ one:
   in_family_history: true
   concerned_about: false
   comment: on grandparents (father) side
+  measured_on : 1995-10-1 10:12
 
 two:
   user: test
@@ -19,3 +20,4 @@ two:
   in_family_history: true
   concerned_about: true
   comment: grandfather
+  measured_on: 1999-7-1 21:12
