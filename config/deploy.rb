@@ -12,8 +12,9 @@ set :scm_passphrase, "wellnessboard" #This is your custom users password
 
 set :user, "deploy"
 set :password, "work4you2"
+set :use_sudo , true
 
-
+set :rails_env, 'production'
 
 set :runner , user
 #set :scm_command, "/bin/git" 
