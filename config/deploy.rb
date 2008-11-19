@@ -17,7 +17,8 @@ set :use_sudo , true
 set :rails_env, 'production'
 
 set :runner , user
-#set :scm_command, "/bin/git" 
+set :scm_command, "~/bin/git" 
+
 
 set :branch, "master"
 
