@@ -26,19 +26,19 @@ test:
 #  username: rails
 #  password: work4you2
 #  #socket: /var/lib/mysql/mysql.sock
-  adapter: mysql
-  encoding: utf8
-  database: lifesthread_test
-  username: root
-  password: sprint
-  socket: /var/lib/mysqld/mysqld.sock
+#  adapter: mysql
+#  encoding: utf8
+#  database: lifesthread_test
+#  username: root
+#  password: sprint
+#  socket: /var/lib/mysqld/mysqld.sock
+  
 production:
   adapter: postgresql
   encoding: utf8
   database: lifesthread_production
   username: rails 
   password: work4you2
-#  #socket: /var/lib/mysql/mysql.sock
 
  # adapter: mysql
  # encoding: utf8
