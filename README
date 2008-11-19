@@ -1,3 +1,14 @@
+current db operations under user rails : work4you2
+
+
+Learn how to set up new server.  notes started below: 
+
+
+
+
+
+
+
 database operations as user deploy.
 
 
@@ -92,7 +103,49 @@ $cd git...(into the git folder)
 $ make
 $ make  install
 
-sudo gem install rack --source http://chneukirchen.org/releases/gems/
+$sudo gem install rack --source http://chneukirchen.org/releases/gems/
 
 
+----------------------------------------
+Please edit your Apache configuration file, and add these lines:
+
+   LoadModule passenger_module /home/deploy/packages/passenger-2.0.3/ext/apache2/mod_passenger.so
+   PassengerRoot /home/deploy/packages/passenger-2.0.3
+   PassengerRuby /usr/local/bin/ruby
+
+After you restart Apache, you are ready to deploy any number of Ruby on Rails
+applications on Apache, without any further Ruby on Rails-specific
+configuration!
+
+--------------------------------------------
+Deploying a Ruby on Rails application: an example
+
+Suppose you have a Ruby on Rails application in /somewhere. Add a virtual host
+to your Apache configuration file, and set its DocumentRoot to
+/somewhere/public, like this:
+
+   <VirtualHost *:80>
+      ServerName www.yourhost.com
+      DocumentRoot /somewhere/public
+   </VirtualHost>
+
+And that's it! You may also want to check the Users Guide for security and
+optimization tips and other useful information:
+
+  /home/deploy/packages/passenger-2.0.3/doc/Users guide.html
+
+Enjoy Phusion Passenger, a product of Phusion (www.phusion.nl) :-)
+http://www.modrails.com/
+
+
+[deploy@16737_1_8927_50310 packages]$ sudo find / -name "httpd.h"
+/usr/include/apache/httpd.h
+
+
+
+
+   <VirtualHost *:80>
+      ServerName www.lifesthread.com
+      DocumentRoot /var/www/rails_apps/lifesthread/current/public
+   </VirtualHost>
  

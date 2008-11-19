@@ -1,6 +1,6 @@
 set :application, "lifesthread"
 #set :domain, "208.113.123.94"  #set :domain, "208.113.123.93"
-set :domain, "208.113.123.91"  #set :domain, "208.113.123.93"
+set :domain, "208.113.123.93"  #set :domain, "208.113.123.93"
 
 ## http://github.com/guides/deploying-with-capistrano
 
@@ -12,12 +12,12 @@ set :scm_passphrase, "wellnessboard" #This is your custom users password
 
 set :user, "deploy"
 set :password, "work4you2"
-set :use_sudo , true
+#set :use_sudo , true
 
 set :rails_env, 'production'
 
 set :runner , user
-set :scm_command, "~/bin/git" 
+#set :scm_command, "/home/deploy/bin/git" 
 
 
 set :branch, "master"
