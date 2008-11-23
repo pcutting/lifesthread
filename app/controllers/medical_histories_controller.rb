@@ -4,8 +4,8 @@ class MedicalHistoriesController < ApplicationController
   # GET /medical_histories
   # GET /medical_histories.xml
   def index
-    @medical_histories = current_user.medical_histories.find(:all)
-    @illness = current_user.illness_histories.find(:all)
+    @medical_histories = current_user.medical_histories.find(:all, :order => :approx_date)
+    @illness = current_user.illness_histories.find(:all, :order => :measured_on)
     
     respond_to do |format|
       format.html # index.html.erb
