@@ -6,18 +6,20 @@ unless logged_in? then
   redirect_to(login_path)
 else
 
-   if current_user.profile.dob.nil? then
+   if current_user.profile.blank? || current_user.profile.dob.nil? then
       flash[:notice] = "Please fill out your profile so that we can start to build your lifes thread. Thank you!"
       redirect_to(edit_profile_path(:fieldset => "welcome"))
+   elsif (params[:view] == "dataentryboard" ) 
+      @profile = current_user.profile
+      @bp = Bp.new
+      @measurement = Measurement.new
+      @food = Food.new
+      @opinion = Opinion.new
+      @sleep = Sleep.new 
    else
-   @profile = current_user.profile
 
-    end # if current_user.profile.dob.nil?
-  @bp = Bp.new
-  @measurement = Measurement.new
-  @food = Food.new
-  @opinion = Opinion.new
-  @sleep = Sleep.new 
+   end # if current_user.profile.dob.nil?
+
   end
   
 end
