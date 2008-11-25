@@ -1,7 +1,7 @@
 /*div.menu{
 visibility: hidden;
 }*/
-
+/*
 #menu{
 visibility: hidden;
 }
@@ -14,7 +14,6 @@ body {
   background-color: #69f;
   color: #333; 
   text-align: center;
- /* width: 900px; */
   }
  
  h1, h2, h3, h4, h5 {
@@ -42,10 +41,10 @@ table {
   margin-left: auto;
   margin-right: auto;
   border-color: #600;
- /* border: 1px solid;
+  border: 1px solid;
   border-style: solid;
   border-collapse: collapse;
-  font-size: 13px;  */
+  font-size: 13px;
 }
 
 th {
@@ -79,6 +78,8 @@ a:hover { color: #fff; background-color:#000; }
   background-color: red;
   display: table;
 }
+*/
+
 
 #errorExplanation {
   width: 400px;

@@ -14,7 +14,7 @@
 </tr>
 <tr>
     <td colspan = 3> <%= f.date_select :date %> </td>
-       <td><%= f.select :meal, ["Pre-breakfast", "Breakfast", "Mid-morning" , "Lunch", "Mid-afternoon", "Dinner", "Late"],:size => 6 %></td>
+       <td><%= f.select :meal, ["Breakfast", "Mid-morning" , "Lunch", "Mid-afternoon", "Dinner", "Late"],:size => 6 %></td>
     <td> <%= f.select :category, ["Grain", "Vegetable", "Fruit", "Dairy", "Meat/Protein", "Fats/Sweets"],:size => 6 %></td>
     <td><%= f.text_field :name  , :size => 6 %></td>
     <td> <%= f.text_field :calories  , :size => 5 %> </td>

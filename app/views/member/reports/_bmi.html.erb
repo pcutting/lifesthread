@@ -1,48 +1,54 @@
-<div class='keep_left' >
-
-<% summery = Array.new %>
-<% details = Array.new %>
-
-<% by_ages = Array.new %>
-<% for ages in @age_group do %>
-
-    <% weight_sum = ages[1].sum(:cache_current_weight) %>
-    <% age_count = ages[1].count(:conditions => 'cache_current_weight > 0') %>
-    <% height_sum = ages[1].sum(:height_inch) %>
+<div class='last' >
+<hr />
+<% summery = Array.new -%>
+<% details = Array.new -%>
 
 
-    <% bmi = (( (weight_sum/age_count.to_f)/( (height_sum/age_count) * (height_sum/age_count).to_f))* 703).to_i  %>
+<% by_ages = Array.new -%>
+<% for ages in @age_group do -%>
 
-    <% by_ages << bmi # make this list to get the average for the age group %>
-
-    <% summery << "There are #{ages[1].count} people in the #{ages[0]} yrs old group.  #{age_count} have entered a weight.  The avg BMI for this group is #{bmi}."  %>
-  <% details << [ages[0], bmi ] %>
-<% end %>
+    <% weight_sum = ages[1].sum(:cache_current_weight) -%>
+    <% age_count = ages[1].count(:conditions => 'cache_current_weight > 0') -%>
+    <% height_sum = ages[1].sum(:height_inch) -%>
 
 
-<% points = Array.new %>
-<% details.each{ |x| points << x[1] } %> 
-<% label_ages = Array.new %>
-<% @age_group.each{|x| label_ages << x[0].to_s} %>
+    <% bmi = (( (weight_sum/age_count.to_f)/( (height_sum/age_count) * (height_sum/age_count).to_f))* 703).to_i unless (age_count <= 0) -%>
 
-<div class='report' class='chart' >
+    <% by_ages << bmi # make this list to get the average for the age group -%>
+
+<% summery << "<tr><td>#{ages[1].count}</td><td>#{ages[0]}</td><td>#{age_count}</td><td>#{bmi}</td></tr>"  -%>
+<% summery_header = "<tr><th>Users</th><th>Age Range</th><th># Entered Weight</th><th>Avg BMI</th></tr>"%>
+    <%# summery << "#{ages[1].count} users are #{ages[0]} yrs old. #{age_count} have entered a weight. The avg BMI is #{bmi}."  -%>
+  <% details << [ages[0], bmi ] -%>
+<% end -%>
+
+
+
+<% points = Array.new -%>
+<% details.each{ |x| points << x[1] } -%> 
+<% label_ages = Array.new -%>
+<% @age_group.each{|x| label_ages << x[0].to_s} -%>
+
+<div class='left chart' >
 <% link = "http://chart.apis.google.com/chart?cht=bhs&
 chtt=BMI+Per+Age+Group&
 chco=4d89f9|ff0000&
-chs=600x400&
+chs=475x400&
 chg=2.5,50&
 chxt=x,y&
 chxl=
 0:|0|10|20|30|40|50|60|70|80|90|100|
 1:|#{label_ages.reverse.join("|")}&
-chd=t:#{points.join(",")}" %>
+chd=t:#{points.join(",")}" -%>
 
 
 
-<%= image_tag(link) %> 
-
-<br /> 
-<%= summery.join(" <br />\n") %>
-
+<%= image_tag(link) -%> 
+</div>
+<div class="right" >
+<table><%= summery_header -%>
+<%= summery.join(" <br />\n") -%>
+</table>
+</div>
 
 </div>

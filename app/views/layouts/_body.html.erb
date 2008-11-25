@@ -4,7 +4,7 @@
 
 <div class="content">
 <%= render :partial => "/menus/vip" %><%# = Time.zone.now.to_s(:short) -%>
-<div class="notice"><%= '<p style="color: green">' +flash[:notice]+ ' </p>' unless flash[:notice].nil?  -%></div>
+<%= '<p style="color: green" class="notice">' + flash[:notice] + ' </p>' unless flash[:notice].nil?  -%>
 
 <div class="layout"><%= yield :layout %></div>
 </div>

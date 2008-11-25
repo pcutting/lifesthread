@@ -1,23 +1,23 @@
 
-<div class='span-24 last keep_left' >
+<div class='last' >
 <hr />
-<% table_labels = Array.new %>
-<% table_details = Array.new %>
-<% details = Array.new %>
-<% details << "By Age group:<br />" %>
+<% table_labels = Array.new -%>
+<% table_details = Array.new -%>
+<% details = Array.new -%>
+<% details << "By Age group:<br />" -%>
 
 
 <% data_set_bottom , data_set_top,axisx = Array.new, Array.new , Array.new 
- count = 0 %>
+ count = 0 -%>
  
-<% for ages in @age_group do %>
-  <% details << "There are #{ages[1].count} (#{per_population = ((ages[1].count.to_f / @profiles.size) * 100).to_i}%) of #{@profiles.size} users in the age group of \"#{ ages[0].to_s}\" yrs. #{ages[1].with_sex("F").count} (#{ per_female = (( ages[1].with_sex("F").count / ages[1].count.to_f ) * 100).to_i }%) are women and #{ages[1].with_sex("m").count} (#{per_male = (( ages[1].with_sex("m").count / ages[1].count.to_f ) * 100).to_i}%) are men.<br />" %> 
-  <% table_header = "Details for the #{@profiles.size} users below." %>
-  <% table_labels = ["#Users","Pop%","Age Range", "F","%","M","%" ] %>
+<% for ages in @age_group do -%>
+  <% details << "There are #{ages[1].count} (#{per_population = ((ages[1].count.to_f / @profiles.size) * 100).to_i}%) of #{@profiles.size} users in the age group of \"#{ ages[0].to_s}\" yrs. #{ages[1].with_sex("F").count} (#{ per_female = (( ages[1].with_sex("F").count / ages[1].count.to_f ) * 100).to_i }%) are women and #{ages[1].with_sex("m").count} (#{per_male = (( ages[1].with_sex("m").count / ages[1].count.to_f ) * 100).to_i}%) are men.<br />" -%> 
+  <% table_header = "Details for the #{@profiles.size} users below." -%>
+  <% table_labels = ["#Users","Pop%","Age Range", "F","%","M","%" ] -%>
   <% table_details <<  [ages[1].count,per_population,ages[0].to_s,ages[1].with_sex("F").count,per_female,ages[1].with_sex("m").count,per_male]
   
   
-   %> 
+   -%> 
  
   <%
   axisx << ages[0].to_s
@@ -25,9 +25,9 @@
   #data_set_top << (per_female * ((100 - per_population) / 100.0) ) + (per_male * ((100 - per_population) / 100.0) )
   data_set_bottom << (per_female.nil? ? 0 : per_female  ) 
   data_set_top << (per_female.nil? ? 0 : per_female) + (per_male.nil? ? 0 : per_male)
-  %>
+  -%>
 
-<% end %>
+<% end -%>
 
 <%
 
@@ -66,13 +66,10 @@ end
 
  if axis_x_sub.ends_with?("|") then axis_x_sub= axis_x_sub.to(axis_x_sub.size - 2 ) end
  if axis_x_top.ends_with?("|") then axis_x_top = axis_x_top.to(axis_x_top.size - 2 ) end
-
 %>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 
-<br />
-
-<div class='span-11 report chart' >
+<div class='left report chart' >
+<div class='bottomBorder'>
 <%= image_tag( 
 "http://chart.apis.google.com/chart?
 cht=bvs&
@@ -86,42 +83,34 @@ chxl=
 2:|Women|Men|
 3:|#{axis_x_sub}|             
 4:|AGE&
-chs=450x150&
-chd=t:#{bottom}|#{top}") %> 
-
-
-<br />Mini Summery:<br />
-
-<%= minitable(table_header, table_labels,table_details) %>
-
-
-
+chs=500x150&
+chd=t:#{bottom}|#{top}") -%>
 </div>
 
-<div class='span-13 last report chart' >
-<div class='report chart' >
+<div class="bottomBorder">
 <%= image_tag(
 "http://chart.apis.google.com/chart?cht=p3&
 chtt=Distribution+of+women+by+age+group&
 chco=4d89f9,ccff00,ff0000&
 chs=500x250&
 chl=#{axisx.join("+yrs|")}+yrs&
-chd=t:#{data_set_bottom.join(",")}") %> 
+chd=t:#{data_set_bottom.join(",")}") -%> 
 </div>
 
-<div class='report' class='chart' >
+<div>
 <%= image_tag(
 "http://chart.apis.google.com/chart?cht=p3&
 chtt=Distribution+of+men+by+age+group&
 chco=4d89f9,ccff00,ff0000&
 chs=500x250&
 chl=#{axisx.join("+yrs|")}+yrs&
-chd=t:#{data_set_top.join(",")}") %> 
+chd=t:#{data_set_top.join(",")}") -%> 
 </div>
 </div>
-<div class = "span-24 last">
 
-<%= details %>
-
+<div class="right summery">
+<br />Mini Summery:<br />
+<%= minitable(table_header, table_labels,table_details) -%>
 </div>
+
 </div>

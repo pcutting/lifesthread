@@ -1,45 +1,50 @@
-<div class='keep_left' >
-
-<% summery = Array.new %>
-<% details = Array.new %>
-
-<% by_ages = Array.new %>
-<% for ages in @age_group do %>
-<% weight_sum = ages[1].sum(:cache_current_weight) %>
-<% weight_count = ages[1].count(:conditions => 'cache_current_weight > 0') %>
-<% goal_sum = ages[1].sum(:cache_current_weight_goal) %>
-<% weight_goal_count = ages[1].count(:conditions => 'cache_current_weight_goal > 0') %>
-<% goal_completion = 100 - (( (weight_sum - goal_sum).abs / weight_sum.to_f ) * 100)  rescue goal_completion = 0 %>
-<% by_ages << goal_completion # make this list to get the average for the age group %>
-<% summery << "#{ages[1].count} people are #{ages[0]} yrs old. #{weight_count} entered weight & #{weight_goal_count} entered goals. Avg completion is #{goal_completion.round_with_precision(2)}%."  %>
-<% details << [ages[0], goal_completion ] %>
-<% end %>
+<div class='last' >
+<hr />
+<% summery = Array.new -%>
+<% details = Array.new -%>
 
 
-<% points = Array.new %>
-<% details.each{ |x| points << x[1] } %> 
-<% label_ages = Array.new %>
-<% @age_group.each{|x| label_ages << x[0].to_s} %>
+<% by_ages = Array.new -%>
+<% for ages in @age_group do -%>
+<% weight_sum = ages[1].sum(:cache_current_weight) -%>
+<% weight_count = ages[1].count(:conditions => 'cache_current_weight > 0') -%>
+<% goal_sum = ages[1].sum(:cache_current_weight_goal) -%>
+<% weight_goal_count = ages[1].count(:conditions => 'cache_current_weight_goal > 0') -%>
+<% goal_completion = 100 - (( (weight_sum - goal_sum).abs / weight_sum.to_f ) * 100)  rescue goal_completion = 0 -%>
+<% by_ages << goal_completion # make this list to get the average for the age group -%>
 
-<div class='report' class='chart' >
+<% summery.push "<tr><td> #{ ages[1].count } </td><td> #{ ages[0] } </td><td> #{ weight_count } </td><td> #{ weight_goal_count } </td><td> #{ if (ages[1].count > 0) then (goal_completion.round_with_precision(2).to_s + "%") else "0%" end } </td></tr>" -%>
+<% details << [ages[0], goal_completion ] -%>
+<% end -%>
+
+
+<% points = Array.new -%>
+<% details.each{ |x| points << x[1] } -%> 
+<% label_ages = Array.new -%>
+<% @age_group.each{|x| label_ages << x[0].to_s} -%>
+
+<div class='left chart' >
 <% link = "http://chart.apis.google.com/chart?cht=bhs&
-chtt=Goal+Accomplishment+Per+Age+Group&
+chtt=Goal+Accomplishment&
 chco=4d89f9|ff0000&
-chs=600x400&
+chs=500x400&
 chg=5,50&
 chxt=x,y&
 chxl=
 0:|0%|25%|50%|75%|100%|
 1:|#{label_ages.reverse.join("|")}&
-chd=t:#{points.join(",")}" %>
+chd=t:#{points.join(",")}" -%>
 
 
 
-<%= image_tag(link) %> 
+<%= image_tag(link) -%> 
+</div>
+<div class="right"
+<table class='summery'>
+<tr><th># of People in age group</th><th>Age Range</th><th># Recorded weight</th><th># Set Goals</th><th>% Completion</th>
 
-<br />
-
-<%= summery.join("<br /> \n") %>
-
+<%= summery.join("\n") -%>
+</table>
+</div>
 
 </div>
