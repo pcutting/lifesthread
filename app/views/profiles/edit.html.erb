@@ -1,4 +1,4 @@
-<h1>Editing profile</h1>
+<h1>Edit profile</h1>
 
 <% form_for(current_user.profile, :url => profile_path) do |f| %>
   <%= f.error_messages %>
@@ -40,6 +40,8 @@
     <%= render :partial => "welcome" , :locals => { :f => f } %>
   <% end %>
 
+  <%= render ( :partial => "terms" , :locals => { :f => f }) unless current_user.profile.terms_agreed %>
+
 <% else %>
 
 
@@ -56,5 +58,3 @@
   </p>
 <% end %>
   
-
-<%= link_to 'Back', profile_path %>

@@ -5,29 +5,35 @@ color: #981793;
 padding:1px
 }
 
+.left  { float : left ; width :30% ; }
+.right, #login, #password { float : right ; width : 60% ; }
 
-div#option{
-text-align: left;
-background:#FFFF70;
-border: 1px groove;
-}
-
-div#footer{
-background: #333;
-/*color: #FFF */
-}
-
-
-
-
-body { 
- background-color: #99ccff;
- color: #333; 
- text-align: center;
- width: 950px;
+html { 
+ background: url(/images/lifesthread.jpg) repeat-y top ; 
   }
-  
-  
+body {
+  size : 800px;
+  margin :  0 auto 0 auto;
+ }  
+ 
+  .last  { clear : both ;}
+  span { background-color : #1FF ; }
+
+  .button { position : relative ; left : 50%; }
+ 
+ .loginBox {  
+  position : absolute;
+  left : 40%;
+  top : 40%;
+  }
+/*      body { 
+      border : 1px solid gray;
+      background :  #DCF1F4  ;  
+      width : 950px;
+      margin : 0 auto  0 auto;
+      padding : 3px 3px 3px 3px; 
+      font-family : sans-serif, Verdana;}
+  */
 
 
 body, p, ol, ul, td {

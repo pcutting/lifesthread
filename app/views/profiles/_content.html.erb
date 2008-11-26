@@ -1,47 +1,24 @@
-<table>
-<tr>
-<td colspan = 2>
 
+
+
+
+
+<div class="left">
 <%= render :partial => "required" , :locals => { :f => f } %>
-</td>
-</tr>
-<tr>
-<td>
-
 <%= render :partial => "address" , :locals => { :f => f } %>
+<%= render :partial => "personal_details" , :locals => { :f => f } %>
+</div>
+
+<div class='right'>
 <%= render :partial => "ethnicity" , :locals => { :f => f } %>
 <%= render :partial => "contact" , :locals => { :f => f } %>
-
-
-</td>
-<td>
-<%= render :partial => "personal_details" , :locals => { :f => f } %>
 <%= render :partial => "substance_usage" , :locals => { :f => f } %>
-
-</td>
-<td>
-
-
-<% #= render :partial => "womens_concerns" , :locals => { :f => f }  if current_user.profile.sex = "female" %>
 <%= render :partial => "emergency_contact" , :locals => { :f => f } %>
-<% #= render :partial => "" , :locals => { :f => f } %>
+</div>
 
-
-
-</td>
-
-</tr>
-<tr>
-<td colspan=2>
+<div class="last">
 
 <%= render ( :partial => "terms" , :locals => { :f => f }) unless current_user.profile.terms_agreed %>
-
-
-</td>
-</tr>
-</table>
-
-
-
+</div>
   
 

@@ -1,9 +1,8 @@
 <h2>Your Personal Wellness Profile Summary</h2>
-<h2><%= link_to 'Go to your Wellness Board', home_path %></h2><br>
-<%= link_to 'Edit Your Profile Details', edit_profile_path %> 
 
-<br />
-<br />
+<%= render :partial => "terms_mini" unless current_user.profile.terms_agreed %>
+  
+
 
 <table>
 <tr>
@@ -24,6 +23,8 @@
 <%= render :partial => "emergency_contact_view"   %>
 
 </td>
-</td>
+</tr>
 </table>
+
+
 

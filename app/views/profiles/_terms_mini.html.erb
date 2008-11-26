@@ -1,0 +1,12 @@
+<div class='last'>
+Please read and agree to the terms below to continue. Thank you.<br/>
+<% form_for(current_user.profile, :url => profile_path) do |f| %>
+  <%= f.error_messages %>
+  <%= render ( :partial => "terms" , :locals => { :f => f }) %>
+  
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>  
+</div>
+

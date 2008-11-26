@@ -45,6 +45,11 @@ class ProfilesController < ApplicationController
 
     respond_to do |format|
       if @profile.save
+        if @profile.terms_agreed != true 
+        
+          format.html { render :action => "update" }
+        
+        end
         flash[:notice] = 'Profile was successfully created.'
         format.html { redirect_to(@profile) }
         

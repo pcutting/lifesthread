@@ -1,9 +1,5 @@
   
 <fieldset><legend>Substance Use and Exposure: <%= link_to "Edit" , edit_profile_path( :fieldset => "substance") %></legend>
-  <!-- p>
-   List unusual substance exposure: <!-- was a br -->
-    <% #= @profile.list_unusual_substance_exposure.capitalize %>
-  </p  -->
   <p>
    Smoked tobacco regularly within the last 10 years: <!-- was a br -->
     <%= if @profile.smoker then "Yes" else "No" end %>

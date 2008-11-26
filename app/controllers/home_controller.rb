@@ -9,6 +9,9 @@ else
    if current_user.profile.blank? || current_user.profile.dob.nil? then
       flash[:notice] = "Please fill out your profile so that we can start to build your lifes thread. Thank you!"
       redirect_to(edit_profile_path(:fieldset => "welcome"))
+   elsif (current_user.profile.terms_agreed != true)
+      flash[:notice] = "Please read terms and conditions."
+      redirect_to(edit_profile_path)
    elsif (params[:view] == "dataentryboard" ) 
       @profile = current_user.profile
       @bp = Bp.new
