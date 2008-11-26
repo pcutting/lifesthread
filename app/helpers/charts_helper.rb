@@ -163,8 +163,8 @@ var options = {
       show: false,
       //labelFormatter: null,
       //labelBoxBorderColor: color,
-      noColumns: 2,
-      position: 'sw'   // 'ne' or 'nw' or 'se' or 'sw'
+      //noColumns: 2,
+      //position: 'sw'   // 'ne' or 'nw' or 'se' or 'sw'
       //margin: number of pixels
       //backgroundColor: null or color
       //backgroundOpacity: number in 0.0 - 1.0
@@ -180,8 +180,8 @@ var options = {
       show: false,
       //labelFormatter: null,
       //labelBoxBorderColor: color,
-      noColumns: 2,
-      position: 'sw'   // 'ne' or 'nw' or 'se' or 'sw'
+      //noColumns: 2,
+      //position: 'sw'   // 'ne' or 'nw' or 'se' or 'sw'
       //margin: number of pixels
       //backgroundColor: null or color
       //backgroundOpacity: number in 0.0 - 1.0
@@ -189,40 +189,9 @@ var options = {
 }
 };
 
-  var options_legend = {
-  xaxis: { mode: 'time' },
-  selection: { mode: 'x' },
-  //grid: { coloredAreas: weekendAreas },
-  legend: {
-      show: true,
-      //labelFormatter: null,
-      //labelBoxBorderColor: color,
-      noColumns:2,
-      position: 'ne',   // 'ne' or 'nw' or 'se' or 'sw'
-      //margin: number of pixels
-      //backgroundColor: null or color
-      //backgroundOpacity: number in 0.0 - 1.0
-      container: null // or jQuery object
-}
-};
-
 var plot = $.plot($('#placeholder'), 
 [  #{@chartable.to_chart } ], options);
 
-
-var legendplot = $.plot($('#legendholder'), 
-[  #{@chartable.showLabel} ],
-{ lines: { show: false },
-  shadowSize: 0,
-  legend: {
-      show: true,
-      position: 'ne',
-       },
-  xaxis: { ticks: 0, mode: 'time' },
-  yaxis: { ticks: 0}, //, min: 0, max: 4000 },
-  selection: { mode: 'x' }
-  }
-);
 
 var overview = $.plot($('#overview'), 
 [  #{@chartable.to_chart}], 
