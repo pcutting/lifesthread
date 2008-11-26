@@ -4,14 +4,13 @@ display:inline;
 color: #981793; 
 padding:1px
 }
-.title { background : #1FF ; margin-top : -1em; }
+.title { background : #1FF ; margin : -1.1em 0 0 0; border-bottom : 1px solid #000; }
+h3.title { margin : 0 0 0 0; padding : 0 0 0 0; }
 
 .left  { float : left ; width :30% ; }
 .right, #login, #password { float : right ; width : 60% ; }
 
-html { 
- background : #blue ; 
-  }
+
   
 body {
  background: url(/images/lifesthread.jpg) no-repeat top left  ;
@@ -25,7 +24,7 @@ body {
   .button { position : relative ; left : 40%; }
  
  .loginBox {  
-  border : 1px solid #1FF;
+  border : 1px solid #000;
   margin :  15em 3em 0 500px; 
   /*position : absolute;
   left : 100%;
