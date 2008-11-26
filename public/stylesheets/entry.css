@@ -4,6 +4,7 @@ display:inline;
 color: #981793; 
 padding:1px
 }
+.title { background : #1FF ; margin-top : -1em; }
 
 .left  { float : left ; width :30% ; }
 .right, #login, #password { float : right ; width : 60% ; }
@@ -13,21 +14,22 @@ html {
   }
   
 body {
- background: url(/images/lifesthread.jpg) no-repeat top  ;
-  width : 950px;
+ background: url(/images/lifesthread.jpg) no-repeat top left  ;
+  width : 900px;
   margin :  0 auto 0 auto;
  }  
  
   .last  { clear : both ;}
   span { background-color : #1FF ; }
 
-  .button { position : relative ; left : 50%; }
+  .button { position : relative ; left : 40%; }
  
  .loginBox {  
   border : 1px solid #1FF;
-  position : absolute;
-  left : 40%;
-  top : 40%;
+  margin :  15em 3em 0 500px; 
+  /*position : absolute;
+  left : 100%;
+  top : 40%; */
   }
 /*      body { 
       border : 1px solid gray;
