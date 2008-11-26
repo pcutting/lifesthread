@@ -164,7 +164,7 @@ var options = {
 var options_overview = {
   xaxis: { mode: 'time' },
   selection: { mode: 'x' },
-  legend: { show: false,}
+  legend: { show: false}
 };
 
 var options_legend = {
@@ -175,7 +175,7 @@ var options_legend = {
       //labelFormatter: null,
       //labelBoxBorderColor: color,
       noColumns:2,
-      position: 'ne',   
+      position: 'ne'  
       // 'ne' or 'nw' or 'se' or 'sw'
       //margin: number of pixels
       //backgroundColor: null or color
