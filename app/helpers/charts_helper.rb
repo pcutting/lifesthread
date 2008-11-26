@@ -155,15 +155,9 @@ display = "
 
 
 $(function () {
-var options = {
-  xaxis: { mode: 'time' },
-  selection: { mode: 'x' },
-  legend: { show: false,},
-};
-
 
 var plot = $.plot($('#placeholder'), 
-[  #{@chartable.to_chart } ], options);
+[  #{@chartable.to_chart } ], {  xaxis: { mode: 'time' }, selection: { mode: 'x' }, legend: { show: false } });
 
 
 var overview = $.plot($('#overview'), 
@@ -184,9 +178,7 @@ $('#placeholder').bind('selected', function (event, area) {
   plot = $.plot($('#placeholder'),
    
   [#{@chartable.to_chart}],
-                $.extend(true, {}, options, {
-                    xaxis: { min: area.x1, max: area.x2 }
-                }));
+                $.extend(true));
   
   if (internalSelection)
       return; // prevent eternal loop
