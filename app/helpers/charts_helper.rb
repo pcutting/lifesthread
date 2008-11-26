@@ -155,10 +155,52 @@ display = "
 
 
 $(function () {
+var options = {
+  xaxis: { mode: 'time' },
+  selection: { mode: 'x' },
+  legend: { show: false,}
+};
+
+var options_overview = {
+  xaxis: { mode: 'time' },
+  selection: { mode: 'x' },
+  legend: { show: false,}
+};
+
+var options_legend = {
+  xaxis: { mode: 'time' },
+  selection: { mode: 'x' },
+  legend: {
+      show: true,
+      //labelFormatter: null,
+      //labelBoxBorderColor: color,
+      noColumns:2,
+      position: 'ne',   
+      // 'ne' or 'nw' or 'se' or 'sw'
+      //margin: number of pixels
+      //backgroundColor: null or color
+      //backgroundOpacity: number in 0.0 - 1.0
+      //container: null // or jQuery object
+}
+};
 
 var plot = $.plot($('#placeholder'), 
-[  #{@chartable.to_chart } ], {  xaxis: { mode: 'time' }, selection: { mode: 'x' }, legend: { show: false } });
+[  #{@chartable.to_chart } ], options);
 
+
+var legendplot = $.plot($('#legendholder'), 
+[  #{@chartable.showLabel} ],
+{ lines: { show: false },
+  shadowSize: 0,
+  legend: {
+      show: true,
+      position: 'ne',
+       },
+  xaxis: { ticks: 0, mode: 'time' },
+  yaxis: { ticks: 0}, //, min: 0, max: 4000 },
+  selection: { mode: 'x' }
+  }
+);
 
 var overview = $.plot($('#overview'), 
 [  #{@chartable.to_chart}], 
@@ -178,7 +220,9 @@ $('#placeholder').bind('selected', function (event, area) {
   plot = $.plot($('#placeholder'),
    
   [#{@chartable.to_chart}],
-                $.extend(true));
+                $.extend(true, {}, options, {
+                    xaxis: { min: area.x1, max: area.x2 }
+                }));
   
   if (internalSelection)
       return; // prevent eternal loop
