@@ -158,7 +158,7 @@ $(function () {
 var options = {
   xaxis: { mode: 'time' },
   selection: { mode: 'x' },
-  legend: { show: false,}
+  legend: { show: false}
 };
 
 var options_overview = {
@@ -216,8 +216,7 @@ var internalSelection = false;
 
 $('#placeholder').bind('selected', function (event, area) {
   // do the zooming
-  plot = $.plot($('#placeholder'),
-   
+  plot = $.plot($('#placeholder'),   
   [#{@chartable.to_chart}],
                 $.extend(true, {}, options, {
                     xaxis: { min: area.x1, max: area.x2 }
@@ -237,6 +236,8 @@ $('#overview').bind('selected', function (event, area) {
   plot.setSelection(area);
   internalSelection = false;
 });
+
+
 });
 </script>
 "
