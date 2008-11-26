@@ -9,10 +9,11 @@ padding:1px
 .right, #login, #password { float : right ; width : 60% ; }
 
 html { 
- background: url(/images/lifesthread.jpg) repeat-y top ; 
+ 
   }
 body {
-  size : 800px;
+ background: url(/images/lifesthread.jpg) none top ;
+  size : 950px;
   margin :  0 auto 0 auto;
  }  
  
