@@ -21,7 +21,7 @@ body {
   .last  { clear : both ;}
   span { background-color : #1FF ; }
 
-  .button { position : relative ; left : 40%; }
+  //.button { position : relative ; left : 40%; }
  
  .loginBox {  
   border : 1px solid #000;

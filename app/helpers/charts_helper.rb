@@ -150,9 +150,9 @@ display = "
 <div id='legendholder' class='right' style='width:200px;height:1px;'></div>
 
 
-
+<div class='last'></div>
 <script id='source' language='javascript' type='text/javascript'>
-<div class='span-24 last'></div>
+
 
 $(function () {
 var options = {
