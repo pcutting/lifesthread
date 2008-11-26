@@ -158,36 +158,9 @@ $(function () {
 var options = {
   xaxis: { mode: 'time' },
   selection: { mode: 'x' },
-  //grid: { coloredAreas: weekendAreas },
-  legend: {
-      show: false,
-      //labelFormatter: null,
-      //labelBoxBorderColor: color,
-      //noColumns: 2,
-      //position: 'sw'   // 'ne' or 'nw' or 'se' or 'sw'
-      //margin: number of pixels
-      //backgroundColor: null or color
-      //backgroundOpacity: number in 0.0 - 1.0
-      //container: null or jQuery object
-}
+  legend: { show: false,},
 };
 
-  var options_overview = {
-  xaxis: { mode: 'time' },
-  selection: { mode: 'x' },
-  //grid: { coloredAreas: weekendAreas },
-  legend: {
-      show: false,
-      //labelFormatter: null,
-      //labelBoxBorderColor: color,
-      //noColumns: 2,
-      //position: 'sw'   // 'ne' or 'nw' or 'se' or 'sw'
-      //margin: number of pixels
-      //backgroundColor: null or color
-      //backgroundOpacity: number in 0.0 - 1.0
-      //container: null or jQuery object
-}
-};
 
 var plot = $.plot($('#placeholder'), 
 [  #{@chartable.to_chart } ], options);
