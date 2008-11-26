@@ -197,8 +197,7 @@ var legendplot = $.plot($('#legendholder'),
       position: 'ne',
        },
   xaxis: { ticks: 0, mode: 'time' },
-  yaxis: { ticks: 0}, //, min: 0, max: 4000 },
-  selection: { mode: 'x' }
+  yaxis: { ticks: 0}, 
   }
 );
 
