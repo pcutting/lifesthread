@@ -9,11 +9,12 @@ padding:1px
 .right, #login, #password { float : right ; width : 60% ; }
 
 html { 
- 
+ background : #blue ; 
   }
+  
 body {
- background: url(/images/lifesthread.jpg) none top ;
-  size : 950px;
+ background: url(/images/lifesthread.jpg) no-repeat top  ;
+  width : 950px;
   margin :  0 auto 0 auto;
  }  
  
@@ -23,6 +24,7 @@ body {
   .button { position : relative ; left : 50%; }
  
  .loginBox {  
+  border : 1px solid #1FF;
   position : absolute;
   left : 40%;
   top : 40%;
