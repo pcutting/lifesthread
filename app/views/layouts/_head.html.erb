@@ -5,22 +5,14 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Welcome to your Wellness Board <%= h current_user.first_name -%></title>
-<%= dhtml_calendar_includes("blue") %>
-   
-    <%# = stylesheet_link_tag 'scaffold' %>
-    <!-- link rel="stylesheet" type="text/css" href="/stylesheets/clickmenu.css" / -->
-
-  <!-- flot includes  -->
-   
-
-    <!--[if IE]><script language="javascript" type="text/javascript" src="/javascripts/excanvas.pack.js"></script><![endif] -->
-    <script language="javascript" type="text/javascript" src="/javascripts/jquery.js"></script>
-    <script language="javascript" type="text/javascript" src="/javascripts/jquery.flot.pack.js"></script>
-  <!-- end flot includes -->
-  <!-- script language="javascript" type="text/javascript" src="/javascripts/jquery.clickmenu.v016/jquery.clickmenu.pack.js"></script -->
+  <%= dhtml_calendar_includes("blue") %>
+  <%# = stylesheet_link_tag 'scaffold' %>
 
 
-  <%# script language="javascript" >$(function() {  $('#menu').css("visibility","visible");});</script> %>
+  <!--[if IE]><script language="javascript" type="text/javascript" src="/javascripts/excanvas.pack.js"></script><![endif] -->
+  <script language="javascript" type="text/javascript" src="/javascripts/jquery.js"></script>
+  <script language="javascript" type="text/javascript" src="/javascripts/jquery.flot.pack.js"></script>
+
   <%#  eventually put this into a nice css file!! %>
   <style type="text/css">
     
