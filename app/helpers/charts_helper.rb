@@ -194,7 +194,7 @@ var legendplot = $.plot($('#legendholder'),
   shadowSize: 0,
   legend: {
       show: true,
-      position: 'ne',
+      position: 'ne'
        },
   xaxis: { ticks: 0, mode: 'time' },
   yaxis: { ticks: 0}, 
