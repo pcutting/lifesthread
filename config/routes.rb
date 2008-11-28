@@ -30,6 +30,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :sleeps
   
   map.resources :roles
+  map.resources :setups
 
 
   

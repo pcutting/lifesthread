@@ -6,22 +6,43 @@
 
 <%= error_messages_for :user %>
 <% form_for :user, :url => users_path do |f| -%>
-  <p><label for="login">Login</label><br/>
-  <%= f.text_field :login %></p>
-
-  <p><label for="email">Email</label><br/>
-  <%= f.text_field :email %></p>
-
-  <p><label for="password">Password</label><br/>
-  <%= f.password_field :password %></p>
-
-  <p><label for="password_confirmation">Confirm Password</label><br/>
-  <%= f.password_field :password_confirmation %></p>
-
-  <%= render :partial => "name", :locals => { :f => f } %>
 
 
-  <p><%= submit_tag 'Sign up' %></p> 
+<p><label for="login">Login</label>
+<%= f.text_field :login %></p>
+
+<p><label for="email">Email</label>
+<%= f.text_field :email %></p>
+
+<p><label for="password">Password</label>
+<%= f.password_field :password %></p>
+
+<p><label for="password_confirmation">Confirm Password</label>
+<%= f.password_field :password_confirmation %></p>
+
+<p><label for="first_name">First Name</label>
+<%= f.text_field :first_name %></p>
+
+<p><label for="middle_name">Middle Name</label>
+<%= f.text_field :middle_name %></p>
+
+<p><label for="last_name">Last Name</label>
+<%= f.text_field :last_name %></p>
+
+
+<p><label for="Time Zone">Time Zone</label>
+<%= f.time_zone_select :time_zone, TimeZone.us_zones %></p>
+
+<p><label for="zip_code">Zip Code</label>
+<%= text_field_tag :zip_code %></p>
+
+<br/>
+
+<p>
+<%= render :partial => "terms", :locals => { :f => f } %></p>
+
+
+<p><%= submit_tag "Join" %></p> 
 <% end -%>
 
 <%= link_to 'Back to Login', login_path %>

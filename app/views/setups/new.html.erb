@@ -1,0 +1,11 @@
+Please take a few min to set up your Wellness Board.<br/>
+
+
+<% form_for(@profile) do |f| %>
+  <%= f.error_messages %>
+<%= render :partial => "content", :locals => { :f => f} %>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+

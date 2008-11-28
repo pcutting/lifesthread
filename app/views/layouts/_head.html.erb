@@ -4,14 +4,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Welcome to your Wellness Board <%= h current_user.first_name -%></title>
+  <title>Welcome to your Wellness Board <%= h current_user.first_name unless current_user.nil? -%></title>
   <%= dhtml_calendar_includes("blue") %>
   <%# = stylesheet_link_tag 'scaffold' %>
 
 
   <script language="javascript" type="text/javascript" src="/javascripts/jquery.js"></script>
   <script language="javascript" type="text/javascript" src="/javascripts/jquery.flot.pack.js"></script>
-  <script language="javascript" type="text/javascript" src="/javascripts/flot/excanvas.pack.js"></script>
+  
+  <!--[if IE]><script language="javascript" type="text/javascript" src="/javascripts/flot/excanvas.pack.js"></script><![endif]-->
 
 
  
@@ -182,7 +183,10 @@
     
     .bottomBorder { border-bottom : 1px solid #000 ; }
     
-    
+    .signup label { float : left ; width : 10em; background : #FFF; }
+    .signup input, select { float : left ; margin : 0 6em 0 0; }
+    .signup p { clear : both; }
+    .signup { width : 600px; }
   </style>
     
 </head>

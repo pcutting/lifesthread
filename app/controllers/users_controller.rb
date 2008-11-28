@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-layout "entry"
+layout "setup"
 
   # render new.rhtml
   def new
@@ -9,27 +9,39 @@ layout "entry"
 
 
   def create
-    cookies.delete :auth_token
-    # protects against session fixation attacks, wreaks havoc with 
-    # request forgery protection.
-    # uncomment at your own risk
-    # reset_session
-    
-    @user = User.new(params[:user])
-    @user.admin = false
-    @user.save
-    @profile = Profile.new
-    @user.profile = @profile
-    @user.profile.save
-    
-    if @user.errors.empty?
-      self.current_user = @user
-      redirect_back_or_default('/')
-      flash[:notice] = "Thanks for signing up!"
-    else
-      flash[:notice] = "There was an error in creating your account."
-      render :action => 'new'
-    end
+
+    tryAgain = false
+      cookies.delete :auth_token
+      # protects against session fixation attacks, wreaks havoc with 
+      # request forgery protection.
+      # uncomment at your own risk
+      # reset_session
+      
+      @user = User.new(params[:user])
+      @user.admin = false
+      if (params[:terms_agreed].nil? )
+        tryAgain = true 
+        flash[:notice] = 'Please check "I agree" for the terms and conditions.'      
+      else
+        @user.save 
+        @profile = Profile.new
+        @user.profile = @profile
+        @user.profile.zip = params[:zip]
+        @user.profile.terms_agreed = true
+        @user.profile.save
+      end
+      
+      if @user.errors.empty? && tryAgain == false
+        self.current_user = @user
+        #redirect_back_or_default('/')
+        flash[:notice] = "Thanks for signing up!"
+        respond_to do |format|
+          format.html  { redirect_back_or_default('/') }
+        end
+      else
+        flash[:notice] += "There was an error in creating your account."
+        render :action => 'new'
+      end
   end
 
   def edit

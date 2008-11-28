@@ -1,0 +1,24 @@
+Please take a few min to set up your Wellness Board.<br/>
+
+
+<% form_for(@profile) do |f| %>
+  <%= f.error_messages %>
+
+
+  <p>
+    <%= f.label :dob %><!-- was a br -->
+    <%= f.date_select :dob, :start_year => 1900 %>
+  </p>
+
+    <p>
+    <%= f.label :height_inch %><!-- was a br -->
+    <%= f.text_field :height_inch , :size => 2%>
+  </p>
+  </fieldset>
+  
+  
+  <p>
+    <%= f.submit "Next" %>
+  </p>
+<% end %>
+
