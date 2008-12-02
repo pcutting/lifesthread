@@ -94,7 +94,7 @@ private
   def parent_path(parent)
     case 
       when params[:fitness_plan_id] then fitness_plan_exercises_path(parent)
-      when params[:workout_id] then workout_exercises_path(parent)
+      when params[:workout_id] then workout_path(parent)
     end
   end
   

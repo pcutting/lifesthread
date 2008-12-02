@@ -1,57 +1,56 @@
-<table class = "dashboard">
+<table class="dashboard">
 
 <tr>
-<th class = "dashboard" > <%= f.label :weight  %> </th>
-<th class = "dashboard" > <%= f.label :Metabolism %> </th>
-<th class = "dashboard" > <%= f.label "Fat %"  %> </th>
-<th class = "dashboard" > <%= f.label "Muscle %" %> </th>
-<th class = "dashboard" > <%= f.label :visceral_fat %> </th>
-<th class = "dashboard" > <%= f.label "H2O%"  %> </th>
-<th class = "dashboard" > <%= f.label :neck %><!-- was a br --> </th>
-<th class = "dashboard" > <%= f.label :chest  %><!-- was a br --> </th>
-<th class = "dashboard" > <%= f.label "Bicep"  %> </th>
-<th class = "dashboard" > <%= f.label :belly%> </th>
-<th class = "dashboard" > <%= f.label "Hip" %>  </th>
-<th class = "dashboard" > <%= f.label "Thigh"  %> </th>
-<th class = "dashboard" > <%= f.label "Calf"  %> </th>
-<th class = "dashboard" > <%= f.label :measured_on %> </th>
-<th class = "dashboard" > <%= f.label :comment %> </th>
-
+<th class="dashboard"><%= f.label :weight %></th>
+<th class="dashboard"><%= f.label :Metabolism %></th>
+<th class="dashboard"><%= f.label "Fat %" %></th>
+<th class="dashboard"><%= f.label "Muscle %" %></th>
+<th class="dashboard"><%= f.label :visceral_fat %></th>
+<th class="dashboard"><%= f.label "H2O%" %></th>
+<th class="dashboard"><%= f.label :chest %></th>
+<th class="dashboard"><%= f.label :belly %></th>
+<th class="dashboard"><%= f.label "Upper Hip" %></th>
+<th class="dashboard"><%= f.label "Lower Hip" %></th>
+<th class="dashboard"><%= f.label "Thigh" %></th>
+<th class="dashboard"><%= f.label "Calf" %></th>
+<th class="dashboard"><%= f.label "Bicep" %></th>
+<th class="dashboard"><%= f.label :measured_on %></th>
+<th class="dashboard"><%= f.label :comment %></th>
 </tr>
 
 <tr>
-<td class= "dashboard" > <%= f.text_field :weight , :size => 3 %>  </td>
-<td class= "dashboard" > <%= f.text_field :resting_metabolism , :size => 4  %>  </td>
-<td class= "dashboard" > <%= f.text_field :fat_percent , :size => 2  %> </td>
-<td class= "dashboard" > <%= f.text_field :muscle_percent , :size => 2 %> </td>
-<td class= "dashboard" > <%= f.text_field :visceral_fat , :size => 2 %> </td>
-<td class= "dashboard" > <%= f.text_field :water_percent , :size => 2 %>  </td>
-<td class= "dashboard" > <%= f.text_field :neck , :size => 2 %> </td>
-<td class= "dashboard" > <%= f.text_field :chest , :size => 2 %>  </td>
-<td class= "dashboard" > <%= f.text_field :bicep , :size => 2 %> </td>
-<td class= "dashboard" > <%= f.text_field :belly, :size => 2  %>  </td>
-<td class= "dashboard" > <%= f.text_field :hip, :size => 2  %> </td>
-<td class= "dashboard" > <%= f.text_field :thigh, :size => 2  %></td>
-<td class= "dashboard" > <%= f.text_field :calf, :size => 2  %>  </td>
-<td class= "dashboard" > 
+<td class= "dashboard"><%= f.text_field :weight , :size => 3 %></td>
+<td class= "dashboard"><%= f.text_field :resting_metabolism , :size => 4 %></td>
+<td class= "dashboard"><%= f.text_field :fat_percent , :size => 2 %></td>
+<td class= "dashboard"><%= f.text_field :muscle_percent , :size => 2 %></td>
+<td class= "dashboard"><%= f.text_field :visceral_fat , :size => 2 %></td>
+<td class= "dashboard"><%= f.text_field :water_percent , :size => 2 %></td>
+<td class= "dashboard"><%= f.text_field :chest , :size => 2 %></td>
+<td class= "dashboard"><%= f.text_field :belly , :size => 2 %></td>
+<td class= "dashboard"><%= f.text_field :hip , :size => 2 %></td>
+<td class= "dashboard"><%= f.text_field :lowerhip, :size => 2 %></td>
+<td class= "dashboard"><%= f.text_field :thigh, :size => 2 %></td>
+<td class= "dashboard"><%= f.text_field :calf, :size => 2 %></td>
+<td class= "dashboard"><%= f.text_field :bicep, :size => 2 %></td>
+<td class= "dashboard"> 
 
-     <%# = f.datetime_select :measured_on, :start_year => 1900, :include_seconds => true  %>  
-     <%= calendar_box 'measurement', 'measured_on',
-       { :class => 'date',
-         :date => Time.zone.now,
-         :field_title => 'Measured on',
-         :button_title => 'Show calendar',
-         :value => Time.zone.now,
-         :size => 10},
-       { :firstDay => 1,
-         :range => [1900, 2015],
-         :step => 1,
-         :showsTime => 1,
-         :showOthers => true,
-         :cache => true } %>
-         
-</td>         
-<td class= "dashboard" > <%= f.text_field :comment , :size => 10 %> </td>
+   <%# = f.datetime_select :measured_on, :start_year => 1900, :include_seconds => true %> 
+   <%= calendar_box 'measurement', 'measured_on',
+    { :class => 'date',
+     :date => Time.zone.now,
+     :field_title => 'Measured on',
+     :button_title => 'Show calendar',
+     :value => Time.zone.now,
+     :size => 10},
+    { :firstDay => 1,
+     :range => [1900, 2015],
+     :step => 1,
+     :showsTime => 1,
+     :showOthers => true,
+     :cache => true } %>
+     
+</td>     
+<td class= "dashboard"><%= f.text_field :comment , :size => 10 %></td>
 
 </tr>
 <tr>

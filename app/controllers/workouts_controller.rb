@@ -5,7 +5,6 @@ class WorkoutsController < ApplicationController
   # GET /workouts
   def index
     @workouts = current_user.workouts.find(:all)
-
     respond_to do |format|
       format.html # index.html.erb
     end
@@ -15,6 +14,7 @@ class WorkoutsController < ApplicationController
   def show
     @workout = current_user.workouts.find(params[:id])
     @exercises = @workout.exercises
+    @exercise =  @workout.exercises.new
 
     respond_to do |format|
       format.html # show.html.erb

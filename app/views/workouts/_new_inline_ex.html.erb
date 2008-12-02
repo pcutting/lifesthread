@@ -1,0 +1,14 @@
+<h2>New exercise</h2>
+
+
+<% form_for([@parent,@exercise]) do |form| %>
+  <%= form.error_messages %>
+
+  <%= render :partial => "contents_ex" , :locals => { :f => form } %>
+
+  <p>
+    <%= form.submit "Create" %>
+  </p>
+<% end %>
+
+<%# = link_to 'Back', polymorphic_path([@parent, @exercise]) %>

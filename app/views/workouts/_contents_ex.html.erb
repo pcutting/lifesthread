@@ -1,0 +1,25 @@
+<table>
+<tr>
+<th>  <%= f.label :style %></th>
+<th>   <%= f.label :exercise %></th>
+<th>  <%= f.label :length %> </th>
+<th> <%= f.label :reps %> </th>
+<th> <%= f.label :resistance %> </th>
+<th> <%= f.label :Unit %> </th>
+<th>  <%= f.label :calories_burned %></th>
+<th>  <%= f.label :intensity %> </th>
+<th>  <%= f.label :comfort_level %> </th>
+</tr>
+<tr>
+<td>    <%= f.select :style, ["Aerobic", "Resistance"], :size=> 10 %> </td>
+<td>  <%= f.text_field :exercise, :size =>10 %></td>
+<td> <%= f.text_field :length , :size =>3 %> </td>
+<td>  <%= f.text_field :reps, :size => 2 %></td>
+<td>  <%= f.text_field :resistance , :size =>3 %> </td>
+<td>   <%= f.select :unit, ["lb", "kg", "miles/hour", "meters", "miles"], :size=> 6 %> </td>
+<td> <%= f.text_field :calories_burned , :size => 4%> </td>
+<td> <% # = f.select :comfort_level, [[1, "Discomfort"],2,3,4,5,6,7 .. 97,99, [100, "Very Comfortable"]], :size=> 6 %>  
+<%= f.text_field :intensity  , :size => 3 %> </td>
+<td> <%= f.text_field :comfort_level  , :size => 3 %> </td>
+</tr>
+</table>

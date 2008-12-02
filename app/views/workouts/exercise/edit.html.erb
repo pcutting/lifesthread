@@ -1,0 +1,11 @@
+<h1>Editing exercise</h1>
+
+<% form_for([@parent,@exercise]) do |f| %>
+  <%= f.error_messages %>
+
+  <%= render :partial => "contents" , :locals => { :f => f } %>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+

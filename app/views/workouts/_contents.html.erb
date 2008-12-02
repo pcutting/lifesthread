@@ -1,26 +1,17 @@
- 
- 
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :day %><br />
-    <%= f.date_select :day %>
-  </p>
-  <p>
-    <%= f.label :start_time %><br />
-    <%= f.time_select :start_time %>
-  </p>
-  <p>
-    <%= f.label :end_time %><br />
-    <%= f.time_select :end_time %>
-  </p>
-  <p>
-    <%= f.label :supplements %><br />
-    <%= f.text_field :supplements %>
-  </p>
-  <p>
-    <%= f.label :comment %><br />
-    <%= f.text_field :comment %>
-  </p>
+<table>
+<tr>
+<th><%= f.label :title %></th>
+<th><%= f.label :day %></th>
+<th><%= f.label :start_time %></th>
+<th><%= f.label :end_time %></th>
+<th><%= f.label :supplements %></th>
+<th><%= f.label :comment %></th>
+</tr><tr>
+
+<td><%= f.text_field :title %></td>
+<td><%= f.date_select :day %></td>
+<td><%= f.time_select :start_time %></td>
+<td><%= f.time_select :end_time %></td>
+<td><%= f.text_field :supplements %></td>
+<td><%= f.text_field :comment %></td>
+</tr></table>

@@ -11,7 +11,7 @@
 <%= makeChart %>
 
 
-<div class='span-24 last'>
+<div class='last'>
 <%= render :partial => "new_inform" %>
 
 <br />
@@ -27,14 +27,14 @@
     <th>Fat %</th>
     <th>Muscle %</th>
     <th>Visceral fat</th>
-    <th>Water %</th>
-    <th>Neck</th>
+    <th>H2O %</th>
     <th>Chest</th>
-    <th>Bicep</th>
     <th>Belly</th>
-    <th>Hip</th>
-    <th>Thigh left</th>
+    <th>Upper Hip</th>
+    <th>Lower Hip</th>
+    <th>Thigh</th>
     <th>Calf</th>
+    <th>Bicept</th>
     <th>Measured on</th>
     <th>Comment</th>
   </tr>
@@ -47,17 +47,17 @@
     <td><%=h measurement.muscle_percent %></td>
     <td><%=h measurement.visceral_fat %></td>
     <td><%=h measurement.water_percent %></td>
-    <td><%=h measurement.neck %></td>
     <td><%=h measurement.chest %></td>
-    <td><%=h measurement.bicep%></td>
     <td><%=h measurement.belly %></td>
-    <td><%=h measurement.hip %></td>
+    <td><%=h measurement.hip%></td>
+    <td><%=h measurement.lowerhip %></td>
     <td><%=h measurement.thigh %></td>
     <td><%=h measurement.calf %></td>
+    <td><%=h measurement.bicep %></td>
     <td><%=h measurement.measured_on.to_s(:long) %></td>
     <td><%=h measurement.comment %></td>
     <td><%= link_to 'Edit', edit_measurement_path(measurement) %></td>
-    <td><%= link_to 'Destroy', measurement, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Delete', measurement, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
@@ -74,7 +74,7 @@ History <br />
     <th>Fat %</th>
     <th>Muscle %</th>
     <th>Visceral fat</th>
-    <th>Water %</th>
+    <th>H20 %</th>
     <th>Neck</th>
     <th>Chest</th>
     <th>Bicep</th>
@@ -104,7 +104,7 @@ History <br />
     <td><%=h measurement.measured_on.to_s(:long) %></td>
     <td><%=h measurement.comment %></td>
     <td><%= link_to 'Edit', edit_measurement_path(measurement) %></td>
-    <td><%= link_to 'Destroy', measurement, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Delete', measurement, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
