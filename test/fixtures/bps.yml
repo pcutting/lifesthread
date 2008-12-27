@@ -5,7 +5,7 @@ num_records = CONFIG['number_of_fixtures']
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  user: test
+  user: aaron
   measured_on: 2008-01-23 13:05:45
   comment: happy day
   is_goal: false
@@ -19,38 +19,8 @@ two:
   is_goal: false
   systolic: 132
   diastolic: 85
-  
-three:
-  user: test
-  measured_on: 2008-06-24 13:08:45
-  comment: happy day
-  is_goal: false
-  systolic: 125
-  diastolic: 84
 
-four:
-  user: test
-  measured_on: 2008-03-20 13:05:45
-  comment: happy day
-  is_goal: false
-  systolic: 145
-  diastolic: 91
-  
-five:
-  user: test
-  measured_on: 2007-12-24 13:05:45
-  comment: happy day
-  is_goal: false
-  systolic: 160
-  diastolic: 94
-  
-six:
-  user: test
-  measured_on: 2007-12-14 3:05:45
-  comment: happy day
-  is_goal: false
-  systolic: 130
-  diastolic: 85
+
   
 <% year = 2008 %><% month = 1 %><% day = 1 %><% hour = 8 %><% min= 0 %><% sec = 0%><%= "gen#0:" %>
   user: test
@@ -58,11 +28,11 @@ six:
   systolic: <%= sys = rand(30) + 110 %>
   diastolic: <%= dia = rand(20) + 60 %>
 
-<% y = 0 %><% x = 1 %><% while x < 200 %><% x = x +1 %><% y = y + 0.1 %><%= "gen#{x}:" %>
+<% y = 0 %><% x = 1 %><% while x < 75 %><% x = x +1 %><% y = y + 1.0 %><%= "gen#{x}:" %>
   user: test<% randsec = rand(99960) %><% sec = sec + randsec %><% rsec = sec %>
 <% if sec > 59 then %><% min = min + ( sec / 60)  %><% sec =  ( sec % 60 ) %>
-<% if min > 59 then %><% hour = hour + rand(8)  %><% hour = hour.to_i + (min / 60) %><% min = ( min % 60 )  %>
-<% if hour > 23 then %><% day = day + rand(3)   %><% day = day.to_i + (hour / 60) %><% hour =  ( hour % 24 ) %>
+<% if min > 59 then %><% hour = hour + rand(24)  %><% hour = hour.to_i + (min / 60) %><% min = ( min % 60 )  %>
+<% if hour > 23 then %><% day = day + rand(5)   %><% day = day.to_i + (hour / 60) %><% hour =  ( hour % 24 ) %>
 <% if ((day > 27 && month ==2 ) || day > 30 ) then %><% month = month + 1 %><% day  = 1 %>
 <% if month > 12 then %><% year = year + 1 %><% month  = 1 %>
 <% end %><% end %><% end %><% end %><% end %>
