@@ -38,3 +38,6 @@ def set_boundry(point_x, point_y)
     if y_min > point_y then y_min = point_y end
   end
 end
+
+end
+

@@ -485,8 +485,7 @@ end #def getCholesterol
 # Get measurements
 ##################
 
-def 
-getMeasurements
+def getMeasurements
 #measurements
 if @chartoptions[:measurements][0] || @chartoptions[:measurements][1] || @chartoptions[:measurements][2]
 
