@@ -10,4 +10,4 @@ script/generate scaffold Subject what:string
 
 script/generate scaffold Role permit:string
 
- 
+ script/generate migration add_chartable_to_profiles  bp:boolean bp_avg:boolean bp_goal:boolean measure:boolean measure_avg:boolean measure_goal:boolean sleep:boolean sleep_avg:boolean sleep_goal:boolean stress:boolean stress_avg:boolean stress_goal:boolean food:boolean food_avg:boolean food_goal:boolean weight:boolean weight_avg:boolean weight_goal:boolean metabolism:boolean metabolism_avg:boolean metabolism_goal:boolean fat:boolean fat_avg:boolean fat_goal:boolean muscle:boolean muscle_avg:boolean muscle_goal:boolean visceral:boolean  visceral_avg:boolean visceral_goal:boolean water:boolean water_avg:boolean water_goal:boolean chest:boolean chest_avg:boolean chest_goal:boolean bicep:boolean bicep_avg:boolean bicep_goal:boolean belly:boolean belly_avg:boolean belly_goal:boolean hip:boolean hip_avg:boolean hip_goal:boolean thigh:boolean thigh_avg:boolean thigh_goal:boolean
