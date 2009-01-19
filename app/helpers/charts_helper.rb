@@ -515,7 +515,7 @@ if @chartoptions[:measurements][0] || @chartoptions[:measurements][1] || @charto
   meas1_sum, meas2_sum, meas3_sum, meas4_sum, meas5_sum, meas6_sum, meas7_sum, meas8_sum = 0,0,0,0,0,0,0,0 
   
   for measurement in @measurements
-    if (!measurement.weight.nil? || measurement.weight != 0) &&  (@chartoptions[:measurement_weight][0] || @chartoptions[:measurement_weight][1])  
+    if (!measurement.weight.nil? && measurement.weight != 0) &&  (@chartoptions[:measurement_weight][0] || @chartoptions[:measurement_weight][1])  
       meas1_count += 1 
       meas1_sum += measurement.weight  
       @set1.addPoint(measurement.measured_on.to_i * 1000,measurement.weight)
@@ -567,54 +567,56 @@ if @chartoptions[:measurements][0] || @chartoptions[:measurements][1] || @charto
     end 
   end 
     
-  if @chartoptions[:measurements][0]
-    if @chartoptions[:measurement_weight][0]
+ # if @chartoptions[:measurements][0]
+    if @chartoptions[:measurement_weight][0] || @chartoptions[:measurements][0]
       @chartable.add(@set1)
     end 
-    if @chartoptions[:measurement_fat_percent][0]
+    if @chartoptions[:measurement_fat_percent][0] || @chartoptions[:measurements][0]
       @chartable.add(@set2)
     end 
-    if @chartoptions[:measurement_muscle_percent][0]
+    if @chartoptions[:measurement_muscle_percent][0] || @chartoptions[:measurements][0]
       @chartable.add(@set3)
     end 
-    if @chartoptions[:measurement_visceral_fat][0]
+    if @chartoptions[:measurement_visceral_fat][0] || @chartoptions[:measurements][0]
      @chartable.add(@set4)
     end 
-    if @chartoptions[:measurement_chest][0]
+    if @chartoptions[:measurement_chest][0] || @chartoptions[:measurements][0]
      @chartable.add(@set5)
     end 
-    if @chartoptions[:measurement_belly][0]
+    if @chartoptions[:measurement_belly][0] || @chartoptions[:measurements][0]
      @chartable.add(@set6) 
     end 
-    if @chartoptions[:measurement_hip][0]
+    if @chartoptions[:measurement_hip][0] || @chartoptions[:measurements][0]
 @chartable.add(@set7)
     end 
-  end # if @chartoptions[:measurements][0]
+  #end # if @chartoptions[:measurements][0] || @chartoptions[:measurements][0]
   
   
-  if @chartoptions[:measurements][1]
-    if @chartoptions[:measurement_weight][1]
+#  if @chartoptions[:measurements][1]
+    if @chartoptions[:measurement_weight][1] || @chartoptions[:measurements][1]
       @chartable.add(@set1Avg)
     end 
-    if @chartoptions[:measurement_fat_percent][1]
+    if @chartoptions[:measurement_fat_percent][1] || @chartoptions[:measurements][1]
       @chartable.add(@set2Avg)
     end 
-    if @chartoptions[:measurement_muscle_percent][1]
+    if @chartoptions[:measurement_muscle_percent][1] || @chartoptions[:measurements][1]
      @chartable.add(@set3Avg)
     end 
-    if @chartoptions[:measurement_visceral_fat][1]
+    if @chartoptions[:measurement_visceral_fat][1] || @chartoptions[:measurements][1]
       @chartable.add(@set4Avg)
     end 
-    if @chartoptions[:measurement_chest][1]
+    if @chartoptions[:measurement_chest][1] || @chartoptions[:measurements][1]
       @chartable.add(@set5Avg)
     end 
-    if @chartoptions[:measurement_belly][1]
+    if @chartoptions[:measurement_belly][1] || @chartoptions[:measurements][1]
       @chartable.add(@set6Avg)
     end 
-    if @chartoptions[:measurement_hip][1]
+    if @chartoptions[:measurement_hip][1] || @chartoptions[:measurements][1]
       @chartable.add(@set7Avg)
     end 
-  end # if @chartoptions[:measurements][1]
+#  end # if @chartoptions[:measurements][1] || @chartoptions[:measurements][1]
+
+
 end # if @chartoptions[:measurments] 
 end #def getMeasurements
 
