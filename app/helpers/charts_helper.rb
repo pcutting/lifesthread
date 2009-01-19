@@ -383,7 +383,7 @@ def getSleep
       #sleep1 << [ "[#{sleeps.started_at.to_i * 1000}, #{((sleeps.woke_up_at - sleeps.started_at) / 288)} ]" ] 
       sum_sleep1 += ( (sleeps.woke_up_at - sleeps.started_at) / 288)
       @set2.addPoint(sleeps.started_at.to_i * 1000,( sum_sleep1 / count) )
-      puts ("#{sleeps.started_at.to_i * 1000},#{( sum_sleep1 / count)}" )
+      #puts ("#{sleeps.started_at.to_i * 1000},#{( sum_sleep1 / count)}" )
       #sleep1_avg << [ "[ #{sleeps.started_at.to_i * 1000}, #{sum_sleep1 / count} ]" ] 
     end
     
@@ -397,7 +397,7 @@ def getSleep
     
     end 
 
-    puts @chartable.datasets
+    #puts @chartable.datasets
 
 end #def getSleep
   
@@ -515,7 +515,7 @@ if @chartoptions[:measurements][0] || @chartoptions[:measurements][1] || @charto
   meas1_sum, meas2_sum, meas3_sum, meas4_sum, meas5_sum, meas6_sum, meas7_sum, meas8_sum = 0,0,0,0,0,0,0,0 
   
   for measurement in @measurements
-    unless (measurement.weight.nil? || measurement.weight == 0) && ! (@chartoptions[:measurement_weight][0] || @chartoptions[:measurement_weight][1])  
+    if (!measurement.weight.nil? || measurement.weight != 0) &&  (@chartoptions[:measurement_weight][0] || @chartoptions[:measurement_weight][1])  
       meas1_count += 1 
       meas1_sum += measurement.weight  
       @set1.addPoint(measurement.measured_on.to_i * 1000,measurement.weight)

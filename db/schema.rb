@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090113194547) do
+ActiveRecord::Schema.define(:version => 20080803210555) do
 
   create_table "bps", :force => true do |t|
     t.integer  "user_id",     :limit => 11
@@ -243,59 +243,11 @@ ActiveRecord::Schema.define(:version => 20090113194547) do
     t.string   "super_member_id"
     t.integer  "cache_current_weight",            :limit => 11, :default => 0
     t.integer  "cache_current_weight_goal",       :limit => 11, :default => 0
-    t.datetime "cache_last_updated",                            :default => '2009-01-13 14:49:53'
+    t.datetime "cache_last_updated",                            :default => '2009-01-13 15:37:47'
     t.text     "unit_preferences"
     t.string   "sponsor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "bp"
-    t.boolean  "bp_avg"
-    t.boolean  "bp_goal"
-    t.boolean  "measure"
-    t.boolean  "measure_avg"
-    t.boolean  "measure_goal"
-    t.boolean  "sleep"
-    t.boolean  "sleep_avg"
-    t.boolean  "sleep_goal"
-    t.boolean  "stress"
-    t.boolean  "stress_avg"
-    t.boolean  "stress_goal"
-    t.boolean  "food"
-    t.boolean  "food_avg"
-    t.boolean  "food_goal"
-    t.boolean  "weight"
-    t.boolean  "weight_avg"
-    t.boolean  "weight_goal"
-    t.boolean  "metabolism"
-    t.boolean  "metabolism_avg"
-    t.boolean  "metabolism_goal"
-    t.boolean  "fat"
-    t.boolean  "fat_avg"
-    t.boolean  "fat_goal"
-    t.boolean  "muscle"
-    t.boolean  "muscle_avg"
-    t.boolean  "muscle_goal"
-    t.boolean  "visceral"
-    t.boolean  "visceral_avg"
-    t.boolean  "visceral_goal"
-    t.boolean  "water"
-    t.boolean  "water_avg"
-    t.boolean  "water_goal"
-    t.boolean  "chest"
-    t.boolean  "chest_avg"
-    t.boolean  "chest_goal"
-    t.boolean  "bicep"
-    t.boolean  "bicep_avg"
-    t.boolean  "bicep_goal"
-    t.boolean  "belly"
-    t.boolean  "belly_avg"
-    t.boolean  "belly_goal"
-    t.boolean  "hip"
-    t.boolean  "hip_avg"
-    t.boolean  "hip_goal"
-    t.boolean  "thigh"
-    t.boolean  "thigh_avg"
-    t.boolean  "thigh_goal"
   end
 
   create_table "questions", :force => true do |t|
