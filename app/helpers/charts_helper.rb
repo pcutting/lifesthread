@@ -339,7 +339,7 @@ def getStresses
     
    
     for stress in @stresses
-      @set1 = ChartItem.new("stress")
+      @set1 = ChartItem.new("Stress:#{stress.title}")
       @set1.addPoint(stress.first_acknowledged.to_time.to_i * 1000,  stress.initial_effect_on_life)
       for stress_log in stress.stress_logs
         @set1.addPoint(stress_log.measured_on.to_i * 1000, stress_log.effect_on_life) 

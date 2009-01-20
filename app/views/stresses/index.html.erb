@@ -21,14 +21,14 @@
     <td><%=h stress.first_acknowledged %></td>
     <td><%=h stress.initial_effect_on_life %></td>
     <td><%=h stress.desired_effect_on_lifestyle %></td>
-    <td><%= link_to 'Log', stress_stress_logs_path(stress) %></td>
-    <td><%= link_to 'Edit', edit_stress_path(stress) %></td>
+    <td><%= link_to 'Events', stress_stress_logs_path(stress) %></td>
+    <td><%= link_to 'Details', edit_stress_path(stress) %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New sTressor', new_stress_path %>
+<%= link_to 'Enter a new sTressor', new_stress_path %>
 </div>
 

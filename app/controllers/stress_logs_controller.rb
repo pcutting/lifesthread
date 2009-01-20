@@ -45,7 +45,8 @@ class StressLogsController < ApplicationController
     respond_to do |format|
       if @stress_log.save
         flash[:notice] = 'StressLog was successfully created.'
-        format.html { redirect_to([@stress, @stress_log]) }
+        #format.html { redirect_to([@stress, @stress_log]) }
+        format.html { redirect_to(stresses_path) }
       else
         format.html { render :action => "new" }
       end
@@ -60,7 +61,7 @@ class StressLogsController < ApplicationController
     respond_to do |format|
       if @stress_log.update_attributes(params[:stress_log])
         flash[:notice] = 'StressLog was successfully updated.'
-        format.html { redirect_to([@stress,@stress_log]) }
+        format.html { redirect_to(stresses_path) }
       else
         format.html { render :action => "edit" }
       end

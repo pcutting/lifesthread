@@ -3,30 +3,44 @@
 <% form_for([@stress, @stress_log]) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :measured_on %><br />
-    <%= f.datetime_select :measured_on %>
-  </p>
-  <p>
-    <%= f.label :event %><br />
+<table>
+<tr><td>
+    <%= f.label "Measured on" %>
+    <%# = f.datetime_select :measured_on %>
+    <%= calendar_box 'stress_log', 'measured_on',
+       { :class => 'date',
+         :date => Time.zone.now,
+         :field_title => 'Measured on',
+         :button_title => 'Show calendar' ,
+         :value => Time.zone.now },
+       { :firstDay => 1,
+         :range => [1900, 2015],
+         :step => 1,
+         :showsTime => 1,
+         :showOthers => true,
+         :cache => true } %>
+</td></tr>
+<tr><td>
+    <%= f.label :event %><br/>
     <%= f.text_field :event %>
-  </p>
-  <p>
+</td></tr>
+<tr><td>
     <%= f.label :description %><br />
     <%= f.text_field :description %>
-  </p>
-  <p>
+</td></tr>
+<tr><td>
     <%= f.label :action_taken %><br />
     <%= f.text_field :action_taken %>
-  </p>
-  <p>
+</td></tr>
+<tr><td>
     <%= f.label :effect_on_life %><br />
     <%= f.text_field :effect_on_life %>
-  </p>
-  <p>
+</td></tr>
+<tr><td>
     <%= f.label :perceivable_progress %><br />
     <%= f.text_field :perceivable_progress %>
-  </p>
+</td></tr>
+</table>
   <p>
     <%= f.submit "Create" %>
   </p>
