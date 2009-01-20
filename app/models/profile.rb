@@ -113,6 +113,9 @@ def updateChartOptions(returned)
   results = Hash.new 
   #raise returned.inspect
   
+  if (returned.nil? ) then 
+    returned = {"bp"=>{"a"=>"true"}}
+  end 
   
   unless returned[:bp].nil?   
    results[:bp]=

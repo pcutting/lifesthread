@@ -1,6 +1,7 @@
 
 <div class="floatLeft">
-<table>
+Vitals<br/>
+<table class="options">
 <tr><th></th><th>Show</th><th>Show Average</th><th>Show Goal</th></tr>
 <tr>
 <td>Blood Pressure</td>
@@ -44,14 +45,6 @@
 <td><%= check_box_tag 'chartoptions[chol_hdl][c]' , true, @chartoptions[:chol_hdl][2] %></td>
 </td>
 
-<tr>
-<td>All Body Measurements</td>
-<td><%= check_box_tag 'chartoptions[measurements][a]' , true, @chartoptions[:measurements][0] %></td>
-<td><%= check_box_tag 'chartoptions[measurements][b]' , true, @chartoptions[:measurements][1] %></td>
-<td><%= check_box_tag 'chartoptions[measurements][c]' , true, @chartoptions[:measurements][2] %></td>
-</td>
-
-
 </table>
 </div>
 
@@ -60,8 +53,18 @@
 
 
 <div class="floatLeft">
-<table>
-<tr>Specific Measurements<th></th><th>Show</th><th>Show Average</th><th>Show Goal</th></tr>
+Body Measurements
+<table class="options">
+<tr><th></th><th>Show</th><th>Show Average</th><th>Show Goal</th></tr>
+
+
+<tr>
+<td>All Body Measurements</td>
+<td><%= check_box_tag 'chartoptions[measurements][a]' , true, @chartoptions[:measurements][0] %></td>
+<td><%= check_box_tag 'chartoptions[measurements][b]' , true, @chartoptions[:measurements][1] %></td>
+<td><%= check_box_tag 'chartoptions[measurements][c]' , true, @chartoptions[:measurements][2] %></td>
+</td>
+
 
 <tr>
 <td>Weight</td>
