@@ -70,7 +70,7 @@ Public:
     Sub Roles: <%= select_tag :sub_role, options_for_select(["ALL","REPORT","CREATE","EDIT","PUBLISH"]) %>
     Conditions: <%= text_field_tag :conditions %>
     Leader: <%= check_box_tag (:leader, value = 1, checked = true) %><br />
-<div class="keep_left make_small">
+<div class="keep_left left make_small last">
 NOTE: Not all 'Sub roles' apply to all 'Roles'.  Unless you want to restrict a role, give it 'Sub role' = 'ALL'.<br />
 NOTE: Conditions currently are only a single zip code.  For every zip code you with to grant that user, add another role.  (Soon conditions will give more options like miles from zip code and so on, but this is for now)<br />
 NOTE: Leader; leaders are able to grant sub-roles to delegate responsibilities to members in their organisation, but they can only delegate roles that they own and can not create other leaders.  An example would be for a Super Member that has a large company, he would want to have a guy be able to view and print reports, but not create patients and have another person focus on creating patients and answering questions.<br />

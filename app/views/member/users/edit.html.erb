@@ -58,9 +58,9 @@
 
 
   <fieldset>
-  <legend>New Role</legend>
+  <legend>New Role</legend><% role_options = [""] + @member_roles %>
     <% fields_for :roles do |role| %>
-    Has Role: <%= select_tag :has_role, options_for_select(@member_roles) %>
+    Has Role: <%= select_tag :has_role, options_for_select(role_options) %>
     Sub Roles: <%= select_tag :sub_role, options_for_select(["ALL","REPORT","CREATE","EDIT","PUBLISH"]) %>
     Conditions: <%= select_tag :conditions , options_for_select (@member_conditions)%><br />
     
