@@ -262,24 +262,20 @@ def myPlots(options='all')
 unless options == "all" 
   @chartoptions=Hash[
      :bp=>[true,true,true],
-     :chol_ldl=>[true,true,true],
-     :chol_hdl=>[true,true,true],
      :measurements=>[true,true,true],
      :measurement_weight=>[true,true,true],
-     :measurement_resting_resting_metabolism=>[true,true,true],
+     :measurement_resting_metabolism=>[true,true,true],
      :measurement_fat_percent=>[true,true,true],
      :measurement_muscle_percent=>[true,true,true],
      :measurement_visceral_fat=>[true,true,true],
-     :measurement_water_percent_percent=>[true,true,true],
+     :measurement_water_percent=>[true,true,true],
      :measurement_chest=>[true,true,true],
+     :measurement_calf => [true, true, true],
      :measurement_pectoral=>[true,true,true],
-     :measurement_bicep_left=>[true,true,true],
-     :measurement_bicep_right=>[true,true,true],
+     :measurement_bicep=>[true,true,true],
      :measurement_belly=>[true,true,true],
      :measurement_hip=>[true,true,true],
-     :measurement_lower_hip=>[true,true,true],
-     :measurement_thigh_left=>[true,true,true],
-     :measurement_thigh_right=>[true,true,true],
+     :measurement_thigh=>[true,true,true],
      :cholesterol=>[true,true,true],
      :sleep=>[true,true,true],
      :stress=>[true,true,true]
@@ -582,35 +578,43 @@ def getMeasurements
       @set7Avg.addPoint(measurement.measured_on.to_time.to_i * 1000, meas8_sum.to_f/ meas8_count.to_f)
     end 
     
-    if !(measurement.thigh.nil? && meassurement.thigh == 0 )  &&  (@chartoptions[:measurement_thigh][0] || @chartoptions[:measurement_thigh][1]   || @chartoptions[:measurements][0] || @chartoptions[:measurements][1]) 
+    b1 = measurement.thigh.nil? && measurement.thigh == 0 
+    b2a = @chartoptions[:measurement_thigh][0]
+    b2b = @chartoptions[:measurement_thigh][1]   
+    b2c = @chartoptions[:measurements][0] 
+    b2d = @chartoptions[:measurements][1]
+    
+    b2 = b2a || b2b || b2c || b2d
+    
+    if !(b1)  &&  (b2) 
       meas9_count += 1 
       meas9_sum += measurement.thigh  
       @set8.addPoint(measurement.measured_on.to_time.to_i * 1000,measurement.thigh)
       @set8Avg.addPoint(measurement.measured_on.to_time.to_i * 1000, meas9_sum.to_f/ meas9_count.to_f)
     end     
     
-    if !(measurement.calf.nil? && meassurement.calf == 0 )  &&  (@chartoptions[:measurement_calf][0] || @chartoptions[:measurement_calf][1]   || @chartoptions[:measurements][0] || @chartoptions[:measurements][1]) 
+    if !(measurement.calf.nil? && measurement.calf == 0 )  &&  (@chartoptions[:measurement_calf][0] || @chartoptions[:measurement_calf][1]   || @chartoptions[:measurements][0] || @chartoptions[:measurements][1]) 
       meas10_count += 1 
       meas10_sum += measurement.calf  
       @set9.addPoint(measurement.measured_on.to_time.to_i * 1000,measurement.calf)
       @set9Avg.addPoint(measurement.measured_on.to_time.to_i * 1000, meas10_sum.to_f/ meas10_count.to_f)
     end  
     
-    if !(measurement.bicep.nil? && meassurement.bicep == 0 )  &&  (@chartoptions[:measurement_bicep][0] || @chartoptions[:measurement_bicep][1]   || @chartoptions[:measurements][0] || @chartoptions[:measurements][1]) 
+    if !(measurement.bicep.nil? && measurement.bicep == 0 )  &&  (@chartoptions[:measurement_bicep][0] || @chartoptions[:measurement_bicep][1]   || @chartoptions[:measurements][0] || @chartoptions[:measurements][1]) 
       meas11_count += 1 
       meas11_sum += measurement.bicep  
       @set10.addPoint(measurement.measured_on.to_time.to_i * 1000,measurement.bicep)
       @set10Avg.addPoint(measurement.measured_on.to_time.to_i * 1000, meas11_sum.to_f/ meas11_count.to_f)
     end      
 
-    if !(measurement.resting_metabolism.nil? && meassurement.resting_metabolism == 0 )  &&  (@chartoptions[:measurement_resting_metabolism][0] || @chartoptions[:measurement_resting_metabolism][1]   || @chartoptions[:measurements][0] || @chartoptions[:measurements][1]) 
+    if !(measurement.resting_metabolism.nil? && measurement.resting_metabolism == 0 )  &&  (@chartoptions[:measurement_resting_metabolism][0] || @chartoptions[:measurement_resting_metabolism][1]   || @chartoptions[:measurements][0] || @chartoptions[:measurements][1]) 
       meas12_count += 1 
       meas12_sum += measurement.resting_metabolism  
       @set11.addPoint(measurement.measured_on.to_time.to_i * 1000,measurement.resting_metabolism)
       @set11Avg.addPoint(measurement.measured_on.to_time.to_i * 1000, meas12_sum.to_f/ meas12_count.to_f)
     end   
     
-    if !(measurement.water_percent.nil? && meassurement.water_percent == 0 )  &&  (@chartoptions[:measurement_water_percent][0] || @chartoptions[:measurement_water_percent][1]   || @chartoptions[:measurements][0] || @chartoptions[:measurements][1]) 
+    if !(measurement.water_percent.nil? && measurement.water_percent == 0 )  &&  (@chartoptions[:measurement_water_percent][0] || @chartoptions[:measurement_water_percent][1]   || @chartoptions[:measurements][0] || @chartoptions[:measurements][1]) 
       meas13_count += 1 
       meas13_sum += measurement.water_percent  
       @set12.addPoint(measurement.measured_on.to_time.to_i * 1000,measurement.water_percent)
