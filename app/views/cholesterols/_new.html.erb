@@ -3,14 +3,31 @@
 <tr>
 <th> <%= f.label :hdl %> </th>
 <th> <%= f.label :ldl %> </th>
-<th> <%= f.label :measured_on %> </th>
+<th> <%= f.label :measured_on %>
+
+    
+
+ </th>
 <th> <%= f.label :comment %> </th>
 </tr>
 
 <tr>
 <td> <%= f.text_field :hdl, :size => 4 %> </td>
 <td> <%= f.text_field :ldl, :size => 4 %> </td>
-<td> <%= f.datetime_select :measured_on %> </td>
+<td> 
+     <%= calendar_box 'cholesterol', 'measured_on',
+       { :class => 'date',
+         :date => Time.zone.now,
+         :field_title => 'Measured on',
+         :button_title => 'Show calendar' ,
+         :value => Time.zone.now },
+       { :firstDay => 1,
+         :range => [1900, 2015],
+         :step => 1,
+         :showsTime => 1,
+         :showOthers => true,
+         :cache => true } %>
+</td>
 <td> <%= f.text_field :comment %> </td>
 
 </tr>

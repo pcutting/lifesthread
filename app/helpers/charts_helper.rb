@@ -309,7 +309,7 @@ end
 
   if options == "all" || options == "cholesterol" 
     @cholesterols = current_user.cholesterols.find(:all, :order => "measured_on asc") 
-    getCholesterol unless @cholesterol.nil? #function call
+    getCholesterol unless @cholesterols.nil? #function call
   end
 
 end # ends myPlots
@@ -444,12 +444,12 @@ end # def getBP
 #################  
   
 def getCholesterol
-
 #cholesterol
 cholesterol1,cholesterol2 = [],[] 
 chol_sum1, chol_sum2, count = 0,0,0 
 chol_avg1, chol_avg2 = [],[] 
-if ( @chartoptions[:cholesterol][0]|| @chartoptions[:cholesterol][1])
+
+if ( @chartoptions[:cholesterol][0] || @chartoptions[:cholesterol][1])
 
     @set1 = ChartItem.new("Cholesterol:HDL")
     @set2 = ChartItem.new("Cholesterol:LDL")

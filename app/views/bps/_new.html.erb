@@ -11,7 +11,7 @@
     <td><%= f.text_field :diastolic, :size => 4  %></td>
     <td><%#= f.datetime_select :measured_on , :start_year => 1900  %>
    
-         <%= calendar_box 'bp', 'measured_on',
+    <%= calendar_box 'bp', 'measured_on',
        { :class => 'date',
          :date => Time.zone.now,
          :field_title => 'BP measured on',

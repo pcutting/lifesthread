@@ -37,6 +37,7 @@
     <td><%=h cholesterol.measured_on %></td>
     <td><%=h cholesterol.comment %></td>
     <td><%= link_to 'Edit', edit_cholesterol_path(cholesterol) %></td>
+    <td><%= link_to 'Destroy', cholesterol, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
