@@ -86,10 +86,17 @@ NOTE: Leader; leaders are able to grant sub-roles to delegate responsibilities t
   <p><%= submit_tag 'Update' %></p> 
 <% end -%>
 
+<br/>
+<h3>Roles</h3>
+<table>
+<tr><th>Role</th><th>Conditions</th><th>Leader</th></tr>
 <% for role in @roles %>
-Role: <%= role.has_role %>
-Conditions: <%= role.conditions %>
-Leader: <%= role.leader ? "Yes" : "No" %>
-<%= link_to 'Destroy', admin_user_path(role), :confirm => 'Are you sure?', :method => :delete %><br />
+<tr><td>
+<%= role.has_role %></td>
+<td><%= role.conditions %></td><td>
+<%= role.leader ? "Yes" : "No" %></td>
+<td><%= link_to 'Destroy', admin_user_path(role), :confirm => 'Are you sure?', :method => :delete %></td></tr>
 <% end %>
+</table>
+<br/>
 
