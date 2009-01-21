@@ -50,7 +50,7 @@ before_filter :load_member_conditions
   end
 
   def destroy
-    @user = User.find(params[:id])
+    #@user = User.find(params[:id])
     @role = Role.find(params[:id])
     @role.destroy
     

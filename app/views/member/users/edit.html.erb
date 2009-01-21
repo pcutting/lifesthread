@@ -76,9 +76,12 @@
   <p><%= submit_tag 'Update' %></p> 
 <% end -%>
 
+<table>
 <% for role in @roles %>
-Role: <%= role.has_role %><br />
-Conditions: <%= role.conditions %><br />
-Leader: <%= role.leader ? "Yes" : "No" %><br />
+<tr><td>
+Role: <%= role.has_role %></td>
+<td>Conditions: <%= role.conditions %></td><td>
+Leader: <%= role.leader ? "Yes" : "No" %></td><td>
+<%= link_to 'Destroy', member_user_path(role), :confirm => 'Are you sure?', :method => :delete %></td><tr>
 <% end %>
-
+</table>
