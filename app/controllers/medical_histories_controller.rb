@@ -6,6 +6,8 @@ class MedicalHistoriesController < ApplicationController
   def index
     @medical_histories = current_user.medical_histories.find(:all, :order => :approx_date)
     @illness = current_user.illness_histories.find(:all, :order => :measured_on)
+    @medications = current_user.medications.find(:all, :order =>  :prescribed_start)
+    
     
     respond_to do |format|
       format.html # index.html.erb

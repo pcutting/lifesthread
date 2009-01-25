@@ -9,6 +9,12 @@ module ChartsHelper
   end
   
   class Event
+  
+    @date
+    @label
+    @summary 
+    @type
+
     attr_reader :date, :label, :summary, :type 
     attr_writer  :label, :summary, :type
     
@@ -807,6 +813,189 @@ def make_table
   chart += "<br/><h3>Summary</h3>[H = Hospital Medical Event, I = Illness History]<br/>" + table 
   
 end
+
+
+
+
+
+
+
+#---------------------------------------------
+
+class ADate
+
+ # @date
+ # @illnesses
+ # @hospitals
+ # @medications
+ 
+  attr_accessor :date, :illnesses, :hospitals, :medications
+  
+  def initialize(d)
+    @date = d.to_date
+    @illnesses = []
+    @hospitals = [] 
+    @medications = []
+  end
+  
+  def date=(d)
+    @date = d.to_date
+  end
+  
+  def illnesses=(ill)
+    @illnesses.push(ill)
+  end
+  
+  def hospitals=(hosp)
+    @hospitals.push(hosp)
+  end
+  
+  def medications=(med)
+    @medications.push(med)
+  end  
+
+  
+end #ADate
+
+
+#------------------------------------------------
+
+def make_table_styled
+  i = 0
+  column = 0
+  width = 850
+  max_column = 15
+  cell_width = width / max_column
+  
+  @table_styled = {}
+  counter = 0
+
+  unless @medical_histories.nil?
+    for med in @medical_histories
+      counter += 1
+      #raise med.approx_date.to_date.hash
+      if @table_styled[med.approx_date.to_date.hash].nil? then    
+        @table_styled[med.approx_date.to_date.hash] = ADate.new(med.approx_date)  
+      end #null date
+     
+      #raise @table_styled.to_yaml
+      
+      @table_styled[med.approx_date.to_date.hash].hospitals = Event.new(med.approx_date.to_date, "H#{counter}<br/>#{med.approx_date.to_date.strftime("%d %b '%y")}" , "<em>Dr Name:</em>#{med.doctor} <em>Hospital:</em>#{med.hospital},<br/><em>Purpose:</em>#{med.problem}, <em>Hospitalization:</em>#{if med.required_hospitalization then 'Yes' else 'No' end}","H")
+    
+    end
+  end
+  
+   
+  unless @illness.nil?
+    counter = 0
+    for ill in @illness
+      counter += 1
+      if @table_styled[ill.measured_on.to_date.hash].nil? then
+        @table_styled[ill.measured_on.to_date.hash] = ADate.new(ill.measured_on)
+      end #null date
+      
+      #i need to add a date field for this.
+      @table_styled[ill.measured_on.to_date.hash].illnesses = Event.new(
+        ill.measured_on.to_date, 
+        "I#{counter}<br/>#{ill.measured_on.to_date.strftime("%d %b '%y")}", 
+        "Condition:#{ill.title}, Controlled:#{if ill.controlled then 'Yes' else 'No' end}", "I")
+    end
+  end
+
+
+  unless @medications.nil?
+    counter = 0
+    for med in @medications
+      counter += 1
+      if @table_styled[med.prescribed_start.to_date.hash].nil? then
+        @table_styled[med.prescribed_start.to_date.hash] = ADate.new(med.prescribed_start)
+      end #null date
+      @table_styled[med.prescribed_start.to_date.hash].medications = Event.new(
+        med.prescribed_start.to_date, 
+        "M#{counter}<br/>#{med.prescribed_start.to_date.strftime("%d %b '%y")}", 
+        "Medication:#{med.name}, Purpose:#{med.purpose}", "M")
+    end
+  end
+
+
+  
+  #raise @table_styled.inspect
+ 
+  @table_styled = @table_styled.sort
+  
+  table = '<br/><table>'
+  table += '<tr><td class="Hospital">Hospital</td>'
+  
+  @table_styled.each {|day, day_value| 
+    table += "<td>"
+    day_value.hospitals.each {| hosp | 
+     table += "#{hosp.label}<br/>"
+    }  
+    table += "</td>"
+  }
+  
+  table += "</tr>" 
+  
+  
+  table += '<tr><td class="Illness">Illness</td>'
+  @table_styled.each {|day, day_value| 
+    table += "<td>"
+    day_value.illnesses.each {| ill | 
+     table += "#{ill.label}<br/>"
+    }  
+    table += "</td>"
+  }
+  
+  table += '<tr><td class="Medication">Medication</td>'
+  @table_styled.each {|day, day_value| 
+    table += "<td>"
+    day_value.medications.each {| med | 
+     table += "#{med.label}<br/>"
+    }  
+    table += "</td>"
+  }  
+  
+  
+  table += "<h3>Timeline</h3></tr></table></br>"
+ 
+  summery = "<table><tr><th></th><th>Summary</th></tr>"
+
+  @table_styled.each {|day, day_value| 
+  
+    day_value.hospitals.each {| value |
+      cls='"Hospital"'
+      summery += "<tr><td class=#{cls}>#{value.label}</td><td>#{value.summary}</td></tr>"
+    }  
+  
+    day_value.illnesses.each {| value |
+     cls = '"Illness"'
+     summery += "<tr><td class=#{cls}>#{value.label}</td><td>#{value.summary}</td></tr>"
+    } 
+    
+    day_value.medications.each {| value |
+      cls='"Medication"'
+      summery += "<tr><td class=#{cls}>#{value.label}</td><td>#{value.summary}</td></tr>"
+    }  
+  }  
+  summery += "</table>"
+  
+  
+ 
+         #if @calendar.events[i].type == "H" then chart += ' class="Hospital" '
+         #elsif @calendar.events[i].type == "I" then chart += ' class="Illness" ' 
+         #elsif @calendar.events[i].type == "M" then chart += ' class="Medication" '
+        #end
+     
+        #chart += ">" +@calendar.events[i].label + "</td></tr></table><br/>"
+        #i += 1
+ 
+ 
+  table + summery
+  
+end
+
+
+
  
 end # ends helper
 
