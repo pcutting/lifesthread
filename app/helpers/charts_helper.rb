@@ -884,7 +884,7 @@ def make_table_styled
      
       #raise @table_styled.to_yaml
       # #{med.approx_date.to_date.strftime("%d %b '%y")}
-      @table_styled[med.approx_date.to_date.hash].hospitals = Event.new(med.approx_date.to_date, "H#{counter}" , "<em>Purpose:</em>#{med.problem}, <em>Hospitalization:</em>#{if med.required_hospitalization then 'Yes' else 'No' end} <em>Dr Name:</em>#{med.doctor} <em>Hospital:</em>#{med.hospital},","H")
+      @table_styled[med.approx_date.to_date.hash].hospitals = Event.new(med.approx_date.to_date, "P#{counter}" , "<em>Purpose: </em>#{med.problem}, <em>Hospitalization: </em>#{if med.required_hospitalization then 'Yes' else 'No' end} <em>Dr Name: </em>#{med.doctor} <em>Hospital: </em>#{med.hospital},","P")
     
     end
   end
@@ -902,8 +902,8 @@ def make_table_styled
       # <br/>#{ill.measured_on.to_date.strftime("%d %b '%y")}
       @table_styled[ill.measured_on.to_date.hash].illnesses = Event.new(
         ill.measured_on.to_date, 
-        "I#{counter}", 
-        "Condition:#{ill.title}, Controlled:#{if ill.controlled then 'Yes' else 'No' end}", "I")
+        "C#{counter}", 
+        "Condition:#{ill.title}, Controlled:#{if ill.controlled then 'Yes' else 'No' end}", "C")
     end
   end
 
@@ -930,7 +930,7 @@ def make_table_styled
   @table_styled = @table_styled.sort
   
   table = '<br/><h3>Timeline</h3><table>'
-  table += '<tr><td class="Hospital">Hospital</td>'
+  table += '<tr><td class="Hospital">Procedure</td>'
   
   @table_styled.each {|day, day_value| 
     table += "<td>"
@@ -943,7 +943,7 @@ def make_table_styled
   table += "</tr>" 
   
   
-  table += '<tr><td class="Illness">Illness</td>'
+  table += '<tr><td class="Illness">Condition</td>'
   @table_styled.each {|day, day_value| 
     table += "<td>"
     day_value.illnesses.each {| ill | 
