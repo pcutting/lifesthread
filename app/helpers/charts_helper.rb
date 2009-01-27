@@ -957,7 +957,7 @@ def make_table_styled
   
 
   
-  table += '<tr><td class="Medication">Medication</td>'
+  table += '<tr><td class="Medication">Prescription</td>'
   @table_styled.each {|day, day_value| 
   
     if (min_date == nil) then 
