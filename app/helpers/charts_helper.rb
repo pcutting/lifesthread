@@ -880,7 +880,7 @@ def make_table_styled
      
       #raise @table_styled.to_yaml
       # #{med.approx_date.to_date.strftime("%d %b '%y")}
-      @table_styled[med.approx_date.to_date.hash].hospitals = Event.new(med.approx_date.to_date, "H#{counter}" , "<em>Purpose:</em>#{med.problem}, <em>Hospitalization:</em>#{if med.required_hospitalization then 'Yes' else 'No' end}<em>Dr Name:</em>#{med.doctor} <em>Hospital:</em>#{med.hospital},","H")
+      @table_styled[med.approx_date.to_date.hash].hospitals = Event.new(med.approx_date.to_date, "H#{counter}" , "<em>Purpose:</em>#{med.problem}, <em>Hospitalization:</em>#{if med.required_hospitalization then 'Yes' else 'No' end} <em>Dr Name:</em>#{med.doctor} <em>Hospital:</em>#{med.hospital},","H")
     
     end
   end
