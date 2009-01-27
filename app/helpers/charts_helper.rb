@@ -879,8 +879,8 @@ def make_table_styled
       end #null date
      
       #raise @table_styled.to_yaml
-      
-      @table_styled[med.approx_date.to_date.hash].hospitals = Event.new(med.approx_date.to_date, "H#{counter}<br/>#{med.approx_date.to_date.strftime("%d %b '%y")}" , "<em>Dr Name:</em>#{med.doctor} <em>Hospital:</em>#{med.hospital},<br/><em>Purpose:</em>#{med.problem}, <em>Hospitalization:</em>#{if med.required_hospitalization then 'Yes' else 'No' end}","H")
+      # #{med.approx_date.to_date.strftime("%d %b '%y")}
+      @table_styled[med.approx_date.to_date.hash].hospitals = Event.new(med.approx_date.to_date, "H#{counter}" , "<em>Purpose:</em>#{med.problem}, <em>Hospitalization:</em>#{if med.required_hospitalization then 'Yes' else 'No' end}<em>Dr Name:</em>#{med.doctor} <em>Hospital:</em>#{med.hospital},","H")
     
     end
   end
@@ -895,9 +895,10 @@ def make_table_styled
       end #null date
       
       #i need to add a date field for this.
+      # <br/>#{ill.measured_on.to_date.strftime("%d %b '%y")}
       @table_styled[ill.measured_on.to_date.hash].illnesses = Event.new(
         ill.measured_on.to_date, 
-        "I#{counter}<br/>#{ill.measured_on.to_date.strftime("%d %b '%y")}", 
+        "I#{counter}", 
         "Condition:#{ill.title}, Controlled:#{if ill.controlled then 'Yes' else 'No' end}", "I")
     end
   end
@@ -910,9 +911,10 @@ def make_table_styled
       if @table_styled[med.prescribed_start.to_date.hash].nil? then
         @table_styled[med.prescribed_start.to_date.hash] = ADate.new(med.prescribed_start)
       end #null date
+      # <br/>#{med.prescribed_start.to_date.strftime("%d %b '%y")}
       @table_styled[med.prescribed_start.to_date.hash].medications = Event.new(
         med.prescribed_start.to_date, 
-        "M#{counter}<br/>#{med.prescribed_start.to_date.strftime("%d %b '%y")}", 
+        "M#{counter}", 
         "Medication:#{med.name}, Purpose:#{med.purpose}", "M")
     end
   end
@@ -958,23 +960,23 @@ def make_table_styled
   
   table += "<h3>Timeline</h3></tr></table></br>"
  
-  summery = "<br/><table><tr><th></th><th>Summary</th></tr>"
+  summery = "<br/><table><tr><th></th><th>Date</th><th>Summary</th></tr>"
 
   @table_styled.each {|day, day_value| 
   
     day_value.hospitals.each {| value |
       cls='"Hospital"'
-      summery += "<tr><td class=#{cls}>#{value.label}</td><td>#{value.summary}</td></tr>"
+      summery += "<tr><td class=#{cls}>#{value.label}</td><td>#{value.date.to_s(:long)}</td><td>#{value.summary}</td></tr>"
     }  
   
     day_value.illnesses.each {| value |
      cls = '"Illness"'
-     summery += "<tr><td class=#{cls}>#{value.label}</td><td>#{value.summary}</td></tr>"
+     summery += "<tr><td class=#{cls}>#{value.label}</td><td>#{value.date.to_s(:long)}</td><td>#{value.summary}</td></tr>"
     } 
     
     day_value.medications.each {| value |
       cls='"Medication"'
-      summery += "<tr><td class=#{cls}>#{value.label}</td><td>#{value.summary}</td></tr>"
+      summery += "<tr><td class=#{cls}>#{value.label}</td><td>#{value.date.to_s(:long)}</td><td>#{value.summary}</td></tr>"
     }  
   }  
   summery += "</table>"
