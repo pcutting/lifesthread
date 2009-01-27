@@ -867,6 +867,10 @@ def make_table_styled
   max_column = 15
   cell_width = width / max_column
   
+   min_date = nil
+  max_date = nil
+
+  
   @table_styled = {}
   counter = 0
 
@@ -925,7 +929,7 @@ def make_table_styled
  
   @table_styled = @table_styled.sort
   
-  table = '<br/><table>'
+  table = '<br/><h3>Timeline</h3><table>'
   table += '<tr><td class="Hospital">Hospital</td>'
   
   @table_styled.each {|day, day_value| 
@@ -950,6 +954,15 @@ def make_table_styled
   
   table += '<tr><td class="Medication">Medication</td>'
   @table_styled.each {|day, day_value| 
+  
+    if (min_date == nil) then 
+      min_date = day_value.date
+      max_date = min_date
+    else
+      if day_value.date > max_date then max_date = day_value.date end
+      if day_value.date < min_date then min_date = day_value.date end #probably not needed.
+    end
+  
     table += "<td>"
     day_value.medications.each {| med | 
      table += "#{med.label}<br/>"
@@ -957,12 +970,19 @@ def make_table_styled
     table += "</td>"
   }  
   
+  cells = @table_styled.size + 1
+  l_cells = cells / 2
+  r_cells = cells - l_cells
   
-  table += "<h3>Timeline</h3></tr></table></br>"
+  table += "</tr><tr><td colspan=#{l_cells}>#{min_date.to_s(:long)}</td><td colspan=#{r_cells } align=right>#{max_date.to_s(:long)}</td></tr></table></br>"
  
   summery = "<br/><table><tr><th></th><th>Date</th><th>Summary</th></tr>"
 
+ 
   @table_styled.each {|day, day_value| 
+    
+
+    
   
     day_value.hospitals.each {| value |
       cls='"Hospital"'
