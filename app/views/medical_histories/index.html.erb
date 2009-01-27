@@ -23,7 +23,7 @@
 
 <% for medical_history in @medical_histories %>
   <tr>
-    <td><%=h medical_history.approx_date %></td>
+    <td><%=h medical_history.approx_date.strftime("%d %b '%y") %></td>
     <td><%=h medical_history.hospital %></td>
     <td><%=h medical_history.problem %></td>
     <td><%=h medical_history.treatment %></td>
@@ -32,9 +32,8 @@
     <td><%=h medical_history.state %></td>
     <td><%=h medical_history.dr_phone %></td>
     <td><%=h medical_history.required_hospitalization %></td>
-    <td><%= link_to 'Show', medical_history %></td>
     <td><%= link_to 'Edit', edit_medical_history_path(medical_history) %></td>
-    <td><%= link_to 'Destroy', medical_history, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Delete', medical_history, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
@@ -64,7 +63,7 @@
     <td><%=h illness_history.at_risk %></td>
     <td><%=h illness_history.in_family_history %></td>
     <td><%=h illness_history.concerned_about %></td>
-    <td><%=h illness_history.measured_on %></td>
+    <td><%=h illness_history.measured_on.strftime("%d %b '%y %H:%M") %></td>
     <td><%=h illness_history.comment %></td>
     <td><%= link_to 'Edit', edit_illness_history_path(illness_history) %></td>
   </tr>
@@ -73,3 +72,45 @@
 
 <br/>
 <%= link_to 'New Illness History Condition', new_illness_history_path %>
+
+
+<hr>
+
+<br/>
+<h3>Medications</h3>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Strength</th>
+    <th>Prescribed start</th>
+    <th>Prescribed end</th>
+    <th>Actual start</th>
+    <th>Actual stop</th>
+    <th>Dosage</th>
+    <th>Purpose</th>
+    <th>Result</th>
+    <th>Comment</th>
+  </tr>
+
+<% for medication in @medications %>
+  <tr>
+    <td><%=h medication.name %></td>
+    <td><%=h medication.strength %><%=h medication.unit_type %></td>
+    <td><%=h medication.prescribed_start.strftime("%d %b '%y") %></td>
+    <td><%=h medication.prescribed_end.strftime("%d %b '%y") %></td>
+    <td><%=h medication.actual_start.strftime("%d %b '%y") %></td>
+    <td><%=h medication.actual_stop.strftime("%d %b '%y") %></td>
+    <td><%=h medication.dosage %>-<%=h medication.dosage_unit %></td>
+    <td><%=h medication.purpose %></td>
+    <td><%=h medication.result %></td>
+    <td><%=h medication.comment %></td>
+    <td><%= link_to 'Edit', edit_medication_path(medication) %></td>
+    <td><%= link_to 'Delete', medication, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New medication', new_medication_path %>
