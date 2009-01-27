@@ -958,7 +958,7 @@ def make_table_styled
   
   table += "<h3>Timeline</h3></tr></table></br>"
  
-  summery = "<table><tr><th></th><th>Summary</th></tr>"
+  summery = "<br/><table><tr><th></th><th>Summary</th></tr>"
 
   @table_styled.each {|day, day_value| 
   

@@ -6,6 +6,9 @@ class StressLogsController < ApplicationController
   # GET /stress_logs.xml
   def index
     @stress_logs = @stress.stress_logs.find(:all)
+    @stress_log = current_user.stress_logs.build
+    
+    
 
     respond_to do |format|
       format.html # index.html.erb

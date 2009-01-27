@@ -13,14 +13,27 @@
   </p>
   <p>
     <%= f.label :first_acknowledged %><br />
-    <%= f.date_select :first_acknowledged %>
+    <%# = f.date_select :first_acknowledged %>
+    <%= calendar_box 'stress', 'first_acknowledged',
+       { :class => 'date',
+         :date => Time.zone.now,
+         :field_title => 'First Acknowledged',
+         :button_title => 'Show calendar' ,
+         :value => Time.zone.now },
+       { :firstDay => 1,
+         :range => [1900, 2015],
+         :step => 1,
+         :showsTime => 1,
+         :showOthers => true,
+         :cache => true } %>
+    
   </p>
   <p>
-    <%= f.label :initial_effect_on_life %><br />
+    <%= f.label :initial_effect_on_life %>:0[Low]-100[High]<br />
     <%= f.text_field :initial_effect_on_life %>
   </p>
   <p>
-    <%= f.label :desired_effect_on_lifestyle %><br />
+    <%= f.label :desired_effect_on_lifestyle %>:0[Low]-100[High]<br />
     <%= f.text_field :desired_effect_on_lifestyle %>
   </p>
   <p>
@@ -28,4 +41,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Show sTressors without creating a new one.', stresses_path %>
+<%= link_to 'Show sTressors', stresses_path %>

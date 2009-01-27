@@ -1,10 +1,63 @@
 <h1>sTressors</h1>
 <br />
+
+
+<br/>
+<% if params[:view] == "dataentry" %> 
+
+<% else %>
+
 <%- @plot_data = [] -%>
 <% @chartoptions = current_user.profile.chart_options %>
 <% myPlots("stress") %>
 <%= makeChart %>
+
+<% end %>
+
 <div class='span-24 last'>
+
+<h3>New sTressor</h3>
+<table>
+<% form_for(@stress) do |f| %>
+  <%= f.error_messages %>
+    <tr>
+    <th><%= f.label :category %></th>
+    <th><%= f.label :title %></th>
+    <th><%= f.label :first_acknowledged %></th>
+    <th><%= f.label :initial_effect_on_life %>: 0[Low]-100[High]</th>
+    <th><%= f.label :desired_effect_on_lifestyle %>: 0[Low]-100[High]</th>
+    </tr>
+    
+    <tr>
+    <td><%= f.text_field :category, :size => 8 %></td>
+    <td><%= f.text_field :title, :size => 8 %></td>
+    <td><%= calendar_box 'stress', 'first_acknowledged',
+       { :class => 'date',
+         :date => Time.zone.now,
+         :field_title => 'First Acknowledged',
+         :button_title => 'Show calendar' ,
+         :value => Time.zone.now },
+       { :firstDay => 1,
+         :range => [1900, 2015],
+         :step => 1,
+         :showsTime => 1,
+         :showOthers => true,
+         :cache => true } %>
+    
+    
+    </td>
+    <td><%= f.text_field :initial_effect_on_life, :size => 3 %></td>
+    <td><%= f.text_field :desired_effect_on_lifestyle , :size => 3%></td>
+    </tr>
+    
+</table>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+
 <table>
   <tr>
     <th>Category</th>
@@ -21,8 +74,8 @@
     <td><%=h stress.first_acknowledged %></td>
     <td><%=h stress.initial_effect_on_life %></td>
     <td><%=h stress.desired_effect_on_lifestyle %></td>
-    <td><%= link_to 'Events', stress_stress_logs_path(stress) %></td>
-    <td><%= link_to 'Details', edit_stress_path(stress) %></td>
+    <td><%= link_to 'Details', stress_stress_logs_path(stress) %></td>
+    <!-- <td><%= link_to 'Description', edit_stress_path(stress) %></td> -->
   </tr>
 <% end %>
 </table>

@@ -1,7 +1,61 @@
-<h1>sTress log</h1>
+<h1>sTressor</h1>
 
-<%= link_to 'New stress log', new_stress_stress_log_path(@stress) %>
-<br /><br />
+<table>
+  
+  <tr><th>Category</th><td><%=h @stress.category %></td><th><%= link_to 'Edit Description', edit_stress_path(@stress) %></th></tr>
+    
+  <tr><th>Title</th><td><%=h @stress.title %></td></tr>
+  <tr><th>First acknowledged</th><td><%=h @stress.first_acknowledged %></td></tr>
+
+</table>
+<br/>
+
+
+<h3>New Detail</h3>
+<% form_for([@stress, @stress_log]) do |f| %>
+  <%= f.error_messages %>
+
+<table>
+<tr><th><%= f.label "Measured on" %></th>
+<th><%= f.label :event %></th>
+<th><%= f.label :description %></th>
+<th><%= f.label :action_taken %></th>
+<th><%= f.label :effect_on_life %>(0-100)</th>
+<th><%= f.label :perceivable_progress %>(0-100)</th>
+</tr><tr>
+<td><%# = f.datetime_select :measured_on %>
+    <%= calendar_box 'stress_log', 'measured_on',
+       { :class => 'date',
+         :date => Time.zone.now,
+         :field_title => 'Measured on',
+         :button_title => 'Show calendar' ,
+         :value => Time.zone.now },
+       { :firstDay => 1,
+         :range => [1900, 2015],
+         :step => 1,
+         :showsTime => 1,
+         :showOthers => true,
+         :cache => true } %>
+</td><td>
+    <%= f.text_field :event, :size => 6 %>
+</td><td>
+    <%= f.text_field :description, :size => 8 %>
+</td><td>
+    <%= f.text_field :action_taken, :size => 8 %>
+</td><td>
+    <%= f.text_field :effect_on_life, :size => 3 %>
+</td><td>
+    <%= f.text_field :perceivable_progress, :size => 3 %>
+</td></tr>
+</table>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+
+<br />
+<h3>Details</h3>
 <table>
   <tr>
     <th>Measured on</th>
@@ -27,4 +81,5 @@
 
 <br />
 
+<%= link_to 'Show sTressors', stresses_path %>
 
