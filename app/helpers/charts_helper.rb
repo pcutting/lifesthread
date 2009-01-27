@@ -884,7 +884,7 @@ def make_table_styled
      
       #raise @table_styled.to_yaml
       # #{med.approx_date.to_date.strftime("%d %b '%y")}
-      @table_styled[med.approx_date.to_date.hash].hospitals = Event.new(med.approx_date.to_date, "P#{counter}" , "<em>Purpose: </em>#{med.problem}, <em>Hospitalization: </em>#{if med.required_hospitalization then 'Yes' else 'No' end} <em>Dr Name: </em>#{med.doctor} <em>Hospital: </em>#{med.hospital},","P")
+      @table_styled[med.approx_date.to_date.hash].hospitals = Event.new(med.approx_date.to_date, "P#{counter}" , "<em>Procedure: </em>#{med.problem}, <em>InPatient: </em>#{if med.required_hospitalization then 'Yes' else 'No' end}, <em>Dr: </em>#{med.doctor}, <em>Facility: </em>#{med.hospital},","P")
     
     end
   end
@@ -903,8 +903,8 @@ def make_table_styled
       @table_styled[ill.measured_on.to_date.hash].illnesses = Event.new(
         ill.measured_on.to_date, 
         "C#{counter}", 
-        "Condition:#{ill.title}, Controlled:#{if ill.controlled then 'Yes' else 'No' end}", "C")
-    end
+        "Condition: #{ill.title}, Controlled: #{if ill.controlled then 'Yes' else 'No' end}, Family History: #{if ill.in_family_history then 'Yes' else 'No' end}", "C")
+    end 
   end
 
 
@@ -919,7 +919,8 @@ def make_table_styled
       @table_styled[med.prescribed_start.to_date.hash].medications = Event.new(
         med.prescribed_start.to_date, 
         "M#{counter}", 
-        "Medication:#{med.name}, Purpose:#{med.purpose}", "M")
+        "Medication:#{med.name}, Dosage:#{med.strength} #{med.unit_type}, Objective:#{med.purpose}",  "M")
+        
     end
   end
 
@@ -930,6 +931,17 @@ def make_table_styled
   @table_styled = @table_styled.sort
   
   table = '<br/><h3>Timeline</h3><table>'
+  
+  table += '<tr><td class="Illness">Condition</td>'
+  @table_styled.each {|day, day_value| 
+    table += "<td>"
+    day_value.illnesses.each {| ill | 
+     table += "#{ill.label}<br/>"
+    }  
+    table += "</td>"
+  }
+  
+   
   table += '<tr><td class="Hospital">Procedure</td>'
   
   @table_styled.each {|day, day_value| 
@@ -943,14 +955,7 @@ def make_table_styled
   table += "</tr>" 
   
   
-  table += '<tr><td class="Illness">Condition</td>'
-  @table_styled.each {|day, day_value| 
-    table += "<td>"
-    day_value.illnesses.each {| ill | 
-     table += "#{ill.label}<br/>"
-    }  
-    table += "</td>"
-  }
+
   
   table += '<tr><td class="Medication">Medication</td>'
   @table_styled.each {|day, day_value| 
@@ -982,17 +987,17 @@ def make_table_styled
   @table_styled.each {|day, day_value| 
     
 
-    
+    day_value.illnesses.each {| value |
+     cls = '"Illness"'
+     summery += "<tr><td class=#{cls}>#{value.label}</td><td>#{value.date.to_s(:long)}</td><td>#{value.summary}</td></tr>"
+    }   
   
     day_value.hospitals.each {| value |
       cls='"Hospital"'
       summery += "<tr><td class=#{cls}>#{value.label}</td><td>#{value.date.to_s(:long)}</td><td>#{value.summary}</td></tr>"
     }  
   
-    day_value.illnesses.each {| value |
-     cls = '"Illness"'
-     summery += "<tr><td class=#{cls}>#{value.label}</td><td>#{value.date.to_s(:long)}</td><td>#{value.summary}</td></tr>"
-    } 
+
     
     day_value.medications.each {| value |
       cls='"Medication"'

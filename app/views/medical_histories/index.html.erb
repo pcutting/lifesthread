@@ -5,51 +5,16 @@
 
 <br />
 
-<hr/>
-<h3>Medical History</h3>
-
-<table>
-  <tr>
-    <th>Approx date</th>
-    <th>Hospital</th>
-    <th>Problem</th>
-    <th>Treatment</th>
-    <th>Doctor</th>
-    <th>City</th>
-    <th>State</th>
-    <th>Dr phone</th>
-    <th>Required hospitalization</th>
-  </tr>
-
-<% for medical_history in @medical_histories %>
-  <tr>
-    <td><%=h medical_history.approx_date.strftime("%d %b '%y") %></td>
-    <td><%=h medical_history.hospital %></td>
-    <td><%=h medical_history.problem %></td>
-    <td><%=h medical_history.treatment %></td>
-    <td><%=h medical_history.doctor %></td>
-    <td><%=h medical_history.city %></td>
-    <td><%=h medical_history.state %></td>
-    <td><%=h medical_history.dr_phone %></td>
-    <td><%=h medical_history.required_hospitalization %></td>
-    <td><%= link_to 'Edit', edit_medical_history_path(medical_history) %></td>
-    <td><%= link_to 'Delete', medical_history, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-<br />
-<%= link_to 'New Medical History Event', new_medical_history_path %>
-<br/>
 
 <hr/>
-<h3>Illness Journal</h3>
+<h3>Conditions</h3>
 <table>
   <tr>
-    <th>Title</th>
+    <th>Condition</th>
     <th>Has</th>
     <th>Controlled</th>
     <th>At risk</th>
-    <th>In family history</th>
+    <th>Family history</th>
     <th>Concerned about</th>
     <th>Measured On</th>
     <th>Comment</th>
@@ -71,8 +36,43 @@
 </table>
 
 <br/>
-<%= link_to 'New Illness History Condition', new_illness_history_path %>
+<%= link_to 'New Condition', new_illness_history_path %>
 
+<hr/>
+<h3>Procedure</h3>
+
+<table>
+  <tr>
+    <th>Approx date</th>
+    <th>Facility</th>
+    <th>Condition</th>
+    <th>Treatment</th>
+    <th>Doctor</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Dr phone</th>
+    <th>InPatient</th>
+  </tr>
+
+<% for medical_history in @medical_histories %>
+  <tr>
+    <td><%=h medical_history.approx_date.strftime("%d %b '%y") %></td>
+    <td><%=h medical_history.hospital %></td>
+    <td><%=h medical_history.problem %></td>
+    <td><%=h medical_history.treatment %></td>
+    <td><%=h medical_history.doctor %></td>
+    <td><%=h medical_history.city %></td>
+    <td><%=h medical_history.state %></td>
+    <td><%=h medical_history.dr_phone %></td>
+    <td><%=h medical_history.required_hospitalization %></td>
+    <td><%= link_to 'Edit', edit_medical_history_path(medical_history) %></td>
+    <td><%= link_to 'Delete', medical_history, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+<%= link_to 'New Procedure', new_medical_history_path %>
+<br/>
 
 <hr>
 
@@ -81,14 +81,14 @@
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Strength</th>
+    <th>Medication</th>
+    <th>Dosage</th>
     <th>Prescribed start</th>
     <th>Prescribed end</th>
     <th>Actual start</th>
     <th>Actual stop</th>
-    <th>Dosage</th>
-    <th>Purpose</th>
+    <th>Usage</th>
+    <th>Objective</th>
     <th>Result</th>
     <th>Comment</th>
   </tr>
