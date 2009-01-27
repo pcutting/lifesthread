@@ -46,7 +46,7 @@ class MedicationsController < ApplicationController
     respond_to do |format|
       if @medication.save
         flash[:notice] = 'Medication was successfully created.'
-        format.html { redirect_to(@medication) }
+        format.html { redirect_to(medications_path) }
       else
         format.html { render :action => "new" }
       end
@@ -61,7 +61,7 @@ class MedicationsController < ApplicationController
     respond_to do |format|
       if @medication.update_attributes(params[:medication])
         flash[:notice] = 'Medication was successfully updated.'
-        format.html { redirect_to(@medication) }
+        format.html { redirect_to(medications_path) }
       else
         format.html { render :action => "edit" }
       end

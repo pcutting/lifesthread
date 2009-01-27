@@ -9,7 +9,6 @@
     <th>Actual start</th>
     <th>Actual stop</th>
     <th>Dosage</th>
-    <th>Dosage unit</th>
     <th>Purpose</th>
     <th>Result</th>
     <th>Comment</th>
@@ -23,8 +22,7 @@
     <td><%=h medication.prescribed_end.strftime("%d %b '%y") %></td>
     <td><%=h medication.actual_start.strftime("%d %b '%y") %></td>
     <td><%=h medication.actual_stop.strftime("%d %b '%y") %></td>
-    <td><%=h medication.dosage %></td>
-    <td><%=h medication.dosage_unit %></td>
+    <td><%=h medication.dosage %>-<%=h medication.dosage_unit %></td>
     <td><%=h medication.purpose %></td>
     <td><%=h medication.result %></td>
     <td><%=h medication.comment %></td>
