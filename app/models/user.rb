@@ -22,6 +22,7 @@ class User < ActiveRecord::Base
 
 has_one :profile
 
+has_many :quotients
 has_many :opinions
 has_many :workouts
 has_many :fitness_plans
