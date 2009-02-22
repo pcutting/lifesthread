@@ -7,13 +7,13 @@ padding:1px
 .title { background : #1FF ; margin : -1.1em 0 0 0; border-bottom : 1px solid #000; }
 h3.title { margin : 0 0 0 0; padding : 0 0 0 0; }
 
-.left  { float : left ; width :30% ; }
-.right, #login, #password { float : right ; width : 60% ; }
+.left  { float : left ; }
+.right, #login, #password { float : right ; width : 35% ; }
 
 
   
 body {
- background: url(/images/lifesthread.jpg) no-repeat top left  ;
+ //background: url(/images/lifesthread.jpg) no-repeat top left  ;
   width : 900px;
   margin :  0 auto 0 auto;
  }  
@@ -23,12 +23,14 @@ body {
 
   //.button { position : relative ; left : 40%; }
  
+ 
+ .loginSummery { border : 0px ; }
+ 
  .loginBox {  
   border : 1px solid #000;
-  margin :  15em 3em 0 500px; 
-  /*position : absolute;
-  left : 100%;
-  top : 40%; */
+  margin : 4em; 0 0 0;
+  //margin :  15em 3em 0 500px; 
+  /*position : absolute;  left : 100%;  top : 40%; */
   }
 /*      body { 
       border : 1px solid gray;
@@ -50,23 +52,23 @@ table {
   margin-left: auto;
   margin-right: auto;
   border-color: #600;
-  border: 1px solid;
+  /* border: 1px solid;
   border-style: solid;
   border-collapse: collapse;
-  font-size: 13px;
+  font-size: 13px; */
 }
 
 th {
   border-color: #600;
   border: 1px;
-  border-style: solid;
+  border-style: none;
   margin: 0;
 }
 
 td {
   border-color: #600;
   border: 1px;
-  border-style: solid;
+  border-style: none;
   margin: 0;
 }
 
