@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :quotients
+
 
 
   
@@ -30,6 +30,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :subjects
   map.resources :permissions
   map.resources :sleeps
+  map.resources :quotients
   
   map.resources :roles
   map.resources :setups
