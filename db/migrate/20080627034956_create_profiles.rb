@@ -56,7 +56,6 @@ class CreateProfiles < ActiveRecord::Migration
       t.integer :cache_current_weight_goal , :default => 0
       t.datetime :cache_last_updated , :default => Time.now
       t.text :unit_preferences
-      t.string :member_id
       t.string :sponsor_id 
       
       t.timestamps
