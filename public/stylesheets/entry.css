@@ -13,7 +13,7 @@ h3.title { margin : 0 0 0 0; padding : 0 0 0 0; }
 
   
 body {
- //background: url(/images/lifesthread.jpg) no-repeat top left  ;
+  /*background: url(/images/lifesthread.jpg) no-repeat top left  ; */
   width : 900px;
   margin :  0 auto 0 auto;
  }  
