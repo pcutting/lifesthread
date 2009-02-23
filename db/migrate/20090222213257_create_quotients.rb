@@ -80,13 +80,14 @@ class CreateQuotients < ActiveRecord::Migration
       t.integer :witness_politics
       t.integer :count_todays_worries
       t.integer :easy_life
-      t.integer :f_score
-      t.integer :i_score
-      t.integer :b_score
-      t.integer :e_score
-      t.integer :r_score
-      t.integer :s_score
-      t.integer :fibers_score
+      t.integer :f_score , :default => 0
+      t.integer :i_score , :default => 0
+      t.integer :b_score , :default => 0
+      t.integer :e_score , :default => 0
+      t.integer :r_score , :default => 0
+      t.integer :sleep_score , :default => 0
+      t.integer :stress_score , :default => 0
+      t.integer :fibers_score , :default => 0
 
       t.timestamps
     end

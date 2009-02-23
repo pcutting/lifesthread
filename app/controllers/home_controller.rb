@@ -2,9 +2,9 @@ class HomeController < ApplicationController
 
 def index
   
-unless logged_in? then
-  redirect_to(login_path)
-else
+  unless logged_in? then
+    redirect_to(login_path)
+  else
 
    if current_user.profile.blank? || current_user.profile.dob.nil? then
       flash[:notice] = "Please fill out your profile so that we can start to build your lifes thread. Thank you!"
@@ -13,18 +13,25 @@ else
       flash[:notice] = "Please read terms and conditions."
       redirect_to(edit_profile_path)
    elsif (params[:view] == "dataentryboard" ) 
-      @profile = current_user.profile
+      @profile = current_user.profile     
       @bp = Bp.new
       @measurement = Measurement.new
       @food = Food.new
       @opinion = Opinion.new
       @sleep = Sleep.new 
    else
+     @quotient = current_user.quotients.find(:first, :order => "updated_at desc")
+      
+      if @quotient.nil? then @quotient = Quotient.new end
+      
+      #raise @quotient.to_yaml
 
    end # if current_user.profile.dob.nil?
 
   end
   
+  
+ 
 end
 
 #def show

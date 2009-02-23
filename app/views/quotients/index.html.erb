@@ -2,184 +2,28 @@
 
 <table>
   <tr>
-    <th>User</th>
-    <th>Red meat</th>
-    <th>Fish</th>
-    <th>Poultry</th>
-    <th>Vegetables daily</th>
-    <th>Fruit daily</th>
-    <th>Vegetable freshness</th>
-    <th>Fruit freshness</th>
-    <th>Fried foods</th>
-    <th>Over eat</th>
-    <th>Food variety</th>
-    <th>Fast eater</th>
-    <th>Proper potions</th>
-    <th>Eat frequently</th>
-    <th>Daily dessert</th>
-    <th>Whole grain breads</th>
-    <th>Happiness</th>
-    <th>Smile frequently</th>
-    <th>Enjoy daily activities</th>
-    <th>Faith</th>
-    <th>Reached potential</th>
-    <th>Reach goals regularly</th>
-    <th>Have inspiring people</th>
-    <th>Listen to music</th>
-    <th>Have hobby</th>
-    <th>Hours tv daily</th>
-    <th>Read books</th>
-    <th>Daily newspaper</th>
-    <th>Watch sporting events</th>
-    <th>Consider news negative</th>
-    <th>Talk with friends</th>
-    <th>Talk with family</th>
-    <th>Happy with body type</th>
-    <th>Happy with mirror reflection</th>
-    <th>Daily exercise</th>
-    <th>Weekly exercise</th>
-    <th>Able to walk distance</th>
-    <th>Physical limitations</th>
-    <th>Understand fitness</th>
-    <th>Recent operations</th>
-    <th>Recent medical tests</th>
-    <th>Chronic medical problems</th>
-    <th>Desired life span</th>
-    <th>Like state residence</th>
-    <th>Like city residence</th>
-    <th>Like geographical area</th>
-    <th>Like home</th>
-    <th>Like working environment</th>
-    <th>Prefer different home environment</th>
-    <th>Prefer different work environment</th>
-    <th>Planning move</th>
-    <th>Planning job change</th>
-    <th>Planning home renovations</th>
-    <th>Over 5 friends</th>
-    <th>Over 5 relatives</th>
-    <th>Have to many friends</th>
-    <th>Have to many relatives</th>
-    <th>Close to parents</th>
-    <th>Close to aunts uncles</th>
-    <th>Close to siblings</th>
-    <th>Close to inlaws</th>
-    <th>Sleep enough</th>
-    <th>Stay up late</th>
-    <th>Wake during night</th>
-    <th>Comfartable while sleeping</th>
-    <th>Wake rested</th>
-    <th>Take naps</th>
-    <th>Have dreams</th>
-    <th>Remember most dreams</th>
-    <th>Comfortable bed</th>
-    <th>Comfortable pillow</th>
-    <th>Currently worried</th>
-    <th>Worried as prior year</th>
-    <th>Worry future</th>
-    <th>Worry finances</th>
-    <th>Worry about health</th>
-    <th>Witness politics</th>
-    <th>Count todays worries</th>
-    <th>Easy life</th>
     <th>F score</th>
     <th>I score</th>
     <th>B score</th>
     <th>E score</th>
     <th>R score</th>
-    <th>S score</th>
-    <th>Fibers score</th>
+    <th>Sleep score</th>
+    <th>sTRESSOR score</th>
   </tr>
 
 <% for quotient in @quotients %>
   <tr>
-    <td><%=h quotient.user %></td>
-    <td><%=h quotient.red_meat %></td>
-    <td><%=h quotient.fish %></td>
-    <td><%=h quotient.poultry %></td>
-    <td><%=h quotient.vegetables_daily %></td>
-    <td><%=h quotient.fruit_daily %></td>
-    <td><%=h quotient.vegetable_freshness %></td>
-    <td><%=h quotient.fruit_freshness %></td>
-    <td><%=h quotient.fried_foods %></td>
-    <td><%=h quotient.over_eat %></td>
-    <td><%=h quotient.food_variety %></td>
-    <td><%=h quotient.fast_eater %></td>
-    <td><%=h quotient.proper_potions %></td>
-    <td><%=h quotient.eat_frequently %></td>
-    <td><%=h quotient.daily_dessert %></td>
-    <td><%=h quotient.whole_grain_breads %></td>
-    <td><%=h quotient.happiness %></td>
-    <td><%=h quotient.smile_frequently %></td>
-    <td><%=h quotient.enjoy_daily_activities %></td>
-    <td><%=h quotient.faith %></td>
-    <td><%=h quotient.reached_potential %></td>
-    <td><%=h quotient.reach_goals_regularly %></td>
-    <td><%=h quotient.have_inspiring_people %></td>
-    <td><%=h quotient.listen_to_music %></td>
-    <td><%=h quotient.have_hobby %></td>
-    <td><%=h quotient.hours_tv_daily %></td>
-    <td><%=h quotient.read_books %></td>
-    <td><%=h quotient.daily_newspaper %></td>
-    <td><%=h quotient.watch_sporting_events %></td>
-    <td><%=h quotient.consider_news_negative %></td>
-    <td><%=h quotient.talk_with_friends %></td>
-    <td><%=h quotient.talk_with_family %></td>
-    <td><%=h quotient.happy_with_body_type %></td>
-    <td><%=h quotient.happy_with_mirror_reflection %></td>
-    <td><%=h quotient.daily_exercise %></td>
-    <td><%=h quotient.weekly_exercise %></td>
-    <td><%=h quotient.able_to_walk_distance %></td>
-    <td><%=h quotient.physical_limitations %></td>
-    <td><%=h quotient.understand_fitness %></td>
-    <td><%=h quotient.recent_operations %></td>
-    <td><%=h quotient.recent_medical_tests %></td>
-    <td><%=h quotient.chronic_medical_problems %></td>
-    <td><%=h quotient.desired_life_span %></td>
-    <td><%=h quotient.like_state_residence %></td>
-    <td><%=h quotient.like_city_residence %></td>
-    <td><%=h quotient.like_geographical_area %></td>
-    <td><%=h quotient.like_home %></td>
-    <td><%=h quotient.like_working_environment %></td>
-    <td><%=h quotient.prefer_different_home_environment %></td>
-    <td><%=h quotient.prefer_different_work_environment %></td>
-    <td><%=h quotient.planning_move %></td>
-    <td><%=h quotient.planning_job_change %></td>
-    <td><%=h quotient.planning_home_renovations %></td>
-    <td><%=h quotient.over_5_friends %></td>
-    <td><%=h quotient.over_5_relatives %></td>
-    <td><%=h quotient.have_to_many_friends %></td>
-    <td><%=h quotient.have_to_many_relatives %></td>
-    <td><%=h quotient.close_to_parents %></td>
-    <td><%=h quotient.close_to_aunts_uncles %></td>
-    <td><%=h quotient.close_to_siblings %></td>
-    <td><%=h quotient.close_to_inlaws %></td>
-    <td><%=h quotient.sleep_enough %></td>
-    <td><%=h quotient.stay_up_late %></td>
-    <td><%=h quotient.wake_during_night %></td>
-    <td><%=h quotient.comfartable_while_sleeping %></td>
-    <td><%=h quotient.wake_rested %></td>
-    <td><%=h quotient.take_naps %></td>
-    <td><%=h quotient.have_dreams %></td>
-    <td><%=h quotient.remember_most_dreams %></td>
-    <td><%=h quotient.comfortable_bed %></td>
-    <td><%=h quotient.comfortable_pillow %></td>
-    <td><%=h quotient.currently_worried %></td>
-    <td><%=h quotient.worried_as_prior_year %></td>
-    <td><%=h quotient.worry_future %></td>
-    <td><%=h quotient.worry_finances %></td>
-    <td><%=h quotient.worry_about_health %></td>
-    <td><%=h quotient.witness_politics %></td>
-    <td><%=h quotient.count_todays_worries %></td>
-    <td><%=h quotient.easy_life %></td>
     <td><%=h quotient.f_score %></td>
     <td><%=h quotient.i_score %></td>
     <td><%=h quotient.b_score %></td>
     <td><%=h quotient.e_score %></td>
     <td><%=h quotient.r_score %></td>
-    <td><%=h quotient.s_score %></td>
-    <td><%=h quotient.fibers_score %></td>
+    <td><%=h quotient.sleep_score %></td>
+    <td><%=h quotient.stress_score %></td>
+    <!-- 
     <td><%= link_to 'Show', quotient %></td>
     <td><%= link_to 'Edit', edit_quotient_path(quotient) %></td>
+    --> 
     <td><%= link_to 'Destroy', quotient, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>

@@ -12,9 +12,7 @@
 <p>Please enter your Sponsor Code if available. </p>
 
 <p><label for="sponsor">Sponsor Code</label>
-<%= text_field_tag("sponsor_id", nil, :size => 10) %></p>
-
-
+<%= text_field_tag("profile[sponsor_id]", nil, :size => 10) %></p>
 
 
 <p><label for="login">User Name</label>
@@ -39,10 +37,10 @@
 <%= f.text_field :last_name , :size => 12 %></p>
 
 <p><label for="zip_code">Zip Code</label>
-<%= text_field_tag :zip_code, nil,  :size => 12 %></p>
+<%= text_field_tag "profile[zip_code]", nil,  :size => 12 %></p>
 
 <p><label for="Time Zone">Time Zone</label>
-<%= f.time_zone_select :time_zone, TimeZone.us_zones ,  :size => 12  %></p>
+<%= f.time_zone_select "time_zone", TimeZone.us_zones ,  :size => 12  %></p>
 
 <p><label for="Birthday">Birthday</label>
     <%= calendar_box 'profile', 'dob',
@@ -60,8 +58,8 @@
          :cache => true } %>
 </p>
 
-<p><label for="Hight">Hight<small class="notes">Feet/Inches</small></label>
-<%= text_field_tag("feet",  nil,  :size=> 4  ) %><%= text_field_tag("inches", nil, :size => 4) %></p>
+<p><label for="Height">Height<small class="notes">Feet/Inches</small></label>
+<%= text_field_tag("profile[feet]",  nil,  :size=> 4  ) %><%= text_field_tag("profile[inches]", nil, :size => 4) %></p>
 
 
 <br/>

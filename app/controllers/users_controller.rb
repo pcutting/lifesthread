@@ -9,6 +9,8 @@ layout "setup"
 
 
   def create
+  
+      #raise @results.to_yaml
 
     tryAgain = false
       cookies.delete :auth_token
@@ -16,6 +18,10 @@ layout "setup"
       # request forgery protection.
       # uncomment at your own risk
       # reset_session
+      prof = params[:profile]
+      
+      #raise prof.to_yaml
+      
       
       @user = User.new(params[:user])
       @user.admin = false
@@ -26,9 +32,17 @@ layout "setup"
         @user.save 
         @profile = Profile.new
         @user.profile = @profile
-        @user.profile.zip = params[:zip]
+        @user.profile.zip = prof[:zip_code]
+        @user.profile.sponsor_id = prof[:sponsor_id]
+        @user.profile.super_member_id = prof[:sponsor_id]
+        @user.profile.height_inch = (prof[:feet].to_i * 12) + prof[:inches].to_i
+        @user.profile.dob = prof[:dob]
+        
+        #@user.profile.zip = params[:zip]
         @user.profile.terms_agreed = true
-        @user.profile.save
+        profile_save = @user.profile.save
+        
+        #raise @user.errors.to_yaml
       end
       
       if @user.errors.empty? && tryAgain == false
@@ -36,7 +50,7 @@ layout "setup"
         #redirect_back_or_default('/')
         flash[:notice] = "Thanks for signing up!"
         respond_to do |format|
-          format.html  { redirect_back_or_default('/') }
+          format.html  { redirect_to (new_quotient_path) }
         end
       else
         flash[:notice] += "There was an error in creating your account."

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080803210555) do
+ActiveRecord::Schema.define(:version => 20090222213257) do
 
   create_table "bps", :force => true do |t|
     t.integer  "user_id",     :limit => 11
@@ -243,7 +243,7 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.string   "super_member_id"
     t.integer  "cache_current_weight",            :limit => 11, :default => 0
     t.integer  "cache_current_weight_goal",       :limit => 11, :default => 0
-    t.datetime "cache_last_updated",                            :default => '2009-01-13 15:37:47'
+    t.datetime "cache_last_updated",                            :default => '2009-02-22 22:26:09'
     t.text     "unit_preferences"
     t.string   "sponsor_id"
     t.datetime "created_at"
@@ -255,6 +255,98 @@ ActiveRecord::Schema.define(:version => 20080803210555) do
     t.string   "statement"
     t.integer  "points",     :limit => 11
     t.integer  "position",   :limit => 11
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "quotients", :force => true do |t|
+    t.integer  "user_id",                           :limit => 11
+    t.integer  "red_meat",                          :limit => 11
+    t.integer  "fish",                              :limit => 11
+    t.integer  "poultry",                           :limit => 11
+    t.integer  "vegetables_daily",                  :limit => 11
+    t.integer  "fruit_daily",                       :limit => 11
+    t.integer  "vegetable_freshness",               :limit => 11
+    t.integer  "fruit_freshness",                   :limit => 11
+    t.integer  "fried_foods",                       :limit => 11
+    t.integer  "over_eat",                          :limit => 11
+    t.integer  "food_variety",                      :limit => 11
+    t.integer  "fast_eater",                        :limit => 11
+    t.integer  "proper_potions",                    :limit => 11
+    t.integer  "eat_frequently",                    :limit => 11
+    t.integer  "daily_dessert",                     :limit => 11
+    t.integer  "whole_grain_breads",                :limit => 11
+    t.integer  "happiness",                         :limit => 11
+    t.integer  "smile_frequently",                  :limit => 11
+    t.integer  "enjoy_daily_activities",            :limit => 11
+    t.integer  "faith",                             :limit => 11
+    t.integer  "reached_potential",                 :limit => 11
+    t.integer  "reach_goals_regularly",             :limit => 11
+    t.integer  "have_inspiring_people",             :limit => 11
+    t.integer  "listen_to_music",                   :limit => 11
+    t.integer  "have_hobby",                        :limit => 11
+    t.integer  "hours_tv_daily",                    :limit => 11
+    t.integer  "read_books",                        :limit => 11
+    t.integer  "daily_newspaper",                   :limit => 11
+    t.integer  "watch_sporting_events",             :limit => 11
+    t.integer  "consider_news_negative",            :limit => 11
+    t.integer  "talk_with_friends",                 :limit => 11
+    t.integer  "talk_with_family",                  :limit => 11
+    t.integer  "happy_with_body_type",              :limit => 11
+    t.integer  "happy_with_mirror_reflection",      :limit => 11
+    t.integer  "daily_exercise",                    :limit => 11
+    t.integer  "weekly_exercise",                   :limit => 11
+    t.integer  "able_to_walk_distance",             :limit => 11
+    t.integer  "physical_limitations",              :limit => 11
+    t.integer  "understand_fitness",                :limit => 11
+    t.integer  "recent_operations",                 :limit => 11
+    t.integer  "recent_medical_tests",              :limit => 11
+    t.integer  "chronic_medical_problems",          :limit => 11
+    t.integer  "desired_life_span",                 :limit => 11
+    t.integer  "like_state_residence",              :limit => 11
+    t.integer  "like_city_residence",               :limit => 11
+    t.integer  "like_geographical_area",            :limit => 11
+    t.integer  "like_home",                         :limit => 11
+    t.integer  "like_working_environment",          :limit => 11
+    t.integer  "prefer_different_home_environment", :limit => 11
+    t.integer  "prefer_different_work_environment", :limit => 11
+    t.integer  "planning_move",                     :limit => 11
+    t.integer  "planning_job_change",               :limit => 11
+    t.integer  "planning_home_renovations",         :limit => 11
+    t.integer  "over_5_friends",                    :limit => 11
+    t.integer  "over_5_relatives",                  :limit => 11
+    t.integer  "have_to_many_friends",              :limit => 11
+    t.integer  "have_to_many_relatives",            :limit => 11
+    t.integer  "close_to_parents",                  :limit => 11
+    t.integer  "close_to_aunts_uncles",             :limit => 11
+    t.integer  "close_to_siblings",                 :limit => 11
+    t.integer  "close_to_inlaws",                   :limit => 11
+    t.integer  "sleep_enough",                      :limit => 11
+    t.integer  "stay_up_late",                      :limit => 11
+    t.integer  "wake_during_night",                 :limit => 11
+    t.integer  "comfartable_while_sleeping",        :limit => 11
+    t.integer  "wake_rested",                       :limit => 11
+    t.integer  "take_naps",                         :limit => 11
+    t.integer  "have_dreams",                       :limit => 11
+    t.integer  "remember_most_dreams",              :limit => 11
+    t.integer  "comfortable_bed",                   :limit => 11
+    t.integer  "comfortable_pillow",                :limit => 11
+    t.integer  "currently_worried",                 :limit => 11
+    t.integer  "worried_as_prior_year",             :limit => 11
+    t.integer  "worry_future",                      :limit => 11
+    t.integer  "worry_finances",                    :limit => 11
+    t.integer  "worry_about_health",                :limit => 11
+    t.integer  "witness_politics",                  :limit => 11
+    t.integer  "count_todays_worries",              :limit => 11
+    t.integer  "easy_life",                         :limit => 11
+    t.integer  "f_score",                           :limit => 11, :default => 0
+    t.integer  "i_score",                           :limit => 11, :default => 0
+    t.integer  "b_score",                           :limit => 11, :default => 0
+    t.integer  "e_score",                           :limit => 11, :default => 0
+    t.integer  "r_score",                           :limit => 11, :default => 0
+    t.integer  "sleep_score",                       :limit => 11, :default => 0
+    t.integer  "stress_score",                      :limit => 11, :default => 0
+    t.integer  "fibers_score",                      :limit => 11, :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
