@@ -122,7 +122,7 @@ class QuotientsController < ApplicationController
   (@quotient.close_to_inlaws ||= 0) 
 
   
-  @quotient.r_score /= 9
+  @quotient.r_score /= 8
 
 
   @quotient.sleep_score = ( @quotient.sleep_enough ||= 0) + 
