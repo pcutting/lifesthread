@@ -29,18 +29,30 @@ layout "setup"
         tryAgain = true 
         flash[:notice] = 'Please check "I agree" for the terms and conditions.'      
       else
-        @user.save 
-        @profile = Profile.new
-        @user.profile = @profile
-        @user.profile.zip = prof[:zip_code]
-        @user.profile.sponsor_id = prof[:sponsor_id]
-        @user.profile.super_member_id = prof[:sponsor_id]
-        @user.profile.height_inch = (prof[:feet].to_i * 12) + prof[:inches].to_i
-        @user.profile.dob = prof[:dob]
+        @user.save ?  {} : tryAgain = true
+        
+        #raise tryAgain.inspect
+        
+        #raise @user.errors.to_yaml
+        
+        if (@user.profile.nil?) then 
+          @profile = Profile.new
+        else 
+          @profile = @user.profile
+        end 
+        
+        
+        @profile.zip = prof[:zip_code] ||= "00000"
+        @profile.sponsor_id = prof[:sponsor_id] ||= "0000"
+        @profile.super_member_id = prof[:sponsor_id] ||= "0000"
+        @profile.height_inch = ( (prof[:feet].to_i ||= 0) * 12) + (prof[:inches].to_i ||= 0)
+        @profile.dob = prof[:dob] ||= Date.current
         
         #@user.profile.zip = params[:zip]
-        @user.profile.terms_agreed = true
-        profile_save = @user.profile.save
+        @profile.terms_agreed = true
+        
+        @user.profile = @profile
+        @user.profile.save ? {} : tryAgain = false
         
         #raise @user.errors.to_yaml
       end
@@ -61,7 +73,6 @@ layout "setup"
   def edit
     @user = current_user
   end
-
   def update
     @user = User.find(params[:id])
     
