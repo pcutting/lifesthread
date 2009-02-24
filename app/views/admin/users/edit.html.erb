@@ -40,20 +40,20 @@ Public:
   <legend>Address and Contact Information: </legend>
  <div class="make_left"> <p>
   Address:<br />
-    <%= @profile.address1.capitalize %><br />  
+    <%= @profile.address1%><br />  
     <%= "#{@profile.address2 } <br />"  unless @profile.address2.nil? %>
-    <%= @profile.city.capitalize %>
+    <%= @profile.city%>
 ,
     <%= @profile.state %>
 
 
     <%= @profile.zip %>
   <p>
-    <%="cell phone:".capitalize %> <!-- was a br -->
+    <%="Cell phone:" %> <!-- was a br -->
     <%= @profile.cell_phone %><br />
-    <%="phone:".capitalize %> <!-- was a br -->
+    <%="Phone:"%> <!-- was a br -->
     <%= @profile.phone %><br />
-    <%="work phone:".capitalize %> <!-- was a br -->
+    <%="Work phone:" %> <!-- was a br -->
     <%= @profile.work_phone %>
   </p>
   </div>
