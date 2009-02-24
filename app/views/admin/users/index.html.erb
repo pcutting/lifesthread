@@ -21,7 +21,6 @@
 			<thead>
 			<tr>
 				<th>User Login</th>
-				<th>User Name</th>
 				<th>Created on</th>
 				<th>Updated on</th>
 		    <th>Is Admin</th>
@@ -33,7 +32,6 @@
 		
 			<tr>
 		    <td><%= link_to  h(user.login), edit_admin_user_path(user) %></td>
-		    <td><%= h user.full_name %></td>
 		    <td><%= h user.created_at %></td>
 		    <td><%= h user.updated_at %></td>
 		    <td <%= "bgcolor = red" if user.admin %> ><%= if user.admin then "YES" else "NO" end %></td>

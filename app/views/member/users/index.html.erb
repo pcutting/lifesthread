@@ -21,7 +21,6 @@
 			<thead>
 			<tr>
 				<th>User Login</th>
-				<th>User Name</th>
 				<th>Created on</th>
 				<th>Updated on</th>
 				<th>Roles</th>
@@ -32,7 +31,6 @@
 		
 			<tr>
 		    <td><%= link_to  h(user.login), edit_member_user_path(user) %></td>
-		    <td><%= h user.full_name %></td>
 		    <td><%= h user.created_at %></td>
 		    <td><%= h user.updated_at %></td>
 		    <td><%= h user.myroles %></td>
