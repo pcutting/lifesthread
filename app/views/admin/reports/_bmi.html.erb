@@ -1,6 +1,6 @@
 <div class='last' >
 <hr />
-<% summery = Array.new -%>
+<% summary = Array.new -%>
 <% details = Array.new -%>
 
 
@@ -16,9 +16,9 @@
 
     <% by_ages << bmi # make this list to get the average for the age group -%>
 
-<% summery << "<tr><td>#{ages[1].count}</td><td>#{ages[0]}</td><td>#{age_count}</td><td>#{bmi}</td></tr>"  -%>
-<% summery_header = "<tr><th>Users</th><th>Age Range</th><th># Entered Weight</th><th>Avg BMI</th></tr>"%>
-    <%# summery << "#{ages[1].count} users are #{ages[0]} yrs old. #{age_count} have entered a weight. The avg BMI is #{bmi}."  -%>
+<% summary << "<tr><td>#{ages[1].count}</td><td>#{ages[0]}</td><td>#{age_count}</td><td>#{bmi}</td></tr>"  -%>
+<% summary_header = "<tr><th>Users</th><th>Age Range</th><th># Entered Weight</th><th>Avg BMI</th></tr>"%>
+    <%# summary << "#{ages[1].count} users are #{ages[0]} yrs old. #{age_count} have entered a weight. The avg BMI is #{bmi}."  -%>
   <% details << [ages[0], bmi ] -%>
 <% end -%>
 
@@ -46,8 +46,8 @@ chd=t:#{points.join(",")}" -%>
 <%= image_tag(link) -%> 
 </div>
 <div class="right" >
-<table><%= summery_header -%>
-<%= summery.join(" <br />\n") -%>
+<table><%= summary_header -%>
+<%= summary.join(" <br />\n") -%>
 </table>
 </div>
 

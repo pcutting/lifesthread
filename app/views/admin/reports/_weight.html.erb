@@ -1,6 +1,6 @@
 <div class='last' >
 <hr />
-<% summery = Array.new -%>
+<% summary = Array.new -%>
 <% details = Array.new -%>
 
 
@@ -13,7 +13,11 @@
 <% goal_completion = 100 - (( (weight_sum - goal_sum).abs / weight_sum.to_f ) * 100)  rescue goal_completion = 0 -%>
 <% by_ages << goal_completion # make this list to get the average for the age group -%>
 
-<% summery.push "<tr><td> #{ ages[1].count } </td><td> #{ ages[0] } </td><td> #{ weight_count } </td><td> #{ weight_goal_count } </td><td> #{ if (ages[1].count > 0) then (goal_completion.round_with_precision(2).to_s + "%") else "0%" end } </td></tr>" -%>
+<% str = "<tr><td> #{ ages[1].count } </td><td> #{ ages[0] } </td><td> #{ weight_count } </td><td> #{ weight_goal_count } </td><td>"  %>
+
+<% str += "#{ if (goal_completion.nil? != true && goal_completion > 0 && ages[1].count > 0) then (goal_completion.round_with_precision(2).to_s + "%") else "0%" end } </td></tr>" %>
+
+<% summary.push str -%>
 <% details << [ages[0], goal_completion ] -%>
 <% end -%>
 
@@ -40,10 +44,10 @@ chd=t:#{points.join(",")}" -%>
 <%= image_tag(link) -%> 
 </div>
 <div class="right"
-<table class='summery'>
+<table class='summary'>
 <tr><th># of People in age group</th><th>Age Range</th><th># Recorded weight</th><th># Set Goals</th><th>% Completion</th>
 
-<%= summery.join("\n") -%>
+<%= summary.join("\n") -%>
 </table>
 </div>
 

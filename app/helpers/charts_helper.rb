@@ -981,7 +981,7 @@ def make_table_styled
   
   table += "</tr><tr><td colspan=#{l_cells}>#{min_date.to_s(:long)}</td><td colspan=#{r_cells } align=right>#{max_date.to_s(:long)}</td></tr></table></br>"
  
-  summery = "<br/><table><tr><th></th><th>Date</th><th>Summary</th></tr>"
+  summary = "<br/><table><tr><th></th><th>Date</th><th>Summary</th></tr>"
 
  
   @table_styled.each {|day, day_value| 
@@ -989,22 +989,22 @@ def make_table_styled
 
     day_value.illnesses.each {| value |
      cls = '"Illness"'
-     summery += "<tr><td class=#{cls}>#{value.label}</td><td>#{value.date.to_s(:long)}</td><td>#{value.summary}</td></tr>"
+     summary += "<tr><td class=#{cls}>#{value.label}</td><td>#{value.date.to_s(:long)}</td><td>#{value.summary}</td></tr>"
     }   
   
     day_value.hospitals.each {| value |
       cls='"Hospital"'
-      summery += "<tr><td class=#{cls}>#{value.label}</td><td>#{value.date.to_s(:long)}</td><td>#{value.summary}</td></tr>"
+      summary += "<tr><td class=#{cls}>#{value.label}</td><td>#{value.date.to_s(:long)}</td><td>#{value.summary}</td></tr>"
     }  
   
 
     
     day_value.medications.each {| value |
       cls='"Medication"'
-      summery += "<tr><td class=#{cls}>#{value.label}</td><td>#{value.date.to_s(:long)}</td><td>#{value.summary}</td></tr>"
+      summary += "<tr><td class=#{cls}>#{value.label}</td><td>#{value.date.to_s(:long)}</td><td>#{value.summary}</td></tr>"
     }  
   }  
-  summery += "</table>"
+  summary += "</table>"
   
   
  
@@ -1017,7 +1017,7 @@ def make_table_styled
         #i += 1
  
  
-  table + summery
+  table + summary
   
 end
 
