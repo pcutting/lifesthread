@@ -45,7 +45,7 @@ class Admin::SponsorsController < Admin::BaseController
   # POST /sponsors.xml
   def create
   
-    railse params.to_yaml
+    #raise params.to_yaml
   
     @sponsor = Sponsor.new(params[:sponsor])
     respond_to do |format|
