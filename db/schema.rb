@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090222213257) do
+ActiveRecord::Schema.define(:version => 20090613180912) do
 
   create_table "bps", :force => true do |t|
     t.integer  "user_id",     :limit => 11
@@ -189,6 +189,27 @@ ActiveRecord::Schema.define(:version => 20090222213257) do
     t.datetime "updated_at"
   end
 
+  create_table "pharmacy_events", :force => true do |t|
+    t.integer  "sponsor_id",    :limit => 11
+    t.datetime "start_display"
+    t.datetime "stop_display"
+    t.datetime "event_date"
+    t.string   "title"
+    t.string   "location"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pharmacy_notices", :force => true do |t|
+    t.integer  "sponsor_id",    :limit => 11
+    t.datetime "start_display"
+    t.datetime "stop_display"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "profiles", :force => true do |t|
     t.date     "dob"
     t.string   "address1"
@@ -243,7 +264,7 @@ ActiveRecord::Schema.define(:version => 20090222213257) do
     t.string   "super_member_id"
     t.integer  "cache_current_weight",            :limit => 11, :default => 0
     t.integer  "cache_current_weight_goal",       :limit => 11, :default => 0
-    t.datetime "cache_last_updated",                            :default => '2009-02-22 22:26:09'
+    t.datetime "cache_last_updated",                            :default => '2009-06-13 16:07:50'
     t.text     "unit_preferences"
     t.string   "sponsor_id"
     t.datetime "created_at"
@@ -387,6 +408,18 @@ ActiveRecord::Schema.define(:version => 20090222213257) do
     t.string   "environment"
     t.string   "waken_by"
     t.string   "condition_awoken"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sponsors", :force => true do |t|
+    t.string   "code"
+    t.string   "name"
+    t.text     "message"
+    t.string   "webpage"
+    t.string   "location"
+    t.text     "template_header"
+    t.text     "template_body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

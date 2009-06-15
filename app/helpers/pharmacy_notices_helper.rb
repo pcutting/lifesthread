@@ -1,0 +1,2 @@
+module PharmacyNoticesHelper
+end

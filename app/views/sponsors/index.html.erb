@@ -1,0 +1,28 @@
+<h1>Listing sponsors</h1>
+
+<table>
+  <tr>
+    <th>Sponsor</th>
+    <th>Name</th>
+    <th>Message</th>
+    <th>Webpage</th>
+    <th>Page template</th>
+  </tr>
+
+<% for sponsor in @sponsors %>
+  <tr>
+    <td><%=h sponsor.sponsor_id %></td>
+    <td><%=h sponsor.name %></td>
+    <td><%=h sponsor.message %></td>
+    <td><%=h sponsor.webpage %></td>
+    <td><%=h sponsor.page_template %></td>
+    <td><%= link_to 'Show', sponsor %></td>
+    <td><%= link_to 'Edit', edit_sponsor_path(sponsor) %></td>
+    <td><%= link_to 'Destroy', sponsor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New sponsor', new_sponsor_path %>

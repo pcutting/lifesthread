@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+joe:
+  code: 999999999999
+  name: Pittstown Pharmacy
+  message: your neighborhood farmacy
+  webpage: pittstown.com
+  #page_template: Hello America
+
+sam:
+  code: 999999999998
+  name: Home Town Pharmacy
+  message: We deliver for free
+  webpage: freedelivery.com
+  #page_template: Free delivery

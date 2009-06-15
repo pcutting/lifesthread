@@ -1,0 +1,26 @@
+<h1>Listing pharmacy_notices</h1>
+
+<table>
+  <tr>
+    <th>Sponsor</th>
+    <th>Start display</th>
+    <th>Stop display</th>
+    <th>Description</th>
+  </tr>
+
+<% for pharmacy_notices in @pharmacy_notices %>
+  <tr>
+    <td><%=h pharmacy_notices.sponsor %></td>
+    <td><%=h pharmacy_notices.start_display %></td>
+    <td><%=h pharmacy_notices.stop_display %></td>
+    <td><%=h pharmacy_notices.description %></td>
+    <td><%= link_to 'Show', pharmacy_notices %></td>
+    <td><%= link_to 'Edit', edit_pharmacy_notices_path(pharmacy_notices) %></td>
+    <td><%= link_to 'Destroy', pharmacy_notices, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New pharmacy_notices', new_pharmacy_notices_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+notice1:
+  sponsor: joe
+  start_display: 2009-06-13 14:08:59
+  stop_display: 2009-08-13 14:08:59
+  description: Just joined 
+
+notice2:
+  sponsor: joe
+  start_display: 2009-06-13 14:08:59
+  stop_display: 2009-09-13 14:08:59
+  description: What is your FIBERSs score, come in today for any questions

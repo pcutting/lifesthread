@@ -1,0 +1,23 @@
+<p>
+  <b>Sponsor:</b>
+  <%=h @pharmacy_notices.sponsor %>
+</p>
+
+<p>
+  <b>Start display:</b>
+  <%=h @pharmacy_notices.start_display %>
+</p>
+
+<p>
+  <b>Stop display:</b>
+  <%=h @pharmacy_notices.stop_display %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @pharmacy_notices.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_pharmacy_notices_path(@pharmacy_notices) %> |
+<%= link_to 'Back', pharmacy_notices_path %>

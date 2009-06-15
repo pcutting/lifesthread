@@ -10,5 +10,8 @@
 <h3><em><%= h current_user.first_name -%></em></h3>
 <h4><%= current_user.myroles -%></h4>
 <%= yield :header -%>
+<div class="sponsor">
+<%= render :partial => "/layouts/sponsor"  unless @sponsor.nil? %>
+</div>
 </div>
 </div>

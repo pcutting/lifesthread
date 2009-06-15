@@ -1,0 +1,63 @@
+
+<p>
+  <h1><%=h @sponsor.name %></h1>
+</p>
+
+
+<p>
+  <a href = "http://<%= @sponsor.webpage %>" target=new ><%= @sponsor.name %>'s Website</a>
+</p>
+
+<p>
+  <%= @sponsor.template_header %>
+</p>
+<p>
+
+  <%= @sponsor.message %>
+</p>
+
+<p>
+  <%= @sponsor.template_body %>
+</p>
+
+
+
+<h1>Events</h1>
+
+<table>
+  <tr>
+    <th>Event date</th>
+    <th>Title</th>
+    <th>Location</th>
+    <th>Description</th>
+  </tr>
+
+<% for pharmacy_event in @events %>
+  <tr>
+    <td><%=h pharmacy_event.event_date.to_date.to_s(:long) %></td>
+    <td><%=h pharmacy_event.title %></td>
+    <td><%=h pharmacy_event.location %></td>
+    <td><%=h pharmacy_event.description %></td>
+</td>
+  </tr>
+<% end %>
+</table >
+
+
+<hr />
+
+<h1>Notices</h1>
+
+<table>
+<% for pharmacy_notice in @pharmacy_notices %>
+  <tr>
+    <th><%=h pharmacy_notice.description %></th>
+
+  </tr>
+<% end %>
+</table>
+  
+
+
+
+

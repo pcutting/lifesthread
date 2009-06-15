@@ -1,0 +1,156 @@
+<br/>
+<%= link_to "Edit #{@sponsor.name}", edit_admin_sponsor_path(@sponsor) %><br/>
+
+<p>
+  <b>Sponsor:</b>
+  <%= @sponsor.code %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @sponsor.name %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <%= @sponsor.message %>
+</p>
+
+<p>
+  <b>Webpage:</b>
+  <%= @sponsor.webpage %>
+</p>
+
+
+<p>
+  <b>Location(Google link):</b>
+  <%=h @sponsor.location %>
+</p>
+
+<p>
+  <b>Page Template Head:</b><br/>
+  <%= @sponsor.template_header %>
+</p>
+<p>
+  <b>Page Template Body:</b><br/>
+  <%= @sponsor.template_body %>
+</p>
+
+<hr />
+
+<h1>Events</h1>
+
+<table>
+  <tr>
+
+    <th>Start display</th>
+    <th>Stop display</th>
+    <th>Event date</th>
+    <th>Title</th>
+    <th>Location</th>
+    <th>Description</th>
+  </tr>
+
+<% for pharmacy_event in @events %>
+  <tr>
+
+    <td><%=h pharmacy_event.start_display %></td>
+    <td><%=h pharmacy_event.stop_display %></td>
+    <td><%=h pharmacy_event.event_date %></td>
+    <td><%=h pharmacy_event.title %></td>
+    <td><%=h pharmacy_event.location %></td>
+    <td><%=h pharmacy_event.description %></td>
+   
+    <td><%= link_to 'Edit', edit_admin_pharmacy_event_path(pharmacy_event) %></td>
+    <td><%= link_to 'Destroy',[:admin,  pharmacy_event] , :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table >
+<br/>
+
+
+
+<% form_for([:admin, @pharmacy_event_new]) do |f| %>
+  <%= f.error_messages %>
+
+<table>
+<tr><th>Start showing <br/>knotice</th><th>Stop showing <br/>knotice</th><th>Event Date</th></tr>
+
+<tr><td>
+    <%= f.date_select :start_display %>
+</td><td>
+    <%= f.date_select :stop_display %>
+</td><td>
+    <%= f.date_select :event_date %>
+</td></tr>
+<tr><td>
+    Title<br>
+    <%= f.text_field :title, :size => 10 %><br/>
+    Location<br/>
+    <%= f.text_field :location, :size => 10 %>
+    <%= hidden_field  :acode,:code, :value => @sponsor.code %>
+</td>
+<td colspan = 2>
+  Descrition<br/>
+    <%= f.text_area :description , :rows => 3 , :cols => 30 %>
+</td></tr>
+</table>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+
+<hr />
+
+<h1>Notices</h1>
+
+<table>
+  <tr>
+    <th>Start display</th>
+    <th>Stop display</th>
+    <th>Description</th>
+  </tr>
+
+<% for pharmacy_notice in @pharmacy_notices %>
+  <tr>
+    <td><%=h pharmacy_notice.start_display %></td>
+    <td><%=h pharmacy_notice.stop_display %></td>
+    <td><%=h pharmacy_notice.description %></td>
+    <td><%= link_to 'Edit', edit_pharmacy_notice_path(pharmacy_notice) %></td>
+    <td><%= link_to 'Destroy',[:admin, pharmacy_notice], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<h1>New notices</h1>
+
+<% form_for([:admin, @pharmacy_notice_new]) do |f| %>
+  <%= f.error_messages %>
+
+<table><tr><th>Start Display</th><th>Stop Displaying</th><th>Decription</th></tr>
+<tr><td>
+    <%= f.date_select :start_display %>
+ </td><td>
+    <%= f.date_select :stop_display %>
+ </td><td>
+    <%= f.text_area :description, :rows => 3, :cols => 30 %>
+    <%= hidden_field  :acode,:code, :value => @sponsor.code %>
+</td></tr>
+</table>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<br />
+
+<%= link_to 'New notices', new_pharmacy_notice_path %>
+
+
+<hr/>
+
+
+<%= link_to 'Edit', edit_admin_sponsor_path(@sponsor) %> |
+<%= link_to 'Back', admin_sponsors_path %>

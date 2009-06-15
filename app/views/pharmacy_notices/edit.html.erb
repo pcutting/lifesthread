@@ -1,0 +1,28 @@
+<h1>Editing pharmacy_notices</h1>
+
+<% form_for(@pharmacy_notices) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :sponsor %><br />
+    <%= f.text_field :sponsor %>
+  </p>
+  <p>
+    <%= f.label :start_display %><br />
+    <%= f.datetime_select :start_display %>
+  </p>
+  <p>
+    <%= f.label :stop_display %><br />
+    <%= f.datetime_select :stop_display %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @pharmacy_notices %> |
+<%= link_to 'Back', pharmacy_notices_path %>

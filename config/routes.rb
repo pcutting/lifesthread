@@ -2,6 +2,8 @@ ActionController::Routing::Routes.draw do |map|
 
 
 
+
+
   
   map.root :controller => "home", :action =>"index"
   map.resource :home
@@ -36,6 +38,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :setups
 
 
+  map.resources :sponsors 
+  map.resources :pharmacy_events
+  map.resources :pharmacy_notices
+
   
   
   map.namespace :admin do |admin|
@@ -46,6 +52,10 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :supports, :has_many => :support_dialogs
     admin.resources :samples
     admin.resources :reports
+    admin.resources :sponsors
+    admin.resources :pharmacy_events
+    admin.resources :pharmacy_notices
+
   end
   
   map.namespace :member do |member|
@@ -56,6 +66,10 @@ ActionController::Routing::Routes.draw do |map|
     member.resources :supports, :has_many => :support_dialogs
     member.resources :samples
     member.resources :reports
+    member.resources :sponsors
+    member.resources :pharmacy_events
+    member.resources :pharmacy_notices    
+    
   end
 
 

@@ -1,0 +1,41 @@
+<h1>Editing sponsor information.</h1>
+
+<% form_for([:admin, @sponsor]) do |f| %>
+  <%= f.error_messages %>
+
+
+  <p><strong> You should probably never update this code!</strong><br/>
+    <%= f.label :code %><br />
+    <%= f.text_field :code %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :message %><br />
+    <%= f.text_area :message, :rows => 4 , :cols => 40 %>
+  </p>
+  <p>
+    <%= f.label :webpage %><br />
+    http://<%= f.text_field :webpage %>
+  </p>
+  <p>
+    <%= f.label :location %>(Google link)<br />
+    <%= f.text_field :location %>
+  </p>
+  <p>
+    <%= f.label :Page_header %><br />
+    <%= f.text_area :template_header , :rows => 25 , :cols => 120  %>
+  </p>
+  <p>
+    <%= f.label :page_body %><br />
+    <%= f.text_area :template_body, :rows => 25 , :cols => 120 %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Sponsors list', admin_sponsor_path %>

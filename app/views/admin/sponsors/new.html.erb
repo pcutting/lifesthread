@@ -1,0 +1,41 @@
+<h1>New sponsor</h1>
+
+<% form_for( [:admin, @sponsor]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :code %><br />
+    <%= f.text_field :code %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :message %><br />
+    <%= f.text_area :message, :rows => 4, :cols => 40 %>
+  </p>
+  <p>
+    <%= f.label :webpage %><br />
+    http://<%= f.text_field :webpage %>
+  </p>
+  <p>
+    <%= f.label :location %>(Google link)<br />
+    <%= f.text_field :location %>
+  </p>
+  <p>
+    <%= f.label :Page_header %><br />
+    <%= f.text_area :template_header , :rows => 25 , :cols => 120  %>
+  </p>
+  <p>
+    <%= f.label :page_body %><br />
+    <% default = '<h1 style="text-align: left;" align="left"><span style="font-size: 14pt; font-family: Garamond; font-weight: normal; text-decoration: none;">We are pleased to be participating in the Life’s Thread Project being offered to our community as a nationwide health initiative providing a variety of health and wellness tools such as </span><span style="font-size: 14pt; font-family: Garamond; text-decoration: none;">The Wellness Board</span><sup><span style="font-size: 14pt; font-family: Garamond; font-weight: normal; text-decoration: none;">©</span></sup><span style="font-size: 14pt; font-family: Garamond; font-weight: normal; text-decoration: none;">.<span>&nbsp; </span>The staff at the Pittstown Pharmacy is proud to sponsor your Wellness Board at </span><span style="font-size: 14pt; font-family: Garamond; color: red; text-decoration: none;">no charge as a lifetime health benefit</span><span style="font-size: 14pt; font-family: Garamond; font-weight: normal; text-decoration: none;"> to every resident of our community.<span>&nbsp; </span>We hope you will use these amazing tools to take control of your wellness and add many more blue sky days to your Life’s Thread.</span></h1>
+' %>
+    <%= f.text_area :template_body, :value => default,  :rows => 25 , :cols => 120 %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Sponsors List', admin_sponsors_path %>

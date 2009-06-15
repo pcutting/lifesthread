@@ -7,6 +7,7 @@ class ProfilesController < ApplicationController
   # GET /profiles.xml
   def index
     @profiles = current_user.profile.find(:all)
+    @sponsor = Sponsor.find_by_code(current_user.profile.sponsor_id)
 
     respond_to do |format|
       format.html # index.html.erb

@@ -1,0 +1,36 @@
+<h1>New pharmacy_events</h1>
+
+<% form_for(@pharmacy_event_new) do |f| %>
+  <%= f.error_messages %>
+
+
+  <p>
+    <%= f.label :start_display %><br />
+    <%= f.datetime_select :start_display %>
+  </p>
+  <p>
+    <%= f.label :stop_display %><br />
+    <%= f.datetime_select :stop_display %>
+  </p>
+  <p>
+    <%= f.label :event_date %><br />
+    <%= f.datetime_select :event_date %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', pharmacy_events_path %>

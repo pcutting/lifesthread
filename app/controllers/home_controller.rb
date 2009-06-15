@@ -20,6 +20,7 @@ def index
       @opinion = Opinion.new
       @sleep = Sleep.new 
    else
+     @sponsor = Sponsor.find_by_code(current_user.profile.sponsor_id)
      @quotient = current_user.quotients.find(:first, :order => "updated_at desc")
       
       if @quotient.nil? then @quotient = Quotient.new end

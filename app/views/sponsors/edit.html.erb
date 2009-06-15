@@ -1,0 +1,32 @@
+<h1>Editing sponsor</h1>
+
+<% form_for(@sponsor) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :sponsor_id %><br />
+    <%= f.text_field :sponsor_id %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :message %><br />
+    <%= f.text_area :message %>
+  </p>
+  <p>
+    <%= f.label :webpage %><br />
+    <%= f.text_field :webpage %>
+  </p>
+  <p>
+    <%= f.label :page_template %><br />
+    <%= f.text_area :page_template %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @sponsor %> |
+<%= link_to 'Back', sponsors_path %>

@@ -1,0 +1,38 @@
+<p>
+  <b>Sponsor:</b>
+  <%=h @pharmacy_events.sponsor %>
+</p>
+
+<p>
+  <b>Start display:</b>
+  <%=h @pharmacy_events.start_display %>
+</p>
+
+<p>
+  <b>Stop display:</b>
+  <%=h @pharmacy_events.stop_display %>
+</p>
+
+<p>
+  <b>Event date:</b>
+  <%=h @pharmacy_events.event_date %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @pharmacy_events.title %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @pharmacy_events.location %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @pharmacy_events.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_pharmacy_events_path(@pharmacy_events) %> |
+<%= link_to 'Back', pharmacy_events_path %>
