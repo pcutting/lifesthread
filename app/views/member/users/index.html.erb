@@ -41,12 +41,12 @@
 		    <td><%= h user.created_at %></td>
 		    <td><%= h user.updated_at %></td>
 		    <td><%= h user.myroles %></td>
-		    <td>No</td>
-		    <td>No</td>
-		    <td>No</td>
-		    <td>No</td>
-		    <td>No</td>
-		    <td>No</td>
+		    <td><%= if rand(100) < 10 then "Yes" else "No" end %></td>
+		    <td><%= if rand(100) < 25 then "Yes" else "No" end %></td>
+		    <td><%= if rand(100) < 10 then "Yes" else "No" end %></td>
+		    <td><%= if rand(100) < 10 then "Yes" else "No" end %></td>
+		    <td><%= if rand(100) < 10 then "Yes" else "No" end %></td>
+		    <td><%= if rand(100) < 10 then "Yes" else "No" end %></td>
 			</tr>
 		<% end %>
 			</tbody>
