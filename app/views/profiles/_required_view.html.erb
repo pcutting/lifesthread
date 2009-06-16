@@ -18,8 +18,8 @@
   
   <fieldset><legend>Reference: <%= link_to "Edit" , edit_profile_path( :fieldset => "required") %></legend>
     <p>
-    <%="Sponsor Name is #{@sponsor.name}." unless @sponsor.nil? %>
-    <%="Referring Pharmacy phone number" %> <!-- was a br -->
-    <%= @profile.rx_affiliate_no %>
+    Sponsor Name is: <%= "#{@sponsor.name}." unless @sponsor.nil? %>
+    <%# ="Referring Pharmacy phone number" %>
+    <%# = @profile.rx_affiliate_no %>
   </p>
   </fieldset>

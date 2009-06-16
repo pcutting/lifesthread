@@ -18,7 +18,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1.xml
   def show
     @profile = current_user.profile
-
+    @sponsor = Sponsor.find_by_code(current_user.profile.sponsor_id)
     respond_to do |format|
       format.html # show.html.erb
     end
@@ -37,6 +37,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1/edit
   def edit
     @profile = current_user.profile 
+    @sponsor = Sponsor.find_by_code(current_user.profile.sponsor_id)
   end
 
   # POST /profiles
