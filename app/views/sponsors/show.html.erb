@@ -1,18 +1,18 @@
-
 <p>
-  <h1><%=h @sponsor.name %></h1>
+  <center><h1><%=h @sponsor.name %></h1></center>
 </p>
 
 
-<p>
-  Website:<a href = "http://<%= @sponsor.webpage %>" target=new >http://<%= @sponsor.webpage %></a>
-</p>
+
 
 <p>
   <%= @sponsor.template_header %>
 </p>
 <p>
+  Website:<a href = "http://<%= @sponsor.webpage %>" target=new >http://<%= @sponsor.webpage %></a>
+</p>
 
+<p>
   <%= @sponsor.message %>
 </p>
 
@@ -42,7 +42,6 @@
   </tr>
 <% end %>
 </table >
-
 
 <hr />
 
