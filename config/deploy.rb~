@@ -16,7 +16,7 @@ set :branch, "master"
 set :repository_cache, "git_cache"
 set :deploy_via, :copy
 
-set :deploy_to, "/var/www/#{application}"
+set :deploy_to, "/home/#{user}/#{application}"
 
 role :app, ip_address
 role :web, ip_address
