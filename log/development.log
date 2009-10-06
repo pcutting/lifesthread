@@ -27923,3 +27923,169 @@ Rendered layouts/_linkto_all (0.00049)
 Rendered layouts/_linktos (0.00108)
 Rendered layouts/_admin_links (0.00005)
 Completed in 0.05418 (18 reqs/sec) | Rendering: 0.01500 (27%) | DB: 0.00900 (16%) | 200 OK [http://localhost/admin/users]
+  [4;36;1mSQL (0.000140)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000069)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-09-27 19:05:15) [GET]
+  Session ID: d10168550e18537e59d43ac28cb46e1c
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mSQL (0.000128)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000083)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Redirected to http://localhost:3000/login
+Completed in 0.00491 (203 reqs/sec) | DB: 0.00021 (4%) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-09-27 19:05:16) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--558e3f5fcd704d9b1130d09b49443bc0cd11c32e
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/entry
+Rendering sessions/new
+Rendered sessions/_contents (0.00094)
+Completed in 0.00797 (125 reqs/sec) | Rendering: 0.00485 (60%) | DB: 0.00000 (0%) | 200 OK [http://localhost/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-09-27 19:05:16) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMTY1M2VkYWU5MjYzOGI0MDE3NDllM2EyYTkyYzI0
+MDciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--feefee9c7367284d4318e05150e2463a5947a61c
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/stylesheet/clickmenu.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/pcutting/Projects/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-09-27 19:05:25) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMTY1M2VkYWU5MjYzOGI0MDE3NDllM2EyYTkyYzI0
+MDciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--feefee9c7367284d4318e05150e2463a5947a61c
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"2a9a2d3ad2ee454b157250aac8b095ce858decf6", "action"=>"create", "controller"=>"sessions", "password"=>"test", "login"=>"test"}
+  [4;36;1mUser Columns (0.001533)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000387)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'test') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 0.18527 (5 reqs/sec) | DB: 0.00192 (1%) | 302 Found [http://localhost/session]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-09-27 19:05:26) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMTY1M2VkYWU5MjYzOGI0MDE3NDllM2EyYTkyYzI0
+MDc6DHVzZXJfaWRsKwe7/39JOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--22173eb840251cdd92872724da77cda45f195dbc
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mUser Columns (0.001230)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000661)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;36;1mProfile Load (0.000665)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 1233125307) LIMIT 1[0m
+  [4;35;1mProfile Columns (0.002172)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSponsor Columns (0.002500)[0m   [0;1mSHOW FIELDS FROM `sponsors`[0m
+  [4;35;1mSponsor Load (0.000609)[0m   [0mSELECT * FROM `sponsors` WHERE (`sponsors`.`code` = '999999999999') LIMIT 1[0m
+  [4;36;1mQuotient Load (0.001606)[0m   [0;1mSELECT * FROM `quotients` WHERE (`quotients`.user_id = 1233125307) ORDER BY updated_at desc LIMIT 1[0m
+Rendering template within layouts/home
+Rendering home/index
+  [4;35;1mQuotient Columns (0.030677)[0m   [0mSHOW FIELDS FROM `quotients`[0m
+Rendered quotients/_graphical_show (0.07033)
+Rendered home/_basicboard (0.07991)
+Rendered home/_dashboard (0.08414)
+Rendered layouts/_head (0.00239)
+  [4;36;1mRole Load (0.000419)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307 AND (has_role = 'MEMBER' OR has_role = 'SUPER MEMBER')) [0m
+Rendered menus/_master_tab_layout (0.12275)
+  [4;35;1mRole Load (0.000188)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307) [0m
+Rendered layouts/_sponsor (0.00238)
+Rendered layouts/_masthead (0.12773)
+Rendered menus/_vip (0.00014)
+Rendered layouts/_body (0.13066)
+Completed in 0.33670 (2 reqs/sec) | Rendering: 0.20128 (59%) | DB: 0.04073 (12%) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-01 21:51:48) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMTY1M2VkYWU5MjYzOGI0MDE3NDllM2EyYTkyYzI0
+MDc6DHVzZXJfaWRsKwe7/39JOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--22173eb840251cdd92872724da77cda45f195dbc
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mSQL (0.000190)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000096)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (0.001036)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000321)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;36;1mProfile Load (0.000584)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 1233125307) LIMIT 1[0m
+  [4;35;1mProfile Columns (0.001820)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSponsor Columns (0.000858)[0m   [0;1mSHOW FIELDS FROM `sponsors`[0m
+  [4;35;1mSponsor Load (0.000229)[0m   [0mSELECT * FROM `sponsors` WHERE (`sponsors`.`code` = '999999999999') LIMIT 1[0m
+  [4;36;1mQuotient Load (0.000700)[0m   [0;1mSELECT * FROM `quotients` WHERE (`quotients`.user_id = 1233125307) ORDER BY updated_at desc LIMIT 1[0m
+Rendering template within layouts/home
+Rendering home/index
+  [4;35;1mQuotient Columns (0.002604)[0m   [0mSHOW FIELDS FROM `quotients`[0m
+Rendered quotients/_graphical_show (0.02671)
+Rendered home/_basicboard (0.04069)
+Rendered home/_dashboard (0.04268)
+Rendered layouts/_head (0.00163)
+  [4;36;1mRole Load (0.000561)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307 AND (has_role = 'MEMBER' OR has_role = 'SUPER MEMBER')) [0m
+Rendered menus/_master_tab_layout (0.01198)
+  [4;35;1mRole Load (0.000256)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307) [0m
+Rendered layouts/_sponsor (0.00284)
+Rendered layouts/_masthead (0.02413)
+Rendered menus/_vip (0.00021)
+Rendered layouts/_body (0.02795)
+Completed in 0.16958 (5 reqs/sec) | Rendering: 0.09976 (58%) | DB: 0.00925 (5%) | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-10-01 22:05:09) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMTY1M2VkYWU5MjYzOGI0MDE3NDllM2EyYTkyYzI0
+MDc6DHVzZXJfaWRsKwe7/39JOg5yZXR1cm5fdG8wIgpmbGFzaElDOidBY3Rp
+b25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--22173eb840251cdd92872724da77cda45f195dbc
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mUser Columns (0.000969)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000075)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;36;1mProfile Load (0.000132)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 1233125307) LIMIT 1[0m
+  [4;35;1mProfile Columns (0.002123)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSponsor Columns (0.000989)[0m   [0;1mSHOW FIELDS FROM `sponsors`[0m
+  [4;35;1mSponsor Load (0.000101)[0m   [0mSELECT * FROM `sponsors` WHERE (`sponsors`.`code` = '999999999999') LIMIT 1[0m
+  [4;36;1mQuotient Load (0.000176)[0m   [0;1mSELECT * FROM `quotients` WHERE (`quotients`.user_id = 1233125307) ORDER BY updated_at desc LIMIT 1[0m
+Rendering template within layouts/home
+Rendering home/index
+  [4;35;1mQuotient Columns (0.002887)[0m   [0mSHOW FIELDS FROM `quotients`[0m
+Rendered quotients/_graphical_show (0.02000)
+Rendered home/_basicboard (0.02178)
+Rendered home/_dashboard (0.02207)
+Rendered layouts/_head (0.00066)
+  [4;36;1mRole Load (0.000136)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307 AND (has_role = 'MEMBER' OR has_role = 'SUPER MEMBER')) [0m
+Rendered menus/_master_tab_layout (0.00649)
+  [4;35;1mRole Load (0.000095)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307) [0m
+Rendered layouts/_sponsor (0.00208)
+Rendered layouts/_masthead (0.00994)
+Rendered menus/_vip (0.00014)
+Rendered layouts/_body (0.01075)
+Completed in 0.18321 (5 reqs/sec) | Rendering: 0.03268 (17%) | DB: 0.00768 (4%) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.000142)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000141)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
