@@ -32,17 +32,13 @@ test:
 #  username: root
 #  password: sprint
 #  socket: /var/lib/mysqld/mysqld.sock
-  
-production:
-  adapter: postgresql
-  encoding: utf8
-  database: lifesthread_production
-  username: rails 
-  password: work4you2
 
- # adapter: mysql
- # encoding: utf8
- # database: lifesthread_development
- # username: rails
- # password: work4you2
- # socket: /var/lib/mysqld/mysqld.sock
+production:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: wellnessboard
+  pool: 5
+  username: railsapps
+  password: sprint1
+
