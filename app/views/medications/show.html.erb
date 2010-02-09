@@ -15,7 +15,7 @@
 
 <p>
   <b>Prescribed start:</b>
-  <%=h @medication.prescribed_start %>
+  <%=h @medication.prescribed_start unless @medication.prescribed_start.nil? %>
 </p>
 
 <p>

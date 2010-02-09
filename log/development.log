@@ -28700,3 +28700,1520 @@ ArgumentError (invalid date):
     script/server:3
 
 Rendering /home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MedicationsController#new (for 127.0.0.1 at 2010-02-09 17:40:55) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA6DHVzZXJfaWRsKwe7/39JOg5yZXR1cm5fdG8w--6ebabf92f65265f208d8af39e829bba7336090c0
+  Parameters: {"action"=>"new", "controller"=>"medications"}
+  [4;35;1mUser Columns (0.001096)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000276)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;35;1mMedication Columns (0.001030)[0m   [0mSHOW FIELDS FROM `medications`[0m
+Rendering template within layouts/application
+Rendering medications/new
+Rendered layouts/_head (0.00067)
+  [4;36;1mRole Load (0.000198)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307 AND (has_role = 'MEMBER' OR has_role = 'SUPER MEMBER')) [0m
+Rendered menus/_master_tab_layout (0.00651)
+  [4;35;1mRole Load (0.000266)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307) [0m
+Rendered layouts/_masthead (0.00769)
+Rendered menus/_vip (0.00015)
+Rendered layouts/_body (0.00854)
+Completed in 0.06824 (14 reqs/sec) | Rendering: 0.02336 (34%) | DB: 0.00685 (10%) | 200 OK [http://localhost/medications/new]
+
+
+Processing MedicationsController#new (for 127.0.0.1 at 2010-02-09 17:40:58) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDA6DHVzZXJfaWRsKwe7/39JIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy
+OjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1cm5fdG8w--e512fe6945a80bf87fb81866495caeed6b6c6e6c
+  Parameters: {"action"=>"new", "controller"=>"medications"}
+  [4;36;1mUser Columns (0.001107)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000275)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;36;1mMedication Columns (0.001161)[0m   [0;1mSHOW FIELDS FROM `medications`[0m
+Rendering template within layouts/application
+Rendering medications/new
+Rendered layouts/_head (0.00065)
+  [4;35;1mRole Load (0.000145)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307 AND (has_role = 'MEMBER' OR has_role = 'SUPER MEMBER')) [0m
+Rendered menus/_master_tab_layout (0.00650)
+  [4;36;1mRole Load (0.000107)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307) [0m
+Rendered layouts/_masthead (0.00752)
+Rendered menus/_vip (0.00015)
+Rendered layouts/_body (0.00836)
+Completed in 0.06616 (15 reqs/sec) | Rendering: 0.02329 (35%) | DB: 0.00279 (4%) | 200 OK [http://localhost/medications/new]
+
+
+Processing MedicalHistoriesController#new (for 127.0.0.1 at 2010-02-09 17:41:03) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA6DHVzZXJfaWRsKwe7/39JOg5yZXR1cm5fdG8w--6ebabf92f65265f208d8af39e829bba7336090c0
+  Parameters: {"action"=>"new", "controller"=>"medical_histories"}
+  [4;35;1mUser Columns (0.001163)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000127)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;35;1mMedicalHistory Columns (0.001128)[0m   [0mSHOW FIELDS FROM `medical_histories`[0m
+Rendering template within layouts/application
+Rendering medical_histories/new
+Rendered layouts/_head (0.00066)
+  [4;36;1mRole Load (0.000130)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307 AND (has_role = 'MEMBER' OR has_role = 'SUPER MEMBER')) [0m
+Rendered menus/_master_tab_layout (0.01235)
+  [4;35;1mRole Load (0.000105)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307) [0m
+Rendered layouts/_masthead (0.01336)
+Rendered menus/_vip (0.00015)
+Rendered layouts/_body (0.01418)
+Completed in 0.09613 (10 reqs/sec) | Rendering: 0.02456 (25%) | DB: 0.00265 (2%) | 200 OK [http://localhost/medical_histories/new]
+
+
+Processing MedicationsController#new (for 127.0.0.1 at 2010-02-09 17:41:08) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDA6DHVzZXJfaWRsKwe7/39JIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy
+OjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1cm5fdG8w--e512fe6945a80bf87fb81866495caeed6b6c6e6c
+  Parameters: {"action"=>"new", "controller"=>"medications"}
+  [4;36;1mUser Columns (0.001338)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000133)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;36;1mMedication Columns (0.001242)[0m   [0;1mSHOW FIELDS FROM `medications`[0m
+Rendering template within layouts/application
+Rendering medications/new
+Rendered layouts/_head (0.00067)
+  [4;35;1mRole Load (0.000137)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307 AND (has_role = 'MEMBER' OR has_role = 'SUPER MEMBER')) [0m
+Rendered menus/_master_tab_layout (0.00713)
+  [4;36;1mRole Load (0.000103)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307) [0m
+Rendered layouts/_masthead (0.00818)
+Rendered menus/_vip (0.00015)
+Rendered layouts/_body (0.00902)
+Completed in 0.22364 (4 reqs/sec) | Rendering: 0.02469 (11%) | DB: 0.00295 (1%) | 200 OK [http://localhost/medications/new]
+
+
+Processing MedicationsController#create (for 127.0.0.1 at 2010-02-09 17:41:34) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA6DHVzZXJfaWRsKwe7/39JOg5yZXR1cm5fdG8w--6ebabf92f65265f208d8af39e829bba7336090c0
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"953b0a211efe412bf4742600184f9b98bfd94bcf", "action"=>"create", "medication"=>{"name"=>"prozack", "result"=>"", "comment"=>"", "strength"=>"33", "dosage"=>"23", "dosage_unit"=>"2", "unit_type"=>"mg", "prescribed_start"=>"2010-02-09", "actual_start"=>"2010-02-09", "purpose"=>"Make happy", "prescribed_end"=>"2010-02-09", "actual_stop"=>"2010-02-09"}, "controller"=>"medications"}
+  [4;35;1mUser Columns (0.001700)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000140)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;35;1mMedication Columns (0.001071)[0m   [0mSHOW FIELDS FROM `medications`[0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mBEGIN[0m
+  [4;35;1mMedication Create (0.000320)[0m   [0mINSERT INTO `medications` (`name`, `result`, `comment`, `strength`, `dosage`, `dosage_unit`, `created_at`, `unit_type`, `updated_at`, `user_id`, `prescribed_start`, `actual_start`, `prescribed_end`, `actual_stop`, `purpose`) VALUES('prozack', '', '', 33, 23, '2', '2010-02-09 22:41:34', 'mg', '2010-02-09 22:41:34', 1233125307, '2010-02-09 00:00:00', '2010-02-09 00:00:00', '2010-02-09 00:00:00', '2010-02-09 00:00:00', 'Make happy')[0m
+  [4;36;1mSQL (0.057727)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/medications
+Completed in 0.23909 (4 reqs/sec) | DB: 0.06118 (25%) | 302 Found [http://localhost/medications]
+
+
+Processing MedicationsController#index (for 127.0.0.1 at 2010-02-09 17:41:34) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDA6DHVzZXJfaWRsKwe7/39JIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy
+OjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIpTWVkaWNhdGlvbiB3YXMg
+c3VjY2Vzc2Z1bGx5IGNyZWF0ZWQuBjoKQHVzZWR7BjsIRjoOcmV0dXJuX3Rv
+MA==--cf84c962cc300314dcaffc8589249b7f4778e392
+  Parameters: {"action"=>"index", "controller"=>"medications"}
+  [4;35;1mUser Columns (0.001301)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000155)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;35;1mMedication Load (0.000457)[0m   [0mSELECT * FROM `medications` WHERE (`medications`.user_id = 1233125307) ORDER BY prescribed_start desc[0m
+Rendering template within layouts/application
+Rendering medications/index
+  [4;36;1mMedication Columns (0.001060)[0m   [0;1mSHOW FIELDS FROM `medications`[0m
+Rendered layouts/_head (0.00063)
+  [4;35;1mRole Load (0.000203)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307 AND (has_role = 'MEMBER' OR has_role = 'SUPER MEMBER')) [0m
+Rendered menus/_master_tab_layout (0.00811)
+  [4;36;1mRole Load (0.000212)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307) [0m
+Rendered layouts/_masthead (0.00993)
+Rendered menus/_vip (0.00035)
+Rendered layouts/_body (0.01397)
+Completed in 0.06462 (15 reqs/sec) | Rendering: 0.02384 (36%) | DB: 0.00339 (5%) | 200 OK [http://localhost/medications]
+
+
+Processing MedicationsController#new (for 127.0.0.1 at 2010-02-09 17:42:44) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIilNZWRpY2F0aW9uIHdhcyBzdWNjZXNzZnVsbHkgY3Jl
+YXRlZC4GOgpAdXNlZHsGOwdUOgx1c2VyX2lkbCsHu/9/SToOcmV0dXJuX3Rv
+MA==--20740e2643dbb2445176e0497272ac8caf0a23c2
+  Parameters: {"action"=>"new", "controller"=>"medications"}
+  [4;35;1mUser Columns (0.001127)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000109)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;35;1mMedication Columns (0.001168)[0m   [0mSHOW FIELDS FROM `medications`[0m
+Rendering template within layouts/application
+Rendering medications/new
+Rendered layouts/_head (0.00064)
+  [4;36;1mRole Load (0.000137)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307 AND (has_role = 'MEMBER' OR has_role = 'SUPER MEMBER')) [0m
+Rendered menus/_master_tab_layout (0.00620)
+  [4;35;1mRole Load (0.000226)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307) [0m
+Rendered layouts/_masthead (0.00734)
+Rendered menus/_vip (0.00015)
+Rendered layouts/_body (0.00819)
+Completed in 0.06238 (16 reqs/sec) | Rendering: 0.02269 (36%) | DB: 0.00277 (4%) | 200 OK [http://localhost/medications/new]
+
+
+Processing MedicationsController#create (for 127.0.0.1 at 2010-02-09 17:43:08) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDA6DHVzZXJfaWRsKwe7/39JIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy
+OjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1cm5fdG8w--e512fe6945a80bf87fb81866495caeed6b6c6e6c
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"953b0a211efe412bf4742600184f9b98bfd94bcf", "action"=>"create", "medication"=>{"name"=>"Zlap", "result"=>"", "comment"=>"", "strength"=>"2", "dosage"=>"1", "dosage_unit"=>"22", "unit_type"=>"mg", "prescribed_start"=>"", "actual_start"=>"2010-02-09", "purpose"=>"when needing a zlap", "prescribed_end"=>"2010-02-09", "actual_stop"=>"2010-02-09"}, "controller"=>"medications"}
+  [4;36;1mUser Columns (0.001074)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000184)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;36;1mMedication Columns (0.001035)[0m   [0;1mSHOW FIELDS FROM `medications`[0m
+
+
+ArgumentError (invalid date):
+    /usr/lib/ruby/1.8/date.rb:956:in `new_by_frags'
+    /usr/lib/ruby/1.8/date.rb:980:in `strptime'
+    /vendor/plugins/dhtml-calendar/lib/extensions/active_record.rb:20:in `cast_to_date'
+    /vendor/plugins/dhtml-calendar/lib/extensions/active_record.rb:6:in `write_attribute'
+    /vendor/rails/activerecord/lib/active_record/attribute_methods.rb:211:in `prescribed_start='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2361:in `send'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2361:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2360:in `each'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2360:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2130:in `initialize'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:285:in `new'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:285:in `send'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:285:in `method_missing_without_paginate'
+    /vendor/rails/activerecord/lib/active_record/base.rb:1852:in `with_scope'
+    /vendor/rails/activerecord/lib/active_record/associations/association_proxy.rb:168:in `send'
+    /vendor/rails/activerecord/lib/active_record/associations/association_proxy.rb:168:in `with_scope'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:281:in `method_missing_without_paginate'
+    /vendor/plugins/will_paginate/lib/will_paginate/finder.rb:164:in `method_missing'
+    /app/controllers/medications_controller.rb:44:in `create'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MedicationsController#new (for 127.0.0.1 at 2010-02-09 17:44:38) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA6DHVzZXJfaWRsKwe7/39JOg5yZXR1cm5fdG8w--6ebabf92f65265f208d8af39e829bba7336090c0
+  Parameters: {"action"=>"new", "controller"=>"medications"}
+  [4;35;1mUser Columns (0.001276)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000126)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;35;1mMedication Columns (0.001086)[0m   [0mSHOW FIELDS FROM `medications`[0m
+Rendering template within layouts/application
+Rendering medications/new
+Rendered layouts/_head (0.00067)
+  [4;36;1mRole Load (0.000123)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307 AND (has_role = 'MEMBER' OR has_role = 'SUPER MEMBER')) [0m
+Rendered menus/_master_tab_layout (0.00862)
+  [4;35;1mRole Load (0.000118)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307) [0m
+Rendered layouts/_masthead (0.00973)
+Rendered menus/_vip (0.00015)
+Rendered layouts/_body (0.01069)
+Completed in 0.22477 (4 reqs/sec) | Rendering: 0.02842 (12%) | DB: 0.00502 (2%) | 200 OK [http://localhost/medications/new]
+
+
+Processing MedicationsController#new (for 127.0.0.1 at 2010-02-09 17:44:43) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDA6DHVzZXJfaWRsKwe7/39JIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy
+OjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1cm5fdG8w--e512fe6945a80bf87fb81866495caeed6b6c6e6c
+  Parameters: {"action"=>"new", "controller"=>"medications"}
+  [4;36;1mUser Columns (0.001086)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000142)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;36;1mMedication Columns (0.001156)[0m   [0;1mSHOW FIELDS FROM `medications`[0m
+Rendering template within layouts/application
+Rendering medications/new
+Rendered layouts/_head (0.00065)
+  [4;35;1mRole Load (0.000182)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307 AND (has_role = 'MEMBER' OR has_role = 'SUPER MEMBER')) [0m
+Rendered menus/_master_tab_layout (0.00736)
+  [4;36;1mRole Load (0.000154)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307) [0m
+Rendered layouts/_masthead (0.00847)
+Rendered menus/_vip (0.00016)
+Rendered layouts/_body (0.00934)
+Completed in 0.07231 (13 reqs/sec) | Rendering: 0.02423 (33%) | DB: 0.00272 (3%) | 200 OK [http://localhost/medications/new]
+
+
+Processing MedicationsController#create (for 127.0.0.1 at 2010-02-09 17:44:47) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA6DHVzZXJfaWRsKwe7/39JOg5yZXR1cm5fdG8w--6ebabf92f65265f208d8af39e829bba7336090c0
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"953b0a211efe412bf4742600184f9b98bfd94bcf", "action"=>"create", "medication"=>{"name"=>"", "result"=>"", "comment"=>"", "strength"=>"", "dosage"=>"", "dosage_unit"=>"", "unit_type"=>"mg", "prescribed_start"=>"", "actual_start"=>"2010-02-09", "purpose"=>"", "prescribed_end"=>"2010-02-09", "actual_stop"=>"2010-02-09"}, "controller"=>"medications"}
+  [4;35;1mUser Columns (0.001082)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000129)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;35;1mMedication Columns (0.001217)[0m   [0mSHOW FIELDS FROM `medications`[0m
+
+
+ArgumentError (invalid date):
+    /usr/lib/ruby/1.8/date.rb:956:in `new_by_frags'
+    /usr/lib/ruby/1.8/date.rb:980:in `strptime'
+    /vendor/plugins/dhtml-calendar/lib/extensions/active_record.rb:20:in `cast_to_date'
+    /vendor/plugins/dhtml-calendar/lib/extensions/active_record.rb:6:in `write_attribute'
+    /vendor/rails/activerecord/lib/active_record/attribute_methods.rb:211:in `prescribed_start='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2361:in `send'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2361:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2360:in `each'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2360:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2130:in `initialize'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:285:in `new'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:285:in `send'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:285:in `method_missing_without_paginate'
+    /vendor/rails/activerecord/lib/active_record/base.rb:1852:in `with_scope'
+    /vendor/rails/activerecord/lib/active_record/associations/association_proxy.rb:168:in `send'
+    /vendor/rails/activerecord/lib/active_record/associations/association_proxy.rb:168:in `with_scope'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:281:in `method_missing_without_paginate'
+    /vendor/plugins/will_paginate/lib/will_paginate/finder.rb:164:in `method_missing'
+    /app/controllers/medications_controller.rb:44:in `create'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MedicationsController#create (for 127.0.0.1 at 2010-02-09 17:45:17) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDA6DHVzZXJfaWRsKwe7/39JIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy
+OjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1cm5fdG8w--e512fe6945a80bf87fb81866495caeed6b6c6e6c
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"953b0a211efe412bf4742600184f9b98bfd94bcf", "action"=>"create", "medication"=>{"name"=>"", "result"=>"", "comment"=>"", "strength"=>"", "dosage"=>"", "dosage_unit"=>"", "unit_type"=>"mg", "prescribed_start"=>"", "actual_start"=>"2010-02-09", "purpose"=>"", "prescribed_end"=>"2010-02-09", "actual_stop"=>"2010-02-09"}, "controller"=>"medications"}
+  [4;36;1mUser Columns (0.001499)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000129)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+
+
+RuntimeError (--- !map:HashWithIndifferentAccess 
+commit: Create
+authenticity_token: 953b0a211efe412bf4742600184f9b98bfd94bcf
+action: create
+medication: !map:HashWithIndifferentAccess 
+  name: ""
+  result: ""
+  comment: ""
+  strength: ""
+  dosage: ""
+  dosage_unit: ""
+  unit_type: mg
+  prescribed_start: ""
+  actual_start: "2010-02-09"
+  purpose: ""
+  prescribed_end: "2010-02-09"
+  actual_stop: "2010-02-09"
+controller: medications
+):
+    /app/controllers/medications_controller.rb:45:in `create'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2010-02-09 17:46:13) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA6DHVzZXJfaWRsKwe7/39JOg5yZXR1cm5fdG8w--6ebabf92f65265f208d8af39e829bba7336090c0
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"953b0a211efe412bf4742600184f9b98bfd94bcf", "action"=>"create", "medication"=>{"name"=>"", "result"=>"", "comment"=>"", "strength"=>"", "dosage"=>"", "dosage_unit"=>"", "unit_type"=>"mg", "prescribed_start"=>"", "actual_start"=>"2010-02-09", "purpose"=>"", "prescribed_end"=>"2010-02-09", "actual_stop"=>"2010-02-09"}, "controller"=>"medications"}
+
+
+SyntaxError (/home/phil/railsapps/lifesthread/app/controllers/medications_controller.rb:47: syntax error, unexpected tIVAR
+    @medication = current_user.medications.new(params[:medication])
+               ^
+/home/phil/railsapps/lifesthread/app/controllers/medications_controller.rb:58: syntax error, unexpected kEND, expecting ')'
+/home/phil/railsapps/lifesthread/app/controllers/medications_controller.rb:86: syntax error, unexpected kEND, expecting ')'):
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:215:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:215:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:214:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:95:in `require_or_load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:260:in `load_missing_constant'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:467:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:479:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:283:in `constantize'
+    /vendor/rails/activesupport/lib/active_support/core_ext/string/inflections.rb:143:in `constantize'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MedicationsController#create (for 127.0.0.1 at 2010-02-09 17:46:28) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDA6DHVzZXJfaWRsKwe7/39JIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy
+OjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1cm5fdG8w--e512fe6945a80bf87fb81866495caeed6b6c6e6c
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"953b0a211efe412bf4742600184f9b98bfd94bcf", "action"=>"create", "medication"=>{"name"=>"", "result"=>"", "comment"=>"", "strength"=>"", "dosage"=>"", "dosage_unit"=>"", "unit_type"=>"mg", "prescribed_start"=>"", "actual_start"=>"2010-02-09", "purpose"=>"", "prescribed_end"=>"2010-02-09", "actual_stop"=>"2010-02-09"}, "controller"=>"medications"}
+  [4;36;1mUser Columns (0.001810)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000203)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+
+
+RuntimeError (--- !map:HashWithIndifferentAccess 
+name: ""
+result: ""
+comment: ""
+strength: ""
+dosage: ""
+dosage_unit: ""
+unit_type: mg
+prescribed_start: ""
+actual_start: "2010-02-09"
+purpose: ""
+prescribed_end: "2010-02-09"
+actual_stop: "2010-02-09"
+):
+    /app/controllers/medications_controller.rb:45:in `create'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MedicationsController#create (for 127.0.0.1 at 2010-02-09 17:47:06) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA6DHVzZXJfaWRsKwe7/39JOg5yZXR1cm5fdG8w--6ebabf92f65265f208d8af39e829bba7336090c0
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"953b0a211efe412bf4742600184f9b98bfd94bcf", "action"=>"create", "medication"=>{"name"=>"", "result"=>"", "comment"=>"", "strength"=>"", "dosage"=>"", "dosage_unit"=>"", "unit_type"=>"mg", "prescribed_start"=>"", "actual_start"=>"2010-02-09", "purpose"=>"", "prescribed_end"=>"2010-02-09", "actual_stop"=>"2010-02-09"}, "controller"=>"medications"}
+  [4;36;1mUser Columns (0.001042)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000164)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+
+
+NoMethodError (undefined method `prescribed_start' for #<HashWithIndifferentAccess:0x7f82d07426b0>):
+    /app/controllers/medications_controller.rb:45:in `create'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2010-02-09 17:47:27) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDA6DHVzZXJfaWRsKwe7/39JIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy
+OjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1cm5fdG8w--e512fe6945a80bf87fb81866495caeed6b6c6e6c
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"953b0a211efe412bf4742600184f9b98bfd94bcf", "action"=>"create", "medication"=>{"name"=>"", "result"=>"", "comment"=>"", "strength"=>"", "dosage"=>"", "dosage_unit"=>"", "unit_type"=>"mg", "prescribed_start"=>"", "actual_start"=>"2010-02-09", "purpose"=>"", "prescribed_end"=>"2010-02-09", "actual_stop"=>"2010-02-09"}, "controller"=>"medications"}
+
+
+SyntaxError (/home/phil/railsapps/lifesthread/app/controllers/medications_controller.rb:45: syntax error, unexpected ':', expecting kEND
+    raise params[:medication]:prescribed_start.to_yaml
+                              ^):
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:215:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:215:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:214:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:95:in `require_or_load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:260:in `load_missing_constant'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:467:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:479:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/inflector.rb:283:in `constantize'
+    /vendor/rails/activesupport/lib/active_support/core_ext/string/inflections.rb:143:in `constantize'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MedicationsController#create (for 127.0.0.1 at 2010-02-09 17:47:42) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA6DHVzZXJfaWRsKwe7/39JOg5yZXR1cm5fdG8w--6ebabf92f65265f208d8af39e829bba7336090c0
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"953b0a211efe412bf4742600184f9b98bfd94bcf", "action"=>"create", "medication"=>{"name"=>"", "result"=>"", "comment"=>"", "strength"=>"", "dosage"=>"", "dosage_unit"=>"", "unit_type"=>"mg", "prescribed_start"=>"", "actual_start"=>"2010-02-09", "purpose"=>"", "prescribed_end"=>"2010-02-09", "actual_stop"=>"2010-02-09"}, "controller"=>"medications"}
+  [4;36;1mUser Columns (0.001087)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000126)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+
+
+RuntimeError (--- ""
+):
+    /app/controllers/medications_controller.rb:45:in `create'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MedicationsController#create (for 127.0.0.1 at 2010-02-09 17:48:14) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDA6DHVzZXJfaWRsKwe7/39JIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy
+OjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1cm5fdG8w--e512fe6945a80bf87fb81866495caeed6b6c6e6c
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"953b0a211efe412bf4742600184f9b98bfd94bcf", "action"=>"create", "medication"=>{"name"=>"", "result"=>"", "comment"=>"", "strength"=>"", "dosage"=>"", "dosage_unit"=>"", "unit_type"=>"mg", "prescribed_start"=>"", "actual_start"=>"2010-02-09", "purpose"=>"", "prescribed_end"=>"2010-02-09", "actual_stop"=>"2010-02-09"}, "controller"=>"medications"}
+  [4;36;1mUser Columns (0.002475)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.002181)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+
+
+RuntimeError (--- !map:HashWithIndifferentAccess 
+name: ""
+result: ""
+comment: ""
+strength: ""
+dosage: ""
+dosage_unit: ""
+unit_type: mg
+prescribed_start: ""
+actual_start: "2010-02-09"
+purpose: ""
+prescribed_end: "2010-02-09"
+actual_stop: "2010-02-09"
+):
+    /app/controllers/medications_controller.rb:45:in `create'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MedicationsController#create (for 127.0.0.1 at 2010-02-09 17:52:49) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA6DHVzZXJfaWRsKwe7/39JOg5yZXR1cm5fdG8w--6ebabf92f65265f208d8af39e829bba7336090c0
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"953b0a211efe412bf4742600184f9b98bfd94bcf", "action"=>"create", "medication"=>{"name"=>"", "result"=>"", "comment"=>"", "strength"=>"", "dosage"=>"", "dosage_unit"=>"", "unit_type"=>"mg", "prescribed_start"=>"", "actual_start"=>"2010-02-09", "purpose"=>"", "prescribed_end"=>"2010-02-09", "actual_stop"=>"2010-02-09"}, "controller"=>"medications"}
+  [4;36;1mUser Columns (0.001067)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000170)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;36;1mMedication Columns (0.002281)[0m   [0;1mSHOW FIELDS FROM `medications`[0m
+
+
+ArgumentError (invalid date):
+    /usr/lib/ruby/1.8/date.rb:956:in `new_by_frags'
+    /usr/lib/ruby/1.8/date.rb:980:in `strptime'
+    /vendor/plugins/dhtml-calendar/lib/extensions/active_record.rb:20:in `cast_to_date'
+    /vendor/plugins/dhtml-calendar/lib/extensions/active_record.rb:6:in `write_attribute'
+    /vendor/rails/activerecord/lib/active_record/attribute_methods.rb:211:in `prescribed_start='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2361:in `send'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2361:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2360:in `each'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2360:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2130:in `initialize'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:326:in `new'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:326:in `build_record'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:85:in `build'
+    /app/controllers/medications_controller.rb:48:in `create'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MedicationsController#create (for 127.0.0.1 at 2010-02-09 17:56:47) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDA6DHVzZXJfaWRsKwe7/39JIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy
+OjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1cm5fdG8w--e512fe6945a80bf87fb81866495caeed6b6c6e6c
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"953b0a211efe412bf4742600184f9b98bfd94bcf", "action"=>"create", "medication"=>{"name"=>"", "result"=>"", "comment"=>"", "strength"=>"", "dosage"=>"", "dosage_unit"=>"", "unit_type"=>"mg", "prescribed_start"=>"", "actual_start"=>"2010-02-09", "purpose"=>"", "prescribed_end"=>"2010-02-09", "actual_stop"=>"2010-02-09"}, "controller"=>"medications"}
+  [4;35;1mUser Columns (0.001060)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000229)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;35;1mMedication Columns (0.001171)[0m   [0mSHOW FIELDS FROM `medications`[0m
+  [4;36;1mSQL (0.000268)[0m   [0;1mBEGIN[0m
+  [4;35;1mMedication Create (0.000341)[0m   [0mINSERT INTO `medications` (`name`, `result`, `comment`, `strength`, `dosage`, `dosage_unit`, `created_at`, `unit_type`, `updated_at`, `user_id`, `prescribed_start`, `actual_start`, `prescribed_end`, `actual_stop`, `purpose`) VALUES('', '', '', NULL, NULL, '', '2010-02-09 22:56:47', 'mg', '2010-02-09 22:56:47', 1233125307, NULL, '2010-02-09 00:00:00', '2010-02-09 00:00:00', '2010-02-09 00:00:00', '')[0m
+  [4;36;1mSQL (0.068977)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/medications
+Completed in 0.27184 (3 reqs/sec) | DB: 0.08871 (32%) | 302 Found [http://localhost/medications]
+
+
+Processing MedicationsController#index (for 127.0.0.1 at 2010-02-09 17:56:48) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIilNZWRpY2F0aW9uIHdhcyBzdWNjZXNzZnVsbHkgY3Jl
+YXRlZC4GOgpAdXNlZHsGOwdGOgx1c2VyX2lkbCsHu/9/SToOcmV0dXJuX3Rv
+MA==--4e52a0b82e5dcfe9a5d7c3ad55bc9a98bbe09606
+  Parameters: {"action"=>"index", "controller"=>"medications"}
+  [4;35;1mUser Columns (0.001133)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.001082)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;35;1mMedication Load (0.003537)[0m   [0mSELECT * FROM `medications` WHERE (`medications`.user_id = 1233125307) ORDER BY prescribed_start desc[0m
+Rendering template within layouts/application
+Rendering medications/index
+  [4;36;1mMedication Columns (0.002387)[0m   [0;1mSHOW FIELDS FROM `medications`[0m
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.strftime) on line #21 of medications/index.html.erb:
+18:   <tr>
+19:     <td><%=h medication.name %></td>
+20:     <td><%=h medication.strength %><%=h medication.unit_type %></td>
+21:     <td><%=h medication.prescribed_start.strftime("%d %b '%y") %></td>
+22:     <td><%=h medication.prescribed_end.strftime("%d %b '%y") %></td>
+23:     <td><%=h medication.actual_start.strftime("%d %b '%y") %></td>
+24:     <td><%=h medication.actual_stop.strftime("%d %b '%y") %></td>
+
+    app/views/medications/index.html.erb:21:in `_run_erb_47app47views47medications47index46html46erb'
+    app/views/medications/index.html.erb:17:in `each'
+    app/views/medications/index.html.erb:17:in `_run_erb_47app47views47medications47index46html46erb'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:35:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:245:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1108:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:865:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/base.rb:880:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:131:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:131:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:160:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:160:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:154:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:154:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/medications_controller.rb:11:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MedicationsController#create (for 127.0.0.1 at 2010-02-09 17:58:18) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDA6DHVzZXJfaWRsKwe7/39JIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy
+OjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIpTWVkaWNhdGlvbiB3YXMg
+c3VjY2Vzc2Z1bGx5IGNyZWF0ZWQuBjoKQHVzZWR7BjsIVDoOcmV0dXJuX3Rv
+MA==--c0fcdac6c34d38505360aacc3a8a21bc301fe6b6
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"953b0a211efe412bf4742600184f9b98bfd94bcf", "action"=>"create", "medication"=>{"name"=>"", "result"=>"", "comment"=>"", "strength"=>"", "dosage"=>"", "dosage_unit"=>"", "unit_type"=>"mg", "prescribed_start"=>"", "actual_start"=>"2010-02-09", "purpose"=>"", "prescribed_end"=>"2010-02-09", "actual_stop"=>"2010-02-09"}, "controller"=>"medications"}
+  [4;35;1mUser Columns (0.001101)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000455)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;35;1mMedication Columns (0.001811)[0m   [0mSHOW FIELDS FROM `medications`[0m
+
+
+ArgumentError (Argument for cast_to_date must be a String, Date, or Time; was: 0):
+    /vendor/plugins/dhtml-calendar/lib/extensions/active_record.rb:25:in `cast_to_date'
+    /vendor/plugins/dhtml-calendar/lib/extensions/active_record.rb:6:in `write_attribute'
+    /vendor/rails/activerecord/lib/active_record/attribute_methods.rb:211:in `prescribed_start='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2361:in `send'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2361:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2360:in `each'
+    /vendor/rails/activerecord/lib/active_record/base.rb:2360:in `attributes='
+    /vendor/rails/activerecord/lib/active_record/base.rb:2130:in `initialize'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:285:in `new'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:285:in `send'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:285:in `method_missing_without_paginate'
+    /vendor/rails/activerecord/lib/active_record/base.rb:1852:in `with_scope'
+    /vendor/rails/activerecord/lib/active_record/associations/association_proxy.rb:168:in `send'
+    /vendor/rails/activerecord/lib/active_record/associations/association_proxy.rb:168:in `with_scope'
+    /vendor/rails/activerecord/lib/active_record/associations/association_collection.rb:281:in `method_missing_without_paginate'
+    /vendor/plugins/will_paginate/lib/will_paginate/finder.rb:164:in `method_missing'
+    /app/controllers/medications_controller.rb:50:in `create'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MedicationsController#index (for 127.0.0.1 at 2010-02-09 17:58:45) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA6DHVzZXJfaWRsKwe7/39JOg5yZXR1cm5fdG8w--6ebabf92f65265f208d8af39e829bba7336090c0
+  Parameters: {"action"=>"index", "controller"=>"medications"}
+  [4;36;1mUser Columns (0.001130)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000957)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;36;1mMedication Load (0.000137)[0m   [0;1mSELECT * FROM `medications` WHERE (`medications`.user_id = 1233125307) ORDER BY prescribed_start desc[0m
+Rendering template within layouts/application
+Rendering medications/index
+  [4;35;1mMedication Columns (0.001303)[0m   [0mSHOW FIELDS FROM `medications`[0m
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.strftime) on line #21 of medications/index.html.erb:
+18:   <tr>
+19:     <td><%=h medication.name %></td>
+20:     <td><%=h medication.strength %><%=h medication.unit_type %></td>
+21:     <td><%=h medication.prescribed_start.strftime("%d %b '%y") %></td>
+22:     <td><%=h medication.prescribed_end.strftime("%d %b '%y") %></td>
+23:     <td><%=h medication.actual_start.strftime("%d %b '%y") %></td>
+24:     <td><%=h medication.actual_stop.strftime("%d %b '%y") %></td>
+
+    app/views/medications/index.html.erb:21:in `_run_erb_47app47views47medications47index46html46erb'
+    app/views/medications/index.html.erb:17:in `each'
+    app/views/medications/index.html.erb:17:in `_run_erb_47app47views47medications47index46html46erb'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:35:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:245:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1108:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:865:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/base.rb:880:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:131:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:131:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:160:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:160:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:154:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:154:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/medications_controller.rb:11:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MedicationsController#index (for 127.0.0.1 at 2010-02-09 18:13:00) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDA6DHVzZXJfaWRsKwe7/39JIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy
+OjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1cm5fdG8w--e512fe6945a80bf87fb81866495caeed6b6c6e6c
+  Parameters: {"action"=>"index", "controller"=>"medications"}
+  [4;36;1mUser Columns (0.000973)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000111)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;36;1mMedication Load (0.000151)[0m   [0;1mSELECT * FROM `medications` WHERE (`medications`.user_id = 1233125307) ORDER BY prescribed_start desc[0m
+Rendering template within layouts/application
+Rendering medications/index
+  [4;35;1mMedication Columns (0.000803)[0m   [0mSHOW FIELDS FROM `medications`[0m
+Rendered layouts/_head (0.00091)
+  [4;36;1mRole Load (0.000104)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307 AND (has_role = 'MEMBER' OR has_role = 'SUPER MEMBER')) [0m
+Rendered menus/_master_tab_layout (0.00471)
+  [4;35;1mRole Load (0.000053)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307) [0m
+Rendered layouts/_masthead (0.00537)
+Rendered menus/_vip (0.00012)
+Rendered layouts/_body (0.00598)
+Completed in 0.04800 (20 reqs/sec) | Rendering: 0.01829 (38%) | DB: 0.00350 (7%) | 200 OK [http://localhost/medications/]
+
+
+Processing MedicationsController#new (for 127.0.0.1 at 2010-02-09 18:16:32) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA6DHVzZXJfaWRsKwe7/39JOg5yZXR1cm5fdG8w--6ebabf92f65265f208d8af39e829bba7336090c0
+  Parameters: {"action"=>"new", "controller"=>"medications"}
+  [4;36;1mUser Columns (0.000954)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000067)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;36;1mMedication Columns (0.000860)[0m   [0;1mSHOW FIELDS FROM `medications`[0m
+Rendering template within layouts/application
+Rendering medications/new
+ERROR: compiling _run_erb_47app47views47medications47new46html46erb RAISED compile error
+/home/phil/railsapps/lifesthread/app/views/medications/new.html.erb:91: syntax error, unexpected ')', expecting tASSOC
+         :cache => true } ).to_s); _erbout.concat "\n    ...
+                           ^
+Function body: def _run_erb_47app47views47medications47new46html46erb(local_assigns)
+_erbout = ''; _erbout.concat "<h1>New Prescription</h1>\n\n\n"
+
+
+;  form_for(@medication) do |f| ; _erbout.concat "\n  "
+; _erbout.concat(( f.error_messages ).to_s); _erbout.concat "\n\n  <table>\n  <tr>\n  <th>"
+
+
+
+; _erbout.concat(( f.label :name ).to_s); _erbout.concat "</th>  \n  <th>"
+; _erbout.concat(( f.label :strength ).to_s); _erbout.concat "</th>\n  <th>"
+; _erbout.concat(( f.label :dosage ).to_s); _erbout.concat "</th>\n  <th>"
+; _erbout.concat(( f.label "Frequency" ).to_s); _erbout.concat "</th>\n  <th>"
+; _erbout.concat(( f.label :purpose ).to_s); _erbout.concat "</th>\n  <th>"
+; _erbout.concat(( f.label :result ).to_s); _erbout.concat "</th>\n  <th>"
+; _erbout.concat(( f.label :comment ).to_s); _erbout.concat "</th>  \n\n </tr><tr>\n    \n     \n  <td>"
+
+
+
+
+; _erbout.concat(( f.text_field :name , :size => 6 ).to_s); _erbout.concat "</td>\n  <td>"
+; _erbout.concat(( f.text_field :strength  , :size => 3).to_s); _erbout.concat(( f.select :unit_type, ["mg", "gm", "gr", "cc", "gtt", "ml", "oz", "tsp", "Tbs", "other"],:size => 5 ).to_s); _erbout.concat "</td>\n  \n \n\n\n  <td>"
+
+
+
+
+; _erbout.concat(( f.text_field :dosage , :size => 3 ).to_s); _erbout.concat "</td>\n  <td>"
+; _erbout.concat(( f.text_field :dosage_unit , :size => 4 ).to_s); _erbout.concat "</td>\n  <td>"
+; _erbout.concat(( f.text_field :purpose  , :size => 6  ).to_s); _erbout.concat "</td>\n  <td>"
+; _erbout.concat(( f.text_field :result , :size => 6  ).to_s); _erbout.concat "</td>\n  <td>"
+; _erbout.concat(( f.text_field :comment , :size => 6  ).to_s); _erbout.concat "</td>\n  </tr>\n  </table>\n  <table>\n  <tr><th>"
+
+
+
+; _erbout.concat(( f.label :prescribed_start ).to_s); _erbout.concat "</th><td>\n        "
+; _erbout.concat(( calendar_box 'medication', 'prescribed_start',
+       { :class => 'date',
+         :date => Date.current,
+         :field_title => 'Start',
+         :button_title => 'Show calendar' ,
+         #:value => Date.current,
+         :size => 8 },
+       { :firstDay => 1,
+         :range => [1900, 2015],
+         :step => 1,
+ 
+    
+         :cache => true } ).to_s); _erbout.concat "</td>\n         \n     <th>"
+
+; _erbout.concat(( f.label :prescribed_end ).to_s); _erbout.concat "</th> <td>\n            "
+; _erbout.concat(( calendar_box 'medication', 'prescribed_end',
+       { :class => 'date',
+         :date => Date.current,
+         :field_title => '',
+         :button_title => 'Show calendar' ,
+         #:value => Date.current,
+         :size => 8 },
+       { :firstDay => 1,
+         :range => [1900, 2015],
+         :step => 1,
+         :showsTime => 0,
+         :showOthers => true,
+         :cache => true } ).to_s); _erbout.concat "</td>\n         \n  </tr><tr><th>"
+
+; _erbout.concat(( f.label :actual_start ).to_s); _erbout.concat "</th>  <td>"; _erbout.concat "\n            "
+; _erbout.concat(( calendar_box 'medication', 'actual_start',
+       { :class => 'date',
+         :date => Date.current,
+         :field_title => 'Stop',
+         :button_title => 'Show calendar' ,
+         #:value => Date.current,
+         :size => 8 },
+       { :firstDay => 1,
+         :range => [1900, 2015],
+         :step => 1,
+         :showsTime => 0,
+         :showOthers => true,
+         :cache => true } ).to_s); _erbout.concat "\n    </td>\n  <th>"
+
+; _erbout.concat(( f.label :actual_stop ).to_s); _erbout.concat "</th><td>\n            "
+; _erbout.concat(( calendar_box 'medication', 'actual_stop',
+       { :class => 'date',
+         :date => Date.current,
+         :field_title => '',
+         :button_title => 'Show calendar' ,
+         #:value => Date.current, :size => 8 },
+       { :firstDay => 1,
+         :range => [1900, 2015],
+         :step => 1,
+         :showsTime => 0,
+         :showOthers => true,
+         :cache => true } ).to_s); _erbout.concat "\n    </td></tr>\n  \n \n  \n  \n  </table>\n  <p>\n    "
+
+
+
+
+
+
+
+; _erbout.concat(( f.submit "Create" ).to_s); _erbout.concat "\n  </p>\n"
+
+;  end ; _erbout.concat "\n\n"
+
+; _erbout.concat "\n"
+; _erbout
+end
+Backtrace: /home/phil/railsapps/lifesthread/app/views/medications/new.html.erb:105:in `compile_template'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_view/template.rb:55:in `prepare!'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_view/template.rb:34:in `render'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_view/base.rb:245:in `render_file'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:1108:in `render_for_file'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:865:in `render_with_no_layout'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:880:in `render_with_no_layout'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/phil/railsapps/lifesthread/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:131:in `send'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:131:in `custom'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:160:in `call'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:160:in `respond'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:154:in `each'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:154:in `respond'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/phil/railsapps/lifesthread/app/controllers/medications_controller.rb:31:in `new'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/phil/railsapps/lifesthread/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+/home/phil/railsapps/lifesthread/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+/home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+/home/phil/railsapps/lifesthread/vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+/home/phil/railsapps/lifesthread/vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/phil/railsapps/lifesthread/vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+/home/phil/railsapps/lifesthread/vendor/rails/railties/lib/commands/servers/webrick.rb:66
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/phil/railsapps/lifesthread/vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+/home/phil/railsapps/lifesthread/vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+/home/phil/railsapps/lifesthread/vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+/home/phil/railsapps/lifesthread/vendor/rails/railties/lib/commands/server.rb:39
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/phil/railsapps/lifesthread/app/views/medications/new.html.erb:91: syntax error, unexpected ')', expecting tASSOC
+         :cache => true } ).to_s); _erbout.concat "\n    ...
+                           ^) on line #91 of medications/new.html.erb:
+88:          :step => 1,
+89:          :showsTime => 0,
+90:          :showOthers => true,
+91:          :cache => true } %>
+92:     </td></tr>
+93:   
+94:  
+
+    app/views/medications/new.html.erb:105:in `compile_template'
+    vendor/rails/actionpack/lib/action_view/template.rb:55:in `prepare!'
+    vendor/rails/actionpack/lib/action_view/template.rb:34:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:245:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1108:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:865:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/base.rb:880:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:131:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:131:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:160:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:160:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:154:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:154:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/medications_controller.rb:31:in `new'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/phil/railsapps/lifesthread/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MedicationsController#new (for 127.0.0.1 at 2010-02-09 18:17:47) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDA6DHVzZXJfaWRsKwe7/39JIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy
+OjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1cm5fdG8w--e512fe6945a80bf87fb81866495caeed6b6c6e6c
+  Parameters: {"action"=>"new", "controller"=>"medications"}
+  [4;35;1mUser Columns (0.000937)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000077)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;35;1mMedication Columns (0.000928)[0m   [0mSHOW FIELDS FROM `medications`[0m
+Rendering template within layouts/application
+Rendering medications/new
+Rendered layouts/_head (0.00061)
+  [4;36;1mRole Load (0.000169)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307 AND (has_role = 'MEMBER' OR has_role = 'SUPER MEMBER')) [0m
+Rendered menus/_master_tab_layout (0.11428)
+  [4;35;1mRole Load (0.000062)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307) [0m
+Rendered layouts/_masthead (0.11512)
+Rendered menus/_vip (0.00013)
+Rendered layouts/_body (0.11582)
+Completed in 0.15752 (6 reqs/sec) | Rendering: 0.12780 (81%) | DB: 0.00217 (1%) | 200 OK [http://localhost/medications/new]
+
+
+Processing MedicationsController#create (for 127.0.0.1 at 2010-02-09 18:18:05) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA6DHVzZXJfaWRsKwe7/39JOg5yZXR1cm5fdG8w--6ebabf92f65265f208d8af39e829bba7336090c0
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"953b0a211efe412bf4742600184f9b98bfd94bcf", "action"=>"create", "medication"=>{"name"=>"Razat", "result"=>"", "comment"=>"", "strength"=>"12", "dosage"=>"1", "dosage_unit"=>"1", "unit_type"=>"mg", "prescribed_start"=>"", "actual_start"=>"", "purpose"=>"for zats", "prescribed_end"=>"", "actual_stop"=>""}, "controller"=>"medications"}
+  [4;36;1mUser Columns (0.000922)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000066)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;36;1mMedication Columns (0.014759)[0m   [0;1mSHOW FIELDS FROM `medications`[0m
+  [4;35;1mSQL (0.000121)[0m   [0mBEGIN[0m
+  [4;36;1mMedication Create (0.000279)[0m   [0;1mINSERT INTO `medications` (`name`, `result`, `comment`, `strength`, `dosage`, `dosage_unit`, `created_at`, `unit_type`, `updated_at`, `user_id`, `prescribed_start`, `actual_start`, `prescribed_end`, `actual_stop`, `purpose`) VALUES('Razat', '', '', 12, 1, '1', '2010-02-09 23:18:05', 'mg', '2010-02-09 23:18:05', 1233125307, NULL, NULL, NULL, NULL, 'for zats')[0m
+  [4;35;1mSQL (0.039472)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/medications
+Completed in 0.18345 (5 reqs/sec) | DB: 0.05562 (30%) | 302 Found [http://localhost/medications]
+
+
+Processing MedicationsController#index (for 127.0.0.1 at 2010-02-09 18:18:05) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOTMxMWE5NTA0NDNiZjNjM2M0MjI1YjFjZGNiODk3
+NDA6DHVzZXJfaWRsKwe7/39JIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy
+OjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIpTWVkaWNhdGlvbiB3YXMg
+c3VjY2Vzc2Z1bGx5IGNyZWF0ZWQuBjoKQHVzZWR7BjsIRjoOcmV0dXJuX3Rv
+MA==--cf84c962cc300314dcaffc8589249b7f4778e392
+  Parameters: {"action"=>"index", "controller"=>"medications"}
+  [4;36;1mUser Columns (0.000911)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000093)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;36;1mMedication Load (0.000442)[0m   [0;1mSELECT * FROM `medications` WHERE (`medications`.user_id = 1233125307) ORDER BY prescribed_start desc[0m
+Rendering template within layouts/application
+Rendering medications/index
+  [4;35;1mMedication Columns (0.000751)[0m   [0mSHOW FIELDS FROM `medications`[0m
+Rendered layouts/_head (0.00059)
+  [4;36;1mRole Load (0.000138)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307 AND (has_role = 'MEMBER' OR has_role = 'SUPER MEMBER')) [0m
+Rendered menus/_master_tab_layout (0.00485)
+  [4;35;1mRole Load (0.000074)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307) [0m
+Rendered layouts/_masthead (0.00555)
+Rendered menus/_vip (0.00012)
+Rendered layouts/_body (0.00621)
+Completed in 0.04756 (21 reqs/sec) | Rendering: 0.01607 (33%) | DB: 0.00241 (5%) | 200 OK [http://localhost/medications]

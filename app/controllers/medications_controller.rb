@@ -41,8 +41,34 @@ class MedicationsController < ApplicationController
   # POST /medications
   # POST /medications.xml
   def create
-    @medication = current_user.medications.new(params[:medication])
+  
+    #raise params[:medication].to_yaml
+    if (params[:medication][:prescribed_start] == "" )
+      params[:medication][:prescribed_start] = nil
+    end
 
+    if (params[:medication][:prescribed_end] == "" )
+      params[:medication][:prescribed_end] = nil
+    end
+    
+    if (params[:medication][:actual_start] == "" )
+      params[:medication][:actual_start] = nil
+    end
+    
+    if (params[:medication][:actual_stop] == "" )
+      params[:medication][:actual_stop] = nil
+    end
+    
+    @medication = current_user.medications.new(params[:medication])
+    #@medication = current_user.medications.build(params[:medication])
+    
+    
+    #prescribed_start: ""
+    #actual_start: "2010-02-09"
+    #prescribed_end: "2010-02-09"
+    #actual_stop: "2010-02-09"
+
+    
     respond_to do |format|
       if @medication.save
         flash[:notice] = 'Medication was successfully created.'

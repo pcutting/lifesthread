@@ -18,10 +18,10 @@
   <tr>
     <td><%=h medication.name %></td>
     <td><%=h medication.strength %><%=h medication.unit_type %></td>
-    <td><%=h medication.prescribed_start.strftime("%d %b '%y") %></td>
-    <td><%=h medication.prescribed_end.strftime("%d %b '%y") %></td>
-    <td><%=h medication.actual_start.strftime("%d %b '%y") %></td>
-    <td><%=h medication.actual_stop.strftime("%d %b '%y") %></td>
+    <td><%=h medication.prescribed_start.strftime("%d %b '%y") unless medication.prescribed_start.nil? %></td>
+    <td><%=h medication.prescribed_end.strftime("%d %b '%y")  unless medication.prescribed_end.nil?%></td>
+    <td><%=h medication.actual_start.strftime("%d %b '%y") unless medication.actual_start.nil? %></td>
+    <td><%=h medication.actual_stop.strftime("%d %b '%y") unless medication.actual_stop.nil? %></td>
     <td><%=h medication.dosage %>-<%=h medication.dosage_unit %></td>
     <td><%=h medication.purpose %></td>
     <td><%=h medication.result %></td>
