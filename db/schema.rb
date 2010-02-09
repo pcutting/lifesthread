@@ -264,7 +264,7 @@ ActiveRecord::Schema.define(:version => 20090613180912) do
     t.string   "super_member_id"
     t.integer  "cache_current_weight",            :limit => 11, :default => 0
     t.integer  "cache_current_weight_goal",       :limit => 11, :default => 0
-    t.datetime "cache_last_updated",                            :default => '2009-06-13 16:07:50'
+    t.datetime "cache_last_updated",                            :default => '2010-02-09 16:34:20'
     t.text     "unit_preferences"
     t.string   "sponsor_id"
     t.datetime "created_at"
