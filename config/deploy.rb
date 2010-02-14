@@ -3,7 +3,7 @@ set :user, "rails"
 set :password, "work4you2"
 #set :server, "lifesthread.com"
 set :application, "wellnessboard"
-set :repository, "git@github.com:pcutting/wellnessboard.git"
+set :repository, "git@github.com:pcutting/lifesthread.git"
 set :scm, "git"
 
 set :deploy_via, :copy
