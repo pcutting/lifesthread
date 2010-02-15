@@ -1,7 +1,6 @@
 set :ip_address, "model.lifesthread.info"
 set :user, "model"
 set :password, "work4you2"
-#set :server, "lifesthread.com"
 set :application, "model"
 set :repository, "git@github.com:pcutting/lifesthread.git"
 set :scm, "git"
