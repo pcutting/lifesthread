@@ -8,7 +8,7 @@ set :scm, "git"
 
 set :deploy_via, :copy
 
-set :use_sudo, true
+set :use_sudo, false
 set :group_writable, false
 set :rails_env, 'production'
 

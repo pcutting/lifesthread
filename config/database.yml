@@ -39,6 +39,6 @@ production:
   reconnect: false
   database: wellnessboard
   pool: 5
-  username: railsapps
-  password: sprint1
+  username: nevie
+  password: otkachena
 
