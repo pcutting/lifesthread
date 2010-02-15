@@ -40,5 +40,5 @@ production:
   database: wellnessboard
   pool: 5
   username: nevie
-  password: otkachena
+  password: work4you2
 
