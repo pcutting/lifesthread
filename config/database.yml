@@ -32,7 +32,7 @@ production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: wellnessboard
+  database: model
   pool: 5
   username: lifesthread
   password: work4you2
