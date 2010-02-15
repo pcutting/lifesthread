@@ -34,6 +34,6 @@ production:
   reconnect: false
   database: lifesthread
   pool: 5
-  username: lifesthread
+  username: model
   password: work4you2
 

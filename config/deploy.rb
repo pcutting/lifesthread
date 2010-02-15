@@ -1,5 +1,5 @@
 set :ip_address, "lifesthread.info"
-set :user, "lifesthread"
+set :user, "model"
 set :password, "work4you2"
 #set :server, "lifesthread.com"
 set :application, "wellnessboard"
