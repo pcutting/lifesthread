@@ -20,25 +20,20 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-#  adapter: postgresql
-#  encoding: utf8
-#  database: lifesthread_test
-#  username: rails
-#  password: work4you2
-#  #socket: /var/lib/mysql/mysql.sock
-#  adapter: mysql
-#  encoding: utf8
-#  database: lifesthread_test
-#  username: root
-#  password: sprint
-#  socket: /var/lib/mysqld/mysqld.sock
-
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: model
+  pool: 5
+  username: model
+  password: work4you2
+  
 production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: wellnessboard
+  database: lifesthread
   pool: 5
-  username: nevie
+  username: lifesthread
   password: work4you2
 
