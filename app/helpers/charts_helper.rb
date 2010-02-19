@@ -427,8 +427,14 @@ def getBP(chart_bps)
       @setSys.addPoint(bps.measured_on.to_i * 1000,bps.systolic)
       @setDias.addPoint(bps.measured_on.to_i * 1000,bps.diastolic)
       
-      sum_bp1 += bps.systolic  
-      sum_bp2 += bps.diastolic     
+      if ( bps.systolic.nil? || bps.diastolic.nil? ) then
+        #can not have a nil value here.  
+        count -= 1
+      else
+        sum_bp1 += bps.systolic  
+        sum_bp2 += bps.diastolic  
+        
+      end  
       @setSysAvg.addPoint(bps.measured_on.to_i * 1000,sum_bp1/count)
       @setDiasAvg.addPoint(bps.measured_on.to_i * 1000,sum_bp2/count)     
     end  
