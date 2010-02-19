@@ -1,7 +1,7 @@
-set :ip_address, "model.lifesthread.info"
-set :user, "model"
+set :ip_address, "lifesthread.info"  #model.lifesthread.info  or lifesthread.info
+set :user, "lifesthread"   #model or lifesthread
 set :password, "work4you2"
-set :application, "model"
+set :application, "wellnessboard" #wellnessboard or model
 set :repository, "git@github.com:pcutting/lifesthread.git"
 set :scm, "git"
 
