@@ -5,7 +5,7 @@ namespace :deploy do
 
 task :restart, :roles => :app do
 run "chmod 755 #{release_path}/public -R"
-run "chown -R model:model #{release_path}"
+run "chown -R lifesthread:lifesthread #{release_path}"  #model:model or lifesthread:lifesthread
 run "touch #{release_path}/current/tmp/restart.txt"
 end
 
