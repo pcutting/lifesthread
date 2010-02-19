@@ -40,6 +40,7 @@
     <td><%=h bp.systolic %></td>
     <td><%=h bp.diastolic %></td>
     <td><%= link_to 'Edit', edit_bp_path(bp) %></td>
+    <td><%= link_to 'Delete', bp, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

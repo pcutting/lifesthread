@@ -30581,3 +30581,130 @@ Rendered layouts/_masthead (0.00630)
 Rendered menus/_vip (0.00012)
 Rendered layouts/_body (0.00700)
 Completed in 0.19930 (5 reqs/sec) | Rendering: 0.04734 (23%) | DB: 0.00402 (2%) | 200 OK [http://localhost/bps]
+
+
+Processing StressesController#index (for 127.0.0.1 at 2010-02-19 01:03:32) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlYWU2ZTg2MWE4ZjIyZTdkY2Y2ZTQzYzBiZjQ1YmNj
+YTU6DHVzZXJfaWRsKwe7/39JIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy
+OjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1cm5fdG8w--0beeb1d984b8d9f4dfd999fbda69076aed49c170
+  Parameters: {"action"=>"index", "controller"=>"stresses"}
+  [4;36;1mUser Columns (0.000914)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000097)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;36;1mStress Load (0.000374)[0m   [0;1mSELECT * FROM `stresses` WHERE (`stresses`.user_id = 1233125307) [0m
+  [4;35;1mStress Columns (0.000583)[0m   [0mSHOW FIELDS FROM `stresses`[0m
+Rendering template within layouts/application
+Rendering stresses/index
+  [4;36;1mProfile Load (0.000360)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 1233125307) LIMIT 1[0m
+  [4;35;1mProfile Columns (0.003967)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mBp Load (0.000284)[0m   [0;1mSELECT * FROM `bps` WHERE (`bps`.user_id = 1233125307) ORDER BY measured_on asc[0m
+  [4;35;1mBp Columns (0.000667)[0m   [0mSHOW FIELDS FROM `bps`[0m
+  [4;36;1mStress Load (0.002351)[0m   [0;1mSELECT * FROM `stresses` WHERE (`stresses`.user_id = 1233125307) ORDER BY first_acknowledged asc[0m
+  [4;35;1mStressLog Load (0.000329)[0m   [0mSELECT * FROM `stress_logs` WHERE (`stress_logs`.stress_id = 953125641) [0m
+  [4;36;1mStressLog Columns (0.000616)[0m   [0;1mSHOW FIELDS FROM `stress_logs`[0m
+  [4;35;1mStressLog Load (0.000342)[0m   [0mSELECT * FROM `stress_logs` WHERE (`stress_logs`.stress_id = 996332877) [0m
+Rendered layouts/_head (0.00052)
+  [4;36;1mRole Load (0.000117)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307 AND (has_role = 'MEMBER' OR has_role = 'SUPER MEMBER')) [0m
+Rendered menus/_master_tab_layout (0.11163)
+  [4;35;1mRole Load (0.000056)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307) [0m
+Rendered layouts/_masthead (0.11237)
+Rendered menus/_vip (0.00014)
+Rendered layouts/_body (0.11305)
+Completed in 0.27375 (3 reqs/sec) | Rendering: 0.21251 (77%) | DB: 0.01106 (4%) | 200 OK [http://localhost/stresses]
+
+
+Processing StressLogsController#index (for 127.0.0.1 at 2010-02-19 01:03:40) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlYWU2ZTg2MWE4ZjIyZTdkY2Y2ZTQzYzBiZjQ1YmNj
+YTUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA6DHVzZXJfaWRsKwe7/39JOg5yZXR1cm5fdG8w--6dbdd29a19b76c8087cb9287314321fed9c6fe13
+  Parameters: {"action"=>"index", "stress_id"=>"953125641", "controller"=>"stress_logs"}
+  [4;36;1mUser Columns (0.001016)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000068)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;36;1mStress Columns (0.005910)[0m   [0;1mSHOW FIELDS FROM `stresses`[0m
+  [4;35;1mStress Load (0.000246)[0m   [0mSELECT * FROM `stresses` WHERE (`stresses`.`id` = 953125641 AND (`stresses`.user_id = 1233125307)) [0m
+  [4;36;1mStressLog Load (0.000106)[0m   [0;1mSELECT * FROM `stress_logs` WHERE (`stress_logs`.stress_id = 953125641) [0m
+  [4;35;1mStressLog Columns (0.000722)[0m   [0mSHOW FIELDS FROM `stress_logs`[0m
+Rendering template within layouts/application
+Rendering stress_logs/index
+Rendered layouts/_head (0.00056)
+  [4;36;1mRole Load (0.000104)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307 AND (has_role = 'MEMBER' OR has_role = 'SUPER MEMBER')) [0m
+Rendered menus/_master_tab_layout (0.00675)
+  [4;35;1mRole Load (0.000074)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307) [0m
+Rendered layouts/_masthead (0.00753)
+Rendered menus/_vip (0.00013)
+Rendered layouts/_body (0.00824)
+Completed in 0.18862 (5 reqs/sec) | Rendering: 0.13382 (70%) | DB: 0.00825 (4%) | 200 OK [http://localhost/stresses/953125641/stress_logs]
+
+
+Processing SleepsController#index (for 127.0.0.1 at 2010-02-19 01:03:47) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlYWU2ZTg2MWE4ZjIyZTdkY2Y2ZTQzYzBiZjQ1YmNj
+YTU6DHVzZXJfaWRsKwe7/39JIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy
+OjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1cm5fdG8w--0beeb1d984b8d9f4dfd999fbda69076aed49c170
+  Parameters: {"action"=>"index", "controller"=>"sleeps"}
+  [4;36;1mUser Columns (0.000999)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000093)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;36;1mSleep Load (0.000390)[0m   [0;1mSELECT * FROM `sleeps` WHERE (`sleeps`.user_id = 1233125307) [0m
+  [4;35;1mSleep Columns (0.000620)[0m   [0mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/application
+Rendering sleeps/index
+  [4;36;1mProfile Load (0.000206)[0m   [0;1mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 1233125307) LIMIT 1[0m
+  [4;35;1mProfile Columns (0.001646)[0m   [0mSHOW FIELDS FROM `profiles`[0m
+  [4;36;1mSleep Load (0.002382)[0m   [0;1mSELECT * FROM `sleeps` WHERE (`sleeps`.user_id = 1233125307) ORDER BY started_at asc[0m
+Rendered layouts/_head (0.00060)
+  [4;35;1mRole Load (0.000150)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307 AND (has_role = 'MEMBER' OR has_role = 'SUPER MEMBER')) [0m
+Rendered menus/_master_tab_layout (0.00505)
+  [4;36;1mRole Load (0.000053)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307) [0m
+Rendered layouts/_masthead (0.00578)
+Rendered menus/_vip (0.00012)
+Rendered layouts/_body (0.00642)
+Completed in 0.07682 (13 reqs/sec) | Rendering: 0.03027 (39%) | DB: 0.00654 (8%) | 200 OK [http://localhost/sleeps]
+
+
+Processing SleepsController#index (for 127.0.0.1 at 2010-02-19 01:04:50) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlYWU2ZTg2MWE4ZjIyZTdkY2Y2ZTQzYzBiZjQ1YmNj
+YTUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA6DHVzZXJfaWRsKwe7/39JOg5yZXR1cm5fdG8w--6dbdd29a19b76c8087cb9287314321fed9c6fe13
+  Parameters: {"action"=>"index", "controller"=>"sleeps"}
+  [4;35;1mUser Columns (0.000945)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000084)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;35;1mSleep Load (0.000115)[0m   [0mSELECT * FROM `sleeps` WHERE (`sleeps`.user_id = 1233125307) [0m
+  [4;36;1mSleep Columns (0.000734)[0m   [0;1mSHOW FIELDS FROM `sleeps`[0m
+Rendering template within layouts/application
+Rendering sleeps/index
+  [4;35;1mProfile Load (0.000147)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 1233125307) LIMIT 1[0m
+  [4;36;1mProfile Columns (0.001705)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mSleep Load (0.000094)[0m   [0mSELECT * FROM `sleeps` WHERE (`sleeps`.user_id = 1233125307) ORDER BY started_at asc[0m
+Rendered layouts/_head (0.00054)
+  [4;36;1mRole Load (0.000095)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307 AND (has_role = 'MEMBER' OR has_role = 'SUPER MEMBER')) [0m
+Rendered menus/_master_tab_layout (0.00488)
+  [4;35;1mRole Load (0.000060)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307) [0m
+Rendered layouts/_masthead (0.00559)
+Rendered menus/_vip (0.00012)
+Rendered layouts/_body (0.00623)
+Completed in 0.05923 (16 reqs/sec) | Rendering: 0.02560 (43%) | DB: 0.00398 (6%) | 200 OK [http://localhost/sleeps]
+
+
+Processing BpsController#index (for 127.0.0.1 at 2010-02-19 01:05:04) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlYWU2ZTg2MWE4ZjIyZTdkY2Y2ZTQzYzBiZjQ1YmNj
+YTU6DHVzZXJfaWRsKwe7/39JIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy
+OjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOg5yZXR1cm5fdG8w--0beeb1d984b8d9f4dfd999fbda69076aed49c170
+  Parameters: {"action"=>"index", "controller"=>"bps"}
+  [4;36;1mUser Columns (0.001114)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000082)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1233125307) LIMIT 1[0m
+  [4;36;1mBp Load (0.000113)[0m   [0;1mSELECT * FROM `bps` WHERE (`bps`.user_id = 1233125307) ORDER BY measured_on desc LIMIT 0, 30[0m
+  [4;35;1mBp Columns (0.000647)[0m   [0mSHOW FIELDS FROM `bps`[0m
+  [4;36;1mSQL (0.000046)[0m   [0;1mSELECT count(*) AS count_all FROM `bps` WHERE (`bps`.user_id = 1233125307) [0m
+Rendering template within layouts/application
+Rendering bps/index
+  [4;35;1mProfile Load (0.000140)[0m   [0mSELECT * FROM `profiles` WHERE (`profiles`.user_id = 1233125307) LIMIT 1[0m
+  [4;36;1mProfile Columns (0.001662)[0m   [0;1mSHOW FIELDS FROM `profiles`[0m
+  [4;35;1mBp Load (0.000123)[0m   [0mSELECT * FROM `bps` WHERE (`bps`.user_id = 1233125307) ORDER BY measured_on asc[0m
+Rendered bps/_new (0.00179)
+Rendered bps/_new_inform (0.00339)
+Rendered layouts/_head (0.00055)
+  [4;36;1mRole Load (0.000068)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307 AND (has_role = 'MEMBER' OR has_role = 'SUPER MEMBER')) [0m
+Rendered menus/_master_tab_layout (0.00610)
+  [4;35;1mRole Load (0.000084)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.user_id = 1233125307) [0m
+Rendered layouts/_masthead (0.00704)
+Rendered menus/_vip (0.00016)
+Rendered layouts/_body (0.00789)
+Completed in 0.20151 (4 reqs/sec) | Rendering: 0.16759 (83%) | DB: 0.00408 (2%) | 200 OK [http://localhost/bps]
