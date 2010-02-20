@@ -4,10 +4,12 @@
 <% if params[:view] == "dataentry" %> 
 <%= render :partial => "new_inform" %>
 <% else %>
-
+<%  begin %>
 <%- @plot_data = [] -%>
 <% @chartoptions = current_user.profile.chart_options %>
 <% myPlots("measurements") %>
+<% rescue %>
+<% end %>
 <%= makeChart %>
 
 
