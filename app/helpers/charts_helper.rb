@@ -918,15 +918,18 @@ def make_table_styled
     counter = 0
     for med in @medications
       counter += 1
-      if @table_styled[med.prescribed_start.to_date.hash].nil? then
-        @table_styled[med.prescribed_start.to_date.hash] = ADate.new(med.prescribed_start)
-      end #null date
-      # <br/>#{med.prescribed_start.to_date.strftime("%d %b '%y")}
-      @table_styled[med.prescribed_start.to_date.hash].medications = Event.new(
-        med.prescribed_start.to_date, 
-        "M#{counter}", 
-        "Medication:#{med.name}, Dosage:#{med.strength} #{med.unit_type}, Objective:#{med.purpose}",  "M")
-        
+      
+      unless med.prescribed_start.nil? then
+        if @table_styled[med.prescribed_start.to_date.hash].nil? then
+          @table_styled[med.prescribed_start.to_date.hash] = ADate.new(med.prescribed_start)
+        end #null date
+        # <br/>#{med.prescribed_start.to_date.strftime("%d %b '%y")}
+        @table_styled[med.prescribed_start.to_date.hash].medications = Event.new(
+          med.prescribed_start.to_date, 
+          "M#{counter}", 
+          "Medication:#{med.name}, Dosage:#{med.strength} #{med.unit_type}, Objective:#{med.purpose}",  "M")
+          
+       end
     end
   end
 
