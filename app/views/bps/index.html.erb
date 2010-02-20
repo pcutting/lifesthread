@@ -8,10 +8,14 @@
 <br />
 <h1>Blood Pressure Chart</h1>
 <br />
+<% begin %>
 <%- @plot_data = [] -%>
 <% @chartoptions = current_user.profile.chart_options %>
 <% myPlots("bp") %>
 <%= makeChart %>
+<% rescue %>
+<% end %>
+
 <div class='span-24 last'>
 <hr />
 
