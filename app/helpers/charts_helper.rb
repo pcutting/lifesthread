@@ -600,9 +600,11 @@ def getMeasurements
     
     if !(b1)  &&  (b2) 
       meas9_count += 1 
-      meas9_sum += measurement.thigh  unless measurement.thigh.nil?
-      @set8.addPoint(measurement.measured_on.to_time.to_i * 1000,measurement.thigh)
-      @set8Avg.addPoint(measurement.measured_on.to_time.to_i * 1000, meas9_sum.to_f/ meas9_count.to_f)
+      unless measurement.thigh.nil? then
+        meas9_sum += measurement.thigh  
+        @set8.addPoint(measurement.measured_on.to_time.to_i * 1000,measurement.thigh)
+        @set8Avg.addPoint(measurement.measured_on.to_time.to_i * 1000, meas9_sum.to_f/ meas9_count.to_f)
+      end 
     end     
     
     if !(measurement.calf.nil? && measurement.calf == 0 )  &&  (@chartoptions[:measurement_calf][0] || @chartoptions[:measurement_calf][1]   || @chartoptions[:measurements][0] || @chartoptions[:measurements][1]) 
